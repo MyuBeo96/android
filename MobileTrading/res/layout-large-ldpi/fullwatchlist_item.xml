@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/m_paddingLeft"
+    android:paddingRight="@dimen/m_paddingRight" >
+
+    <ImageView
+        android:id="@+id/img_banggiafull_item_Sign"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/text_banggiafull_item_Symbol"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="@dimen/t_fullwatchlist_textsize" />
+
+    <TextView
+        android:id="@+id/text_banggiafull_item_totalTrading"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/white_text"
+        android:textSize="@dimen/t_fullwatchlist_textsize" />
+
+    <TextView
+        android:id="@+id/text_item_bidprice3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="@dimen/t_fullwatchlist_textsize" />
+
+    <TextView
+        android:id="@+id/text_item_bidvol3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="@dimen/t_fullwatchlist_textsize" />
+
+    <TextView
+        android:id="@+id/text_item_bidprice2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="@dimen/t_fullwatchlist_textsize" />
+
+    <TextView
+        android:id="@+id/text_item_bidvol2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="@dimen/t_fullwatchlist_textsize" />
+
+    <TextView
+        android:id="@+id/text_item_bidprice1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="@dimen/t_fullwatchlist_textsize" />
+
+    <TextView
+        android:id="@+id/text_item_bidvol1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="@dimen/t_fullwatchlist_textsize" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:background="@color/bg_price_change_qty_fullwatchlist_tablet"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/text_banggiafull_item_Price"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="@dimen/t_fullwatchlist_textsize" />
+
+        <TextView
+            android:id="@+id/text_banggiafull_item_Change"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="@dimen/t_fullwatchlist_textsize" />
+
+        <TextView
+            android:id="@+id/text_banggiafull_item_Quantity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="@dimen/t_fullwatchlist_textsize" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_item_offerprice1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="@dimen/t_fullwatchlist_textsize" />
+
+    <TextView
+        android:id="@+id/text_item_offervol1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="@dimen/t_fullwatchlist_textsize" />
+
+    <TextView
+        android:id="@+id/text_item_offerprice2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="@dimen/t_fullwatchlist_textsize" />
+
+    <TextView
+        android:id="@+id/text_item_offervol2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="@dimen/t_fullwatchlist_textsize" />
+
+    <TextView
+        android:id="@+id/text_item_offerprice3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="@dimen/t_fullwatchlist_textsize" />
+
+    <TextView
+        android:id="@+id/text_item_offervol3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="@dimen/t_fullwatchlist_textsize" />
+
+</LinearLayout>

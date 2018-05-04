@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.fss.mobiletrading.common.CustomHorizontalScrollView
+        android:id="@+id/horiscrollview_solenh_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:fillViewport="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/layout_solenh_item_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/text_solenh_item_contentwidth"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/m_paddingLeft"
+                    android:paddingRight="@dimen/m_paddingRight" >
+
+                    <TextView
+                        android:id="@+id/lbl_solenh_item_CustodyCd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="3dp"
+                        android:text="@string/TK"
+                        android:textColor="#fff"
+                        android:textSize="13.0sp" />
+
+                    <TextView
+                        android:id="@+id/text_solenh_item_CustodyCd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/lbl_solenh_item_CustodyCd"
+                        android:paddingLeft="3dp"
+                        android:textColor="#fff"
+                        android:textSize="13.0sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/m_paddingLeft"
+                    android:paddingRight="@dimen/m_paddingRight" >
+
+                    <TextView
+                        android:id="@+id/text_solenh_item_tv_side"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:textAllCaps="true"
+                        android:textSize="15.0sp" />
+
+                    <TextView
+                        android:id="@+id/text_solenh_item_tv_MaCK"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="2.0"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:textColor="@color/white_text"
+                        android:textSize="15.0sp" />
+
+                    <TextView
+                        android:id="@+id/text_solenh_item_tv_SoLuong"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="2.0"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:textColor="@color/red_brown_text"
+                        android:textSize="15.0sp" />
+
+                    <TextView
+                        android:id="@+id/text_solenh_item_tv_Gia"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.7"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:textColor="@color/red_brown_text"
+                        android:textSize="15.0sp" />
+
+                    <TextView
+                        android:id="@+id/text_solenh_item_tv_TrangThai"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="2.8"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:textColor="@color/white_text"
+                        android:textSize="15.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_solenh_item_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/placeorder_buy_color"
+                android:padding="0dp"
+                android:text="@string/Mua"
+                android:textColor="@color/white_text"
+                 />
+
+            <Button
+                android:id="@+id/btn_solenh_item_sell"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/placeorder_sell_color"
+                android:padding="0dp"
+                android:text="@string/Ban"
+                android:textColor="@color/white_text"
+                 />
+
+            <Button
+                android:id="@+id/btn_solenh_item_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#FF9966"
+                android:padding="0dp"
+                android:text="@string/Cancel"
+                android:textColor="@color/white_text"
+                 />
+        </LinearLayout>
+    </com.fss.mobiletrading.common.CustomHorizontalScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/m_paddingLeft"
+        android:layout_marginRight="@dimen/m_paddingRight"
+        android:background="@color/listview_separation_color" />
+
+</LinearLayout>

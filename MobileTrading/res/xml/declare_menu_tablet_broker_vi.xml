@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<listmenu>
+
+    <tabmenu
+        class="com.fss.mobiletrading.function.market.T_MarketInfo"
+        title="Thị trường" >
+    </tabmenu>
+    <tabmenu
+        class="com.fss.mobiletrading.function.watchlist.StockItemInformation"
+        title="Chứng khoán" >
+    </tabmenu>
+    <tabmenu
+        class="com.fss.mobiletrading.function.orderlist.NormalOrderList"
+        title="Sổ lệnh" >
+    </tabmenu>
+    <!-- <tabmenu -->
+    <!-- class="null" -->
+    <!-- title="Lệnh điều kiện" > -->
+    <!-- </tabmenu> -->
+    <tabmenu
+        class="com.fss.mobiletrading.function.CapBaoLanh"
+        title="Cấp hạn mức" >
+    </tabmenu>
+    <tabmenu
+        class="null"
+        title="Quản lý tài khoản" >
+        <child>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.AccountBalance"
+                title="Số dư" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.portfolio.Porfolio"
+                title="Danh mục đầu tư" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.Statement"
+                title="Sao kê" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.OrderHistory"
+                title="Lịch sử khớp lệnh" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.coporateactions.CoporateActions"
+                title="Lịch sự kiện quyền" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.accountconfig.AccountConfig"
+                title="TT khách hàng" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.guaranteelist.GuaranteeList"
+                title="Dư nợ bảo lãnh" >
+            </tabmenu>
+        </child>
+    </tabmenu>
+    <tabmenu
+        class="com.fss.mobiletrading.function.report.Report"
+        title="Báo cáo" >
+    </tabmenu>
+
+</listmenu>

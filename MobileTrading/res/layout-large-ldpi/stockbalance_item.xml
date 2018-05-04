@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/m_paddingLeft"
+    android:paddingRight="@dimen/m_paddingRight" >
+
+    <TextView
+        android:id="@+id/text_symbol"
+        style="@style/Content_Style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/t_textsize_listviewitem" />
+
+    <Button
+        android:id="@+id/btn_buy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:text="@string/Mua"
+        android:textColor="@color/green_text"
+        android:textSize="@dimen/t_textsize_listviewitem" />
+
+    <Button
+        android:id="@+id/btn_sell"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:text="@string/Ban"
+        android:textColor="@color/red_brown_text"
+        android:textSize="@dimen/t_textsize_listviewitem" />
+
+    <TextView
+        android:id="@+id/text_total"
+        style="@style/Content_Style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/t_textsize_listviewitem" />
+
+    <TextView
+        android:id="@+id/text_availableamount"
+        style="@style/Content_Style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/t_textsize_listviewitem" />
+
+    <TextView
+        android:id="@+id/text_chovequyen"
+        style="@style/Content_Style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/t_textsize_listviewitem" />
+
+    <TextView
+        android:id="@+id/text_receivingT0"
+        style="@style/Content_Style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/t_textsize_listviewitem" />
+
+    <TextView
+        android:id="@+id/text_receivingT1"
+        style="@style/Content_Style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/t_textsize_listviewitem" />
+
+    <TextView
+        android:id="@+id/text_receivingT2"
+        style="@style/Content_Style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/t_textsize_listviewitem" />
+
+    <TextView
+        android:id="@+id/text_receivingT3"
+        style="@style/Content_Style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/t_textsize_listviewitem"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/text_pendingmatch"
+        style="@style/Content_Style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/t_textsize_listviewitem" />
+
+    <TextView
+        android:id="@+id/text_marketprice"
+        style="@style/Content_Style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/t_textsize_listviewitem" />
+
+    <TextView
+        android:id="@+id/text_marketvalue"
+        style="@style/Content_Style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:textSize="@dimen/t_textsize_listviewitem" />
+
+</LinearLayout>

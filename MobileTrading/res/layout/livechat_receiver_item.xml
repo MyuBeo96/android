@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingTop="5dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="#ffffffff" android:id="@+id/text_livechat_receiver_item_content" android:background="#ff33cc66" android:padding="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:layout_marginRight="35dp" android:text="hnay co da bong k" android:layout_alignParentLeft="true" />
+    <TextView android:textSize="11.0sp" android:textColor="#ffffffff" android:id="@+id/text_livechat_receiver_item_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="!%:30" android:layout_below="@+id/text_livechat_receiver_item_content" android:layout_alignRight="@+id/text_livechat_receiver_item_content" />
+</RelativeLayout>

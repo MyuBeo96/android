@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/large_orderplace"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_fragment"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/lay_buysell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#222222"
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp" >
+
+        <Button
+            android:id="@+id/btn_large_orderplace_Mua"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:background="@drawable/selector_placeorder_tab_selector"
+            android:gravity="center_horizontal|bottom"
+            android:text="@string/Mua"
+            android:textSize="16.0sp"
+             />
+
+        <Button
+            android:id="@+id/btn_large_orderplace_Ban"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="90dp"
+            android:background="@drawable/selector_placeorder_tab_selector"
+            android:gravity="center_horizontal|bottom"
+            android:text="@string/Ban"
+            android:textSize="16.0sp"
+             />
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/frag_large_placeorder_stockinfo"
+        android:name="com.fss.mobiletrading.function.watchlist.StockIndex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#00AA00" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#222222"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:paddingRight="3dp" >
+
+            <TextView
+                android:id="@+id/lbl_large_placeorder_afacctno"
+                style="@style/Label_Style"
+                android:layout_width="100dp"
+                android:layout_alignParentLeft="true"
+                android:text="@string/TieuKhoan" />
+
+            <Spinner
+                android:id="@+id/spn_large_placeorder_afacctno"
+                style="@style/EditText_Style"
+                android:layout_toRightOf="@+id/lbl_large_placeorder_afacctno" />
+
+            <TextView
+                android:id="@+id/lbl_large_orderplace_MaCK"
+                style="@style/Label_Style"
+                android:layout_width="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/lbl_large_placeorder_afacctno"
+                android:text="@string/MaCK" />
+
+            <EditText
+                android:id="@+id/autoEdt_large_orderplace_Symbol"
+                style="@style/EditText_Style"
+                android:layout_alignTop="@+id/lbl_large_orderplace_MaCK"
+                android:layout_toRightOf="@+id/lbl_large_orderplace_MaCK"
+                android:ems="10"
+                android:inputType="textCapCharacters"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/shape_textcursoredittext" >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/imgv_large_orderplace_symboldetail"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignRight="@+id/autoEdt_large_orderplace_Symbol"
+                android:layout_alignTop="@+id/autoEdt_large_orderplace_Symbol"
+                android:layout_marginTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/image_symboldetail64x64"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/lbl_large_orderplace_SoLuong"
+                style="@style/Label_Style"
+                android:layout_width="100dp"
+                android:layout_alignBottom="@+id/cus_edt_large_orderplace_SoLuong"
+                android:layout_alignParentLeft="true"
+                android:text="@string/KhoiLuong" />
+
+            <com.msbuat.mobiletrading.design.Edittext_SoLuong
+                android:id="@+id/cus_edt_large_orderplace_SoLuong"
+                style="@style/EditText_Style"
+                android:layout_below="@+id/autoEdt_large_orderplace_Symbol"
+                android:layout_toRightOf="@+id/lbl_large_orderplace_SoLuong" />
+
+            <TextView
+                android:id="@+id/lbl_large_orderplace_LoaiLenh"
+                style="@style/Label_Style"
+                android:layout_width="100dp"
+                android:layout_alignBottom="@+id/cus_edt_large_orderplace_LoaiLenh"
+                android:layout_alignParentLeft="true"
+                android:text="@string/LoaiLenh" />
+
+            <com.msbuat.mobiletrading.design.Edittext_LoaiLenh
+                android:id="@+id/cus_edt_large_orderplace_LoaiLenh"
+                style="@style/EditText_Style"
+                android:layout_below="@+id/cus_edt_large_orderplace_SoLuong"
+                android:layout_toRightOf="@+id/lbl_large_orderplace_LoaiLenh" />
+
+            <TextView
+                android:id="@+id/lbl_large_orderplace_Gia"
+                style="@style/Label_Style"
+                android:layout_width="100dp"
+                android:layout_alignBottom="@+id/cus_edt_large_orderplace_Gia"
+                android:layout_alignParentLeft="true"
+                android:text="@string/Gia1000" />
+
+            <com.msbuat.mobiletrading.design.Edittext_Gia
+                android:id="@+id/cus_edt_large_orderplace_Gia"
+                style="@style/EditText_Style"
+                android:layout_below="@+id/cus_edt_large_orderplace_LoaiLenh"
+                android:layout_toRightOf="@+id/lbl_large_orderplace_Gia" />
+
+            <TextView
+                android:id="@+id/lbl_large_orderplace_SplitQtty"
+                style="@style/Label_Style"
+                android:layout_width="100dp"
+                android:layout_alignBottom="@+id/edttg_large_orderplace_SplitQtty"
+                android:layout_alignParentLeft="true"
+                android:text="@string/datlenh_label_SplitQtty" />
+
+            <com.msbuat.mobiletrading.design.Edittext_SoLuong
+                android:id="@+id/edttg_large_orderplace_SplitQtty"
+                style="@style/EditText_Style"
+                android:layout_below="@+id/cus_edt_large_orderplace_Gia"
+                android:layout_toRightOf="@+id/lbl_large_orderplace_SplitQtty" />
+
+            <Button
+                android:id="@+id/btn_large_orderplace_DatLenh"
+                style="@style/Button_Background1"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/edttg_large_orderplace_SplitQtty"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/XacNhan" />
+
+            <ImageView
+                android:id="@+id/imgv_large_orderplace_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignRight="@+id/btn_large_orderplace_DatLenh"
+                android:layout_alignTop="@+id/btn_large_orderplace_DatLenh"
+                android:layout_marginRight="5dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_loading"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5" >
+
+            <RelativeLayout
+                android:id="@+id/lay_large_orderplace_balanceinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/lbl_large_placeorder_SucMuaBuy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:paddingLeft="5dp"
+                    android:text="@string/datlenh_label_SucMua"
+                    android:textColor="#ff777777"
+                    android:textSize="12.0sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/text_large_placeorder_SucMuaBuy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/lbl_large_placeorder_SucMuaBuy"
+                    android:textColor="@color/white_text"
+                    android:textSize="12.0sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/lbl_large_placeorder_rttbuy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/text_large_placeorder_SucMuaBuy"
+                    android:paddingLeft="5dp"
+                    android:text="@string/RTT"
+                    android:textColor="#ff777777"
+                    android:textSize="12.0sp" />
+
+                <TextView
+                    android:id="@+id/text_large_placeorder_rttbuy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/lbl_large_placeorder_rttbuy"
+                    android:textColor="#ffffffff"
+                    android:textSize="12.0sp" />
+
+                <TextView
+                    android:id="@+id/lbl_large_placeorder_tylevay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_below="@+id/lbl_large_placeorder_SucMuaBuy"
+                    android:paddingLeft="5dp"
+                    android:text="@string/datlenh_label_TyLeVay"
+                    android:textColor="#ff777777"
+                    android:textSize="12.0sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/text_large_placeorder_tylevay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_below="@+id/lbl_large_placeorder_SucMuaBuy"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/lbl_large_placeorder_tylevay"
+                    android:textColor="#ffffffff"
+                    android:textSize="12.0sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/lbl_large_placeorder_KLduocmua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_alignLeft="@+id/lbl_large_placeorder_rttbuy"
+                    android:layout_below="@+id/lbl_large_placeorder_rttbuy"
+                    android:paddingLeft="5dp"
+                    android:text="@string/datlenh_label_KLDuocMua"
+                    android:textColor="#ff777777"
+                    android:textSize="12.0sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/text_large_placeorder_KLduocmua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_below="@+id/lbl_large_placeorder_rttbuy"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/lbl_large_placeorder_KLduocmua"
+                    android:textColor="#ffffffff"
+                    android:textSize="12.0sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/lbl_large_placeorder_SucMuaSell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:paddingLeft="5dp"
+                    android:text="@string/datlenh_label_SucMua"
+                    android:textColor="#ff777777"
+                    android:textSize="12.0sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/text_large_placeorder_SucMuaSell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/lbl_large_placeorder_SucMuaSell"
+                    android:textColor="@color/white_text"
+                    android:textSize="12.0sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/lbl_large_placeorder_rttsell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/text_large_placeorder_SucMuaSell"
+                    android:paddingLeft="5dp"
+                    android:text="@string/RTT"
+                    android:textColor="#ff777777"
+                    android:textSize="12.0sp" />
+
+                <TextView
+                    android:id="@+id/text_large_placeorder_rttsell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/lbl_large_placeorder_rttsell"
+                    android:textColor="#ffffffff"
+                    android:textSize="12.0sp" />
+
+                <TextView
+                    android:id="@+id/lbl_large_placeorder_ChoVe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_below="@+id/lbl_large_placeorder_SucMuaSell"
+                    android:paddingLeft="5dp"
+                    android:text="@string/datlenh_label_ChoVe"
+                    android:textColor="#ff777777"
+                    android:textSize="12.0sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/text_large_placeorder_ChoVe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_alignLeft="@+id/lbl_large_placeorder_rttsell"
+                    android:layout_below="@+id/lbl_large_placeorder_SucMuaSell"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#ffffffff"
+                    android:textSize="12.0sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/lbl_large_placeorder_KLduocban"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_below="@+id/lbl_large_placeorder_rttsell"
+                    android:layout_toRightOf="@+id/text_large_placeorder_ChoVe"
+                    android:paddingLeft="5dp"
+                    android:text="@string/datlenh_label_KLduocban"
+                    android:textColor="#ff777777"
+                    android:textSize="12.0sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/text_large_placeorder_KLduocban"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_below="@+id/lbl_large_placeorder_rttsell"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/lbl_large_placeorder_KLduocban"
+                    android:textColor="#ffffffff"
+                    android:textSize="12.0sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <com.fss.mobiletrading.keyboard.KeyboardPrice
+                android:id="@+id/kb_large_orderplace_price"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lay_large_orderplace_balanceinfo" >
+            </com.fss.mobiletrading.keyboard.KeyboardPrice>
+
+            <com.fss.mobiletrading.keyboard.KeyboardQuantity
+                android:id="@+id/kb_large_orderplace_quantity"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kb_large_orderplace_price" >
+            </com.fss.mobiletrading.keyboard.KeyboardQuantity>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

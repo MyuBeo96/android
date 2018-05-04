@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingRight="@dimen/m_paddingRight" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.msbuat.mobiletrading.design.SelectorImageView
+            android:id="@+id/img_nororderlist_item_iscancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            app:active="false"
+            app:active_drawable="@drawable/ic_active"
+            app:inactive_drawable="@drawable/ic_inactive" />
+
+        <Button
+            android:id="@+id/btn_solenh_item_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="@string/Cancel"
+            android:textColor="@color/red_brown_text"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_solenh_item_amend"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="@string/Sua"
+            android:textColor="@color/red_brown_text"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_solenh_item_CustodyCd"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_solenh_item_afacctno"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_solenh_item_tv_side"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_solenh_item_tv_MaCK"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_solenh_item_tv_SoLuong"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_solenh_item_tv_Gia"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_solenh_item_matchedqtty"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_solenh_item_matchedprice"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_solenh_item_tv_TrangThai"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_solenh_item_pricetype"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

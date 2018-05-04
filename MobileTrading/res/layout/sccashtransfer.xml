@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/SCcashtransfer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/m_paddingLeft"
+    android:paddingRight="@dimen/m_paddingRight" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.msbuat.mobiletrading.design.MySpinner
+                android:id="@+id/spn_CToutSC_sender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hasLabel="true"
+                app:textMySpinner="@string/TieuKhoanChuyen" />
+
+            <com.msbuat.mobiletrading.design.MySpinner
+                android:id="@+id/spn_CToutSC_SoTKNH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hasLabel="true"
+                app:textMySpinner="@string/SoTaiKhoanNganHang" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_CToutSC_NganHang"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_labelcontentverlayout_height"
+                app:labelText="@string/NganHangNguoiThuHuong"
+                app:orientation="vertical" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_CToutSC_NguoiNhan"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_labelcontentverlayout_height"
+                app:labelText="@string/TenNguoiThuHuong"
+                app:orientation="vertical" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_CToutSC_TinhThanhPho"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_labelcontentverlayout_height"
+                app:labelText="@string/TinhThanhPho"
+                app:orientation="vertical" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_CToutSC_PGD"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_labelcontentverlayout_height"
+                app:labelText="@string/PhongGiaoDich"
+                app:orientation="vertical" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_CToutSC_SoDu"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_labelcontentverlayout_height"
+                app:labelText="@string/SoDu"
+                app:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/lbl_CToutSC_SoTienChuyen"
+                    style="@style/Label_Style"
+                    android:layout_width="match_parent"
+                    android:text="@string/SoTienChuyen" />
+
+                <com.msbuat.mobiletrading.design.NumberEditText
+                    android:id="@+id/edt_CToutSC_SoTienChuyen"
+                    style="@style/EditText_Style"
+                    android:layout_width="match_parent"
+                    android:digits="0123456789,"
+                    android:hint="@string/SoTienChuyen"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@drawable/shape_textcursoredittext" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/header_separation_color" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/edt_CToutSC_NoiDung"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_labelcontentverlayout_height"
+                app:contentColor="@color/white_text"
+                app:contentHint="@string/NoiDung"
+                app:editable="true"
+                app:labelText="@string/NoiDung"
+                app:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_CToutSC_ChapNhan"
+                    style="@style/Button_Background1"
+                    android:layout_width="0dp"
+                    android:layout_weight="5.0"
+                    android:text="@string/XacNhan" />
+
+                <Button
+                    android:id="@+id/btn_CToutSC_Clear"
+                    style="@style/Button_Background1"
+                    android:layout_width="0dp"
+                    android:layout_weight="5.0"
+                    android:text="@string/Clear"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_transferdesc"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone" />
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_CToutSC_sotientoidaduocchuyen"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

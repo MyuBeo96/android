@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:id="@+id/lay_DotBienGia1"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/btn_DotBienGia_GiaCaoNhat"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="5.0"
+            android:background="#ff555555"
+            android:text="@string/dotbiengia_lbl_GiaCaoNhat"
+            android:textColor="#ffffffff"
+            android:textSize="13.0sp" />
+
+        <Button
+            android:id="@+id/btn_DotBienGia_GiaThapNhat"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="5.0"
+            android:background="#ff555555"
+            android:text="@string/dotbiengia_lbl_GiaCaoNhat"
+            android:textColor="#ffffffff"
+            android:textSize="13.0sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lbl_DotBienGia_DotBienTrong"
+        android:layout_width="55dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/lay_DotBienGia1"
+        android:layout_marginTop="5dp"
+        android:gravity="bottom"
+        android:text="@string/dotbienkhoiluong_lbl_DotBienTrong"
+        android:textColor="#ffffffff"
+        android:textSize="10.0sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/lay_DotBienGia1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/lbl_DotBienGia_DotBienTrong" >
+
+        <Button
+            android:id="@+id/btn_DotBienGia_1thang"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:background="@drawable/button_selected2"
+            android:textColor="#ffffffff"
+            android:textSize="10.0sp" />
+
+        <Button
+            android:id="@+id/btn_DotBienGia_2thang"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:background="@drawable/button_not_select2"
+            android:textColor="#ffffffff"
+            android:textSize="10.0sp" />
+
+        <Button
+            android:id="@+id/btn_DotBienGia_3thang"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:background="@drawable/button_not_select2"
+            android:textColor="#ffffffff"
+            android:textSize="10.0sp" />
+
+        <Button
+            android:id="@+id/btn_DotBienGia_6thang"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:background="@drawable/button_not_select2"
+            android:textColor="#ffffffff"
+            android:textSize="10.0sp" />
+
+        <Button
+            android:id="@+id/btn_DotBienGia_12thang"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:background="@drawable/button_not_select2"
+            android:textColor="#ffffffff"
+            android:textSize="10.0sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lbl_DotBienGia_KhoiLuongDB"
+        android:layout_width="55dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/lbl_DotBienGia_DotBienTrong"
+        android:layout_marginTop="5dp"
+        android:gravity="bottom"
+        android:text="@string/dotbienkhoiluong_lbl_KhoiLuongDB"
+        android:textColor="#ffffffff"
+        android:textSize="10.0sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/lbl_DotBienGia_DotBienTrong"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/lbl_DotBienGia_KhoiLuongDB" >
+
+        <Button
+            android:id="@+id/btn_DotBienGia_100"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:background="@drawable/button_selected2"
+            android:textColor="#ffffffff"
+            android:textSize="10.0sp" />
+
+        <Button
+            android:id="@+id/btn_DotBienGia_200"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:background="@drawable/button_not_select2"
+            android:textColor="#ffffffff"
+            android:textSize="10.0sp" />
+
+        <Button
+            android:id="@+id/btn_DotBienGia_300"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:background="@drawable/button_not_select2"
+            android:textColor="#ffffffff"
+            android:textSize="10.0sp" />
+
+        <Button
+            android:id="@+id/btn_DotBienGia_400"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:background="@drawable/button_not_select2"
+            android:textColor="#ffffffff"
+            android:textSize="10.0sp" />
+
+        <Button
+            android:id="@+id/btn_DotBienGia_500"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:background="@drawable/button_not_select2"
+            android:textColor="#ffffffff"
+            android:textSize="10.0sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_DotBienGia_ChapNhan"
+        style="@style/Button_Background1"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/lbl_DotBienGia_KhoiLuongDB"
+        android:layout_marginTop="10dp"
+        android:text="@string/XacNhan" />
+
+    <TextView
+        android:id="@+id/text_DotBienGia_KetQuaBoLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/lbl_DotBienGia_KhoiLuongDB"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/btn_DotBienGia_ChapNhan"
+        android:gravity="center_vertical"
+        android:textColor="#ffffffff"
+        android:textSize="11.0sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_DotBienGia_ChapNhan"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10.0" >
+
+            <TextView
+                android:id="@+id/lbl_DotBienGia_MaCK"
+                style="@style/Label_Style"
+                android:layout_width="0dp"
+                android:layout_weight="2.0"
+                android:text="@string/MaCK" />
+
+            <TextView
+                android:id="@+id/lbl_DotBienGia_GiaKhopCuoi"
+                style="@style/Label_Style"
+                android:layout_width="0dp"
+                android:layout_weight="4.0"
+                android:text="@string/GiaKhopCuoi" />
+
+            <TextView
+                android:id="@+id/lbl_DotBienGia_TongKLGD"
+                style="@style/Label_Style"
+                android:layout_width="0dp"
+                android:layout_weight="4.0"
+                android:text="@string/dotbienkhoiluong_lbl_TongKLGD" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ffff9900" />
+
+        <ListView
+            android:id="@+id/listview_DotBienGia"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/listview_separation_color" android:scrollbars="none" />
+    </LinearLayout>
+
+</RelativeLayout>

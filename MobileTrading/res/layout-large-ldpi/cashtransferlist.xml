@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical" >
+
+    <com.msbuat.mobiletrading.design.MySpinner
+        android:id="@+id/spn_cashtransferlist"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/header_background_color"
+        android:paddingRight="20dp"
+        app:gravity_hori="center_hori"
+        app:hasLabel="false"
+        app:separationColor="@color/transparent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <LinearLayout
+        android:id="@+id/header_internal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/t_header_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/STT" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.0"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/TenNguoiThuHuong" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.0"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/SoTKTaiFSC" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.0"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/SoTieuKhoanTaiFSC" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/header_bank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/t_header_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/STT" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.0"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/TenNguoiThuHuong" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.0"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/SoTaiKhoanNganHang" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.0"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/TenNganHang" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.0"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/ChiNhanh" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/ThanhPho" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <ListView
+        android:id="@+id/listview_BankAcc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/listview_separation_color"
+        android:scrollbars="none" />
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="45dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/btn_amend"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:text="@string/Sua"
+        android:textColor="@color/green_text"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_item"
+        style="@style/Content_Style"
+        android:layout_width="100dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_total"
+        style="@style/Content_Style"
+        android:layout_width="150dp"
+        android:gravity="center"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp" />
+
+    <TextView
+        android:id="@+id/text_stockavailable"
+        style="@style/Content_Style"
+        android:layout_width="150dp"
+        android:gravity="center"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp" />
+
+    <TextView
+        android:id="@+id/text_chovequyen"
+        style="@style/Content_Style"
+        android:layout_width="100dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_pendingmatch"
+        style="@style/Content_Style"
+        android:layout_width="50dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_marketprice"
+        style="@style/Content_Style"
+        android:layout_width="80dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_marketvalue"
+        style="@style/Content_Style"
+        android:layout_width="150dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_receivingT0"
+        style="@style/Content_Style"
+        android:layout_width="100dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_receivingT1"
+        style="@style/Content_Style"
+        android:layout_width="100dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_receivingT2"
+        style="@style/Content_Style"
+        android:layout_width="100dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_receivingT3"
+        style="@style/Content_Style"
+        android:layout_width="100dp"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/text_giabinhquan"
+        style="@style/Content_Style"
+        android:layout_width="150dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_giavon"
+        style="@style/Content_Style"
+        android:layout_width="150dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_pl"
+        style="@style/Content_Style"
+        android:layout_width="100dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_percentpl"
+        style="@style/Content_Style"
+        android:layout_width="50dp"
+        android:gravity="center" />
+
+</LinearLayout>

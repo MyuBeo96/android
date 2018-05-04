@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollview_stockiteminformation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/container_stockindex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_width="match_parent"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/m_paddingLeft"
+                android:paddingRight="@dimen/m_paddingRight"
+                android:text="@string/TinTuc" />
+
+            <LinearLayout
+                android:id="@+id/container_newsbysymbol"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/listviewinscrollview_height"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.msbuat.mobiletrading.design.SearchTextUI
+        android:id="@+id/searchtext_listview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_refresh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_stockinfo_expand"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/lay_news"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" >
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/stockitem_information_container_newsdetails"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="gone" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_graph_tradelog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="gone" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_graphview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="gone" >
+    </LinearLayout>
+
+    <com.mtrading.mobile.graph.TradeLog
+        android:id="@+id/listview_tradelog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_stockinfo_graph"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_stockinfo_news"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="separationColor" format="reference"></attr>
+    <attr name="gravity_hori" format="integer">
+        <flag name="center_hori" value="0" />
+        <flag name="left" value="1" />
+        <flag name="right" value="2" />
+    </attr>
+    <attr name="labelsize_dimen" format="dimension"></attr>
+    <attr name="contentsize_dimen" format="dimension"></attr>
+
+    <declare-styleable name="RangeSeekBarLayout">
+        <attr name="maxValue" format="integer"></attr>
+        <attr name="minValue" format="integer"></attr>
+    </declare-styleable>
+    <declare-styleable name="NumberEditText">
+        <attr name="dataType" format="string">
+            <flag name="numberInterger" value="0" />
+            <flag name="numberDecimal" value="1" />
+        </attr>
+        <attr name="contentsize_dimen"></attr>
+    </declare-styleable>
+    <declare-styleable name="LabelContentLayout">
+        <attr name="orientation" format="string">
+            <flag name="horizontal" value="0" />
+            <flag name="vertical" value="1" />
+        </attr>
+        <attr name="labelColor" format="string"></attr>
+        <attr name="contentColor" format="string"></attr>
+        <attr name="labelSize" format="integer"></attr>
+        <attr name="contentSize" format="integer"></attr>
+        <attr name="contentText" format="string"></attr>
+        <attr name="labelText" format="string"></attr>
+        <attr name="contentHint" format="string"></attr>
+        <attr name="separationColor"></attr>
+        <attr name="editable" format="boolean"></attr>
+        <attr name="digits" format="string"></attr>
+        <attr name="singleLine" format="boolean"></attr>
+        <attr name="inputType" format="string">
+            <flag name="number" value="0" />
+            <flag name="text" value="1" />
+            <flag name="textPassword" value="2" />
+            <flag name="textCap" value="3" />
+            <flag name="numberDecimal" value="4" />
+        </attr>
+        <attr name="contentgravity" format="integer">
+            <flag name="center" value="0" />
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+        </attr>
+        <attr name="active_color_buysell" format="boolean"></attr>
+        <attr name="checkPriceRull" format="boolean"></attr>
+        <attr name="setTextStyle" format="string">
+            <flag name="bold" value="0" />
+            <flag name="normal" value="1" />
+        </attr>
+        <attr name="labelweight" format="integer"></attr>
+        <attr name="labelgravity" format="string">
+            <flag name="center" value="0" />
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+        </attr>
+        <attr name="labelsize_dimen"></attr>
+        <attr name="contentsize_dimen"></attr>
+    </declare-styleable>
+    <declare-styleable name="TabItem">
+        <attr name="textTabItem" format="string"></attr>
+    </declare-styleable>
+    <declare-styleable name="SortButton">
+        <attr name="textSortButton" format="string"></attr>
+    </declare-styleable>
+    <declare-styleable name="MySpinner">
+        <attr name="textMySpinner" format="string"></attr>
+        <attr name="hasLabel" format="boolean"></attr>
+        <attr name="labelsize_dimen"></attr>
+        <attr name="separationColor"></attr>
+        <attr name="contentsize_dimen"></attr>
+        <attr name="gravity_hori" />
+    </declare-styleable>
+    <declare-styleable name="MyButton">
+        <attr name="textMyButton" format="string"></attr>
+    </declare-styleable>
+    <declare-styleable name="InputDate">
+        <attr name="orientationInputDate" format="string">
+            <flag name="horizontal" value="0" />
+            <flag name="vertical" value="1" />
+        </attr>
+        <attr name="textInputDate" format="string"></attr>
+        <attr name="contentInputDate" format="string"></attr>
+        <attr name="separationColorInputDate" format="string"></attr>
+    </declare-styleable>
+    <declare-styleable name="BoundedLinearLayout">
+        <attr name="maxheight" format="dimension"></attr>
+    </declare-styleable>
+    <declare-styleable name="SelectorImageView">
+        <attr name="active_drawable" format="reference"></attr>
+        <attr name="inactive_drawable" format="reference"></attr>
+        <attr name="active" format="boolean"></attr>
+    </declare-styleable>
+    <declare-styleable name="CusRelativeLayout">
+        <attr name="paddingLeftPercentage" format="integer"></attr>
+        <attr name="paddingRightPercentage" format="integer"></attr>
+        <attr name="paddingTopPercentage" format="integer"></attr>
+        <attr name="paddingBottomPercentage" format="integer"></attr>
+    </declare-styleable>
+
+</resources>

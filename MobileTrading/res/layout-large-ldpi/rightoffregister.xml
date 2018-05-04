@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 8 cái header -->
+
+    <LinearLayout
+        android:id="@+id/header_internal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/t_header_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/STT" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/MaCKDuocHuongQuyen" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/SoLuongCKDuocMua" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/SoLuongDaDangKyMua" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/Giamua" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/SoTienMuaPhaiThanhToan" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/DangKy" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/ThongTinChiTietQuyen" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <TextView
+        android:id="@+id/text_DKQM_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Loading..."
+        android:textColor="#ff888888"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/listview_DKQM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/listview_separation_color"
+        android:scrollbars="none" />
+
+</LinearLayout>

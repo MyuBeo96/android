@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/fullwatchlist"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <com.msbuat.mobiletrading.design.SearchStockUI
+        android:id="@+id/searchtext_fullwatchlist_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/listview_separation_color" />
+
+    <com.msbuat.mobiletrading.design.TabSelector
+        android:id="@+id/tab_fullwatchlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <com.msbuat.mobiletrading.design.TabItem
+            android:id="@+id/tab_fullwatchlist_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            app:textTabItem="@string/solenh_label_All" />
+
+        <com.msbuat.mobiletrading.design.TabItem
+            android:id="@+id/tab_fullwatchlist_hose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            app:textTabItem="@string/banggia_lbl_10" />
+
+        <com.msbuat.mobiletrading.design.TabItem
+            android:id="@+id/tab_fullwatchlist_hnx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            app:textTabItem="@string/banggia_lbl_02" />
+
+        <com.msbuat.mobiletrading.design.TabItem
+            android:id="@+id/tab_fullwatchlist_upcom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            app:textTabItem="@string/banggia_lbl_04" />
+    </com.msbuat.mobiletrading.design.TabSelector>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:text="@string/MaCK"
+            android:textAllCaps="false" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/header_separation_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.0"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:text="@string/Gia"
+                android:textAllCaps="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:text="@string/banggia_change"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/header_separation_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:text="@string/KL"
+                android:textAllCaps="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:text="@string/TongKL_2"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/header_separation_color" />
+
+        <LinearLayout
+            android:id="@+id/lay_banggiafull_bidoff"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                style="@style/Table_Header"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:textAllCaps="false" >
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_changeheader" />
+
+                <TextView
+                    android:id="@+id/header_fullwatchlist_bid"
+                    style="@style/Table_Header"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:text="@string/banggia_MuaGia1KL1"
+                    android:textAllCaps="false" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/header_separation_color" />
+
+            <RelativeLayout
+                style="@style/Table_Header"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:textAllCaps="false" >
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_changeheader"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/header_fullwatchlist_off"
+                    style="@style/Table_Header"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:text="@string/banggia_BanGia1KL1"
+                    android:textAllCaps="false" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_background_color" />
+
+    <ListView
+        android:id="@+id/listview_banggiafull"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/listview_separation_color"
+        android:scrollbars="none" />
+
+</LinearLayout>

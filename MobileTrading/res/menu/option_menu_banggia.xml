@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/option_menu_item_banggia_addlistfav"
+        android:icon="@drawable/ic_add"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/option_menu_item_banggia_searchsymbol"
+        android:icon="@drawable/ic_search32"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/option_menu_item_banggia_expand"
+        android:icon="@drawable/ic_expand32"
+        app:showAsAction="always"/>
+
+</menu>

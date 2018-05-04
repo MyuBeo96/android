@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/internalcashtransfer_detail"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:gravity="center"
+        android:text="@string/InternalCashTransferDetail"
+        android:textColor="@color/white_text"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingLeft="@dimen/m_paddingLeft"
+        android:paddingRight="@dimen/m_paddingRight"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/lc_CTin_chitiet_TieuKhoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentgravity="left"
+                app:labelText="@string/TieuKhoanChuyen"
+                app:labelweight="5"
+                app:orientation="horizontal" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_CTin_chitiet_NguoiNhan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentgravity="left"
+                app:labelText="@string/TenNguoiNhan"
+                app:labelweight="5"
+                app:orientation="horizontal"
+                app:singleLine="true" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_CTin_chitiet_SoTKNhan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentgravity="left"
+                app:labelText="@string/TieuKhoanNhan"
+                app:labelweight="5"
+                app:orientation="horizontal"
+                app:singleLine="true" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_CTin_chitiet_SoLuuKy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentgravity="left"
+                app:labelText="@string/SoLuuKyNhan"
+                app:labelweight="5"
+                app:orientation="horizontal"
+                app:singleLine="true" />
+
+            <TextView
+                style="@style/Content_Style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_labelcontenthorilayout_height"
+                android:background="@color/header_background_color"
+                android:text="@string/chi_tiet"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/header_separation_color" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_CTin_chitiet_SoDu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentgravity="left"
+                app:labelText="@string/SoDuTienVND"
+                app:labelweight="5"
+                app:orientation="horizontal"
+                app:singleLine="true" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_CTin_chitiet_SoTienChuyen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentgravity="left"
+                app:labelText="@string/SoTienChuyenVND"
+                app:labelweight="5"
+                app:orientation="horizontal"
+                app:singleLine="true" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_CTin_chitiet_PhiChuyenTien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentgravity="left"
+                app:labelText="@string/PhiVND"
+                app:labelweight="5"
+                app:orientation="horizontal"
+                app:singleLine="true" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_CTin_chitiet_TongTien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentgravity="left"
+                app:labelText="@string/TongTienVND"
+                app:labelweight="5"
+                app:orientation="horizontal"
+                app:singleLine="true" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_CTin_chitiet_NoiDung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentgravity="left"
+                app:labelText="@string/NoiDung"
+                app:labelweight="5"
+                app:orientation="horizontal"
+                app:singleLine="true" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/edt_CTin_chitiet_tradingcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentColor="@color/white_text"
+                app:contentHint="@string/MaXacThuc"
+                app:contentgravity="left"
+                app:editable="true"
+                app:inputType="textPassword"
+                app:labelText="@string/MaXacThuc"
+                app:labelweight="5"
+                app:orientation="horizontal"
+                app:singleLine="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_CTin_chitiet_Accept"
+                    style="@style/Button_Background1"
+                    android:layout_width="0dp"
+                    android:layout_weight="5.0"
+                    android:text="@string/XacNhan" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<listmenu>
+
+    <tabmenu
+        class="com.fss.mobiletrading.function.placeorder.PlaceOrder"
+        icon="selector_slidemenu_datlenh"
+        title="Đặt lệnh" >
+    </tabmenu>
+    <tabmenu
+        class="com.fss.mobiletrading.function.placeorder.GTCPlaceOrder"
+        icon="selector_slidemenu_datlenhgtc"
+        title="Đặt lệnh điều kiện" >
+    </tabmenu>
+    <tabmenu
+        class="null"
+        icon="selector_slidemenu_solenh"
+        title="Sổ lệnh" >
+        <child>
+            <tabmenu
+                class="com.fss.mobiletrading.function.orderlist.NormalOrderList"
+                title="Sổ lệnh thường" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.orderlist.GTCOrderList"
+                title="Sổ lệnh điều kiện" >
+            </tabmenu>
+        </child>
+    </tabmenu>
+    <tabmenu
+        class="com.fss.mobiletrading.function.watchlist.WatchList"
+        icon="selector_slidemenu_banggia"
+        title="Bảng giá" >
+    </tabmenu>
+    <tabmenu
+        class="null"
+        icon="selector_slidemenu_chuyentien"
+        title="Chuyển tiền" >
+        <child>
+            <tabmenu
+                class="com.fss.mobiletrading.function.cashtransfer.CashTransfer"
+                title="Chuyển tiền" >
+            </tabmenu>
+            <!--<tabmenu-->
+                <!--class="com.fss.mobiletrading.function.cashtransfer.CashTransferRegister"-->
+                <!--title="Đăng ký người thụ hưởng" >-->
+            <!--</tabmenu>-->
+            <tabmenu
+                class="com.fss.mobiletrading.function.cashtransfer.CashTransferList"
+                title="Danh sách người thụ hưởng" >
+            </tabmenu>
+        </child>
+    </tabmenu>
+    <tabmenu
+        class="null"
+        icon="selector_slidemenu_giaodichdb"
+        title="Giao dịch đặc biệt" >
+        <child>
+            <tabmenu
+                class="com.fss.mobiletrading.function.rightoffregister.RightOffRegister"
+                title="Đăng ký quyền mua" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.stocktransfer.StockTransfer"
+                title="Chuyển khoản chứng khoán" >
+            </tabmenu>
+        </child>
+    </tabmenu>
+    <tabmenu
+        class="null"
+        icon="selector_slidemenu_quanlytk"
+        title="Quản lý tài khoản" >
+        <child>
+            <tabmenu
+                class="com.fss.mobiletrading.function.AccountBalance"
+                title="Số dư" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.portfolio.Porfolio"
+                title="Danh mục đầu tư" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.Statement"
+                title="Sao kê" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.OrderHistory"
+                title="Lịch sử khớp lệnh" >
+            </tabmenu>
+        </child>
+    </tabmenu>
+    <tabmenu
+        class="null"
+        icon="selector_slidemenu_thongtintt"
+        title="Thông tin thị trường" >
+        <child>
+            <tabmenu
+                class="com.fss.mobiletrading.function.market.MarketInfo"
+                title="Thị trường" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.notify.NotifyFragment"
+                title="Thông điệp FSC" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.coporateactions.CoporateActions"
+                title="Lịch sự kiện quyền" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.searchstock.SearchStock"
+                title="Thông tin chứng khoán" >
+            </tabmenu>
+        </child>
+    </tabmenu>
+    <tabmenu
+        class="null"
+        icon="selector_slidemenu_thongtinkh"
+        title="Thông tin khách hàng" >
+        <child>
+            <tabmenu
+                class="com.fss.mobiletrading.function.accountconfig.ChangePassword"
+                title="Đổi mật khẩu đăng nhập" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.accountconfig.ChangeTradingPassword"
+                title="Đổi PIN" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.accountconfig.AccountConfig"
+                title="Thay đổi thông tin cá nhân" >
+            </tabmenu>
+            <!--<tabmenu-->
+                <!--class="com.fss.mobiletrading.function.authorizationinfo.AuthorizationInfo"-->
+                <!--title="Thông tin người ủy quyền" >-->
+            <!--</tabmenu>-->
+        </child>
+    </tabmenu>
+    <tabmenu
+        class="com.fss.mobiletrading.function.AboutUs"
+        icon="selector_slidemenu_lienhe"
+        title="Liên hệ FSC" >
+    </tabmenu>
+    <tabmenu
+        class="null"
+        icon="selector_slidemenu_logout"
+        title="Đăng xuất" >
+    </tabmenu>
+
+</listmenu>

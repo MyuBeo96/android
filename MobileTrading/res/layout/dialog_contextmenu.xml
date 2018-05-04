@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="40dp"
+    android:background="@drawable/background_mycontextmenu"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <com.msbuat.mobiletrading.design.BoundedLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:maxheight="405dp" >
+
+        <ListView
+            android:id="@+id/lv_dialog_contextmenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/listview_separation_color"
+            android:scrollbars="none" >
+        </ListView>
+    </com.msbuat.mobiletrading.design.BoundedLinearLayout>
+
+    <TextView
+        android:id="@+id/text_dialog_contextmenu_cancel"
+        style="@style/Label_Style"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m_contextmenu_item_height"
+        android:gravity="center"
+        android:text="@string/Cancel"
+        android:textColor="@color/red_brown_text"
+        android:textSize="18sp" />
+
+</LinearLayout>

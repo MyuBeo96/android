@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+    compile project(':library')
+    compile project(':google-play-services_lib')
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:percent:23.1.1'
+    compile project(':designcontrol')
+    compile files('libs/java-websocket-1.3.1.jar')
+    compile files('libs/gson-2.2.2.jar')
+    compile files('libs/signalr-client-sdk.jar')
+
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    useLibrary "org.apache.http.legacy"
+
+    defaultConfig {
+        applicationId "com.msbuat.mobiletrading"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 25
+        versionName "2.1.1"
+        multiDexEnabled true
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            lintOptions {
+                disable 'MissingTranslation'
+                abortOnError false
+                ignoreWarnings true
+                checkReleaseBuilds false
+            }
+        }
+    }
+    productFlavors {
+        production{
+            buildConfigField "String", "address_server", '"https://hftsso.fss.com.vn/MFlexTest"'
+        }
+        development{
+            buildConfigField "String", "address_server", '"https://hftsso.fss.com.vn/MFlexTest"'
+        }
+        uat{
+            buildConfigField "String", "address_server", '""httcp://192.168.50.34/MFlexApps""'
+        }
+        systemTest{
+            buildConfigField "String", "address_server", '"http://192.168.18.190/MFlexApps"'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+}

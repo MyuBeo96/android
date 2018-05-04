@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText android:textCursorDrawable="@drawable/shape_textcursoredittext" xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/EditText_Style"
+    android:layout_width="fill_parent"
+    android:background="@drawable/background_edittext_1"
+    android:padding="10dp"
+    android:selectAllOnFocus="true"
+    android:singleLine="true"
+    android:textColor="#ff0099ff"
+    android:textSize="15.0sp" />

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/sccashtransfer_register"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/m_paddingLeft"
+    android:paddingRight="@dimen/m_paddingRight" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/edt_sctransferregis_accountbank"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_labelcontentverlayout_height"
+                app:contentColor="@color/white_text"
+                app:contentHint="@string/TaiKhoanNganHang"
+                app:editable="true"
+                app:labelText="@string/TaiKhoanNganHang"
+                app:orientation="vertical" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_sctransferregis_beneficiaryname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_labelcontentverlayout_height"
+                app:contentColor="@color/white_text"
+                app:contentHint="@string/TenNguoiThuHuong"
+                app:labelText="@string/TenNguoiThuHuong"
+                app:orientation="vertical"
+                app:singleLine="true" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_sctransferregis_branch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_labelcontentverlayout_height"
+                app:contentColor="@color/white_text"
+                app:contentHint="@string/PhongGiaoDich"
+                app:labelText="@string/PhongGiaoDich"
+                app:orientation="vertical"
+                app:singleLine="true" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_sctransferregis_city"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_labelcontentverlayout_height"
+                app:contentColor="@color/white_text"
+                app:contentHint="@string/TinhThanhPho"
+                app:labelText="@string/TinhThanhPho"
+                app:orientation="vertical"
+                app:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_DKCT_MSB_ChapNhan"
+            style="@style/Button_Background1"
+            android:layout_width="match_parent"
+            android:text="@string/XacNhan" />
+    </LinearLayout>
+
+</LinearLayout>

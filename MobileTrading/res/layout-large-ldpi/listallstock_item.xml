@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_listview_item"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/m_paddingLeft"
+    android:paddingRight="@dimen/m_paddingRight" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/img_listallstocks_item_selected"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_add" />
+
+        <TextView
+            android:id="@+id/text_listallstocks_item_symbol"
+            style="@style/Content_Style"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_listallstocks_item_selected" />
+
+        <TextView
+            android:id="@+id/text_listallstocks_item_name"
+            style="@style/Label_Style"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/text_listallstocks_item_symbol"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_listallstocks_item_selected"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+</LinearLayout>

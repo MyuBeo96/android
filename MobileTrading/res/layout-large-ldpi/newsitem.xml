@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/news_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_listviewitem_checked"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/m_paddingLeft"
+    android:paddingRight="@dimen/m_paddingRight" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <ImageView
+            android:id="@+id/img_tintuc_item_Right"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_arrow" />
+
+        <TextView
+            android:id="@+id/text_tintuc_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/img_tintuc_item_Right"
+            android:maxLines="2"
+            android:textColor="@color/news_title_color"
+            android:textSize="15.0sp" />
+
+        <TextView
+            android:id="@+id/text_tintuc_item_PostDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_tintuc_item_title"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/img_tintuc_item_Right"
+            android:textColor="@color/label_text_color"
+            android:textSize="11.0sp" />
+
+        <TextView
+            android:id="@+id/text_tintuc_item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_tintuc_item_PostDate"
+            android:layout_toLeftOf="@+id/img_tintuc_item_Right"
+            android:maxLines="2"
+            android:textColor="@color/label_text_color"
+            android:textSize="14.0sp" />
+    </RelativeLayout>
+
+</LinearLayout>

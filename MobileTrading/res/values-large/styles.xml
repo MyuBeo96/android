@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Theme.Base.AppCompat.Dialog.Light.FixedSize" parent="@style/Theme.Base.AppCompat.Dialog.Light.FixedSize" />
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+
+    <style name="MyTheme.ActionBarStyle" parent="@style/ActionBar">
+        <item name="android:background">#444444</item>
+        <item name="android:titleTextStyle">@style/TextAppearance</item>
+    </style>
+
+    <style name="TextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">#99ffffff</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Table_Header">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/header_text_color</item>
+        <item name="android:background">@drawable/background_header</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:layout_height">@dimen/m_header_height</item>
+    </style>
+
+    <style name="Button_Background1">
+        <item name="android:textSize">@dimen/m_button_textsize</item>
+        <item name="android:textColor">@color/button_text_color</item>
+        <item name="android:background">@drawable/t_backgroundbutton_red</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_height">@dimen/m_button_height</item>
+    </style>
+
+    <style name="EditText_Style">
+        <item name="android:textSize">@dimen/m_edittext_size</item>
+        <item name="android:background">@color/edittext_background_color</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/edittext_text_color</item>
+        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_height">@dimen/m_text_height</item>
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:inputType">textNoSuggestions</item>
+        <item name="android:textColorHint">@color/edittext_hint_color</item>
+    </style>
+
+    <style name="Label_Style">
+        <item name="android:textSize">@dimen/m_label_size</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/label_text_color</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">@dimen/m_text_height</item>
+    </style>
+
+    <style name="Content_Style">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/content_text_color</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:textColorHint">@color/text_hint_color</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">@dimen/m_text_height</item>
+    </style>
+
+    <style name="Label_Background3">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/label_text_color</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">@dimen/m_text_height</item>
+    </style>
+
+    <style name="label_style1">
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+
+    <style name="imageview_loading">
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:src">@drawable/ic_loading</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="ActionBar">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/header_height</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/actionbar_background</item>
+    </style>
+
+    <style name="TabSelector">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:background">@drawable/selector_menu_tab_selector</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">@color/white_text</item>
+    </style>
+
+    <style name="Spinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/m_spinner_height</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="cusDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowTitleStyle">@style/dialog_title_style</item>
+    </style>
+
+    <style name="dialog_title_style" parent="android:Widget.TextView">
+        <item name="android:background">@drawable/header_dialogfragment</item>
+        <item name="android:textColor">@color/actionbar_title_color</item>
+        <item name="android:textSize">@dimen/actionbar_title_size</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="cusAlertDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowTitleStyle">@style/alertdialog_title_style</item>
+        <item name="android:windowBackground">@color/alertdialog_background_color</item>
+    </style>
+
+    <style name="alertdialog_title_style" parent="android:Widget.TextView">
+        <item name="android:background">@color/alertdialog_background_color</item>
+        <item name="android:textColor">@color/white_text</item>
+        <item name="android:textSize">@dimen/actionbar_title_size</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="LabelContentLayout_Style">
+       <item name="android:layout_width">0dp</item>
+       <item name="android:layout_height">@dimen/t_cashtransfer_frame_content</item>
+       <item name="android:layout_weight">1</item>
+    </style>
+<style name="LabelContentLayoutMarginLeft_Style">
+       <item name="android:layout_width">0dp</item>
+       <item name="android:layout_height">@dimen/t_cashtransfer_frame_content</item>
+       <item name="android:layout_weight">1</item>
+       <item name="android:layout_marginLeft">@dimen/t_cashtransfer_frame_marginLeft</item>
+    </style>
+</resources>

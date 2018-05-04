@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/alert_coban"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText android:textCursorDrawable="@drawable/shape_textcursoredittext"
+                android:id="@+id/edt_alert_coban_symbols"
+                style="@style/EditText_Style"
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:hint="@string/CK1CK2CK3"
+                android:inputType="textCapCharacters" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/btn_alert_coban_dautucoban"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/lbl_alert_coban_EPS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/boloc_EPS"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <TextView
+                            android:id="@+id/text_alert_coban_DescEPS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/lbl_alert_coban_EPS"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/text_alert_coban_DescEPS"
+                            android:text="@string/VND"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <com.msbuat.mobiletrading.design.RangeSeekBarLayout
+                            android:id="@+id/seekbar_alert_coban_EPS"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lbl_alert_coban_EPS"
+                            android:layout_marginLeft="10dp"
+                            app:maxValue="20"
+                            app:minValue="0" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/lbl_alert_coban_PE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/boloc_PE"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <TextView
+                            android:id="@+id/text_alert_coban_DescPE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/lbl_alert_coban_PE"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/text_alert_coban_DescPE"
+                            android:text="@string/lan"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <com.msbuat.mobiletrading.design.RangeSeekBarLayout
+                            android:id="@+id/seekbar_alert_coban_PE"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lbl_alert_coban_PE"
+                            android:layout_marginLeft="10dp"
+                            app:maxValue="50"
+                            app:minValue="0" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/lbl_alert_coban_ROE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/boloc_ROE"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <TextView
+                            android:id="@+id/text_alert_coban_DescROE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/lbl_alert_coban_ROE"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/text_alert_coban_DescROE"
+                            android:text="@string/percent"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <com.msbuat.mobiletrading.design.RangeSeekBarLayout
+                            android:id="@+id/seekbar_alert_coban_ROE"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lbl_alert_coban_ROE"
+                            android:layout_marginLeft="10dp"
+                            app:maxValue="20"
+                            app:minValue="0" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/lbl_alert_coban_ROA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/boloc_ROA"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <TextView
+                            android:id="@+id/text_alert_coban_DescROA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/lbl_alert_coban_ROA"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/text_alert_coban_DescROA"
+                            android:text="@string/percent"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <com.msbuat.mobiletrading.design.RangeSeekBarLayout
+                            android:id="@+id/seekbar_alert_coban_ROA"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lbl_alert_coban_ROA"
+                            android:layout_marginLeft="10dp"
+                            app:maxValue="20"
+                            app:minValue="0" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/lbl_alert_coban_PB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/boloc_PB"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <TextView
+                            android:id="@+id/text_alert_coban_DescPB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/lbl_alert_coban_PB"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/text_alert_coban_DescPB"
+                            android:text="@string/percent"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <com.msbuat.mobiletrading.design.RangeSeekBarLayout
+                            android:id="@+id/seekbar_alert_coban_PB"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lbl_alert_coban_PB"
+                            android:layout_marginLeft="10dp"
+                            app:maxValue="40"
+                            app:minValue="0" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/lbl_alert_coban_Beta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/boloc_Beta"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <TextView
+                            android:id="@+id/text_alert_coban_DescBeta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/lbl_alert_coban_Beta"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/text_alert_coban_DescBeta"
+                            android:text="@string/lan"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <com.msbuat.mobiletrading.design.RangeSeekBarLayout
+                            android:id="@+id/seekbar_alert_coban_Beta"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lbl_alert_coban_Beta"
+                            android:layout_marginLeft="10dp"
+                            app:maxValue="30"
+                            app:minValue="0" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/lbl_alert_coban_GiaHT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/boloc_GiaHT"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <TextView
+                            android:id="@+id/text_alert_coban_DescGiaHT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/lbl_alert_coban_GiaHT"
+                            android:textColor="#ffffffff"
+                            android:textSize="13.0sp" />
+
+                        <com.msbuat.mobiletrading.design.RangeSeekBarLayout
+                            android:id="@+id/seekbar_alert_coban_GiaHT"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lbl_alert_coban_GiaHT"
+                            android:layout_marginLeft="10dp"
+                            app:maxValue="40"
+                            app:minValue="0" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_alert_coban_dautucoban"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/background_edittext_1"
+                    android:text="@string/dau_tu_co_ban"
+                    android:textColor="#ffffffff" />
+
+                <Button
+                    android:id="@+id/btn_alert_coban_dautuhieuqua"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/btn_alert_coban_dautucoban"
+                    android:background="@drawable/background_edittext_1"
+                    android:text="@string/dau_tu_hieu_qua"
+                    android:textColor="#ffffffff" />
+
+                <Button
+                    android:id="@+id/btn_alert_coban_dautuluotsong"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/btn_alert_coban_dautuhieuqua"
+                    android:background="@drawable/background_edittext_1"
+                    android:text="@string/dau_tu_luot_song"
+                    android:textColor="#ffffffff" />
+            </RelativeLayout>
+
+            <CheckBox
+                android:id="@+id/checkBox_alert_coban_SendEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/SendEmail"
+                android:textColor="#ffffffff" />
+
+            <TextView
+                android:id="@+id/text_alert_coban_Desc"
+                style="@style/Label_Style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_alert_coban_CapNhat"
+                    style="@style/Button_Background1"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="5.0"
+                    android:text="@string/cap_nhat" />
+
+                <Button
+                    android:id="@+id/btn_alert_coban_Default"
+                    style="@style/Button_Background1"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="5.0"
+                    android:text="@string/MacDinh" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/Label_Style"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/button_not_select2"
+                    android:singleLine="true"
+                    android:text="@string/ngay_tao" />
+
+                <TextView
+                    style="@style/Label_Style"
+                    android:layout_width="0dp"
+                    android:layout_weight="4.0"
+                    android:background="@drawable/button_not_select2"
+                    android:singleLine="true"
+                    android:text="@string/dieu_kien" />
+
+                <TextView
+                    style="@style/Label_Style"
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/button_not_select2"
+                    android:singleLine="true"
+                    android:text="@string/danh_sach_ma" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listview_alert_coban"
+                android:layout_width="fill_parent"
+                android:layout_height="150dp"
+                android:divider="@color/listview_separation_color"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

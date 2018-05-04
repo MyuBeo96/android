@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/t_header_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/Muc" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:singleLine="false"
+                    android:text="@string/TongCong" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:singleLine="false"
+                    android:text="@string/HienCo" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/ChoVeQuyen" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/ChoKhop" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/GiaThiTruong" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/GiaTriThiTruong" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/ChoVeT0" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/ChoVeT1" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/ChoVeT2" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/ChoVeT3"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/GiaVon" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/GiaTriVon" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/LaiLo" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/PercentLaiLo" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/header_separation_color" />
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/pull_refresh_Porfolio"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:divider="@color/listview_separation_color"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:focusableInTouchMode="true"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:scrollbars="none"
+                android:smoothScrollbar="true"
+                ptr:ptrHeaderTextAppearance="@style/TextAppearance" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

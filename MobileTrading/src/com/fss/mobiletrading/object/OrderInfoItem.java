@@ -1,0 +1,81 @@
+package com.fss.mobiletrading.object;
+
+import java.util.HashMap;
+
+public class OrderInfoItem {
+	public String AfAcctno;
+	public String BalanceInfo;
+	public String BuyingInfo;
+	public String CancelQtty;
+	public String CustodyCd;
+	public String Fee;
+	public String Matched;
+	public String MatchedPrice;
+	public String ModifiedPrice;
+	public String ModifiedQtty;
+	public String OrderId;
+	public String Price;
+	public String PriceInfo;
+	public String PriceType;
+	public String Qtty;
+	public String RemainQtty;
+	public String RootOrderId;
+	public String SEInfo;
+	public String SelectedSymbol;
+	public String Side;
+	public String Status;
+	public String Symbol;
+	public String Time;
+	public String TotalValue;
+	public String TradingPassword;
+	public String WarningMessage;
+	public String feedbackMsg;
+	public String fromDate;
+	public String isCancellable;
+	public String isModifiable;
+	public String orderIDDesc;
+	public String statusValue;
+	public String toDate;
+	public String MaxQty;
+	public String Rtt;
+	public String MRRATIOLOAN;
+
+	public OrderInfoItem(HashMap<String, String> hm) {
+		OrderId = hm.get("OrderId");
+		CustodyCd = hm.get("CustodyCd");
+		AfAcctno = hm.get("AfAcctno");
+		Symbol = hm.get("Symbol");
+		PriceType = hm.get("PriceType");
+		Price = hm.get("Price");
+		Qtty = hm.get("Qtty");
+		Side = hm.get("Side");
+		Matched = hm.get("Matched");
+		MatchedPrice = hm.get("MatchedPrice");
+		ModifiedQtty = hm.get("ModifiedQtty");
+		ModifiedPrice = hm.get("ModifiedPrice");
+		Status = hm.get("Status");
+		TradingPassword = hm.get("TradingPassword");
+		SelectedSymbol = hm.get("SelectedSymbol");
+		PriceInfo = hm.get("PriceInfo");
+		BalanceInfo = hm.get("BalanceInfo");
+		BuyingInfo = hm.get("BuyingInfo");
+		Fee = hm.get("Fee");
+		SEInfo = hm.get("SEInfo");
+		WarningMessage = hm.get("WarningMessage");
+		RootOrderId = hm.get("RootOrderId");
+		orderIDDesc = hm.get("orderIDDesc");
+		RemainQtty = hm.get("RemainQtty");
+		CancelQtty = hm.get("CancelQtty");
+		statusValue = hm.get("statusValue");
+		feedbackMsg = hm.get("feedbackMsg");
+		Time = hm.get("Time");
+		isModifiable = hm.get("isModifiable");
+		isCancellable = hm.get("isCancellable");
+		fromDate = hm.get("fromDate");
+		toDate = hm.get("toDate");
+		TotalValue = hm.get("TotalValue");
+		MaxQty = hm.get("MaxQty");
+		Rtt = hm.get("Rtt");
+		MRRATIOLOAN = hm.get("MRRATIOLOAN");
+	}
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lin_marketindex_tradelog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/listview_separation_color" />
+
+        <LinearLayout
+            android:id="@+id/lin_marketindex_tradelog_tittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/listview_separation_color" />
+
+            <TextView
+                android:id="@+id/time"
+                style="@style/Table_Header"
+                android:layout_weight="1"
+                android:text="@string/ThoiGian"
+                android:textAllCaps="false" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/listview_separation_color" />
+
+            <TextView
+                android:id="@+id/index"
+                style="@style/Table_Header"
+                android:layout_weight="1"
+                android:text="@string/ChiSo"
+                android:textAllCaps="false" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/listview_separation_color" />
+
+            <TextView
+                android:id="@+id/change"
+                style="@style/Table_Header"
+                android:layout_weight="1"
+                android:text="@string/ThayDoi"
+                android:textAllCaps="false" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/listview_separation_color" />
+
+            <TextView
+                android:id="@+id/volume"
+                style="@style/Table_Header"
+                android:layout_weight="1"
+                android:text="@string/KhoiLuong_2"
+                android:textAllCaps="false" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/listview_separation_color" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/listview_separation_color" />
+
+        <ListView
+            android:id="@+id/livTradelog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

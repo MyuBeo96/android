@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/contextmenu_item_solenhgtc_huy"
+        android:title="@string/HuyLenh"/>
+    <item
+        android:id="@+id/contextmenu_item_solenhgtc_mua"
+        android:title="@string/Mua"/>
+    <item
+        android:id="@+id/contextmenu_item_solenhgtc_ban"
+        android:title="@string/Ban"/>
+    <item
+        android:id="@+id/contextmenu_item_solenhgtc_filter"
+        android:title="@string/LocTheoMaCK"/>
+
+</menu>

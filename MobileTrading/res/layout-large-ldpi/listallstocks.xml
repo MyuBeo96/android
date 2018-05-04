@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listallstocks"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_fragment"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal" >
+
+        <com.msbuat.mobiletrading.design.SearchStockUI
+            android:id="@+id/searchtext_listallstock_symbol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@+id/btn_listallstock_cancel" />
+
+        <Button
+            android:id="@+id/btn_listallstock_cancel"
+            style="@style/Button_Background1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/m_text_height"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_listallstock_save"
+            android:background="@drawable/bg_grey_button_corner5"
+            android:text="@string/Cancel"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_listallstock_save"
+            style="@style/Button_Background1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/m_text_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/DongY"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <ListView
+        android:id="@+id/listview_listallstocks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+    </ListView>
+
+</LinearLayout>

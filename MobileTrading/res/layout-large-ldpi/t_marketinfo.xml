@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/t_marketinfo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_fragment"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollview_index"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/t_market_scrollview_indices"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.msbuat.mobiletrading.design.Indices_View
+                    android:id="@+id/indices_marketinfo_HOSE"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:paddingLeft="@dimen/t_paddingLeft"
+                    android:paddingRight="@dimen/t_paddingRight" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/header_separation_color" />
+
+                <ImageView
+                    android:id="@+id/img_graphchart_HOSE"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/header_separation_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.msbuat.mobiletrading.design.Indices_View
+                    android:id="@+id/indices_marketinfo_HNX"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:paddingLeft="@dimen/t_paddingLeft"
+                    android:paddingRight="@dimen/t_paddingRight" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/header_separation_color" />
+
+                <ImageView
+                    android:id="@+id/img_graphchart_HNX"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/header_separation_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.msbuat.mobiletrading.design.Indices_View
+                    android:id="@+id/indices_marketinfo_UPCOM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:paddingLeft="@dimen/t_paddingLeft"
+                    android:paddingRight="@dimen/t_paddingRight" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/header_separation_color" />
+
+                <ImageView
+                    android:id="@+id/img_graphchart_UPCOM"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/header_background_color"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp" >
+
+        <TextView
+            style="@style/Label_Style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/searchtext_listview"
+            android:gravity="center"
+            android:text="@string/TinTuc" />
+
+        <com.msbuat.mobiletrading.design.SearchTextUI
+            android:id="@+id/searchtext_listview"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/img_refresh" />
+
+        <ImageView
+            android:id="@+id/img_refresh"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/img_expand"
+            android:background="@drawable/actionbar_btn"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_news_refresh" />
+
+        <ImageView
+            android:id="@+id/img_expand"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/actionbar_btn"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_news_zoom" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/listview_News"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.7"
+            android:background="@color/bg_fragment"
+            android:choiceMode="singleChoice"
+            android:divider="@color/listview_separation_color"
+            android:dividerHeight="0.5dp"
+            android:listSelector="@color/bg_listviewitemselected"
+            android:scrollbars="none" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/listview_separation_color" />
+
+        <LinearLayout
+            android:id="@+id/t_marketinfo_container_newsdetails"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6.3"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

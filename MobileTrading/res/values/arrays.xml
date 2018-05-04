@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="menu_function_title">
+        <item>Đặt lệnh</item>
+        <item>Bảng giá</item>
+        <item>Thông tin thị trường</item>
+        <item>Tin tổng hợp</item>
+        <item>Thông điệp VCBS</item>
+        <item>Lịch sự kiện</item>
+        <item>Sổ lệnh</item>
+        <item>Sổ lệnh thường</item>
+        <item>Sổ lệnh điều kiện</item>
+        <item>Quản lý tài khoản</item>
+        <item>Số dư</item>
+        <item>Danh mục chứng khoán</item>
+        <item>Sao kê</item>
+        <item>Sao kê tiền</item>
+        <item>Sao kê chứng khoán</item>
+        <item>Lịch sử khớp lệnh</item>
+        <item>Lịch sử chuyển tiền</item>
+        <item>Lịch sử đăng ký quyền mua</item>
+        <item>Lịch sử ứng trước</item>
+        <item>Chuyển tiền</item>
+        <item>Chuyển tiền</item>
+        <item>Chuyển tiền sang MSB</item>
+        <item>Chuyển tiền ra ngoài</item>
+        <item>Đăng ký chuyển tiền</item>
+        <item>Đăng ký chuyển tiền ra ngoài cùng CTCK</item>
+        <item>Đăng ký chuyển tiền ra ngoài khác ngân hàng</item>
+        <item>Giao dịch đặc biệt</item>
+        <item>Ứng trước</item>
+        <item>Chuyển khoản chứng khoán</item>
+        <item>Đăng ký quyền mua</item>
+        <item>Bộ lọc và cảnh báo</item>
+        <item>Bộ lọc cổ phiếu</item>
+        <item>Bộ lọc cảnh báo</item>
+        <item>Hệ thống và tài khoản</item>
+        <item>Thiết lập tài khoản</item>
+        <item>Đổi mật khẩu giao dịch</item>
+        <item>Ngôn ngữ</item>
+        <item>Thông tin liên hệ</item>
+        <item>Đăng xuất</item>
+        <item>Chọn tiểu khoản</item>
+        <item>Báo cáo</item>
+        <item>Tin từ CTCK</item>
+        <item>Danh sách người thụ hưởng</item>
+        <item>Đặt lệnh điều kiện</item>
+        <item>Đăng ký bán lô lẻ</item>
+        <item>Xác nhận lệnh</item>
+        <item>Thông tin người ủy quyền</item>
+        <item>Tra cứu chứng khoán</item>
+    </string-array>
+    <string-array name="listBoLocCP">
+        <item>Bộ lọc đột biến giá</item>
+        <item>Bộ lọc đột biến khối lượng</item>
+        <item>Bộ lọc đột biến KL và giá</item>
+        <item>Bộ lọc đột biến cơ bản</item>
+    </string-array>
+    <string-array name="listAlert">
+        <item>Cảnh báo đột biến giá</item>
+        <item>Cảnh báo đột biến khối lượng</item>
+        <item>Cảnh báo đột biến KL và giá</item>
+        <item>Cảnh báo đột biến cơ bản</item>
+        <item>Danh sách cảnh báo chạm ngưỡng</item>
+    </string-array>
+    <string-array name="DBKhoiLuong_DotBienTrong">
+        <item>1 tuần</item>
+        <item>2 tuần</item>
+        <item>1 tháng</item>
+        <item>2 tháng</item>
+        <item>3 tháng</item>
+        <item>6 tháng</item>
+        <item>12 tháng</item>
+    </string-array>
+    <string-array name="DBKhoiLuong_TyLeDotBien">
+        <item>2 lần</item>
+        <item>3 lần</item>
+        <item>4 lần</item>
+        <item>5 lần</item>
+        <item>6 lần</item>
+        <item>7 lần</item>
+        <item>8 lần</item>
+        <item>9 lần</item>
+    </string-array>
+    <string-array name="DBKhoiLuong_KhoiLuongDB">
+        <item>100,000</item>
+        <item>200,000</item>
+        <item>300,000</item>
+        <item>400,000</item>
+        <item>500,000</item>
+        <item>1,000,000</item>
+        <item>2,000,000</item>
+    </string-array>
+    <string-array name="DBGia_DotBienTrong">
+        <item>1 tháng</item>
+        <item>2 tháng</item>
+        <item>3 tháng</item>
+        <item>6 tháng</item>
+        <item>12 tháng</item>
+    </string-array>
+    <string-array name="DBGia_KhoiLuongDB">
+        <item>0</item>
+        <item>100,000</item>
+        <item>200,000</item>
+        <item>300,000</item>
+        <item>400,000</item>
+        <item>500,000</item>
+        <item>1,000,000</item>
+        <item>2,000,000</item>
+    </string-array>
+    <string-array name="DBGiaGiaKhoiLuong_TyLeDotBien">
+        <item>0</item>
+        <item>2 lần</item>
+        <item>3 lần</item>
+        <item>4 lần</item>
+        <item>5 lần</item>
+        <item>6 lần</item>
+        <item>7 lần</item>
+        <item>8 lần</item>
+    </string-array>
+    <string-array name="DBGiaGiaKhoiLuong_GiaDotBien">
+        <item>Giá tăng >=1%</item>
+        <item>Giá tăng >=2%</item>
+        <item>Giá tăng >=3%</item>
+        <item>Giá giảm >=1%</item>
+        <item>Giá giảm >=2%</item>
+        <item>Giá giảm >=3%</item>
+    </string-array>
+    <string-array name="ConfirmOrder_ExecType">
+        <item>Tất cả#ALL</item>
+        <item>Mua#NB</item>
+        <item>Bán#NS</item>
+        <item>Bán cầm cố#MS</item>
+        <item>Hủy mua#CB</item>
+        <item>Hủy bán#CS</item>
+        <item>Sửa mua#AB</item>
+        <item>Sửa bán#AS</item>
+    </string-array>
+
+</resources>

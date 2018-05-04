@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal" >
+
+        <com.msbuat.mobiletrading.design.InputDate
+            android:id="@+id/edt_confirmorder_fromdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5" />
+
+        <com.msbuat.mobiletrading.design.InputDate
+            android:id="@+id/edt_confirmorder_todate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="5" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <com.msbuat.mobiletrading.design.MySpinner
+            android:id="@+id/spn_confirmorder_exectype"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:hasLabel="true"
+            app:textMySpinner="@string/Mua_Ban" />
+
+        <Button
+            android:id="@+id/btn_confirmorder_update"
+            style="@style/Button_Background1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/btn_confirmorder_confirm"
+            android:text="@string/cap_nhat" />
+
+        <Button
+            android:id="@+id/btn_confirmorder_confirm"
+            style="@style/Button_Background1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="@string/XacNhan" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_weight="1.5"
+            android:text="@string/MaCK" />
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/header_separation_color" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_weight="1.5"
+            android:text="@string/KhoiLuong" />
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/header_separation_color" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_weight="2.0"
+            android:text="@string/Gia" />
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/header_separation_color" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_weight="2.0"
+            android:text="@string/Mua_Ban" />
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/header_separation_color" />
+
+        <CheckBox
+            android:id="@+id/checkbox_confirmorder_check"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:checked="true" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview_confirm_order"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/listview_separation_color"
+        android:scrollbars="none" />
+
+</LinearLayout>

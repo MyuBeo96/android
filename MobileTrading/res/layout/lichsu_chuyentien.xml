@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/lay_LichSuCT1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" >
+
+        <EditText android:textCursorDrawable="@drawable/shape_textcursoredittext"
+            android:id="@+id/edt_LichSuCT_TuNgay"
+            style="@style/EditText_Style"
+            android:layout_width="200dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:hint="@string/TuNgay"
+            android:inputType="none" />
+
+        <EditText android:textCursorDrawable="@drawable/shape_textcursoredittext"
+            android:id="@+id/edt_LichSuCT_DenNgay"
+            style="@style/EditText_Style"
+            android:layout_width="200dp"
+            android:layout_below="@+id/edt_LichSuCT_TuNgay"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:hint="@string/DenNgay"
+            android:inputType="none" />
+
+        <Button
+            android:id="@+id/btn_LichSuCT_Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/edt_LichSuCT_DenNgay"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/edt_LichSuCT_DenNgay"
+            android:background="@drawable/background_button"
+            android:text="@string/XacNhan"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_fragment2" >
+
+        <LinearLayout
+            android:id="@+id/lay_header"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.0"
+                android:background="@drawable/bg_report_result_header"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/lichsuct_NgayThucHien"
+                android:textColor="#ffffffff"
+                android:textSize="14.0sp"
+                 />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.0"
+                android:background="@drawable/bg_report_result_header"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/SoTaiKhoanNhan"
+                android:textColor="#ffffffff"
+                android:textSize="14.0sp"
+                 />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.0"
+                android:background="@drawable/bg_report_result_header"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/SoTienChuyenVND"
+                android:textColor="#ffffffff"
+                android:textSize="14.0sp"
+                 />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.0"
+                android:background="@drawable/bg_report_result_header"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/TrangThai"
+                android:textColor="#ffffffff"
+                android:textSize="14.0sp"
+                 />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_header"
+            android:layout_centerHorizontal="true"
+            android:text="@string/error_no_data_to_display"
+            android:textColor="#ff888888" />
+
+        <TextView
+            android:id="@+id/text_lichsuct_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_header"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Loading..."
+            android:textColor="#ff888888"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/listview_LichSuCT"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_header"
+            android:background="@color/bg_fragment"
+            android:divider="@color/listview_separation_color"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/chuyenkhoan_chungkhoan"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/m_paddingLeft"
+    android:paddingRight="@dimen/m_paddingRight" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.msbuat.mobiletrading.design.MySpinner
+                android:id="@+id/spn_ChuyenKhoanCK_senderafacctno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hasLabel="true"
+                app:textMySpinner="@string/TieuKhoanChuyen" />
+
+            <com.msbuat.mobiletrading.design.MySpinner
+                android:id="@+id/spn_ChuyenKhoanCK_TKNhan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hasLabel="true"
+                app:textMySpinner="@string/chuyenkhoanck_label_TKNhan" />
+
+            <com.msbuat.mobiletrading.design.MySpinner
+                android:id="@+id/spn_ChuyenKhoanCK_MaCK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hasLabel="true"
+                app:textMySpinner="@string/MaChungKhoan" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_ChuyenKhoanCK_HienCo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_labelcontentverlayout_height"
+                app:labelText="@string/SLCoTheChuyen"
+                app:orientation="vertical" />
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/edt_ChuyenKhoanCK_SoLuong"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_labelcontentverlayout_height"
+                app:contentColor="@color/white_text"
+                app:contentHint="@string/SoLuongChuyen"
+                app:digits="0123456789.,"
+                app:editable="true"
+                app:inputType="number"
+                app:labelText="@string/SoLuongChuyen"
+                app:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_ChuyenKhoanCK_ChapNhan"
+                    style="@style/Button_Background1"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:text="@string/XacNhan" />
+
+                <Button
+                    android:id="@+id/btn_ChuyenKhoanCK_Clear"
+                    style="@style/Button_Background1"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

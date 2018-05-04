@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10.0" >
+
+            <TextView
+                android:id="@+id/lbl_DSCBCNg_LoaiCB"
+                style="@style/Label_Style"
+                android:layout_width="0dp"
+                android:layout_weight="2.0"
+                android:gravity="center"
+                android:text="@string/dscbdb_lbl_LoaiCB"
+                android:textSize="11.0sp" />
+
+            <TextView
+                android:id="@+id/lbl_DSCBCNg_DieuKien"
+                style="@style/Label_Style"
+                android:layout_width="0dp"
+                android:layout_weight="4.5"
+                android:gravity="center"
+                android:text="@string/dieu_kien"
+                android:textSize="11.0sp" />
+
+            <TextView
+                android:id="@+id/lbl_DSCBCNg_MaCK"
+                style="@style/Label_Style"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="@string/MaCK"
+                android:textSize="11.0sp" />
+
+            <TextView
+                android:id="@+id/lbl_DSCBCNg_ThoiGianCham"
+                style="@style/Label_Style"
+                android:layout_width="0dp"
+                android:layout_weight="2.0"
+                android:gravity="center"
+                android:text="@string/dscbdb_lbl_ThoiGianCham"
+                android:textSize="11.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ffff9900" />
+
+        <ListView
+            android:id="@+id/listview_DSCBChamNguong"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/listview_separation_color" android:scrollbars="none" />
+    </LinearLayout>
+
+</LinearLayout>

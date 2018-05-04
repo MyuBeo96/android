@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/edittext"
+        style="@style/Content_Style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/error_no_data_to_display"
+            android:textColor="#ff888888" />
+
+        <ListView
+            android:id="@+id/listview_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_dialogfragment"
+            android:divider="@color/listview_separation_color"
+            android:dividerHeight="0.5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:scrollbars="none" >
+        </ListView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/listview_result"
+            android:background="@color/header_separation_color" />
+    </RelativeLayout>
+
+</LinearLayout>

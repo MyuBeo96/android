@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<listmenu>
+
+    <tabmenu
+        class="com.fss.mobiletrading.function.market.T_MarketInfo"
+        title="市场" >
+    </tabmenu>
+    <tabmenu
+        class="com.fss.mobiletrading.function.watchlist.StockItemInformation"
+        title="证券" >
+    </tabmenu>
+    <tabmenu
+        class="null"
+        title="交易" >
+        <child>
+            <tabmenu
+                style="1"
+                class="null"
+                title="订单记录" >
+                <child>
+                    <tabmenu
+                        style="1"
+                        class="com.fss.mobiletrading.function.orderlist.NormalOrderList"
+                        title="Sổ lệnh thường" >
+                    </tabmenu>
+                    <tabmenu
+                        style="1"
+                        class="com.fss.mobiletrading.function.orderlist.GTCOrderList"
+                        title="条件订单列表" >
+                    </tabmenu>
+                </child>
+            </tabmenu>
+            <tabmenu
+                style="1"
+                class="null"
+                title="转账" >
+                <child>
+                    <tabmenu
+                        style="2"
+                        class="com.fss.mobiletrading.function.cashtransfer.CashTransfer"
+                        title="转账" >
+                    </tabmenu>
+                    <!--<tabmenu-->
+                    <!--style="2"-->
+                    <!--class="com.fss.mobiletrading.function.cashtransfer.CashTransferRegister"-->
+                    <!--title="Đăng ký người thụ hưởng" >-->
+                    <!--</tabmenu>-->
+                    <tabmenu
+                        style="2"
+                        class="com.fss.mobiletrading.function.cashtransfer.CashTransferList"
+                        title="收款人列表" >
+                    </tabmenu>
+                </child>
+            </tabmenu>
+            <tabmenu
+                style="1"
+                class="null"
+                title="Giao dịch đặc biệt" >
+                <child>
+                    <tabmenu
+                        style="2"
+                        class="com.fss.mobiletrading.function.rightoffregister.RightOffRegister"
+                        title="登记购买权" >
+                    </tabmenu>
+                    <tabmenu
+                        style="2"
+                        class="com.fss.mobiletrading.function.stocktransfer.StockTransfer"
+                        title="证券转账" >
+                    </tabmenu>
+                </child>
+            </tabmenu>
+        </child>
+    </tabmenu>
+    <!-- <tabmenu -->
+    <!-- class="null" -->
+    <!-- title="Lệnh điều kiện" > -->
+    <!-- </tabmenu> -->
+
+    <tabmenu
+        class="null"
+        title="账户管理" >
+        <child>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.AccountBalance"
+                title="余额" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.portfolio.Porfolio"
+                title="投资组合" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.Statement"
+                title="银行账号明细表" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.OrderHistory"
+                title="成交历史" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.coporateactions.CoporateActions"
+                title="公司活动详情公（公司行事歷）" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.searchstock.SearchStock"
+                title="证券信息" >
+            </tabmenu>
+        </child>
+    </tabmenu>
+    <tabmenu
+        class="com.fss.mobiletrading.function.accountconfig.AccountConfig"
+        title="个人信息" >
+    </tabmenu>
+
+</listmenu>

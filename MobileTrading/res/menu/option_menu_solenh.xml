@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/option_menu_item_CancelFilterBySymbol"
+        android:title="@string/BoLoc"
+        app:showAsAction="always"/>
+
+</menu>

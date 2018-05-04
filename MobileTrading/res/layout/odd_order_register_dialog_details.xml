@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/odd_order_register_dialog_details"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/lbl_oddorderregisterdetails_symbol"
+                    style="@style/Label_Style"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/MaCK" />
+
+                <TextView
+                    android:id="@+id/text_oddorderregisterdetails_symbol"
+                    style="@style/Content_Style"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/lbl_oddorderregisterdetails_symbol" />
+
+                <TextView
+                    android:id="@+id/lbl_oddorderregisterdetails_quantity"
+                    style="@style/Label_Style"
+                    android:layout_below="@+id/lbl_oddorderregisterdetails_symbol"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/SoLuongBan" />
+
+                <TextView
+                    android:id="@+id/text_oddorderregisterdetails_quantity"
+                    style="@style/Content_Style"
+                    android:layout_below="@+id/lbl_oddorderregisterdetails_symbol"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/lbl_oddorderregisterdetails_quantity" />
+
+                <TextView
+                    android:id="@+id/lbl_oddorderregisterdetails_price"
+                    style="@style/Label_Style"
+                    android:layout_below="@+id/lbl_oddorderregisterdetails_quantity"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/GiaBan" />
+
+                <TextView
+                    android:id="@+id/text_oddorderregisterdetails_price"
+                    style="@style/Content_Style"
+                    android:layout_below="@+id/lbl_oddorderregisterdetails_quantity"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/lbl_oddorderregisterdetails_price" />
+
+                <TextView
+                    android:id="@+id/lbl_oddorderregisterdetails_value"
+                    style="@style/Label_Style"
+                    android:layout_below="@+id/lbl_oddorderregisterdetails_price"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/GiaTri" />
+
+                <TextView
+                    android:id="@+id/text_oddorderregisterdetails_value"
+                    style="@style/Content_Style"
+                    android:layout_below="@+id/lbl_oddorderregisterdetails_price"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/lbl_oddorderregisterdetails_value" />
+
+                <TextView
+                    android:id="@+id/lbl_oddorderregisterdetails_fee"
+                    style="@style/Label_Style"
+                    android:layout_below="@+id/lbl_oddorderregisterdetails_value"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/PhiGiaoDich" />
+
+                <TextView
+                    android:id="@+id/text_oddorderregisterdetails_fee"
+                    style="@style/Content_Style"
+                    android:layout_below="@+id/lbl_oddorderregisterdetails_value"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/lbl_oddorderregisterdetails_fee" />
+
+                <TextView
+                    android:id="@+id/lbl_oddorderregisterdetails_tax"
+                    style="@style/Label_Style"
+                    android:layout_below="@+id/lbl_oddorderregisterdetails_fee"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/ThueDuTinh" />
+
+                <TextView
+                    android:id="@+id/text_oddorderregisterdetails_tax"
+                    style="@style/Content_Style"
+                    android:layout_below="@+id/lbl_oddorderregisterdetails_fee"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/lbl_oddorderregisterdetails_tax" />
+
+                <TextView
+                    android:id="@+id/lbl_oddorderregisterdetails_receiveamount"
+                    style="@style/Label_Style"
+                    android:layout_below="@+id/lbl_oddorderregisterdetails_tax"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/SoTienNhanDutinh" />
+
+                <TextView
+                    android:id="@+id/text_oddorderregisterdetails_receiveamount"
+                    style="@style/Content_Style"
+                    android:layout_below="@+id/lbl_oddorderregisterdetails_tax"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/lbl_oddorderregisterdetails_receiveamount" />
+
+                <EditText android:textCursorDrawable="@drawable/shape_textcursoredittext"
+                    android:id="@+id/edt_oddorderregisterdetails_pin"
+                    style="@style/EditText_Style"
+                    android:layout_width="fill_parent"
+                    android:layout_below="@+id/lbl_oddorderregisterdetails_receiveamount"
+                    android:layout_centerHorizontal="true"
+                    android:hint="@string/chuyentiennoibo_hint_MaPin"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="9.0" >
+
+                <Button
+                    android:id="@+id/btn_oddorderregisterdetails_accept"
+                    style="@style/Button_Background1"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="9dp"
+                    android:layout_weight="3.0"
+                    android:text="@string/XacNhan" />
+
+                <Button
+                    android:id="@+id/btn_oddorderregisterdetails_cancel"
+                    style="@style/Button_Background1"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_weight="3.0"
+                    android:text="@string/Cancel" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

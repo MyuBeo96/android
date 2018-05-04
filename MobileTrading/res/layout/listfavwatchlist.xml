@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/listfavwatchlist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/m_paddingLeft"
+    android:paddingRight="@dimen/m_paddingRight" >
+
+    <LinearLayout
+        android:id="@+id/lay_listfavwatchlist_addfav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.msbuat.mobiletrading.design.LabelContentLayout
+            android:id="@+id/edt_listfavwatchlist_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentHint="@string/TenDanhMuc"
+            app:editable="true"
+            app:labelText="@string/TenDanhMuc" />
+
+        <com.msbuat.mobiletrading.design.LabelContentLayout
+            android:id="@+id/edt_listfavwatchlist_symbols"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentHint="@string/CK1CK2CK3"
+            app:editable="true"
+            app:inputType="textCap"
+            app:labelText="@string/MaCK" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_listfavwatchlist_Accept"
+                style="@style/Button_Background1"
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="5"
+                android:text="@string/ThemMoi" />
+
+            <Button
+                android:id="@+id/btn_listfavwatchlist_Cancel"
+                style="@style/Button_Background1"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="5"
+                android:text="@string/Cancel" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview_listfavwatchlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+    </ListView>
+
+</LinearLayout>

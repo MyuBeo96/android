@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/m_slidemenu_item_height" >
+
+    <TextView
+        android:id="@+id/text_menu_function_item_space"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_menu_function_item_icon"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/text_menu_function_item_space"
+        android:contentDescription="@string/desc_list_item_icon" />
+
+    <TextView
+        android:id="@+id/text_menu_function_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/img_menu_function_item_icon"
+        android:paddingLeft="10dp"
+        android:textColor="@drawable/selector_slidemenu_title"
+         />
+
+    <ImageView
+        android:id="@+id/img_menu_function_item_group"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/desc_list_item_icon"
+        android:src="@drawable/ic_group_down"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignLeft="@+id/img_menu_function_item_icon"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_separation_slidemenu" />
+
+</RelativeLayout>

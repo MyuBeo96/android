@@ -1,0 +1,11 @@
+/gen/
+/bin/
+out
+.idea
+.gradle/*
+*.iml
+*/build
+build/
+local.properties
+gradle/
+/.gradle

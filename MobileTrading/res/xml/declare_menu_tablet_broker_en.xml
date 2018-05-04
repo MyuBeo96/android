@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<listmenu>
+
+    <tabmenu
+        class="com.fss.mobiletrading.function.market.T_MarketInfo"
+        title="Markets" >
+    </tabmenu>
+    <tabmenu
+        class="com.fss.mobiletrading.function.watchlist.StockItemInformation"
+        title="Stock" >
+    </tabmenu>
+    <tabmenu
+        class="com.fss.mobiletrading.function.orderlist.NormalOrderList"
+        title="Order List" >
+    </tabmenu>
+    <!-- <tabmenu -->
+    <!-- class="null" -->
+    <!-- title="Lệnh điều kiện" > -->
+    <!-- </tabmenu> -->
+    <tabmenu
+        class="com.fss.mobiletrading.function.CapBaoLanh"
+        title="To Issue Guarantee" >
+    </tabmenu>
+    <tabmenu
+        class="null"
+        title="Historical Data" >
+        <child>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.AccountBalance"
+                title="Balance" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.portfolio.Porfolio"
+                title="Porfolio" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.Statement"
+                title="Statement" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.OrderHistory"
+                title="Order History" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.coporateactions.CoporateActions"
+                title="Coporate Actions" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.accountconfig.AccountConfig"
+                title="Personal Info" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.guaranteelist.GuaranteeList"
+                title="Customer List Loan Guarantee" >
+            </tabmenu>
+        </child>
+    </tabmenu>
+    <tabmenu
+        class="com.fss.mobiletrading.function.report.Report"
+        title="Report" >
+    </tabmenu>
+
+</listmenu>

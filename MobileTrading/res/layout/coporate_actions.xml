@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_fragment"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:id="@+id/layout_coporate_actions_textbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.msbuat.mobiletrading.design.InputDate
+                android:id="@+id/edt_coporate_actions_fromdate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                app:separationColorInputDate="@color/transparent" />
+
+            <com.msbuat.mobiletrading.design.InputDate
+                android:id="@+id/edt_coporate_actions_todate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="5"
+                app:separationColorInputDate="@color/transparent" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_coporate_actions_Search"
+            style="@style/Button_Background1"
+            android:layout_below="@+id/layout_coporate_actions_textbox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/XacNhan"
+            android:textColor="@color/white_text"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <View
+            android:id="@+id/line_coporate_action_1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/header_separation_color" />
+
+        <LinearLayout
+            android:id="@+id/lay_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_coporate_action_1"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="1.5"
+                android:text="@string/Ma" />
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="2"
+                android:text="@string/Quyen" />
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="2"
+                android:text="@string/NgayChot" />
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="3"
+                android:text="@string/TT" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_header"
+            android:layout_centerHorizontal="true"
+            android:text="@string/error_no_data_to_display"
+            android:textColor="#ff888888" />
+
+        <TextView
+            android:id="@+id/text_coporate_actions_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_header"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Loading..."
+            android:textColor="#ff888888"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/listview_coporate_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_header"
+            android:background="@color/bg_fragment"
+            android:divider="@color/listview_separation_color"
+            android:paddingLeft="@dimen/m_paddingLeft"
+            android:paddingRight="@dimen/m_paddingRight"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+</LinearLayout>

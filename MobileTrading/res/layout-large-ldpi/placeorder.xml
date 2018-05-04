@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/datlenh"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialogplaceorder"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/lay_buysell"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_DatLenh_Mua"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="5.0"
+                    android:background="@drawable/background_buy_placeorder"
+                    android:text="@string/Mua"
+                    android:drawableLeft="@drawable/icon_buy"
+                    android:paddingLeft="20dp"
+                    android:drawablePadding="-40dp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white_text"
+                    android:textSize="20.0sp" />
+
+                <Button
+                    android:id="@+id/btn_DatLenh_Ban"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="5.0"
+                    android:background="@drawable/background_sell_placeorder"
+                    android:text="@string/Ban"
+                    android:drawableLeft="@drawable/icon_sell"
+                    android:paddingLeft="20dp"
+                    android:drawablePadding="-40dp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white_text"
+                    android:textSize="20.0sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/header_separation_color" />
+
+            <LinearLayout
+                android:id="@+id/container_placeorder_stockindex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/header_separation_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_dialogplaceorderdown"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/m_paddingLeft"
+                android:paddingRight="@dimen/m_paddingRight" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/img_placeorder_account"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_account" />
+
+                        <TextView
+                            android:id="@+id/autoEdt_DatLenh_Afacctno"
+                            style="@style/Content_Style"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/img_placeorder_account"
+                            android:hint="@string/TieuKhoan"
+                            android:singleLine="true"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignLeft="@+id/img_placeorder_account"
+                            android:layout_alignRight="@+id/autoEdt_DatLenh_Afacctno"
+                            android:layout_below="@+id/autoEdt_DatLenh_Afacctno"
+                            android:background="@color/lc_separation_color" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/img_placeorder_symbol"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_datlenh_mack" />
+
+                        <com.fss.designcontrol.SymbolEdittext
+                            android:id="@+id/autoEdt_DatLenh_Symbol"
+                            style="@style/EditText_Style"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/img_placeorder_symbol"
+                            android:hint="@string/MaChungKhoan"
+                            android:inputType="textCapCharacters"
+                            android:singleLine="true"
+                            android:textColorHint="@color/edittext_hint_color"
+                            android:textCursorDrawable="@drawable/shape_textcursoredittext" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignLeft="@+id/img_placeorder_symbol"
+                            android:layout_alignRight="@+id/autoEdt_DatLenh_Symbol"
+                            android:layout_below="@+id/autoEdt_DatLenh_Symbol"
+                            android:background="@color/lc_separation_color" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/lbl_DatLenh_SoLuong"
+                            style="@style/Content_Style"
+                            android:layout_height="45dp"
+                            android:layout_alignBottom="@+id/cus_edt_DatLenh_SoLuong"
+                            android:gravity="center_vertical"
+                            android:text="@string/SoLuong_2" />
+
+                        <com.msbuat.mobiletrading.design.Edittext_SoLuong
+                            android:id="@+id/cus_edt_DatLenh_SoLuong"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/lbl_DatLenh_SoLuong" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignLeft="@+id/lbl_DatLenh_SoLuong"
+                            android:layout_alignRight="@+id/cus_edt_DatLenh_SoLuong"
+                            android:layout_below="@+id/cus_edt_DatLenh_SoLuong"
+                            android:background="@color/lc_separation_color" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lay_order_pricetype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/lbl_DatLenh_LoaiLenh"
+                            style="@style/Content_Style"
+                            android:layout_height="45dp"
+                            android:layout_alignBottom="@+id/cus_edt_DatLenh_LoaiLenh"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_vertical"
+                            android:text="@string/LoaiLenh" />
+
+                        <com.msbuat.mobiletrading.design.Edittext_LoaiLenh
+                            android:id="@+id/cus_edt_DatLenh_LoaiLenh"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/lbl_DatLenh_LoaiLenh" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignLeft="@+id/lbl_DatLenh_LoaiLenh"
+                            android:layout_alignRight="@+id/cus_edt_DatLenh_LoaiLenh"
+                            android:layout_below="@+id/cus_edt_DatLenh_LoaiLenh"
+                            android:background="@color/lc_separation_color" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/lbl_DatLenh_Gia"
+                            style="@style/Content_Style"
+                            android:layout_height="45dp"
+                            android:layout_alignBottom="@+id/cus_edt_DatLenh_Gia"
+                            android:gravity="center_vertical"
+                            android:text="@string/Gia1000" />
+
+                        <com.msbuat.mobiletrading.design.Edittext_Gia
+                            android:id="@+id/cus_edt_DatLenh_Gia"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/lbl_DatLenh_Gia" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignLeft="@+id/lbl_DatLenh_Gia"
+                            android:layout_alignRight="@+id/cus_edt_DatLenh_Gia"
+                            android:layout_below="@+id/cus_edt_DatLenh_Gia"
+                            android:background="@color/lc_separation_color" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lay_order_splitqtty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/lbl_DatLenh_SplitQtty"
+                            style="@style/Content_Style"
+                            android:layout_height="45dp"
+                            android:layout_alignBottom="@+id/edttg_DatLenh_SplitQtty"
+                            android:gravity="center_vertical"
+                            android:text="@string/datlenh_label_SplitQtty" />
+
+                        <com.msbuat.mobiletrading.design.Edittext_SoLuong
+                            android:id="@+id/edttg_DatLenh_SplitQtty"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/lbl_DatLenh_SplitQtty" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignLeft="@+id/lbl_DatLenh_SplitQtty"
+                            android:layout_alignRight="@+id/edttg_DatLenh_SplitQtty"
+                            android:layout_below="@+id/edttg_DatLenh_SplitQtty"
+                            android:background="@color/lc_separation_color" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lay_order_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/label_DatLenh_date"
+                            style="@style/Label_Style"
+                            android:layout_height="45dp"
+                            android:layout_alignBottom="@+id/edt_order_fromdate"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_vertical"
+                            android:text="@string/NgayHieuLuc" />
+
+                        <ImageButton
+                            android:id="@+id/img_DatLenh_date"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@color/transparent"
+                            android:padding="0dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_arrow" />
+
+                        <EditText
+                            android:id="@+id/edt_order_todate"
+                            style="@style/EditText_Style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/img_DatLenh_date" />
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/edt_order_todate"
+                            android:text="-"
+                            android:textColor="@color/white_text" />
+
+                        <EditText
+                            android:id="@+id/edt_order_fromdate"
+                            style="@style/EditText_Style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toLeftOf="@+id/edt_order_todate" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignLeft="@+id/label_DatLenh_date"
+                            android:layout_alignRight="@+id/img_DatLenh_date"
+                            android:layout_below="@+id/edt_order_fromdate"
+                            android:background="@color/lc_separation_color" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/selector_placeordertype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <com.msbuat.mobiletrading.design.SelectorImageView
+                            android:id="@+id/img_nororderlist_item_iscancel"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            app:active="false"
+                            app:active_drawable="@drawable/ic_active"
+                            app:inactive_drawable="@drawable/ic_inactive" />
+
+                        <TextView
+                            style="@style/Label_Style"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/img_nororderlist_item_iscancel"
+                            android:text="@string/LenhDieuKien"
+                            android:textColor="@color/green_text" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="@dimen/m_paddingLeft" >
+
+                    <LinearLayout
+                        android:id="@+id/lay_stockinfor_index"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:visibility="gone" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/text_DatLenh_Tran"
+                                android:layout_alignParentLeft="true"
+                                android:text="@string/Tran"
+                                android:textColor="#ff777777"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/text_DatLenh_Tran"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/color_Tran"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/text_DatLenh_refprice"
+                                android:layout_alignParentLeft="true"
+                                android:text="@string/ThamChieu"
+                                android:textColor="#ff777777"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/text_DatLenh_refprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@+id/text_DatLenh_Tran"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/color_ThamChieu"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/text_DatLenh_San"
+                                android:layout_alignParentLeft="true"
+                                android:text="@string/datlenh_label_San"
+                                android:textColor="#ff777777"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/text_DatLenh_San"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@+id/text_DatLenh_refprice"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/color_San"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/lbl_datlenh_giakhopcuoi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/text_DatLenh_GiaKhopCuoi"
+                                android:layout_alignParentLeft="true"
+                                android:text="@string/GiaKhopCuoi"
+                                android:textColor="#ff777777"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/text_DatLenh_GiaKhopCuoi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@+id/text_DatLenh_San"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/white_text"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5" >
+
+                            <TextView
+                                android:id="@+id/lbl_datlenh_SucMuaBuy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:paddingLeft="5dp"
+                                android:text="@string/datlenh_label_SucMua"
+                                android:textColor="#ff777777"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/text_datlenh_SucMuaBuy"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/lbl_datlenh_SucMuaBuy"
+                                android:gravity="right"
+                                android:textColor="@color/white_text"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/lbl_datlenh_rttbuy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_below="@+id/lbl_datlenh_SucMuaBuy"
+                                android:paddingLeft="5dp"
+                                android:text="@string/RTT"
+                                android:textColor="#ff777777"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/text_datlenh_rttbuy"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_below="@+id/lbl_datlenh_SucMuaBuy"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/lbl_datlenh_rttbuy"
+                                android:gravity="right"
+                                android:textColor="@color/white_text"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/lbl_datlenh_SucMuaSell"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_alignBottom="@+id/text_datlenh_SucMuaSell"
+                                android:paddingLeft="5dp"
+                                android:text="@string/datlenh_label_SucMua"
+                                android:textColor="#ff777777"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/text_datlenh_SucMuaSell"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_below="@+id/text_datlenh_rttbuy"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/lbl_datlenh_SucMuaSell"
+                                android:gravity="right"
+                                android:textColor="@color/white_text"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/lbl_datlenh_rttsell"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_alignBottom="@+id/text_datlenh_rttsell"
+                                android:paddingLeft="5dp"
+                                android:text="@string/RTT"
+                                android:textColor="#ff777777"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/text_datlenh_rttsell"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_below="@+id/text_datlenh_SucMuaSell"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/lbl_datlenh_rttsell"
+                                android:gravity="right"
+                                android:textColor="@color/white_text"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:paddingLeft="10dp" >
+
+                            <TextView
+                                android:id="@+id/lbl_datlenh_tylevay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_alignBottom="@+id/text_datlenh_tylevay"
+                                android:text="@string/datlenh_label_TyLeVay"
+                                android:textColor="#ff777777"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/text_datlenh_tylevay"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/lbl_datlenh_tylevay"
+                                android:gravity="right"
+                                android:textColor="@color/white_text"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/lbl_datlenh_KLduocmua"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_below="@+id/lbl_datlenh_tylevay"
+                                android:text="@string/datlenh_label_KLDuocMua"
+                                android:textColor="#ff777777"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/text_datlenh_KLduocmua"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_below="@+id/lbl_datlenh_tylevay"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/lbl_datlenh_KLduocmua"
+                                android:gravity="right"
+                                android:textColor="@color/white_text"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/lbl_datlenh_ChoVe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_alignBottom="@+id/text_datlenh_ChoVe"
+                                android:text="@string/datlenh_label_ChoVe"
+                                android:textColor="#ff777777"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/text_datlenh_ChoVe"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_below="@+id/text_datlenh_KLduocmua"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/lbl_datlenh_ChoVe"
+                                android:gravity="right"
+                                android:textColor="@color/white_text"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/lbl_datlenh_KLduocban"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_alignBottom="@+id/text_datlenh_KLduocban"
+                                android:text="@string/datlenh_label_KLduocban"
+                                android:textColor="#ff777777"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+
+                            <TextView
+                                android:id="@+id/text_datlenh_KLduocban"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_below="@+id/text_datlenh_ChoVe"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/lbl_datlenh_KLduocban"
+                                android:gravity="right"
+                                android:textColor="@color/white_text"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <com.fss.mobiletrading.keyboard.KBoardPrice
+                        android:id="@+id/t_placeorder_kboardsymbol_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone" >
+                    </com.fss.mobiletrading.keyboard.KBoardPrice>
+
+                    <com.fss.mobiletrading.keyboard.KBoardQuantity
+                        android:id="@+id/t_placeorder_kboardsymbol_quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:visibility="visible" >
+                    </com.fss.mobiletrading.keyboard.KBoardQuantity>
+
+                    <Button
+                        android:id="@+id/btn_DatLenh_DatLenh"
+                        style="@style/Button_Background1"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/XacNhan"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/lay_CTin1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

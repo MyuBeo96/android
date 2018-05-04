@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/capbaolanh"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/t_paddingLeft"
+            android:paddingRight="40dp">
+
+            <!--  -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/edt_soLuuKy"
+                    style="@style/EditText_Style"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="3"
+                    app:contentColor="@color/white_text"
+                    app:contentHint="@string/CBL_SoLuuKy"
+                    app:editable="true"
+                    app:labelText="@string/CBL_SoLuuKy"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.MySpinner
+                    android:id="@+id/Spin_SoTieuKhoan"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="3"
+                    app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                    app:hasLabel="true"
+                    app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+                    app:textMySpinner="@string/CBL_SoTieuKhoan" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/text_BaoLanhLyThuyet"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="3"
+                    app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                    app:labelText="@string/CBL_BaoLanhLyThuyet"
+                    app:orientation="vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/text_Rtt"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="3"
+                    app:labelText="@string/CBL_Rtt"
+                    app:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Label_Style"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:text="@string/CBL_SoTienSuDung" />
+
+                    <com.msbuat.mobiletrading.design.NumberEditText
+                        android:id="@+id/edt_SoTienSuDung"
+                        style="@style/EditText_Style"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:digits="0123456789,"
+                        android:hint="@string/CBL_SoTienSuDung"
+                        android:inputType="number"
+                        android:singleLine="true" />
+
+                    <View
+                        android:id="@+id/labelcontentver_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/lc_separation_color" />
+                </LinearLayout>
+                <!-- <com.msbuat.mobiletrading.design.LabelContentLayout -->
+                <!-- android:id="@+id/edt_SoTienSuDung" -->
+                <!-- style="@style/EditText_Style" -->
+                <!-- android:layout_width="0dp" -->
+                <!-- android:layout_weight="3" -->
+                <!-- android:layout_height="@dimen/m_labelcontentverlayout_height" -->
+                <!-- android:layout_marginLeft="40dp" -->
+                <!-- android:hint="@string/CBL_SoTienSuDung" -->
+                <!-- android:inputType="number" -->
+                <!-- app:editable="true" -->
+                <!-- app:labelText="@string/CBL_SoTienSuDung" -->
+                <!-- app:orientation="vertical" /> -->
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/text_SoTienPheDuyet"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="3"
+                    app:labelText="@string/CBL_SoTienPheDuyet"
+                    app:orientation="vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/text_NgPheDuyet"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="3"
+                    app:labelText="@string/CBL_NgPheDuyet"
+                    app:orientation="vertical" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Label_Style"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:text="@string/CBL_DSCKAllowedBuy" />
+
+                    <com.fss.designcontrol.SymbolEdittext
+                        android:id="@+id/edt_DSCKAllowedBuy"
+                        style="@style/EditText_Style_CapBaoLanh"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:digits="abcdefghijklmnopqrstuvxyz ABCDEFGHIJKLMNOPQRSTUVXYZ 0123456789 _,"
+                        android:hint="@string/CBL_DSCKAllowedBuyHint" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/lc_separation_color" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_Cbl_ChapNhan"
+                    style="@style/Button_Background1"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="@string/XacNhan" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+

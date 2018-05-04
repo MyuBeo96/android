@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/m_paddingLeft"
+    android:paddingRight="@dimen/m_paddingRight" >
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_coporateaction_details_afacctno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentgravity="left"
+        app:labelText="@string/SoTieuKhoan"
+        app:labelweight="4"
+        app:orientation="horizontal" />
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_coporateaction_details_eventtype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentgravity="left"
+        app:labelText="@string/LoaiSuKien"
+        app:labelweight="4"
+        app:orientation="horizontal" />
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_coporateaction_details_symbol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentgravity="left"
+        app:labelText="@string/MaCK"
+        app:labelweight="4"
+        app:orientation="horizontal" />
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_coporateaction_details_closingdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentgravity="left"
+        app:labelText="@string/NgayChot"
+        app:labelweight="4"
+        app:orientation="horizontal" />
+
+    <TextView
+        style="@style/Table_Header"
+        android:layout_width="match_parent"
+        android:gravity="left|center_vertical"
+        android:text="@string/chi_tiet"
+        android:textAllCaps="false"
+        android:textColor="@color/white_text"
+        android:textSize="20sp" />
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_coporateaction_details_trade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentgravity="left"
+        app:labelText="@string/SoLuongChungKhoanSoHuu"
+        app:labelweight="4"
+        app:orientation="horizontal" />
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_coporateaction_details_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentgravity="left"
+        app:labelText="@string/Tyle"
+        app:labelweight="4"
+        app:orientation="horizontal" />
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_coporateaction_details_receivingQtty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentgravity="left"
+        app:labelText="@string/SoLuongChungKhoanChoVe"
+        app:labelweight="4"
+        app:orientation="horizontal" />
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_coporateaction_details_receivingCash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentgravity="left"
+        app:labelText="@string/SoTienChoVe"
+        app:labelweight="4"
+        app:orientation="horizontal" />
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_coporateaction_details_actiondate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentgravity="left"
+        app:labelText="@string/dkqm_label_EffectiveDate"
+        app:labelweight="4"
+        app:orientation="horizontal" />
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_coporateaction_details_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentgravity="left"
+        app:labelText="@string/TrangThai"
+        app:labelweight="4"
+        app:orientation="horizontal" />
+
+    <Button
+        android:id="@+id/btn_coporateaction_detail_accept"
+        style="@style/Button_Background1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:text="@string/XacNhan"
+        android:visibility="gone" />
+
+</LinearLayout>

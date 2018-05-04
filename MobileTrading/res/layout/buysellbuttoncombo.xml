@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_buysellbuttoncombo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_grey_conner10"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btn_buysellcombo_buy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Mua"
+        android:background="@color/transparent"
+        android:textColor="@color/blue_text" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="0dp"
+        android:background="#888888" />
+
+    <Button
+        android:id="@+id/btn_buysellcombo_sell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:text="@string/Ban"
+        android:background="@color/transparent"
+        android:textColor="@color/blue_text" >
+    </Button>
+
+</LinearLayout>

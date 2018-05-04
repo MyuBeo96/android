@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/boloc_dotbiengia"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="3dp"
+    android:paddingTop="3dp" >
+
+    <TextView
+        android:id="@+id/text_bolockhoiluong_item_Symbol"
+        style="@style/Label_Style"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="2.0"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_bolockhoiluong_item_KLGDTB"
+        style="@style/Label_Style"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="2.0"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_bolockhoiluong_item_ChangeKLGDTB"
+        style="@style/Label_Style"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="3.0"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_bolockhoiluong_item_KLGD"
+        style="@style/Label_Style"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="3.0"
+        android:gravity="center" />
+
+</LinearLayout>

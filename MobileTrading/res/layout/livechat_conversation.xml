@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffeeeeee"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_user32" />
+
+        <TextView
+            android:id="@+id/text_livechat_username"
+            style="@style/Label_Style"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="giangcoibg"
+            android:textColor="#aa00ccff"
+            android:textSize="20.0sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp" >
+
+        <ListView
+            android:id="@+id/lv_livechat_conversation"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/edt_livechat_chatbox"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:divider="@color/listview_separation_color" android:scrollbars="none" />
+
+        <EditText android:textCursorDrawable="@drawable/shape_textcursoredittext"
+            android:id="@+id/edt_livechat_chatbox"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:hint="@string/livechat_vietgidovaoday"
+            android:maxLines="4"
+            android:textColor="#ffffffff"
+            android:textColorHint="#ffcccccc" />
+    </RelativeLayout>
+
+</LinearLayout>

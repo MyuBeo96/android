@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_text"
+        android:padding="5dp" >
+
+        <com.fss.designcontrol.SymbolEdittext
+            android:id="@+id/edt_searchtextui_search"
+            style="@style/EditText_Style"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="0dp"
+            android:layout_toLeftOf="@+id/btn_searchtextui_cancelsearch"
+            android:background="@drawable/background_white_conner"
+            android:hint="@string/TimKiemTheoMa"
+            android:inputType="textNoSuggestions"
+            android:paddingLeft="30dp"
+            android:textColor="@color/black_text"
+            android:textCursorDrawable="@drawable/shape_textcursoredittext" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignLeft="@+id/edt_searchtextui_search"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_editsearch" />
+
+        <ImageView
+            android:id="@+id/img_searchtextui_clearfield"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignRight="@+id/edt_searchtextui_search"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_clearfield"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_searchtextui_cancelsearch"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparent"
+            android:text="@string/Cancel"
+            android:textColor="@color/blue_text2"
+            android:textSize="18.0sp" />
+    </RelativeLayout>
+
+</LinearLayout>

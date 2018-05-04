@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/m_tabselector_height" >
+
+    <TextView
+        android:id="@+id/text_tabitem"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line_tabitem"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@drawable/selector_textcolor_white_grey"
+        android:textSize="@dimen/m_tabselector_text_size" />
+
+    <View
+        android:id="@+id/line_tabitem"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignLeft="@+id/text_tabitem"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/text_tabitem"
+        android:background="@color/tabselector_line_color" />
+
+</RelativeLayout>

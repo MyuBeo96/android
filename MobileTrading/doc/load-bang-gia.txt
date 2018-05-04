@@ -1,0 +1,15 @@
+﻿* Khi chuyển fav
+B1. Lấy các mã chứng khoán trong fav: CallGetWLSymbols(String criteriaId, String marketId,`INotifier notifier, String key)
+B2. Nhận dữ liệu từ B1
+	Nếu có lỗi	  =>....
+	Nếu không lỗi => create list mã chứng khoán từ dữ liệu => vẽ luôn
+B3.1. Lấy dữ liệu của 2x mã đầu: CallGetWatchListBySyms(String syms)
+B3.2. Lấy dữ liệu của tất cả các mã: CallGetAllWatchListDefault(GETALLWATCHLISTDEFAULT);
+B4. Nhận dữ liệu từ B3.1
+	Nếu có lỗi	  =>...
+	Nếu không lỗi => update 2x mã đầu vào data => vẽ lại listview
+B5. Nhận dữ liệu từ B3.2
+	Nếu có lỗi	  =>...
+	Nếu không lỗi => update vào data => vẽ lại, cập nhật lastSequence
+	
+	

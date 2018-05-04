@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/baocaomoigioi"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.msbuat.mobiletrading.design.MySpinner
+        android:id="@+id/spn_reportlist"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/header_background_color"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        app:gravity_hori="center_hori"
+        app:hasLabel="false"
+        app:separationColor="@color/transparent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <View
+        android:id="@+id/lay_headerpopout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/green_text"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/scrollview_ver"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/lay_report_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/t_paddingLeft"
+                android:paddingRight="@dimen/t_paddingRight" />
+
+            <Button
+                android:id="@+id/btn_Report_Accept"
+                style="@style/Button_Background1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:text="@string/XacNhan" />
+
+            <WebView
+                android:id="@+id/webview_reportdata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_fragment"
+                android:visibility="gone" />
+
+            <!-- <HorizontalScrollView -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:fillViewport="true" > -->
+
+
+            <!-- <LinearLayout -->
+            <!-- android:id="@+id/lay_Report_result" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginBottom="30dp" -->
+            <!-- android:orientation="horizontal" -->
+            <!-- android:visibility="gone" /> -->
+            <!-- </HorizontalScrollView> -->
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

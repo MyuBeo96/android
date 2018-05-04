@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.0" >
+
+            <TextView
+                android:id="@+id/text_indices_item_marketname"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:textColor="@color/white_text" />
+
+            <TextView
+                android:id="@+id/text_indices_item_marketstatus"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/text_indices_item_marketname"
+                android:layout_toLeftOf="@+id/text_indices_item_kyhieu"
+                android:gravity="left"
+                android:singleLine="true"
+                android:textColor="@color/red_brown_text"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/text_indices_item_kyhieu"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <com.msbuat.mobiletrading.design.TextViewHightLight
+            android:id="@+id/text_indices_item_marketindex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            android:textColor="@color/white_text" />
+
+        <com.msbuat.mobiletrading.design.TextViewHightLight
+            android:id="@+id/text_indices_item_marketchange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            android:textColor="@color/white_text" />
+
+        <com.msbuat.mobiletrading.design.TextViewHightLight
+            android:id="@+id/text_indices_item_marketchangeP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            android:textColor="@color/white_text"
+            android:visibility="gone" />
+
+        <com.msbuat.mobiletrading.design.TextViewHightLight
+            android:id="@+id/text_indices_item_volume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.0"
+            android:gravity="right|center"
+            android:textColor="@color/white_text" />
+
+        <com.msbuat.mobiletrading.design.TextViewHightLight
+            android:id="@+id/text_indices_item_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.0"
+            android:gravity="right|center"
+            android:textColor="@color/white_text"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.msbuat.mobiletrading.design.TextViewHightLight
+        android:id="@+id/text_indices_item_trade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <com.msbuat.mobiletrading.design.TextViewHightLight
+        android:id="@+id/text_indices_item_upstocks"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <com.msbuat.mobiletrading.design.TextViewHightLight
+        android:id="@+id/text_indices_item_downstocks"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <com.msbuat.mobiletrading.design.TextViewHightLight
+        android:id="@+id/text_indices_item_refstocks"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_indexname"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/listview_separation_color" />
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@+id/boloc_coban" android:paddingTop="3dp" android:paddingBottom="3dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@+id/text_alert_coban_item_CreateDay" android:layout_width="0dp" android:layout_height="fill_parent" android:layout_weight="1.5" style="@style/Label_Style" />
+    <TextView android:id="@+id/text_alert_coban_item_Condition" android:layout_width="0dp" android:layout_height="fill_parent" android:layout_weight="4.0" style="@style/Label_Style" />
+    <TextView android:id="@+id/text_alert_coban_item_Symbols" android:layout_width="0dp" android:layout_height="fill_parent" android:layout_weight="2.5" style="@style/Label_Style" />
+</LinearLayout>

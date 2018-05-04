@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.msbuat.mobiletrading.design.TabSelector
+            android:id="@+id/tab_solenhthuong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.msbuat.mobiletrading.design.TabItem
+                android:id="@+id/tab_solenhthuong_all"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                app:textTabItem="@string/solenh_label_All" />
+
+            <com.msbuat.mobiletrading.design.TabItem
+                android:id="@+id/tab_SoLenhThuong_receiving"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                app:textTabItem="@string/Cho" />
+
+            <com.msbuat.mobiletrading.design.TabItem
+                android:id="@+id/tab_solenhthuong_matched"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                app:textTabItem="@string/Khop" />
+
+            <com.msbuat.mobiletrading.design.TabItem
+                android:id="@+id/tab_solenhthuong_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                app:textTabItem="@string/Cancel" />
+
+            <com.msbuat.mobiletrading.design.TabItem
+                android:id="@+id/tab_solenhthuong_allmatched"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                app:textTabItem="@string/solenh_label_Khophet" />
+        </com.msbuat.mobiletrading.design.TabSelector>
+
+        <com.msbuat.mobiletrading.design.SearchStockUI
+            android:id="@+id/searchtext_solenhthuong_symbol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/header_separation_color" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="1.5"
+                android:text="@string/Mua_Ban" />
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="2.0"
+                android:text="@string/MaCK2" />
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="2.0"
+                android:text="@string/KL_2" />
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="2.0"
+                android:text="@string/Gia" />
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="2.5"
+                android:text="@string/TrangThai" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/header_separation_color" />
+
+        <ListView
+            android:id="@+id/listview_SoLenhThuong"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/listview_separation_color"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ungtruoc"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/lay_UngTruoc1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center_vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/lbl_ungtruoc_CoTheUng"
+            style="@style/Label_Style"
+            android:layout_marginTop="5dp"
+            android:text="@string/ungtruoc_label_CoTheUng" />
+
+        <TextView
+            android:id="@+id/text_ungtruoc_CoTheUng"
+            style="@style/Content_Style"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/lbl_ungtruoc_CoTheUng" />
+
+        <TextView
+            android:id="@+id/lbl_ungtruoc_DaUng"
+            style="@style/Label_Style"
+            android:layout_below="@+id/lbl_ungtruoc_CoTheUng"
+            android:layout_marginTop="5dp"
+            android:text="@string/ungtruoc_label_DaUng" />
+
+        <TextView
+            android:id="@+id/text_ungtruoc_DaUng"
+            style="@style/Content_Style"
+            android:layout_below="@+id/lbl_ungtruoc_CoTheUng"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/lbl_ungtruoc_DaUng" />
+
+        <TextView
+            android:id="@+id/lbl_ungtruoc_SoTienNhan"
+            style="@style/Label_Style"
+            android:layout_below="@+id/lbl_ungtruoc_DaUng"
+            android:layout_marginTop="5dp"
+            android:text="@string/ungtruoc_label_SoTienNhan" />
+
+        <EditText android:textCursorDrawable="@drawable/shape_textcursoredittext"
+            android:id="@+id/edt_ungtruoc_SoTienNhan"
+            style="@style/EditText_Style"
+            android:layout_below="@+id/lbl_ungtruoc_DaUng"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/lbl_ungtruoc_SoTienNhan"
+            android:digits="0123456789.,"
+            android:hint="@string/ungtruoc_label_SoTienNhan"
+            android:inputType="number"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/lbl_ungtruoc_PhiUngTruoc"
+            style="@style/Label_Style"
+            android:layout_below="@+id/lbl_ungtruoc_SoTienNhan"
+            android:layout_marginTop="5dp"
+            android:text="@string/ungtruoc_label_PhiUngTruoc" />
+
+        <TextView
+            android:id="@+id/text_ungtruoc_PhiUngTruoc"
+            style="@style/Content_Style"
+            android:layout_below="@+id/lbl_ungtruoc_SoTienNhan"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/lbl_ungtruoc_PhiUngTruoc" />
+
+        <EditText android:textCursorDrawable="@drawable/shape_textcursoredittext"
+            android:id="@+id/edt_ungtruoc_MaPIN"
+            style="@style/EditText_Style"
+            android:layout_width="fill_parent"
+            android:layout_below="@+id/lbl_ungtruoc_PhiUngTruoc"
+            android:hint="@string/chuyentiennoibo_hint_MaPin"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="9.0" >
+
+        <Button
+            android:id="@+id/btn_UngTruoc_ChapNhan"
+            style="@style/Button_Background1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="3.0"
+            android:text="@string/XacNhan" />
+
+        <Button
+            android:id="@+id/btn_UngTruoc_Clear"
+            style="@style/Button_Background1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="3.0"
+            android:text="@string/Clear" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+package com.fss.mobiletrading.object;
+
+import java.util.HashMap;
+
+public class AccountInfo {
+	public String Afacctno;
+	public String Birthday;
+	public String CustID;
+	public String Custodycd;
+	public String EmailAdd;
+	public String Emailnew;
+	public String FullName;
+	public String Gender;
+	public String HomeAdd;
+	public String HomePhone;
+	public String IDCardDate;
+	public String IssuedPlace;
+	public String Mobile1;
+	public String Mobile2;
+	public String OTAUTHTYPE;
+	public String PasportNumber;
+	public String Pin;
+	public String UserName;
+	public String autotrf;
+	public String bankacctno;
+	public String corebank;
+	public String fldName;
+	public String fldValue;
+	public String lb_Alert;
+	public String mrcrlimitmax;
+	public String passlogin;
+	public String rdName;
+	public String rmName;
+	public String tradeonline;
+	public String tradetelephone;
+	public String IDPlace;
+	public String VSDAdd;
+	public String MSBSAdd;
+	public String Class;
+	public String AgentPhone;
+	public String AgentName;
+
+	public AccountInfo(HashMap<String, String> hm) {
+		FullName = hm.get("FullName");
+		Gender = hm.get("Gender");
+		IDCardDate = hm.get("IDCardDate");
+		HomeAdd = hm.get("HomeAdd");
+		EmailAdd = hm.get("EmailAdd");
+		Emailnew = hm.get("Emailnew");
+		Mobile1 = hm.get("Mobile1");
+		Mobile2 = hm.get("Mobile2");
+		Birthday = hm.get("Birthday");
+		PasportNumber = hm.get("PasportNumber");
+		IssuedPlace = hm.get("IssuedPlace");
+		HomePhone = hm.get("HomePhone");
+		lb_Alert = hm.get("lb_Alert");
+		UserName = hm.get("UserName");
+		Afacctno = hm.get("Afacctno");
+		Custodycd = hm.get("Custodycd");
+		CustID = hm.get("CustID");
+		bankacctno = hm.get("bankacctno");
+		tradetelephone = hm.get("tradetelephone");
+		tradeonline = hm.get("tradeonline");
+		corebank = hm.get("corebank");
+		autotrf = hm.get("autotrf");
+		mrcrlimitmax = hm.get("mrcrlimitmax");
+		OTAUTHTYPE = hm.get("OTAUTHTYPE");
+		passlogin = hm.get("passlogin");
+		Pin = hm.get("Pin");
+		fldName = hm.get("fldName");
+		fldValue = hm.get("fldValue");
+		rdName = hm.get("rdName");
+		rmName = hm.get("rmName");
+		IDPlace = hm.get("IDPlace");
+		VSDAdd = hm.get("VSDAdd");
+		MSBSAdd = hm.get("MSBSAdd");
+		Class = hm.get("Class");
+		AgentPhone = hm.get("AgentPhone");
+		AgentName = hm.get("AgentName");
+	}
+}

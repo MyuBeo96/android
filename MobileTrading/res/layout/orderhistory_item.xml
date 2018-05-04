@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fortydp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/text_LichSuLenh_item_Ngay"
+            style="@style/Label_Style"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.8"
+            android:gravity="center"
+            android:textColor="@color/white_text" />
+
+        <TextView
+            android:id="@+id/text_LichSuLenh_item_Side"
+            style="@style/Label_Style"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:textColor="@color/white_text" />
+
+        <TextView
+            android:id="@+id/text_LichSuLenh_item_MaCK"
+            style="@style/Label_Style"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.7"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white_text" />
+
+        <TextView
+            android:id="@+id/text_LichSuLenh_item_SoLuong"
+            style="@style/Label_Style"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            android:textColor="@color/white_text" />
+
+        <TextView
+            android:id="@+id/text_LichSuLenh_item_Gia"
+            style="@style/Label_Style"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            android:textColor="@color/white_text" />
+
+        <TextView
+            android:id="@+id/text_matchedvalue"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_fee"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_tax"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_method"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+</LinearLayout>

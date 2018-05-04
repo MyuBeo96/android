@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_actionbar_main"
+    android:background="@drawable/actionbar_background" >
+
+    <LinearLayout
+        android:id="@+id/layout_myactionbar_home"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_myactionbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/actionbar_home_width"
+        android:layout_marginRight="@dimen/actionbar_home_width"
+        android:orientation="vertical"
+        android:paddingLeft="3dp" >
+
+        <TextView
+            android:id="@+id/text_myactionbar_title"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/actionbar_title_color"
+            android:textSize="@dimen/actionbar_title_size" />
+
+        <LinearLayout
+            android:id="@+id/lay_myactionbar_chooseafacctno"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/text_myactionbar_afacctno"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/press_throughtout"
+                android:paddingLeft="5dp"
+                android:textColor="@color/actionbar_afacctno_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/img_myactionbar_chooseafacctno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/image_group_open"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_myactionbar_optionmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="5dp" >
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="fill_parent"
+            android:background="@color/color_separation_actionbar" />
+    </LinearLayout>
+
+</RelativeLayout>

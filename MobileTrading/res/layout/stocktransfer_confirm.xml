@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/m_paddingLeft"
+    android:paddingRight="@dimen/m_paddingRight" >
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_ChuyenKhoanCKInfo_TKChuyen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelText="@string/TieuKhoanNguon" />
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_ChuyenKhoanCKInfo_TKNhan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelText="@string/chuyenkhoanck_label_TKNhan" />
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_ChuyenKhoanCKInfo_MaCK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelText="@string/MaChungKhoan" />
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_ChuyenKhoanCKInfo_HienCo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelText="@string/KhoiLuongHienCo"
+        app:labelweight="5" />
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_ChuyenKhoanCKInfo_SoLuong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelText="@string/KhoiLuongChuyen"
+        app:labelweight="5" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_ChuyenKhoanCKInfo_ChapNhan"
+            style="@style/Button_Background1"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:text="@string/XacNhan" />
+    </LinearLayout>
+
+</LinearLayout>

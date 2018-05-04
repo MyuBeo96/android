@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/boloc_dotbiengia"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <Spinner
+            android:id="@+id/spn_bolocgia"
+            style="@style/EditText_Style"
+            android:layout_width="fill_parent"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_bolocgia_GiaCaoNhat"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="5.0"
+                android:background="@drawable/button_active"
+                android:text="@string/dotbiengia_lbl_GiaCaoNhat"
+                android:textColor="#ffffffff"
+                android:textSize="13.0sp"
+                 />
+
+            <Button
+                android:id="@+id/btn_bolocgia_GiaThapNhat"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="5.0"
+                android:background="@drawable/button_active"
+                android:text="@string/dotbiengia_lbl_GiaThapNhat"
+                android:textColor="#ffffffff"
+                android:textSize="13.0sp"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lbl_bolocgia_DotBienTrong"
+                style="@style/Label_Style"
+                android:text="@string/dotbienkhoiluong_lbl_DotBienTrong" />
+
+            <Spinner
+                android:id="@+id/spn_bolocgia_DotBienTrong"
+                style="@style/EditText_Style"
+                android:layout_width="150dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lbl_bolocgia_KLDotBien"
+                style="@style/Label_Style"
+                android:text="@string/dotbienkhoiluong_lbl_KhoiLuongDB" />
+
+            <Spinner
+                android:id="@+id/spn_bolocgia_KLDotBien"
+                style="@style/EditText_Style"
+                android:layout_width="150dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_bolocgia_Desc"
+            style="@style/Label_Style"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" />
+
+        <Button
+            android:id="@+id/btn_bolocgia_CapNhat"
+            style="@style/Button_Background1"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/cap_nhat" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/Label_Style"
+                android:layout_width="0dp"
+                android:layout_weight="2.0"
+                android:background="@drawable/button_not_select2"
+                android:singleLine="true"
+                android:text="@string/MaCK" />
+
+            <TextView
+                style="@style/Label_Style"
+                android:layout_width="0dp"
+                android:layout_weight="3.0"
+                android:background="@drawable/button_not_select2"
+                android:singleLine="true"
+                android:text="@string/GiaKhopCuoi" />
+
+            <TextView
+                style="@style/Label_Style"
+                android:layout_width="0dp"
+                android:layout_weight="2.0"
+                android:background="@drawable/button_not_select2"
+                android:singleLine="true"
+                android:text="@string/boloc_PE" />
+
+            <TextView
+                style="@style/Label_Style"
+                android:layout_width="0dp"
+                android:layout_weight="3.0"
+                android:background="@drawable/button_not_select2"
+                android:singleLine="true"
+                android:text="@string/dotbienkhoiluong_lbl_TongKLGD" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listview_bolocgia"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:divider="@color/listview_separation_color" android:scrollbars="none" />
+    </LinearLayout>
+
+</LinearLayout>

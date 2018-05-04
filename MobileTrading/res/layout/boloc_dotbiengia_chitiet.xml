@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingBottom="5dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <TextView android:id="@+id/lbl_dotbiengia_chitiet_Symbol" android:layout_marginLeft="5dp" android:text="@string/MaCK" style="@style/Label_Style" />
+        <TextView android:id="@+id/text_dotbiengia_chitiet_Symbol" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_dotbiengia_chitiet_Symbol" style="@style/Content_Style" />
+        <TextView android:id="@+id/lbl_dotbiengia_chitiet_ClosePrice" android:layout_marginLeft="5dp" android:text="@string/GiaKhopCuoi" android:layout_below="@+id/lbl_dotbiengia_chitiet_Symbol" style="@style/Label_Style" />
+        <TextView android:id="@+id/text_dotbiengia_chitiet_ClosePrice" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_dotbiengia_chitiet_ClosePrice" android:layout_below="@+id/lbl_dotbiengia_chitiet_Symbol" style="@style/Content_Style" />
+        <TextView android:id="@+id/lbl_dotbiengia_chitiet_Change" android:layout_marginLeft="5dp" android:text="@string/change" android:layout_below="@+id/lbl_dotbiengia_chitiet_ClosePrice" style="@style/Label_Style" />
+        <TextView android:id="@+id/text_dotbiengia_chitiet_Change" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_dotbiengia_chitiet_Change" android:layout_below="@+id/lbl_dotbiengia_chitiet_ClosePrice" style="@style/Content_Style" />
+        <TextView android:id="@+id/lbl_dotbiengia_chitiet_PercentChange" android:layout_marginLeft="5dp" android:text="@string/percent_change" android:layout_below="@+id/lbl_dotbiengia_chitiet_Change" style="@style/Label_Style" />
+        <TextView android:id="@+id/text_dotbiengia_chitiet_PercentChange" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_dotbiengia_chitiet_PercentChange" android:layout_below="@+id/lbl_dotbiengia_chitiet_Change" style="@style/Content_Style" />
+        <TextView android:id="@+id/lbl_dotbiengia_chitiet_HighInMonth" android:layout_marginLeft="5dp" android:text="@string/dotbienkhoiluong_lbl_KLGDTB" android:layout_below="@+id/lbl_dotbiengia_chitiet_PercentChange" style="@style/Label_Style" />
+        <TextView android:id="@+id/text_dotbiengia_chitiet_HighInMonth" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_dotbiengia_chitiet_HighInMonth" android:layout_below="@+id/lbl_dotbiengia_chitiet_PercentChange" style="@style/Content_Style" />
+        <TextView android:id="@+id/lbl_dotbiengia_chitiet_LowInMonth" android:layout_marginLeft="5dp" android:text="@string/dotbienkhoiluong_lbl_ThayDoiKLGD" android:layout_below="@+id/lbl_dotbiengia_chitiet_HighInMonth" style="@style/Label_Style" />
+        <TextView android:id="@+id/text_dotbiengia_chitiet_LowInMonth" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_dotbiengia_chitiet_LowInMonth" android:layout_below="@+id/lbl_dotbiengia_chitiet_HighInMonth" style="@style/Content_Style" />
+        <TextView android:id="@+id/lbl_dotbiengia_chitiet_TongKLGD" android:layout_marginLeft="5dp" android:text="@string/dotbienkhoiluong_lbl_TongKLGD" android:layout_below="@+id/lbl_dotbiengia_chitiet_LowInMonth" style="@style/Label_Style" />
+        <TextView android:textSize="13.0sp" android:id="@+id/text_dotbiengia_chitiet_TongKLGD" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_dotbiengia_chitiet_TongKLGD" android:layout_below="@+id/lbl_dotbiengia_chitiet_LowInMonth" style="@style/Content_Style" />
+        <TextView android:id="@+id/lbl_dotbiengia_chitiet_TongGTGD" android:layout_marginLeft="5dp" android:text="@string/Tong_GTGD" android:layout_below="@+id/lbl_dotbiengia_chitiet_TongKLGD" style="@style/Label_Style" />
+        <TextView android:textSize="13.0sp" android:id="@+id/text_dotbiengia_chitiet_TongGTGD" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_dotbiengia_chitiet_TongGTGD" android:layout_below="@+id/lbl_dotbiengia_chitiet_TongKLGD" style="@style/Content_Style" />
+        <TextView android:id="@+id/lbl_dotbiengia_chitiet_PE" android:layout_marginLeft="5dp" android:text="@string/boloc_PE" android:layout_below="@+id/lbl_dotbiengia_chitiet_TongGTGD" style="@style/Label_Style" />
+        <TextView android:id="@+id/text_dotbiengia_chitiet_PE" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_dotbiengia_chitiet_PE" android:layout_below="@+id/lbl_dotbiengia_chitiet_TongGTGD" style="@style/Content_Style" />
+        <TextView android:id="@+id/lbl_dotbiengia_chitiet_EPS" android:layout_marginLeft="5dp" android:text="@string/boloc_EPS" android:layout_below="@+id/lbl_dotbiengia_chitiet_PE" style="@style/Label_Style" />
+        <TextView android:id="@+id/text_dotbiengia_chitiet_EPS" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_dotbiengia_chitiet_EPS" android:layout_below="@+id/lbl_dotbiengia_chitiet_PE" style="@style/Content_Style" />
+        <TextView android:id="@+id/lbl_dotbiengia_chitiet_PB" android:layout_marginLeft="5dp" android:text="@string/boloc_PB" android:layout_below="@+id/lbl_dotbiengia_chitiet_EPS" style="@style/Label_Style" />
+        <TextView android:id="@+id/text_dotbiengia_chitiet_PB" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_dotbiengia_chitiet_PB" android:layout_below="@+id/lbl_dotbiengia_chitiet_EPS" style="@style/Content_Style" />
+    </RelativeLayout>
+</LinearLayout>

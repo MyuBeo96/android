@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@+id/text_tuvandautu_item_Symbol" android:layout_width="0dp" android:layout_weight="3.0" style="@style/Label_Style" />
+    <TextView android:id="@+id/text_tuvandautu_item_TuVan" android:layout_width="0dp" android:layout_weight="7.0" style="@style/Label_Style" />
+</LinearLayout>

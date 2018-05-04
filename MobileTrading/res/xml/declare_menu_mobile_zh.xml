@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<listmenu>
+
+    <tabmenu
+        class="com.fss.mobiletrading.function.placeorder.PlaceOrder"
+        icon="selector_slidemenu_datlenh"
+        title="订单" >
+    </tabmenu>
+    <tabmenu
+        class="com.fss.mobiletrading.function.placeorder.GTCPlaceOrder"
+        icon="selector_slidemenu_datlenhgtc"
+        title="条件订单" >
+    </tabmenu>
+    <tabmenu
+        class="null"
+        icon="selector_slidemenu_solenh"
+        title="订单记录" >
+        <child>
+            <tabmenu
+                class="com.fss.mobiletrading.function.orderlist.NormalOrderList"
+                title="Sổ lệnh thường" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.orderlist.GTCOrderList"
+                title="条件订单列表" >
+            </tabmenu>
+        </child>
+    </tabmenu>
+    <tabmenu
+        class="com.fss.mobiletrading.function.watchlist.WatchList"
+        icon="selector_slidemenu_banggia"
+        title="价格表" >
+    </tabmenu>
+    <tabmenu
+        class="null"
+        icon="selector_slidemenu_chuyentien"
+        title="转账" >
+        <child>
+            <tabmenu
+                class="com.fss.mobiletrading.function.cashtransfer.CashTransfer"
+                title="转账" >
+            </tabmenu>
+            <!--<tabmenu-->
+            <!--class="com.fss.mobiletrading.function.cashtransfer.CashTransferRegister"-->
+            <!--title="Đăng ký người thụ hưởng" >-->
+            <!--</tabmenu>-->
+            <tabmenu
+                class="com.fss.mobiletrading.function.cashtransfer.CashTransferList"
+                title="收款人列表" >
+            </tabmenu>
+        </child>
+    </tabmenu>
+    <tabmenu
+        class="null"
+        icon="selector_slidemenu_giaodichdb"
+        title="Giao dịch đặc biệt" >
+        <child>
+            <tabmenu
+                class="com.fss.mobiletrading.function.rightoffregister.RightOffRegister"
+                title="登记购买权" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.stocktransfer.StockTransfer"
+                title="证券转账" >
+            </tabmenu>
+        </child>
+    </tabmenu>
+    <tabmenu
+        class="null"
+        icon="selector_slidemenu_quanlytk"
+        title="账户管理" >
+        <child>
+            <tabmenu
+                class="com.fss.mobiletrading.function.AccountBalance"
+                title="余额" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.portfolio.Porfolio"
+                title="投资组合" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.Statement"
+                title="银行账号明细表" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.OrderHistory"
+                title="成交历史" >
+            </tabmenu>
+        </child>
+    </tabmenu>
+    <tabmenu
+        class="null"
+        icon="selector_slidemenu_thongtintt"
+        title="Thông tin thị trường" >
+        <child>
+            <tabmenu
+                class="com.fss.mobiletrading.function.market.MarketInfo"
+                title="市场" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.notify.NotifyFragment"
+                title="FSC通牒（通報）" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.coporateactions.CoporateActions"
+                title="公司活动详情公（公司行事歷）" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.searchstock.SearchStock"
+                title="证券信息" >
+            </tabmenu>
+        </child>
+    </tabmenu>
+    <tabmenu
+        class="null"
+        icon="selector_slidemenu_thongtinkh"
+        title="个人信息" >
+        <child>
+            <tabmenu
+                class="com.fss.mobiletrading.function.accountconfig.ChangePassword"
+                title="修改登录密码" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.accountconfig.ChangeTradingPassword"
+                title="修改PIN码" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.accountconfig.AccountConfig"
+                title="Thay đổi thông tin cá nhân" >
+            </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.authorizationinfo.AuthorizationInfo"
+                title="授权人信息" >
+            </tabmenu>
+        </child>
+    </tabmenu>
+    <tabmenu
+        class="com.fss.mobiletrading.function.AboutUs"
+        icon="selector_slidemenu_lienhe"
+        title="联系富南" >
+    </tabmenu>
+    <tabmenu
+        class="null"
+        icon="selector_slidemenu_logout"
+        title="退出" >
+    </tabmenu>
+
+</listmenu>

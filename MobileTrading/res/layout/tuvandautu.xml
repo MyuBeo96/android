@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:orientation="vertical"
+        android:padding="4dp"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10.0" >
+
+            <TextView
+                style="@style/Label_Style"
+                android:layout_width="0dp"
+                android:layout_weight="3.0"
+                android:gravity="center"
+                android:text="@string/MaCK" />
+
+            <TextView
+                style="@style/Label_Style"
+                android:layout_width="0dp"
+                android:layout_weight="7.0"
+                android:gravity="center"
+                android:text="@string/livechat_TuVan" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ffff9900" />
+
+        <ListView
+            android:id="@+id/lv_tuvandautu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:divider="@color/listview_separation_color" android:scrollbars="none" />
+    </LinearLayout>
+
+</LinearLayout>

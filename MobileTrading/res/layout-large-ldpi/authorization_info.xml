@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/authorization_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4.5"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/Content_Style"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:text="@string/AuthorizationInfo"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/header_separation_color" />
+
+        <ListView
+            android:id="@+id/listview_authorization_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:choiceMode="singleChoice"
+            android:divider="@color/listview_separation_color"
+            android:dividerHeight="0.5dp"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:background="@color/header_separation_color" />
+
+    <LinearLayout
+        android:id="@+id/container_permissiontable"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5.5"
+        android:orientation="vertical"
+        android:background="@color/bg_fragment"
+        android:paddingLeft="10dp" >
+    </LinearLayout>
+
+</LinearLayout>

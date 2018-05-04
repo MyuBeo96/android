@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/lay_LichSuLenh1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/layout_saoketien_textbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/m_paddingLeft"
+            android:paddingRight="@dimen/m_paddingRight" >
+
+            <com.msbuat.mobiletrading.design.SearchTextUI
+                android:id="@+id/searchtext_listview"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone" />
+
+            <com.fss.designcontrol.SymbolEdittext
+                android:id="@+id/edt_searchstock_search"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone" />
+
+            <com.msbuat.mobiletrading.design.InputDate
+                android:id="@+id/date_cashstatement_fromdate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                app:separationColorInputDate="@color/transparent" />
+
+            <com.msbuat.mobiletrading.design.InputDate
+                android:id="@+id/date_cashstatement_todate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="5"
+                app:separationColorInputDate="@color/transparent" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_LichSuLenh_Search"
+            style="@style/Button_Background1"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/layout_saoketien_textbox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/XacNhan"
+            android:textColor="@color/white_text"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_fragment2" >
+
+        <View
+            android:id="@+id/line_orderhistory_1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/header_separation_color" />
+
+        <LinearLayout
+            android:id="@+id/lay_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_orderhistory_1"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="2.8"
+                android:text="@string/saoketien_label_ngay" />
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="1.5"
+                android:text="@string/Mua_Ban" />
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="1.8"
+                android:text="@string/MaCK" />
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="2.0"
+                android:text="@string/KL_2" />
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="2.0"
+                android:text="@string/Gia" />
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/header_separation_color" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_header"
+            android:layout_centerHorizontal="true"
+            android:text="@string/error_no_data_to_display"
+            android:textColor="#ff888888" />
+
+        <ListView
+            android:id="@+id/listview_LichSuLenh"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_header"
+            android:background="@color/bg_fragment"
+            android:divider="@color/listview_separation_color"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:paddingBottom="5dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <TextView android:id="@+id/lbl_coban_chitiet_Symbol" android:layout_marginLeft="5dp" android:text="@string/MaCK" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_Symbol" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_Symbol" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_ClosePrice" android:layout_marginLeft="5dp" android:text="@string/GiaKhopCuoi" android:layout_below="@+id/lbl_coban_chitiet_Symbol" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_ClosePrice" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_ClosePrice" android:layout_below="@+id/lbl_coban_chitiet_Symbol" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_Change" android:layout_marginLeft="5dp" android:text="@string/change" android:layout_below="@+id/lbl_coban_chitiet_ClosePrice" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_Change" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_Change" android:layout_below="@+id/lbl_coban_chitiet_ClosePrice" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_PE" android:layout_marginLeft="5dp" android:text="@string/boloc_PE" android:layout_below="@+id/lbl_coban_chitiet_Change" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_PE" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_PE" android:layout_below="@+id/lbl_coban_chitiet_Change" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_PB" android:layout_marginLeft="5dp" android:text="@string/boloc_PB" android:layout_below="@+id/lbl_coban_chitiet_PE" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_PB" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_PB" android:layout_below="@+id/lbl_coban_chitiet_PE" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_EPS" android:layout_marginLeft="5dp" android:text="@string/boloc_EPS" android:layout_below="@+id/lbl_coban_chitiet_PB" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_EPS" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_EPS" android:layout_below="@+id/lbl_coban_chitiet_PB" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_PS" android:layout_marginLeft="5dp" android:text="@string/boloc_PS" android:layout_below="@+id/lbl_coban_chitiet_EPS" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_PS" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_PS" android:layout_below="@+id/lbl_coban_chitiet_EPS" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_ThanhToanNhanh" android:layout_marginLeft="5dp" android:text="@string/thanh_toan_nhanh" android:layout_below="@+id/lbl_coban_chitiet_PS" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_ThanhToanNhanh" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_ThanhToanNhanh" android:layout_below="@+id/lbl_coban_chitiet_PS" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_ThanhToanHienHanh" android:layout_marginLeft="5dp" android:text="@string/thanh_toan_hien_hanh" android:layout_below="@+id/lbl_coban_chitiet_ThanhToanNhanh" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_ThanhToanHienHanh" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_ThanhToanHienHanh" android:layout_below="@+id/lbl_coban_chitiet_ThanhToanNhanh" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_VonVay_VonCSH" android:layout_marginLeft="5dp" android:text="@string/von_vay_vonCSH" android:layout_below="@+id/lbl_coban_chitiet_ThanhToanHienHanh" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_VonVay_VonCSH" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_VonVay_VonCSH" android:layout_below="@+id/lbl_coban_chitiet_ThanhToanHienHanh" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_VonVay_TongTS" android:layout_marginLeft="5dp" android:text="@string/von_vay_tong_TS" android:layout_below="@+id/lbl_coban_chitiet_VonVay_VonCSH" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_VonVay_TongTS" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_VonVay_TongTS" android:layout_below="@+id/lbl_coban_chitiet_VonVay_VonCSH" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_LaiGop_DT" android:layout_marginLeft="5dp" android:text="@string/lai_gop_DT" android:layout_below="@+id/lbl_coban_chitiet_VonVay_TongTS" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_LaiGop_DT" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_LaiGop_DT" android:layout_below="@+id/lbl_coban_chitiet_VonVay_TongTS" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_EBIT_DT" android:layout_marginLeft="5dp" android:text="@string/EBIT_DT" android:layout_below="@+id/lbl_coban_chitiet_LaiGop_DT" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_EBIT_DT" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_EBIT_DT" android:layout_below="@+id/lbl_coban_chitiet_LaiGop_DT" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_LaiHDKT_DT" android:layout_marginLeft="5dp" android:text="@string/laiHDKD_DT" android:layout_below="@+id/lbl_coban_chitiet_EBIT_DT" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_LaiHDKT_DT" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_LaiHDKT_DT" android:layout_below="@+id/lbl_coban_chitiet_EBIT_DT" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_LaiRong_DT" android:layout_marginLeft="5dp" android:text="@string/lai_rong_DT" android:layout_below="@+id/lbl_coban_chitiet_LaiHDKT_DT" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_LaiRong_DT" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_LaiRong_DT" android:layout_below="@+id/lbl_coban_chitiet_LaiHDKT_DT" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_ROE" android:layout_marginLeft="5dp" android:text="@string/boloc_ROE" android:layout_below="@+id/lbl_coban_chitiet_LaiRong_DT" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_ROE" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_ROE" android:layout_below="@+id/lbl_coban_chitiet_LaiRong_DT" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_ROA" android:layout_marginLeft="5dp" android:text="@string/boloc_ROA" android:layout_below="@+id/lbl_coban_chitiet_ROE" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_ROA" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_ROA" android:layout_below="@+id/lbl_coban_chitiet_ROE" style="@style/Content_Style" />
+                <TextView android:id="@+id/lbl_coban_chitiet_Beta" android:layout_marginLeft="5dp" android:text="@string/boloc_Beta" android:layout_below="@+id/lbl_coban_chitiet_ROA" style="@style/Label_Style" />
+                <TextView android:id="@+id/text_coban_chitiet_Beta" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/lbl_coban_chitiet_Beta" android:layout_below="@+id/lbl_coban_chitiet_ROA" style="@style/Content_Style" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

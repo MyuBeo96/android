@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/bankcashtransfer_register"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/m_paddingLeft"
+    android:paddingRight="@dimen/m_paddingRight" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/edt_banktransferregis_accountbank"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/white_text"
+                    app:contentHint="@string/TaiKhoanNganHang"
+                    app:editable="true"
+                    app:labelText="@string/TaiKhoanNganHang"
+                    app:orientation="vertical"
+                    app:singleLine="true" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/edt_banktransferregis_beneficiaryname"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/white_text"
+                    app:contentHint="@string/TenNguoiThuHuong"
+                    app:editable="true"
+                    app:labelText="@string/TenNguoiThuHuong"
+                    app:orientation="vertical"
+                    app:singleLine="true" />
+
+                <com.msbuat.mobiletrading.design.MySpinner
+                    android:id="@+id/spn_banktransferregis_beneficiarybank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hasLabel="true"
+                    app:textMySpinner="@string/NganHangNguoiThuHuong" />
+
+                <com.msbuat.mobiletrading.design.MySpinner
+                    android:id="@+id/spn_banktransferregis_branch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hasLabel="true"
+                    app:textMySpinner="@string/PhongGiaoDich" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/edt_banktransferregis_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/white_text"
+                    app:contentHint="@string/TinhThanhPho"
+                    app:editable="true"
+                    app:labelText="@string/TinhThanhPho"
+                    app:orientation="vertical"
+                    app:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_DKCT_rangoai_ChapNhan"
+                    style="@style/Button_Background1"
+                    android:layout_width="match_parent"
+                    android:text="@string/XacNhan" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

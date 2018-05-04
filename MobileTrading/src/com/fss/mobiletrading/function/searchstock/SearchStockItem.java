@@ -1,0 +1,102 @@
+package com.fss.mobiletrading.function.searchstock;
+
+import java.util.HashMap;
+
+public class SearchStockItem {
+
+	public String Id;
+	public String symbol;
+	public String StockId;
+	public String FullName;
+	public String tradingdate;
+	public String FloorCode;
+	public String StockType;
+	public String ceiling;
+	public String floor;
+	public String reference;
+	public String bidPrice3;
+	public String bidVol3;
+	public String bidPrice2;
+	public String bidVol2;
+	public String bidPrice1;
+	public String bidVol1;
+	public String closePrice;
+	public String closeVol;
+	public String change;
+	public String offerPrice1;
+	public String offerVol1;
+	public String offerPrice2;
+	public String offerVol2;
+	public String offerPrice3;
+	public String offerVol3;
+	public String totalTrading;
+	public String totalTradingValue;
+	public String averagePrice;
+	public String open;
+	public String high;
+	public String low;
+	public String foreignBuy;
+	public String foreignSell;
+	public String foreignRemain;
+	public String foreignRoom;
+	public String TOTAL_OFFER_QTTY;
+	public String TOTAL_BID_QTTY;
+	public String PRIOR_PRICE;
+	public String PT_MATCH_QTTY;
+	public String PT_MATCH_PRICE;
+	public String PT_TOTAL_TRADED_QTTY;
+	public String PT_TOTAL_TRADED_VALUE;
+	public String Status;
+	public String priceOne;
+	public String priceTwo;
+
+	public SearchStockItem(HashMap<String, String> hm) {
+		super();
+		Id = hm.get("Id");
+		symbol = hm.get("symbol");
+		StockId = hm.get("StockId");
+		FullName = hm.get("FullName");
+		tradingdate = hm.get("tradingdate");
+		FloorCode = hm.get("FloorCode");
+		StockType = hm.get("StockType");
+		ceiling = hm.get("ceiling");
+		floor = hm.get("floor");
+		reference = hm.get("reference");
+		bidPrice3 = hm.get("bidPrice3");
+		bidVol3 = hm.get("bidVol3");
+		bidPrice2 = hm.get("bidPrice2");
+		bidVol2 = hm.get("bidVol2");
+		bidPrice1 = hm.get("bidPrice1");
+		bidVol1 = hm.get("bidVol1");
+		closePrice = hm.get("closePrice");
+		closeVol = hm.get("closeVol");
+		change = hm.get("change");
+		offerPrice1 = hm.get("offerPrice1");
+		offerVol1 = hm.get("offerVol1");
+		offerPrice2 = hm.get("offerPrice2");
+		offerVol2 = hm.get("offerVol2");
+		offerPrice3 = hm.get("offerPrice3");
+		offerVol3 = hm.get("offerVol3");
+		totalTrading = hm.get("totalTrading");
+		totalTradingValue = hm.get("totalTradingValue");
+		averagePrice = hm.get("averagePrice");
+		open = hm.get("open");
+		high = hm.get("high");
+		low = hm.get("low");
+		foreignBuy = hm.get("foreignBuy");
+		foreignSell = hm.get("foreignSell");
+		foreignRemain = hm.get("foreignRemain");
+		foreignRoom = hm.get("foreignRoom");
+		TOTAL_OFFER_QTTY = hm.get("TOTAL_OFFER_QTTY");
+		TOTAL_BID_QTTY = hm.get("TOTAL_BID_QTTY");
+		PRIOR_PRICE = hm.get("PRIOR_PRICE");
+		PT_MATCH_QTTY = hm.get("PT_MATCH_QTTY");
+		PT_MATCH_PRICE = hm.get("PT_MATCH_PRICE");
+		PT_TOTAL_TRADED_QTTY = hm.get("PT_TOTAL_TRADED_QTTY");
+		PT_TOTAL_TRADED_VALUE = hm.get("PT_TOTAL_TRADED_VALUE");
+		Status = hm.get("Status");
+		priceOne = hm.get("priceOne");
+		priceTwo = hm.get("priceTwo");
+	}
+
+}

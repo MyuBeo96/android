@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/solenh_chitiet"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="1dp" >
+
+    <ScrollView
+        android:id="@+id/scrollview_solenh_chitiet"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lay_solenh_chitiet_huysualenh"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/m_paddingLeft"
+                    android:paddingRight="@dimen/m_paddingRight" >
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_solenh_chitiet_custodycd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:contentgravity="right"
+                        app:labelText="@string/SoLuuKy" />
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_solenh_chitiet_afacctno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:contentgravity="right"
+                        app:labelText="@string/TieuKhoan" />
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_solenh_chitiet_fromDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:contentgravity="right"
+                        app:labelText="@string/NgayDat" />
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_solenh_chitiet_toDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:contentgravity="right"
+                        app:labelText="@string/NgayHetHan" />
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_solenh_chitiet_side"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:active_color_buysell="true"
+                        app:contentgravity="right"
+                        app:labelText="@string/Mua_Ban" />
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_solenh_chitiet_symbol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:contentColor="@color/yellow_text"
+                        app:contentgravity="right"
+                        app:labelText="@string/MaCK" />
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_solenh_chitiet_pricetype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:active_color_buysell="true"
+                        app:contentgravity="right"
+                        app:labelText="@string/LoaiLenh" />
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/edt_solenh_chitiet_orderquantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:active_color_buysell="true"
+                        app:contentgravity="right"
+                        app:labelText="@string/KLDat" />
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/edt_solenh_chitiet_orderprice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:active_color_buysell="true"
+                        app:contentgravity="right"
+                        app:labelText="@string/GiaDat" />
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_solenh_chitiet_matchquantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:active_color_buysell="true"
+                        app:contentgravity="right"
+                        app:labelText="@string/KLKhop" />
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_solenh_chitiet_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:contentColor="@color/blue_text"
+                        app:contentgravity="right"
+                        app:labelText="@string/TrangThai" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_solenh_chitiet_ChiTietKhop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/header_separation_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/Table_Header"
+                        android:layout_weight="2.0"
+                        android:lines="1"
+                        android:text="@string/GioDat" />
+
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/header_separation_color" />
+
+                    <TextView
+                        style="@style/Table_Header"
+                        android:layout_weight="2.0"
+                        android:lines="1"
+                        android:text="@string/GiaDat" />
+
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/header_separation_color" />
+
+                    <TextView
+                        style="@style/Table_Header"
+                        android:layout_weight="2.0"
+                        android:lines="1"
+                        android:text="@string/solenh_chitiet_KLDat" />
+
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/header_separation_color" />
+
+                    <TextView
+                        style="@style/Table_Header"
+                        android:layout_weight="2.0"
+                        android:lines="1"
+                        android:text="@string/solenh_chitiet_KLKhop" />
+
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/header_separation_color" />
+
+                    <TextView
+                        style="@style/Table_Header"
+                        android:layout_weight="2.0"
+                        android:lines="1"
+                        android:text="@string/ConLai" />
+
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/header_separation_color" />
+                </LinearLayout>
+
+                <com.msbuat.mobiletrading.design.VerticalListview
+                    android:id="@+id/listview_solenhthuongCT"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:divider="@color/listview_separation_color"
+                    android:paddingLeft="@dimen/m_paddingLeft"
+                    android:paddingRight="@dimen/m_paddingRight"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/lay_solenh_chitiet_huysualenh"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_solenh_chitiet_HuyLenh"
+            style="@style/Button_Background1"
+            android:layout_width="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="5"
+            android:background="@drawable/background_button_huysualenh"
+            android:text="@string/HuyLenh" />
+
+        <Button
+            android:id="@+id/btn_solenh_chitiet_SuaLenh"
+            style="@style/Button_Background1"
+            android:layout_width="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="5"
+            android:background="@drawable/background_button_huysualenh"
+            android:text="@string/solenh_chitiet_btn_SuaLenh" />
+    </LinearLayout>
+
+</RelativeLayout>

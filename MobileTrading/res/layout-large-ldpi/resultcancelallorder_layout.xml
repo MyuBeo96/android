@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/background_alertdialog"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/text_resultcancelallorder_title"
+        style="@style/Label_Style"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alertdialog_title_height"
+        android:gravity="center"
+        android:text="@string/DaXoaThanhCong"
+        android:textColor="@color/white_text"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color"
+        android:visibility="gone" />
+
+    <com.msbuat.mobiletrading.design.BoundedLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:maxheight="@dimen/m_docancelorderdialog_maxheight" >
+
+        <ListView
+            android:id="@+id/listview_resultcancelallorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2A2931"
+            android:scrollbars="none" >
+        </ListView>
+    </com.msbuat.mobiletrading.design.BoundedLinearLayout>
+
+    <TextView
+        android:id="@+id/text_resultcancelallorder_positive"
+        style="@style/Label_Style"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="@string/XacNhan"
+        android:textColor="@color/green_text" />
+
+</LinearLayout>

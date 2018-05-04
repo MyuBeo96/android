@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/accountbalance"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_fragment"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.msbuat.mobiletrading.design.MySpinner
+            android:id="@+id/spn_accountbalance"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/header_background_color"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            app:gravity_hori="center_hori"
+            app:hasLabel="false"
+            app:separationColor="@color/transparent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/header_separation_color" />
+
+        <LinearLayout
+            android:id="@+id/layout_balance_cash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/t_paddingLeft"
+            android:paddingRight="@dimen/t_paddingRight"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/t_cashtransfer_frame_height"
+                android:gravity="bottom"
+                android:orientation="horizontal" >
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/text_tienmat"
+                    style="@style/LabelContentLayout_Style"
+                    app:contentColor="@color/white_text"
+                    app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                    app:labelText="@string/TienMat"
+                    app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/text_ungtoida"
+                    style="@style/LabelContentLayoutMarginLeft_Style"
+                    app:contentColor="@color/white_text"
+                    app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                    app:labelText="@string/TienCoTheUng"
+                    app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/text_cotucchove"
+                    style="@style/LabelContentLayoutMarginLeft_Style"
+                    app:contentColor="@color/white_text"
+                    app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                    app:labelText="@string/CoTucChoVe"
+                    app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+                    app:orientation="vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/t_cashtransfer_frame_height"
+                android:gravity="bottom"
+                android:orientation="horizontal" >
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/text_tongno"
+                    style="@style/LabelContentLayout_Style"
+                    app:contentColor="@color/white_text"
+                    app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                    app:labelText="@string/DuNoHienTai"
+                    app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/text_RTT"
+                    style="@style/LabelContentLayoutMarginLeft_Style"
+                    app:contentColor="@color/white_text"
+                    app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                    app:labelText="@string/sodutien_label_RTT"
+                    app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/text_tiennopbosung"
+                    style="@style/LabelContentLayoutMarginLeft_Style"
+                    app:contentColor="@color/white_text"
+                    app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                    app:labelText="@string/TienNopBoSung"
+                    app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+                    app:orientation="vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/t_cashtransfer_frame_height"
+                android:gravity="bottom"
+                android:orientation="horizontal" >
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/text_choveT0"
+                    style="@style/LabelContentLayout_Style"
+                    app:contentColor="@color/white_text"
+                    app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                    app:labelText="@string/TienBanT0"
+                    app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/text_choveT1"
+                    style="@style/LabelContentLayoutMarginLeft_Style"
+                    app:contentColor="@color/white_text"
+                    app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                    app:labelText="@string/TienBanT1"
+                    app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/text_choveT2"
+                    style="@style/LabelContentLayoutMarginLeft_Style"
+                    app:contentColor="@color/white_text"
+                    app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                    app:labelText="@string/TienBanT2"
+                    app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+                    app:orientation="vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/t_cashtransfer_frame_height"
+                android:gravity="bottom"
+                android:orientation="horizontal" >
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/text_ruttoida"
+                    style="@style/LabelContentLayout_Style"
+                    app:contentColor="@color/white_text"
+                    app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                    app:labelText="@string/sodutien_label_RutToiDa"
+                    app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/text_GiaTriNAV"
+                    style="@style/LabelContentLayoutMarginLeft_Style"
+                    app:contentColor="@color/white_text"
+                    app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                    app:labelText="@string/sodutien_lable_GiaTriNAV"
+                    app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+                    app:orientation="vertical" />
+
+                <View style="@style/LabelContentLayoutMarginLeft_Style" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_balance_stock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/t_header_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/m_paddingLeft"
+                android:paddingRight="@dimen/m_paddingRight" >
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/MaCK"
+                    android:textSize="@dimen/stockbalance_headertextsize" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/Mua_Ban"
+                    android:textSize="@dimen/stockbalance_headertextsize" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/TongCong"
+                    android:textSize="@dimen/stockbalance_headertextsize" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/HienCo"
+                    android:textSize="@dimen/stockbalance_headertextsize" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/ChoVeQuyen"
+                    android:textSize="@dimen/stockbalance_headertextsize" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/ChoVeT0"
+                    android:textSize="@dimen/stockbalance_headertextsize" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/ChoVeT1"
+                    android:textSize="@dimen/stockbalance_headertextsize" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/ChoVeT2"
+                    android:textSize="@dimen/stockbalance_headertextsize" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/ChoVeT3"
+                    android:textSize="@dimen/stockbalance_headertextsize"
+                    android:visibility="gone"/>
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/ChoKhop"
+                    android:textSize="@dimen/stockbalance_headertextsize" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/GiaThiTruong"
+                    android:textSize="@dimen/stockbalance_headertextsize" />
+
+                <TextView
+                    style="@style/Table_Header"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:background="@color/t_header_bg"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/GiaTriThiTruong"
+                    android:textSize="@dimen/stockbalance_headertextsize" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/header_separation_color"
+               />
+
+            <ListView
+                android:id="@+id/listview_DMCK_rutgon"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/listview_separation_color"
+                android:scrollbars="none"
+               />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

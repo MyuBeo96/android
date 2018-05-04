@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/stockinfo_index"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/m_paddingLeft" >
+
+            <TextView
+                android:id="@+id/text_BangGiaCT_Symbol"
+                style="@style/Label_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/Img_BangGiaCT_KyHieu"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/text_BangGiaCT_TenCty"
+                style="@style/Content_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:textSize="@dimen/t_stockinfo_index_labelsize" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/header_separation_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/Label_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:text="@string/GiaKhopCuoi"
+                android:textSize="@dimen/t_stockinfo_index_labelsize" />
+
+            <com.msbuat.mobiletrading.design.TextViewHightLight
+                android:id="@+id/text_BangGiaCT_GiaKhopCuoi"
+                style="@style/Label_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/Label_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/ThayDoi"
+                android:textSize="@dimen/t_stockinfo_index_labelsize" />
+
+            <com.msbuat.mobiletrading.design.TextViewHightLight
+                android:id="@+id/text_BangGiaCT_Change"
+                style="@style/Label_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/Label_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:text="@string/percent_change"
+                android:textSize="@dimen/t_stockinfo_index_labelsize" />
+
+            <com.msbuat.mobiletrading.design.TextViewHightLight
+                android:id="@+id/text_BangGiaCT_Percent"
+                style="@style/Label_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:textSize="20.0sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/header_separation_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/m_paddingRight" >
+
+                <TextView
+                    style="@style/Label_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/KhoiLuong_2"
+                    android:textSize="@dimen/t_stockinfo_index_labelsize" />
+
+                <com.msbuat.mobiletrading.design.TextViewHightLight
+                    android:id="@+id/text_BangGiaCT_khoiluong"
+                    style="@style/Content_Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_hint_color"
+                    android:textSize="@dimen/t_stockinfo_index_contentsize" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/header_separation_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/m_paddingRight" >
+
+                <TextView
+                    style="@style/Label_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TongKL_2"
+                    android:textSize="12sp" />
+
+                <com.msbuat.mobiletrading.design.TextViewHightLight
+                    android:id="@+id/text_BangGiaCT_tongkhoiluong"
+                    style="@style/Content_Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_hint_color"
+                    android:textSize="@dimen/t_stockinfo_index_contentsize" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:paddingLeft="@dimen/m_paddingLeft" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/Label_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/ThiTruong"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/text_stockinfo_index_market"
+                        style="@style/Content_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|left"
+                        android:singleLine="true"
+                        android:textColorHint="@color/text_hint_color"
+                        android:textSize="@dimen/t_stockinfo_index_contentsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/Label_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|right"
+                        android:text="@string/RoomNuocNgoai"
+                        android:textSize="12sp" />
+
+                    <com.msbuat.mobiletrading.design.TextViewHightLight
+                        android:id="@+id/text_BangGiaCT_foreignRemain"
+                        style="@style/Content_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|right"
+                        android:singleLine="true"
+                        android:textColorHint="@color/text_hint_color"
+                        android:textSize="@dimen/t_stockinfo_index_contentsize" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/header_separation_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:paddingLeft="@dimen/m_paddingLeft" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/Label_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/CaoNhat"
+                        android:textSize="12sp" />
+
+                    <com.msbuat.mobiletrading.design.TextViewHightLight
+                        android:id="@+id/text_BangGiaCT_CaoNhat"
+                        style="@style/Content_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|left"
+                        android:singleLine="true"
+                        android:textColorHint="@color/text_hint_color"
+                        android:textSize="@dimen/t_stockinfo_index_contentsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/Label_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|right"
+                        android:text="@string/ThapNhat"
+                        android:textSize="12sp" />
+
+                    <com.msbuat.mobiletrading.design.TextViewHightLight
+                        android:id="@+id/text_BangGiaCT_ThapNhat"
+                        style="@style/Content_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|right"
+                        android:singleLine="true"
+                        android:textColorHint="@color/text_hint_color"
+                        android:textSize="@dimen/t_stockinfo_index_contentsize" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="2.5"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/m_paddingRight" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/Label_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/Tran"
+                        android:textSize="12sp" />
+
+                    <com.msbuat.mobiletrading.design.TextViewHightLight
+                        android:id="@+id/text_BangGiaCT_Tran"
+                        style="@style/Content_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|left"
+                        android:singleLine="true"
+                        android:textColor="@color/color_Tran"
+                        android:textColorHint="@color/text_hint_color"
+                        android:textSize="@dimen/t_stockinfo_index_contentsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/Label_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|right"
+                        android:text="@string/ThamChieu"
+                        android:textSize="12sp" />
+
+                    <com.msbuat.mobiletrading.design.TextViewHightLight
+                        android:id="@+id/text_BangGiaCT_ThamChieu"
+                        style="@style/Content_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|right"
+                        android:singleLine="true"
+                        android:textColor="@color/color_ThamChieu"
+                        android:textColorHint="@color/text_hint_color"
+                        android:textSize="@dimen/t_stockinfo_index_contentsize" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/header_separation_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/Label_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/San"
+                        android:textSize="12sp" />
+
+                    <com.msbuat.mobiletrading.design.TextViewHightLight
+                        android:id="@+id/text_BangGiaCT_San"
+                        style="@style/Content_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|left"
+                        android:singleLine="true"
+                        android:textColor="@color/color_San"
+                        android:textColorHint="@color/text_hint_color"
+                        android:textSize="@dimen/t_stockinfo_index_contentsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/Label_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|right"
+                        android:text="@string/TrungBinh"
+                        android:textSize="12sp" />
+
+                    <com.msbuat.mobiletrading.design.TextViewHightLight
+                        android:id="@+id/text_BangGiaCT_Average"
+                        style="@style/Content_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|right"
+                        android:singleLine="true"
+                        android:textColorHint="@color/text_hint_color"
+                        android:textSize="@dimen/t_stockinfo_index_contentsize" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/header_separation_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/m_paddingRight" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lbl_BangGiaCT_GiaMuaTotNhat"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="@dimen/button_bidoffer_width"
+                    android:layout_weight="5"
+                    android:background="@color/transparent"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="5dp"
+                    android:text="@string/banggiachitiet_lbl_GiaMuaTotNhat"
+                    android:textColor="@color/bidrate_color"
+                    android:textSize="@dimen/t_stockinfo_index_labelsize" />
+
+                <TextView
+                    android:id="@+id/lbl_BangGiaCT_GiaBanTotNhat"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="@dimen/button_bidoffer_width"
+                    android:layout_weight="5"
+                    android:background="@color/transparent"
+                    android:gravity="center_horizontal"
+                    android:text="@string/banggiachitiet_lbl_GiaBanTotNhat"
+                    android:textColor="@color/offrate_color"
+                    android:textSize="@dimen/t_stockinfo_index_labelsize" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/lay_percentBidOff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/text_bidpercent"
+                    android:layout_width="@dimen/button_bidoffer_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/m_paddingLeft"
+                    android:gravity="center"
+                    android:text="50%"
+                    android:textColor="@color/bidrate_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="7dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/text_offpercent"
+                    android:layout_toRightOf="@+id/text_bidpercent"
+                    android:background="@color/offrate_color"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <View
+                        android:id="@+id/view_bidpercent"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:background="@color/bidrate_color" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text_offpercent"
+                    android:layout_width="@dimen/button_bidoffer_width"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/m_paddingRight"
+                    android:text="50%"
+                    android:textColor="@color/offrate_color" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/m_paddingLeft"
+                    android:layout_weight="2.5"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/btn_stockitem_index_bid1"
+                            android:layout_width="@dimen/button_bidoffer_width"
+                            android:layout_height="@dimen/button_bidoffer_height"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/background_button_offer_stockinfo"
+                            android:gravity="center"
+                            android:text="@string/Ban"
+                            android:textColor="@color/white_text"
+                            android:textSize="@dimen/t_stockinfo_index_labelsize" />
+
+                        <RelativeLayout
+                            android:id="@+id/lay_stockinfo_index_bid1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2.5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2.5dp"
+                            android:background="@drawable/bg_bid1"
+                            android:paddingRight="10dp" >
+
+                            <com.msbuat.mobiletrading.design.TextViewHightLight
+                                android:id="@+id/text_BangGiaCT_BidPrice1"
+                                style="@style/Label_Style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="@dimen/stockinfo_index_bidofflabelsize" />
+
+                            <com.msbuat.mobiletrading.design.TextViewHightLight
+                                android:id="@+id/text_BangGiaCT_Bid1"
+                                style="@style/Label_Style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:textSize="@dimen/stockinfo_index_bidofflabelsize" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/btn_stockitem_index_bid2"
+                            android:layout_width="@dimen/button_bidoffer_width"
+                            android:layout_height="@dimen/button_bidoffer_height"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/background_button_offer_stockinfo"
+                            android:gravity="center"
+                            android:text="@string/Ban"
+                            android:textColor="@color/white_text"
+                            android:textSize="@dimen/t_stockinfo_index_labelsize" />
+
+                        <RelativeLayout
+                            android:id="@+id/lay_stockinfo_index_bid2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2.5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2.5dp"
+                            android:background="@drawable/bg_bid2"
+                            android:paddingRight="10dp" >
+
+                            <com.msbuat.mobiletrading.design.TextViewHightLight
+                                android:id="@+id/text_BangGiaCT_BidPrice2"
+                                style="@style/Label_Style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="@dimen/stockinfo_index_bidofflabelsize" />
+
+                            <com.msbuat.mobiletrading.design.TextViewHightLight
+                                android:id="@+id/text_BangGiaCT_Bid2"
+                                style="@style/Label_Style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:textSize="@dimen/stockinfo_index_bidofflabelsize" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/btn_stockitem_index_bid3"
+                            android:layout_width="@dimen/button_bidoffer_width"
+                            android:layout_height="@dimen/button_bidoffer_height"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/background_button_offer_stockinfo"
+                            android:gravity="center"
+                            android:text="@string/Ban"
+                            android:textColor="@color/white_text"
+                            android:textSize="@dimen/t_stockinfo_index_labelsize" />
+
+                        <RelativeLayout
+                            android:id="@+id/lay_stockinfo_index_bid3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2.5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2.5dp"
+                            android:background="@drawable/bg_bid3"
+                            android:paddingRight="10dp" >
+
+                            <com.msbuat.mobiletrading.design.TextViewHightLight
+                                android:id="@+id/text_BangGiaCT_BidPrice3"
+                                style="@style/Label_Style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="@dimen/stockinfo_index_bidofflabelsize" />
+
+                            <com.msbuat.mobiletrading.design.TextViewHightLight
+                                android:id="@+id/text_BangGiaCT_Bid3"
+                                style="@style/Label_Style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:textSize="@dimen/stockinfo_index_bidofflabelsize" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="2.5"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <RelativeLayout
+                            android:id="@+id/lay_stockinfo_index_offer1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2.5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="2.5dp"
+                            android:layout_toLeftOf="@+id/btn_stockitem_index_offer1"
+                            android:background="@drawable/bg_off1"
+                            android:paddingLeft="10dp" >
+
+                            <com.msbuat.mobiletrading.design.TextViewHightLight
+                                android:id="@+id/text_BangGiaCT_OfferPrice1"
+                                style="@style/Label_Style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="0dp"
+                                android:textSize="@dimen/stockinfo_index_bidofflabelsize" />
+
+                            <com.msbuat.mobiletrading.design.TextViewHightLight
+                                android:id="@+id/text_BangGiaCT_Offer1"
+                                style="@style/Label_Style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="0dp"
+                                android:textSize="@dimen/stockinfo_index_bidofflabelsize" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/btn_stockitem_index_offer1"
+                            android:layout_width="@dimen/button_bidoffer_width"
+                            android:layout_height="@dimen/button_bidoffer_height"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/background_button_bid_stockinfo"
+                            android:gravity="center"
+                            android:text="@string/Mua"
+                            android:textColor="@color/white_text"
+                            android:textSize="@dimen/t_stockinfo_index_labelsize" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <RelativeLayout
+                            android:id="@+id/lay_stockinfo_index_offer2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2.5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="2.5dp"
+                            android:layout_toLeftOf="@+id/btn_stockitem_index_offer2"
+                            android:background="@drawable/bg_off2"
+                            android:paddingLeft="10dp" >
+
+                            <com.msbuat.mobiletrading.design.TextViewHightLight
+                                android:id="@+id/text_BangGiaCT_OfferPrice2"
+                                style="@style/Label_Style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="0dp"
+                                android:textSize="@dimen/stockinfo_index_bidofflabelsize" />
+
+                            <com.msbuat.mobiletrading.design.TextViewHightLight
+                                android:id="@+id/text_BangGiaCT_Offer2"
+                                style="@style/Label_Style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="0dp"
+                                android:textSize="@dimen/stockinfo_index_bidofflabelsize" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/btn_stockitem_index_offer2"
+                            android:layout_width="@dimen/button_bidoffer_width"
+                            android:layout_height="@dimen/button_bidoffer_height"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/background_button_bid_stockinfo"
+                            android:text="@string/Mua"
+                            android:textColor="@color/white_text"
+                            android:textSize="@dimen/t_stockinfo_index_labelsize" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:id="@+id/lay_stockinfo_index_offer3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2.5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="2.5dp"
+                            android:layout_toLeftOf="@+id/btn_stockitem_index_offer3"
+                            android:background="@drawable/bg_off3"
+                            android:paddingLeft="10dp" >
+
+                            <com.msbuat.mobiletrading.design.TextViewHightLight
+                                android:id="@+id/text_BangGiaCT_OfferPrice3"
+                                style="@style/Label_Style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="0dp"
+                                android:textSize="@dimen/stockinfo_index_bidofflabelsize" />
+
+                            <com.msbuat.mobiletrading.design.TextViewHightLight
+                                android:id="@+id/text_BangGiaCT_Offer3"
+                                style="@style/Label_Style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="0dp"
+                                android:textSize="@dimen/stockinfo_index_bidofflabelsize" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/btn_stockitem_index_offer3"
+                            android:layout_width="@dimen/button_bidoffer_width"
+                            android:layout_height="@dimen/button_bidoffer_height"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/background_button_bid_stockinfo"
+                            android:text="@string/Mua"
+                            android:textColor="@color/white_text"
+                            android:textSize="@dimen/t_stockinfo_index_labelsize" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

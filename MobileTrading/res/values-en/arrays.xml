@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="menu_function_title">
+        <item>Trade</item>
+        <item>WatchList</item>
+        <item>Market</item>
+        <item>Market News</item>
+        <item>KBSV Message</item>
+        <item>Market Calendar</item>
+        <item>Order status</item>
+        <item>Normal order</item>
+        <item>Condition Order</item>
+        <item>Account balance</item>
+        <item>Cash balance</item>
+        <item>Stock balance</item>
+        <item>Statement</item>
+        <item>Cash statement</item>
+        <item>Stock statement</item>
+        <item>Order history</item>
+        <item>Transfer history</item>
+        <item>RightOff register history</item>
+        <item>Advanced history</item>
+        <item>Cash transfer</item>
+        <item>Cash transfer</item>
+        <item>MSB transfer</item>
+        <item>Bank transfer</item>
+        <item>Cash transfer register</item>
+        <item>MSB transfer register</item>
+        <item>Bank transfer register</item>
+        <item>Special Payments</item>
+        <item>Cash Advanced</item>
+        <item>Stock transfer</item>
+        <item>RightOff Register</item>
+        <item>Filter and SmartAlert</item>
+        <item>Sticker filter</item>
+        <item>SmartAlert</item>
+        <item>System and account</item>
+        <item>Setting</item>
+        <item>Change trading password</item>
+        <item>Language</item>
+        <item>About KBSV</item>
+        <item>Logout</item>
+        <item>Change account</item>
+        <item>Report</item>
+        <item>Analysis</item>
+        <item>Transfer list</item>
+        <item>Conditional trade</item>
+        <item>Odd Order Register</item>
+        <item>Confirm Order</item>
+        <item>Authorization Info</item>
+        <item>Search Stock</item>
+    </string-array>
+    <string-array name="listBoLocCP">
+        <item>Price mutation</item>
+        <item>Volume mutation</item>
+        <item>Volume and price mutation</item>
+        <item>Basic mutation</item>
+    </string-array>
+    <string-array name="listAlert">
+        <item>Match alert list</item>
+        <item>Price mutation alert</item>
+        <item>Volume mutation alert</item>
+        <item>Volume and price mutation alert</item>
+        <item>Basic mutation alert</item>
+    </string-array>
+    <string-array name="DBKhoiLuong_DotBienTrong">
+        <item>1 weeks</item>
+        <item>2 weeks</item>
+        <item>1 months</item>
+        <item>2 months</item>
+        <item>3 months</item>
+        <item>6 months</item>
+        <item>12 months</item>
+    </string-array>
+    <string-array name="DBKhoiLuong_TyLeDotBien">
+        <item>2 times</item>
+        <item>3 times</item>
+        <item>4 times</item>
+        <item>5 times</item>
+        <item>6 times</item>
+        <item>7 times</item>
+        <item>8 times</item>
+        <item>9 times</item>
+    </string-array>
+    <string-array name="DBKhoiLuong_KhoiLuongDB">
+        <item>100,000</item>
+        <item>200,000</item>
+        <item>300,000</item>
+        <item>400,000</item>
+        <item>500,000</item>
+        <item>1,000,000</item>
+        <item>2,000,000</item>
+    </string-array>
+    <string-array name="DBGia_DotBienTrong">
+        <item>1 months</item>
+        <item>2 months</item>
+        <item>3 months</item>
+        <item>6 months</item>
+        <item>12 months</item>
+    </string-array>
+    <string-array name="DBGia_KhoiLuongDB">
+        <item>0</item>
+        <item>100,000</item>
+        <item>200,000</item>
+        <item>300,000</item>
+        <item>400,000</item>
+        <item>500,000</item>
+        <item>1,000,000</item>
+        <item>2,000,000</item>
+    </string-array>
+    <string-array name="DBGiaGiaKhoiLuong_TyLeDotBien">
+        <item>0</item>
+        <item>2 times</item>
+        <item>3 times</item>
+        <item>4 times</item>
+        <item>5 times</item>
+        <item>6 times</item>
+        <item>7 times</item>
+        <item>8 times</item>
+    </string-array>
+    <string-array name="DBGiaGiaKhoiLuong_GiaDotBien">
+        <item>Price Increase  >=1%</item>
+        <item>Price Increase  >=2%</item>
+        <item>Price Increase  >=3%</item>
+        <item>Price Decrease  >=1%</item>
+        <item>Price Decrease >=2%</item>
+        <item>Price Decrease >=3%</item>
+    </string-array>
+    <string-array name="ConfirmOrder_ExecType">
+        <item>All#ALL</item>
+        <item>Buy#NB</item>
+        <item>Sell#NS</item>
+        <item>Mortgage sell#MS</item>
+        <item>Buy cancel#CB</item>
+        <item>Sell cancel#CS</item>
+        <item>Buy amend#AB</item>
+        <item>Sell amend#AS</item>
+    </string-array>
+
+</resources>

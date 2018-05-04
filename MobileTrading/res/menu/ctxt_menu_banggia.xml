@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/contextmenu_item_banggia_xoa"
+        android:title="@string/Clear"/>
+    <item
+        android:id="@+id/contextmenu_item_banggia_mua"
+        android:title="@string/Mua"/>
+    <item
+        android:id="@+id/contextmenu_item_banggia_ban"
+        android:title="@string/Ban"/>
+
+</menu>

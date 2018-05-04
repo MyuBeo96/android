@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/permission_table"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_weight="7"
+            android:background="@color/transparent"
+            android:text="@string/TenChucNang" />
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/header_separation_color" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_weight="2.0"
+            android:background="@color/transparent"
+            android:text="@string/View" />
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/header_separation_color" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_weight="2.0"
+            android:background="@color/transparent"
+            android:text="@string/Send" />
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/header_separation_color" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_weight="2.0"
+            android:background="@color/transparent"
+            android:text="@string/Edit" />
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/header_separation_color" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_weight="2.5"
+            android:background="@color/transparent"
+            android:text="@string/Search" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <ListView
+        android:id="@+id/listview_permission_table"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" />
+
+</LinearLayout>

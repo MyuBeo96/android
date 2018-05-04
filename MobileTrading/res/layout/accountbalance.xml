@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/accountbalance"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingLeft="@dimen/m_paddingLeft"
+    android:paddingRight="@dimen/m_paddingRight" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.msbuat.mobiletrading.design.MySpinner
+            android:id="@+id/spn_accountbalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/layout_balance_cash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_tienmat"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/m_labelcontentverlayout_height"
+                        android:layout_weight="5"
+                        app:contentColor="@color/green_text"
+                        app:labelText="@string/TienMat"
+                        app:orientation="vertical"
+                        app:separationColor="@color/transparent" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/lc_separation_color" />
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_ungtoida"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/m_labelcontentverlayout_height"
+                        android:layout_weight="5"
+                        android:paddingLeft="@dimen/m_paddingLeft"
+                        app:contentColor="@color/green_text"
+                        app:labelText="@string/sodutien_label_UngToiDa"
+                        app:orientation="vertical"
+                        app:separationColor="@color/transparent" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/lc_separation_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_ruttoida"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/m_labelcontentverlayout_height"
+                        android:layout_weight="5"
+                        app:contentColor="@color/green_text"
+                        app:labelText="@string/sodutien_label_RutToiDa"
+                        app:orientation="vertical"
+                        app:separationColor="@color/transparent" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/lc_separation_color" />
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_tongno"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/m_labelcontentverlayout_height"
+                        android:layout_weight="5"
+                        android:paddingLeft="@dimen/m_paddingLeft"
+                        app:contentColor="@color/green_text"
+                        app:labelText="@string/sodutien_label_TongNo"
+                        app:orientation="vertical"
+                        app:separationColor="@color/transparent" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/lc_separation_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_RTT"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/m_labelcontentverlayout_height"
+                        android:layout_weight="5"
+                        app:contentColor="@color/green_text"
+                        app:labelText="@string/sodutien_label_RTT"
+                        app:orientation="vertical"
+                        app:separationColor="@color/transparent" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/lc_separation_color" />
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_tiennopbosung"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/m_labelcontentverlayout_height"
+                        android:layout_weight="5"
+                        android:paddingLeft="@dimen/m_paddingLeft"
+                        app:contentColor="@color/green_text"
+                        app:labelText="@string/TienNopBoSung"
+                        app:orientation="vertical"
+                        app:separationColor="@color/transparent" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/lc_separation_color" />
+				<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_GiaTriNAV"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/m_labelcontentverlayout_height"
+                        android:layout_weight="5"
+                        app:contentColor="@color/green_text"
+                        app:labelText="@string/sodutien_lable_GiaTriNAV"
+                        app:orientation="vertical"
+                        app:separationColor="@color/transparent" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/lc_separation_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_choveT0"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/m_labelcontentverlayout_height"
+                        android:layout_weight="5"
+                        app:contentColor="@color/green_text"
+                        app:labelText="@string/ChoVeT0"
+                        app:orientation="vertical"
+                        app:separationColor="@color/transparent" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/lc_separation_color" />
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_choveT1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/m_labelcontentverlayout_height"
+                        android:layout_weight="5"
+                        android:paddingLeft="@dimen/m_paddingLeft_CV"
+                        app:contentColor="@color/green_text"
+                        app:labelText="@string/ChoVeT1"
+                        app:orientation="vertical"
+                        app:separationColor="@color/transparent" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/lc_separation_color" />
+
+                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/text_choveT2"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/m_labelcontentverlayout_height"
+                        android:layout_weight="5"
+                        android:paddingLeft="@dimen/m_paddingLeft_CV"
+                        app:contentColor="@color/green_text"
+                        app:labelText="@string/ChoVeT2"
+                        app:orientation="vertical"
+                        app:separationColor="@color/transparent" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/lc_separation_color" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_balance_stock"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ListView
+                android:id="@+id/listview_DMCK_rutgon"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/listview_separation_color"
+                android:dividerHeight="0.5dp"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

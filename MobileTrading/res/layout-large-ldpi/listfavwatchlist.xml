@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/listfavwatchlist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/header_dialogfragment"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/m_paddingLeft"
+        android:paddingRight="@dimen/m_paddingRight" >
+
+        <ImageView
+            android:id="@+id/img_listfavwatchlist_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_btn"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_back"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_listfavwatchlist_favname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/img_listfavwatchlist_addfav"
+            android:layout_toRightOf="@+id/img_listfavwatchlist_back"
+            android:background="@drawable/press_throughtout"
+            android:gravity="center"
+            android:textColor="@color/white_text"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/img_listfavwatchlist_addfav"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_btn"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_add2"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_listfavwatchlist_addfav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/m_paddingLeft"
+        android:paddingRight="@dimen/m_paddingRight"
+        android:visibility="gone" >
+
+        <com.msbuat.mobiletrading.design.LabelContentLayout
+            android:id="@+id/edt_listfavwatchlist_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentHint="@string/TenDanhMuc"
+            app:editable="true"
+            app:labelText="@string/TenDanhMuc" />
+
+        <com.msbuat.mobiletrading.design.LabelContentLayout
+            android:id="@+id/edt_listfavwatchlist_symbols"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentHint="@string/CK1CK2CK3"
+            app:editable="true"
+            app:inputType="textCap"
+            app:labelText="@string/MaCK" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_listfavwatchlist_Cancel"
+                style="@style/Button_Background1"
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="5"
+                android:background="@drawable/bg_grey_button_corner5"
+                android:text="@string/Cancel" />
+
+            <Button
+                android:id="@+id/btn_listfavwatchlist_Accept"
+                style="@style/Button_Background1"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="5"
+                android:text="@string/ThemMoi" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview_listfavwatchlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/m_paddingLeft"
+        android:paddingRight="@dimen/m_paddingRight"
+        android:scrollbars="none" >
+    </ListView>
+
+</LinearLayout>

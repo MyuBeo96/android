@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/boloc_chamnguong"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="3dp"
+    android:paddingTop="3dp" >
+
+    <TextView
+        android:id="@+id/text_alert_chamnguong_item_CreateDay"
+        style="@style/Label_Style"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.5" />
+
+    <TextView
+        android:id="@+id/text_alert_chamnguong_item_Condition"
+        style="@style/Label_Style"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="4.0" />
+
+    <TextView
+        android:id="@+id/text_alert_chamnguong_item_Symbols"
+        style="@style/Label_Style"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="2.5" />
+
+    <TextView
+        android:id="@+id/text_alert_chamnguong_item_Type"
+        style="@style/Label_Style"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.5"
+        android:textSize="12.0sp" />
+
+</LinearLayout>

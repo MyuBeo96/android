@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/container_stockindex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/header_background_color"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_stockinfo_graph"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="5"
+                android:background="@drawable/bg_stockinfo_tab_graph"
+                android:gravity="center"
+                android:text="@string/XemTheoT_G"
+                android:textColor="@drawable/textcolor_stockinfo_tab_graphnews"
+                android:textSize="16.0sp" />
+
+            <Button
+                android:id="@+id/btn_stockinfo_news"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="5"
+                android:background="@drawable/bg_stockinfo_tab_news"
+                android:gravity="center"
+                android:text="@string/TinTuc"
+                android:textColor="@drawable/textcolor_stockinfo_tab_graphnews"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/container_graph_tradelog"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/container_graphview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/lin_marketindex_tradelog_tittle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/time"
+                        style="@style/Table_Header"
+                        android:layout_weight="1"
+                        android:text="@string/ThoiGian"
+                        android:textAllCaps="false" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/listview_separation_color" />
+
+                    <TextView
+                        android:id="@+id/index"
+                        style="@style/Table_Header"
+                        android:layout_weight="1"
+                        android:text="@string/Gia"
+                        android:textAllCaps="false" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/listview_separation_color" />
+
+                    <TextView
+                        android:id="@+id/change"
+                        style="@style/Table_Header"
+                        android:layout_weight="1"
+                        android:text="@string/ThayDoi"
+                        android:textAllCaps="false" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/listview_separation_color" />
+
+                    <TextView
+                        android:id="@+id/volume"
+                        style="@style/Table_Header"
+                        android:layout_weight="1"
+                        android:text="@string/KhoiLuong_2"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/listview_separation_color" />
+
+                <com.mtrading.mobile.graph.TradeLog
+                    android:id="@+id/listview_tradelog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/listview_separation_color"
+                    android:dividerHeight="0.5dp"
+                    android:scrollbars="none"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/lay_news"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/news_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/header_background_color" >
+
+                <TextView
+                    style="@style/Label_Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/searchtext_listview"
+                    android:gravity="center"
+                    android:text="@string/TinTuc" />
+
+                <com.msbuat.mobiletrading.design.SearchTextUI
+                    android:id="@+id/searchtext_listview"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/img_refresh" />
+
+                <ImageView
+                    android:id="@+id/img_refresh"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/img_stockinfo_expand"
+                    android:background="@drawable/actionbar_btn"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_news_refresh" />
+
+                <ImageView
+                    android:id="@+id/img_stockinfo_expand"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/actionbar_btn"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_news_zoom" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/header_separation_color" />
+
+            <LinearLayout
+                android:id="@+id/container_newsbysymbol"
+                android:layout_width="@dimen/t_stockitem_infor_news_width"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/news_header"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/news_header"
+                android:layout_toRightOf="@+id/container_newsbysymbol"
+                android:background="@color/listview_separation_color" />
+
+            <LinearLayout
+                android:id="@+id/stockitem_information_container_newsdetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/news_header"
+                android:layout_toRightOf="@+id/line"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

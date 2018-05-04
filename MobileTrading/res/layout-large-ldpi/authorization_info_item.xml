@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/authorization_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_listviewitem_checked"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/Label_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.5"
+            android:singleLine="true"
+            android:text="@string/MaKhachHang" />
+
+        <TextView
+            android:id="@+id/text_authorizationinfo_item_custid"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:singleLine="true"
+            android:textColor="@color/green_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/Label_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.5"
+            android:singleLine="true"
+            android:text="@string/SoLuuKy" />
+
+        <TextView
+            android:id="@+id/text_authorizationinfo_item_custodycd"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:singleLine="true"
+            android:textColor="@color/green_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/Label_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.5"
+            android:singleLine="true"
+            android:text="@string/TenDayDu" />
+
+        <TextView
+            android:id="@+id/text_authorizationinfo_item_fullname"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:singleLine="true"
+            android:textColor="@color/green_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/Label_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.5"
+            android:singleLine="true"
+            android:text="@string/SoCMT" />
+
+        <TextView
+            android:id="@+id/text_authorizationinfo_item_idcard"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:singleLine="true"
+            android:textColor="@color/green_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/Label_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.5"
+            android:singleLine="true"
+            android:text="@string/TuNgay" />
+
+        <TextView
+            android:id="@+id/text_authorizationinfo_item_fromdate"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:singleLine="true"
+            android:textColor="@color/green_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/Label_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.5"
+            android:singleLine="true"
+            android:text="@string/DenNgay" />
+
+        <TextView
+            android:id="@+id/text_authorizationinfo_item_todate"
+            style="@style/Content_Style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:singleLine="true"
+            android:textColor="@color/green_text" />
+    </LinearLayout>
+
+</LinearLayout>

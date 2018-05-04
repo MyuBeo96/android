@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:paddingBottom="5dp" >
+
+        <TextView
+            android:id="@+id/lbl_dotbiengiakhoiluong_chitiet_Symbol"
+            style="@style/Label_Style"
+            android:layout_marginLeft="5dp"
+            android:text="@string/MaCK" />
+
+        <TextView
+            android:id="@+id/text_dotbiengiakhoiluong_chitiet_Symbol"
+            style="@style/Content_Style"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/lbl_dotbiengiakhoiluong_chitiet_Symbol" />
+
+        <TextView
+            android:id="@+id/lbl_dotbiengiakhoiluong_chitiet_ClosePrice"
+            style="@style/Label_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_Symbol"
+            android:layout_marginLeft="5dp"
+            android:text="@string/GiaKhopCuoi" />
+
+        <TextView
+            android:id="@+id/text_dotbiengiakhoiluong_chitiet_ClosePrice"
+            style="@style/Content_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_Symbol"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/lbl_dotbiengiakhoiluong_chitiet_ClosePrice" />
+
+        <TextView
+            android:id="@+id/lbl_dotbiengiakhoiluong_chitiet_Change"
+            style="@style/Label_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_ClosePrice"
+            android:layout_marginLeft="5dp"
+            android:text="@string/change" />
+
+        <TextView
+            android:id="@+id/text_dotbiengiakhoiluong_chitiet_Change"
+            style="@style/Content_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_ClosePrice"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/lbl_dotbiengiakhoiluong_chitiet_Change" />
+
+        <TextView
+            android:id="@+id/lbl_dotbiengiakhoiluong_chitiet_PercentChange"
+            style="@style/Label_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_Change"
+            android:layout_marginLeft="5dp"
+            android:text="@string/percent_change" />
+
+        <TextView
+            android:id="@+id/text_dotbiengiakhoiluong_chitiet_PercentChange"
+            style="@style/Content_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_Change"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/lbl_dotbiengiakhoiluong_chitiet_PercentChange" />
+
+        <TextView
+            android:id="@+id/lbl_dotbiengiakhoiluong_chitiet_TongKLGD"
+            style="@style/Label_Style"
+            android:layout_below="@+id/text_dotbiengiakhoiluong_chitiet_PercentChange"
+            android:layout_marginLeft="5dp"
+            android:text="@string/dotbienkhoiluong_lbl_TongKLGD" />
+
+        <TextView
+            android:id="@+id/text_dotbiengiakhoiluong_chitiet_TongKLGD"
+            style="@style/Content_Style"
+            android:layout_below="@+id/text_dotbiengiakhoiluong_chitiet_PercentChange"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/lbl_dotbiengiakhoiluong_chitiet_TongKLGD"
+            android:textSize="13.0sp" />
+
+        <TextView
+            android:id="@+id/lbl_dotbiengiakhoiluong_chitiet_TongGTGD"
+            style="@style/Label_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_TongKLGD"
+            android:layout_marginLeft="5dp"
+            android:text="@string/Tong_GTGD" />
+
+        <TextView
+            android:id="@+id/text_dotbiengiakhoiluong_chitiet_TongGTGD"
+            style="@style/Content_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_TongKLGD"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/lbl_dotbiengiakhoiluong_chitiet_TongGTGD"
+            android:textSize="13.0sp" />
+
+        <TextView
+            android:id="@+id/lbl_dotbiengiakhoiluong_chitiet_KLGDTB"
+            style="@style/Label_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_TongGTGD"
+            android:layout_marginLeft="5dp"
+            android:text="@string/dotbienkhoiluong_lbl_KLGDTB" />
+
+        <TextView
+            android:id="@+id/text_dotbiengiakhoiluong_chitiet_KLGDTB"
+            style="@style/Content_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_TongGTGD"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/lbl_dotbiengiakhoiluong_chitiet_KLGDTB" />
+
+        <TextView
+            android:id="@+id/lbl_dotbiengiakhoiluong_chitiet_ThayDoiKLGD"
+            style="@style/Label_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_KLGDTB"
+            android:layout_marginLeft="5dp"
+            android:text="@string/dotbienkhoiluong_lbl_ThayDoiKLGD" />
+
+        <TextView
+            android:id="@+id/text_dotbiengiakhoiluong_chitiet_ThayDoiKLGD"
+            style="@style/Content_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_KLGDTB"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/lbl_dotbiengiakhoiluong_chitiet_ThayDoiKLGD" />
+
+        <TextView
+            android:id="@+id/lbl_dotbiengiakhoiluong_chitiet_MoCua"
+            style="@style/Label_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_ThayDoiKLGD"
+            android:layout_marginLeft="5dp"
+            android:text="banggiachitiet_lbl_MoCua" />
+
+        <TextView
+            android:id="@+id/text_dotbiengiakhoiluong_chitiet_MoCua"
+            style="@style/Content_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_ThayDoiKLGD"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/lbl_dotbiengiakhoiluong_chitiet_MoCua" />
+
+        <TextView
+            android:id="@+id/lbl_dotbiengiakhoiluong_chitiet_Cao"
+            style="@style/Label_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_MoCua"
+            android:layout_marginLeft="5dp"
+            android:text="@string/Cao" />
+
+        <TextView
+            android:id="@+id/text_dotbiengiakhoiluong_chitiet_Cao"
+            style="@style/Content_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_MoCua"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/lbl_dotbiengiakhoiluong_chitiet_Cao" />
+
+        <TextView
+            android:id="@+id/lbl_dotbiengiakhoiluong_chitiet_Thap"
+            style="@style/Label_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_Cao"
+            android:layout_marginLeft="5dp"
+            android:text="@string/Thap" />
+
+        <TextView
+            android:id="@+id/text_dotbiengiakhoiluong_chitiet_Thap"
+            style="@style/Content_Style"
+            android:layout_below="@+id/lbl_dotbiengiakhoiluong_chitiet_Cao"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/lbl_dotbiengiakhoiluong_chitiet_Thap" />
+    </RelativeLayout>
+
+</LinearLayout>

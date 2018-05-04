@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_user32" />
+    <TextView android:textSize="20.0sp" android:textColor="#dd00ccff" android:id="@+id/text_livechat_friendlist_item_username" android:layout_width="fill_parent" android:layout_height="40dp" style="@style/Label_Style" />
+</LinearLayout>

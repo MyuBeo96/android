@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyHeight="8%p"
+    android:keyWidth="20%p"
+    android:verticalGap="4dp" >
+
+    <Row>
+        <Key
+            android:codes="55"
+            android:keyEdgeFlags="left"
+            android:keyIcon="@drawable/key_7_black" />
+        <Key
+            android:codes="56"
+            android:keyIcon="@drawable/key_8_black" />
+        <Key
+            android:codes="57"
+            android:keyIcon="@drawable/key_9_black" />
+        <Key
+            android:codes="50004"
+            android:keyIcon="@drawable/key_ne_1000_black"
+            android:keyWidth="35%p" />
+        <Key
+            android:codes="50003"
+            android:keyIcon="@drawable/key_1000_black"
+            android:keyWidth="35%p" />
+    </Row>
+    <Row>
+        <Key
+            android:codes="52"
+            android:keyEdgeFlags="left"
+            android:keyIcon="@drawable/key_4_black" />
+        <Key
+            android:codes="53"
+            android:keyIcon="@drawable/key_5_black" />
+        <Key
+            android:codes="54"
+            android:keyIcon="@drawable/key_6_black" />
+        <Key
+            android:codes="50006"
+            android:keyIcon="@drawable/key_ne_500_black"
+            android:keyWidth="35%p" />
+        <Key
+            android:codes="50005"
+            android:keyIcon="@drawable/key_500_black"
+            android:keyWidth="35%p" />
+    </Row>
+    <Row>
+        <Key
+            android:codes="49"
+            android:keyIcon="@drawable/key_1_black" />
+        <Key
+            android:codes="50"
+            android:keyIcon="@drawable/key_2_black" />
+        <Key
+            android:codes="51"
+            android:keyIcon="@drawable/key_3_black" />
+        <Key
+            android:codes="50008"
+            android:keyIcon="@drawable/key_ne_100_black"
+            android:keyWidth="35%p" />
+        <Key
+            android:codes="50007"
+            android:keyIcon="@drawable/key_100_black"
+            android:keyWidth="35%p" />
+    </Row>
+    <Row>
+        <Key
+            android:codes="48"
+            android:keyIcon="@drawable/key_0_black" />
+        <Key
+            android:codes="50009"
+            android:keyIcon="@drawable/key_00_black" />
+        <Key
+            android:codes="50010"
+            android:keyIcon="@drawable/key_000_black" />
+        <Key
+            android:codes="50001"
+            android:isRepeatable="true"
+            android:keyIcon="@drawable/ic_keyboard_delete"
+            android:keyWidth="35%p" />
+        <Key
+            android:codes="50002"
+            android:keyLabel="@string/Xoa_Keyboard"
+            android:keyWidth="35%p" />
+    </Row>
+
+</Keyboard>

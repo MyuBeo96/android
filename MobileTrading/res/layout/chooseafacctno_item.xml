@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/text_chontieukhoan_item_Acctno"
+        style="@style/Label_Style"
+        android:layout_width="match_parent"
+        android:textSize="13.0sp" />
+
+    <TextView
+        android:id="@+id/text_chontieukhoan_item_Fullname"
+        style="@style/Content_Style"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/text_chontieukhoan_item_Acctno" />
+
+    <View
+        android:id="@+id/view_chontieukhoan_item_select"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_chontieukhoan_item_division"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#34C6FC"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view_chontieukhoan_item_division"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/text_chontieukhoan_item_Fullname"
+        android:layout_marginBottom="0.5dp"
+        android:background="@color/listview_separation_color" />
+
+</RelativeLayout>

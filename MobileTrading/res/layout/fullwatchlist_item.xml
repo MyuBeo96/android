@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/text_banggiafull_item_Symbol"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="15sp"
+             />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/listview_separation_color" />
+
+        <TextView
+            android:id="@+id/text_banggiafull_item_Price"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/listview_separation_color" />
+
+        <TextView
+            android:id="@+id/text_banggiafull_item_Quantity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/listview_separation_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/text_banggiafull_item_BidP1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5.0"
+                android:gravity="center"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/text_banggiafull_item_BidV1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5.0"
+                android:gravity="center"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/img_banggiafull_item_Sign"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:scaleType="center" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/listview_separation_color" />
+
+        <TextView
+            android:id="@+id/text_banggiafull_item_Change"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/listview_separation_color" />
+
+        <TextView
+            android:id="@+id/text_banggiafull_item_totalTrading"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="center"
+            android:textColor="@color/white_text"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/listview_separation_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/text_banggiafull_item_OfferP1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5.0"
+                android:gravity="center"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/text_banggiafull_item_OfferV1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5.0"
+                android:gravity="center"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/listview_separation_color" />
+
+</LinearLayout>

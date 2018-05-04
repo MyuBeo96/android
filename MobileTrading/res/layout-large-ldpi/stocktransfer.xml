@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/chuyenkhoan_chungkhoan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/t_paddingLeft"
+    android:paddingRight="@dimen/t_paddingRight" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/t_cashtransfer_frame_height"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <com.msbuat.mobiletrading.design.MySpinner
+            android:id="@+id/spn_ChuyenKhoanCK_senderafacctno"
+            style="@style/LabelContentLayout_Style"
+            app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+            app:hasLabel="true"
+            app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+            app:textMySpinner="@string/TieuKhoanChuyen" />
+
+        <com.msbuat.mobiletrading.design.MySpinner
+            android:id="@+id/spn_ChuyenKhoanCK_TKNhan"
+            style="@style/LabelContentLayoutMarginLeft_Style"
+            app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+            app:hasLabel="true"
+            app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+            app:textMySpinner="@string/chuyenkhoanck_label_TKNhan" />
+
+        <com.msbuat.mobiletrading.design.MySpinner
+            android:id="@+id/spn_ChuyenKhoanCK_MaCK"
+            style="@style/LabelContentLayoutMarginLeft_Style"
+            app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+            app:hasLabel="true"
+            app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+            app:textMySpinner="@string/MaChungKhoan" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/t_cashtransfer_frame_height"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <com.msbuat.mobiletrading.design.LabelContentLayout
+            android:id="@+id/text_ChuyenKhoanCK_HienCo"
+            style="@style/LabelContentLayout_Style"
+            app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+            app:labelText="@string/SLCoTheChuyen"
+            app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+            app:orientation="vertical" />
+
+        <com.msbuat.mobiletrading.design.LabelContentLayout
+            android:id="@+id/edt_ChuyenKhoanCK_SoLuong"
+            style="@style/LabelContentLayoutMarginLeft_Style"
+            app:contentColor="@color/white_text"
+            app:contentHint="@string/SoLuongChuyen"
+            app:contentsize_dimen="@dimen/t_cashtransfer_labletextsize"
+            app:digits="0123456789.,"
+            app:editable="true"
+            app:inputType="number"
+            app:labelText="@string/SoLuongChuyen"
+            app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+            app:orientation="vertical" />
+
+        <View style="@style/LabelContentLayoutMarginLeft_Style" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_ChuyenKhoanCK_ChapNhan"
+            style="@style/Button_Background1"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:text="@string/XacNhan" />
+
+        <Button
+            android:id="@+id/btn_ChuyenKhoanCK_Clear"
+            style="@style/Button_Background1"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:text="@string/Clear"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</LinearLayout>

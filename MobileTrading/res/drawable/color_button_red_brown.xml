@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- set màu text của các button có background trong suốt, chữ màu đỏ nâu bên tablet -->
+    <item android:state_enabled="false" android:color="@color/red_brown_text_enable_false"></item>
+    <item android:state_enabled="true" android:color="@color/red_brown_text"></item>
+
+</selector>

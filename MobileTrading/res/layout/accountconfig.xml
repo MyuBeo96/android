@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/thietlaptk"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/m_paddingLeft"
+            android:paddingRight="@dimen/m_paddingRight" >
+            <LinearLayout
+                android:id="@+id/lay_thietlaptk_accountinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/lc_thietlaptk_fullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/green_text"
+                    app:labelText="@string/TenDayDu"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/lc_thietlaptk_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/green_text"
+                    app:labelText="@string/NgaySinh"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/lc_thietlaptk_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/green_text"
+                    app:labelText="@string/GioiTinh"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/lc_thietlaptk_idpeople"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/green_text"
+                    app:labelText="@string/SoCMT"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/lc_thietlaptk_idpeoplecreateday"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/green_text"
+                    app:labelText="@string/NgayCap"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/lc_thietlaptk_idpeoplecreateplace"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/green_text"
+                    app:labelText="@string/NoiCap"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/lc_thietlaptk_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/green_text"
+                    app:labelText="@string/DiDong"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/lc_thietlaptk_homephone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/white_text"
+                    app:contentHint="@string/DienThoaiLienLac"
+                    app:editable="true"
+                    app:labelText="@string/DienThoaiLienLac"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/lc_thietlaptk_VSDregistryplace"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/green_text"
+                    app:labelText="@string/DiaChiDangKyVoiVSD"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/lc_thietlaptk_MSBScontactplace"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/white_text"
+                    app:contentHint="@string/DiaChiLienHeVoiFSC"
+                    app:editable="true"
+                    app:labelText="@string/DiaChiLienHeVoiFSC"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/lc_thietlaptk_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/white_text"
+                    app:contentHint="@string/Email"
+                    app:editable="true"
+                    app:labelText="@string/Email"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/lc_thietlaptk_careby"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/green_text"
+                    app:labelText="@string/ChamSocBoi"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/lc_thietlaptk_brokerphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/green_text"
+                    app:labelText="@string/SDTMoiGioiChamSoc"
+                    app:orientation="vertical" />
+
+                <com.msbuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/lc_thietlaptk_customerclass"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/green_text"
+                    app:labelText="@string/HangKhachHang"
+                    app:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btn_accountconfig_Accept"
+                        style="@style/Button_Background1"
+                        android:layout_width="0dp"
+                        android:layout_marginRight="9dp"
+                        android:layout_weight="5.0"
+                        android:text="@string/XacNhan" />
+
+                    <Button
+                        android:id="@+id/btn_accountconfig_Cancel"
+                        style="@style/Button_Background1"
+                        android:layout_width="0dp"
+                        android:layout_weight="5.0"
+                        android:text="@string/Cancel" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_changepassword"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_changepin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_authorizationinfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+</LinearLayout>

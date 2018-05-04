@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="3.0"
+        android:orientation="vertical"
+        android:paddingRight="5dp" >
+
+        <TextView
+            android:id="@+id/text_symbol"
+            style="@style/Content_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_text"
+            android:textSize="25sp"
+             />
+
+        <TextView
+            android:id="@+id/text_tradeplace"
+            style="@style/Label_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green_text" />
+
+        <TextView
+            android:id="@+id/text_fullstock"
+            style="@style/Label_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/lay_dmck_rutgon_item_chart"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="3.0" >
+
+        <!--<TextView-->
+            <!--android:id="@+id/text_receivingT3"-->
+            <!--style="@style/Content_Style"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:textColor="@color/green_text" />-->
+
+        <!--<TextView-->
+            <!--style="@style/Label_Style"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:text="@string/ChoVeT3" />-->
+
+        <TextView
+            android:id="@+id/text_receivingT2"
+            style="@style/Content_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/green_text" />
+            <!--android:layout_below="@+id/text_receivingT3"-->
+
+
+        <TextView
+            style="@style/Label_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+
+            android:text="@string/ChoVeT2" />
+        <!--android:layout_below="@+id/text_receivingT3"-->
+
+        <TextView
+            android:id="@+id/text_receivingT1"
+            style="@style/Content_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/text_receivingT2"
+            android:textColor="@color/green_text" />
+
+        <TextView
+            style="@style/Label_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/text_receivingT2"
+            android:text="@string/ChoVeT1" />
+        <TextView
+            android:id="@+id/text_receivingT0"
+            style="@style/Content_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/text_receivingT1"
+            android:textColor="@color/green_text" />
+
+        <TextView
+            style="@style/Label_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/text_receivingT1"
+            android:text="@string/ChoVeT0" />
+
+        <TextView
+            android:id="@+id/text_total"
+            style="@style/Content_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/text_receivingT0"
+            android:textColor="@color/green_text" />
+
+        <TextView
+            style="@style/Label_Style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/text_receivingT0"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/text_total"
+            android:singleLine="true"
+            android:text="@string/TongCong" />
+    </RelativeLayout>
+
+</LinearLayout>

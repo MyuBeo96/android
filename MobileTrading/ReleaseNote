@@ -1,0 +1,60 @@
+ReleaseNote
+
+Ngày 5/4/2016
+
+VersionCode 17
+VersionName 2.0.5
+Reversion SVN
+Nội dung fix:
+    Publish bản thật bên dưới lên store với nội dung tổng hợp của 3 thằng dưới:
+    - Nâng cấp chức năng cấp bảo lãnh.
+    - Chỉnh sửa lỗi không tắt được dialog trên các bản tablet mini.
+    - Sửa lỗi giao diện trên một số dòng máy tính bảng độ phân giải cao
+
+Ngày 5/4/2016
+
+VersionCode 16
+VersionName 2.0.4
+Reversion SVN 4893
+Nội dung fix:
+    Ghép branch 1.4.0.0 vào bản thật
+
+
+Ngày 4/4/2016
+
+VersionCode 16
+VersionName 2.0.4
+Reversion SVN 4882
+Nội dung fix:
+    Nâng cấp chức năng cấp bảo lãnh
+    Fix lỗi gọi danh sách mã chứng khoán
+
+
+
+Ngày 31/3/2016
+
+VersionCode 15
+VersionName 2.0.3
+Reversion SVN
+Nội dung fix: fix lỗi không tắt được dialog trên màn hình large
+
+
+Ngày 11/3/2016
+
+VersionCode 14
+VersionName 2.0.2
+Reversion SVN
+Nội dung fix: đổi tên cấp bảo lãnh thành cấp hạn mức
+
+
+Ngày 25/02/2016
+VersionCode 13
+VersionName 2.0.1
+Reversion SVN
+Nội dung fix: fix lỗi giao diện ở màn hình thiết lập tài khoản, chuyển khoản chứng khoán và
+số dư. Bỏ versionapp bên mstradingconfig bằng getversioncode bên login.
+
+reversion svn
+nội dung chỉnh sửa trong lần release này
+fix lỗi giao diện, bỏ versionapp thay bằng....
+rồi commit lên nhé

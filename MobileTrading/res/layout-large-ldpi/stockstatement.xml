@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/lay_SaoKeCK1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/header_background_color" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/m_paddingLeft"
+            android:paddingRight="@dimen/m_paddingRight" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <com.msbuat.mobiletrading.design.InputDate
+                    android:id="@+id/date_stocckstatement_fromdate"
+                    android:layout_width="250dp"
+                    android:layout_height="@dimen/t_singleLine_height"
+                    app:orientationInputDate="horizontal"
+                    app:separationColorInputDate="@color/transparent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <com.msbuat.mobiletrading.design.InputDate
+                    android:id="@+id/date_stockstatement_todate"
+                    android:layout_width="250dp"
+                    android:layout_height="@dimen/t_singleLine_height"
+                    android:layout_marginLeft="50dp"
+                    app:orientationInputDate="horizontal"
+                    app:separationColorInputDate="@color/transparent" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_SaoKeCK_Search"
+            style="@style/Button_Background1"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/layout_saoketien_textbox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/XacNhan"
+            android:textColor="@color/white_text"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/t_singleLine_height"
+        android:background="@color/t_header_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/Ngay" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/MaCK" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/DienGiai" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/Tang" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@color/t_header_bg"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/Giam" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/error_no_data_to_display"
+            android:textColor="#ff888888" />
+
+        <TextView
+            android:id="@+id/text_saokeck_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Loading..."
+            android:textColor="#ff888888"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/listview_SaoKeCK"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_fragment"
+            android:divider="@color/listview_separation_color"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/edittext_background_color" >
+
+    <ImageButton
+        android:id="@+id/btn_Decrease"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/background_button_minus"
+        android:padding="0dp" />
+
+    <EditText
+        android:id="@+id/edt_price"
+        style="@style/EditText_Style1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/btn_Increace"
+        android:layout_toRightOf="@+id/btn_Decrease"
+        android:gravity="center"
+        android:hint="@string/Nhap"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:textColorHint="@color/edittext_hint_color"
+        android:textCursorDrawable="@drawable/shape_textcursoredittext"
+        android:textSize="12sp" />
+
+    <ImageButton
+        android:id="@+id/btn_Increace"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/background_button_plus"
+        android:padding="0dp" />
+
+</RelativeLayout>

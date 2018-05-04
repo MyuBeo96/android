@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/m_paddingLeft"
+    android:paddingRight="@dimen/m_paddingRight" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:layout_marginBottom="5dp" >
+
+        <TextView
+            android:id="@+id/text_marketindex_MarketCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white_text" />
+
+        <TextView
+            android:id="@+id/text_marketindex_Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_marketindex_MarketCode"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white_text" />
+
+        <ImageView
+            android:id="@+id/img_marketindex_KyHieu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/text_marketindex_MarketCode" />
+
+        <com.msbuat.mobiletrading.design.TextViewHightLight
+            android:id="@+id/text_marketindex_indexPercentChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white_text" />
+
+        <com.msbuat.mobiletrading.design.TextViewHightLight
+            android:id="@+id/text_marketindex_indexChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/text_marketindex_indexPercentChange"
+            android:textColor="@color/white_text" />
+
+        <com.msbuat.mobiletrading.design.TextViewHightLight
+            android:id="@+id/text_marketindex_marketIndex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/text_marketindex_indexChange"
+            android:textColor="@color/white_text" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/lc_separation_color" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:padding="3dp" >
+
+        <TextView
+            android:id="@+id/lbl_marketindex_TotalShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/TongKhoiLuong"
+            android:textColor="@color/white_text" />
+
+        <com.msbuat.mobiletrading.design.TextViewHightLight
+            android:id="@+id/text_marketindex_TotalShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white_text" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/lc_separation_color" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:padding="3dp" >
+
+        <TextView
+            android:id="@+id/lbl_marketindex_TotalValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/thongtinthitruong_lbl_TotalValue"
+            android:textColor="@color/white_text" />
+
+        <com.msbuat.mobiletrading.design.TextViewHightLight
+            android:id="@+id/text_marketindex_TotalValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white_text" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/lc_separation_color" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:padding="3dp" >
+
+        <TextView
+            android:id="@+id/lbl_marketindex_TotalTrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/thongtinthitruong_lbl_TotalTrade"
+            android:textColor="@color/white_text" />
+
+        <com.msbuat.mobiletrading.design.TextViewHightLight
+            android:id="@+id/text_marketindex_TotalTrare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white_text" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/lc_separation_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/img_marketindex_advances"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_up" />
+
+        <TextView
+            android:id="@+id/text_marketindex_advances"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:textColor="@color/white_text" />
+
+        <ImageView
+            android:id="@+id/img_marketindex_declines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_downred" />
+
+        <TextView
+            android:id="@+id/text_marketindex_declines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:textColor="@color/white_text" />
+
+        <ImageView
+            android:id="@+id/img_marketindex_noChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_yellow" />
+
+        <TextView
+            android:id="@+id/text_marketindex_noChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:textColor="@color/white_text" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/marketindex_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- header cua cac fragment hien thi duoi dang dialog -->
+    <corners
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp" />
+
+    <gradient
+        android:angle="-90"
+        android:endColor="@color/actionbar_backgroundbottom_color"
+        android:startColor="@color/actionbar_backgroundtop_color" />
+
+</shape>

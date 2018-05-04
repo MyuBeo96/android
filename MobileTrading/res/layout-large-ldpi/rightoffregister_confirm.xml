@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    android:id="@+id/rightoffregister_confirm"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/m_paddingLeft"
+    android:paddingRight="@dimen/m_paddingRight" >
+
+    <TextView
+        android:id="@+id/text_rightoffregister_confirm_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:gravity="center"
+        android:text="@string/DangKyThucHienQuyen"
+        android:textColor="@color/white_text"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/MaCK2"
+            android:textSize="14sp" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/dkqm_label_SLduocmua"
+            android:textSize="14sp" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/Giamua"
+            android:textSize="14sp" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.4"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/SoDuTien"
+            android:textSize="14sp" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/SoLuongMua2"
+            android:textSize="14sp" />
+
+        <TextView
+            style="@style/Table_Header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="@string/TongTien"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.msbuat.mobiletrading.design.LabelContentLayout
+            android:id="@+id/text_DKQM_chitiet_MaCK"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.8"
+            app:contentColor="@color/white_text"
+            app:contentgravity="center"
+            app:labelText="@string/MaCK"
+            app:labelweight="0"
+            app:separationColor="@color/transparent" />
+
+        <com.msbuat.mobiletrading.design.LabelContentLayout
+            android:id="@+id/text_DKQM_chitiet_SLduocmua"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="2"
+            app:contentColor="@color/white_text"
+            app:contentgravity="center"
+            app:labelText="@string/dkqm_label_SLduocmua"
+            app:labelweight="0"
+            app:separationColor="@color/transparent" />
+
+        <com.msbuat.mobiletrading.design.LabelContentLayout
+            android:id="@+id/text_DKQM_chitiet_Gia"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1.2"
+            app:contentColor="@color/white_text"
+            app:contentgravity="center"
+            app:labelText="@string/Gia"
+            app:labelweight="0"
+            app:separationColor="@color/transparent" />
+
+        <com.msbuat.mobiletrading.design.LabelContentLayout
+            android:id="@+id/text_DKQM_chitiet_SoDu"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="2.4"
+            app:contentColor="@color/white_text"
+            app:contentgravity="center"
+            app:labelText="@string/SoDu"
+            app:labelweight="0"
+            app:separationColor="@color/transparent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/bg_black_conner3_262630"
+            android:gravity="center_vertical" >
+
+            <com.msbuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/edt_DKQM_chitiet_SLMua"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                app:contentColor="@color/white_text"
+                app:contentHint="@string/SoLuongMua2"
+                app:contentgravity="center"
+                app:digits="0123456789,"
+                app:editable="true"
+                app:inputType="number"
+                app:labelweight="0"
+                app:orientation="vertical"
+                app:separationColor="@color/transparent"
+                app:singleLine="true" />
+        </LinearLayout>
+
+        <com.msbuat.mobiletrading.design.LabelContentLayout
+            android:id="@+id/text_DKQM_chitiet_TongTien"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1.8"
+            app:contentColor="@color/white_text"
+            app:contentgravity="center"
+            app:labelText="@string/TongTien"
+            app:labelweight="0"
+            app:separationColor="@color/transparent" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/header_separation_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.msbuat.mobiletrading.design.SelectorImageView
+            android:id="@+id/img_rightoffregister_switch"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="fitCenter"
+            app:active="false"
+            app:active_drawable="@drawable/ic_active"
+            app:inactive_drawable="@drawable/ic_inactive" />
+
+        <TextView
+            android:id="@+id/text_rightoffregister_confirm_policy"
+            style="@style/Label_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/RoRPolicy"
+            android:textColor="@color/red_brown_text" />
+    </LinearLayout>
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/edt_DKQM_chitiet_tradingcode"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_black_conner3_262630"
+        android:paddingLeft="5dp"
+        android:visibility="gone"
+        app:contentColor="@color/white_text"
+        app:contentHint="@string/MaXacThuc"
+        app:contentgravity="left"
+        app:editable="true"
+        app:inputType="textPassword"
+        app:labelweight="0"
+        app:orientation="vertical"
+        app:separationColor="@color/transparent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/header_separation_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_alertdialog_negative"
+            style="@style/Button_Background1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="5"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="@string/Dong"
+            android:textColor="@color/red_brown_text" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/header_separation_color" />
+
+        <Button
+            android:id="@+id/btn_DKQM_chitiet_Accept"
+            style="@style/Button_Background1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="5"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="@string/DongY"
+            android:textColor="@drawable/color_button_green" />
+    </LinearLayout>
+
+    <com.msbuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_DKQM_chitiet_Afacctno"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+</LinearLayout>

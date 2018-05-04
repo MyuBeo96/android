@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="bg_price_change_qty_fullwatchlist_tablet">#20ffffff</color>
+    <color name="bg_fragment2">#444444</color>
+    <color name="bg_dialogfragment">#2a2a33</color>
+    <color name="red_background">#20ff0000</color>
+    <color name="color_background_edittext">#ff555555</color>
+    <color name="white_text">#ffffffff</color>
+    <color name="white_text_2">#dddddd</color>
+    <color name="opaquewhite">#99ffffff</color>
+    <color name="blue_text">#2879FE</color>
+    <color name="blue_text2">#0099ff</color>
+    <color name="yellow_text">#EEEE00</color>
+    <color name="black_text">#090909</color>
+    <color name="color_label">#A3A3A3</color>
+    <color name="green_text">#21B545</color>
+    <color name="green_text_enable_false">#DD15752D</color>
+    <color name="grey_text">#ACACAC</color>
+    <color name="red_brown_text">#EE393E</color>
+    <color name="red_brown_text_enable_false">#DD9E262A</color>
+    <!--  -->
+    <color name="color_Tran">#FF00FF</color>
+    <color name="color_San">#66ccff</color>
+    <color name="color_ThamChieu">#FFCC00</color>
+    <color name="color_Mua2">#009900</color>
+    <color name="color_Ban">#ff0000</color>
+    <color name="color_Mua">#00ff00</color>
+    <color name="color_column">#444444</color>
+    <color name="color_Mua40">#4000ff00</color>
+    <color name="color_Ban40">#40ff0000</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="color_title">#BB0000</color>
+    <color name="color_separation_actionbar">#550000</color>
+    <color name="color_slidemenu_bg">#222222</color>
+    <color name="color_separation_slidemenu">#60A6A6A6</color>
+    <color name="color_evenrow">#111111</color>
+    <color name="color_oddrow">#424242</color>
+    <color name="placeorder_buy_color">#20B243</color>
+    <color name="placeorder_sell_color">#DE3E40</color>
+
+    <!-- config color -->
+    <color name="bg_fragment">#1e1e28</color>
+    <color name="label_text_color_buy">#10B243</color>
+    <color name="label_text_color">#ffff</color>
+
+    <color name="text_sell_color">#DE3E40</color>
+    <color name="text_buy_color">#20B243</color>
+    <color name="content_text_color">#FFFFFF</color>
+    <color name="text_hint_color">#30dddddd</color>
+    <color name="text_hint_color_bgwhite">#30000000</color>
+    <color name="lc_separation_color">#60A6A6A6</color>
+    <color name="edittext_text_color">#ffffff</color>
+    <color name="edittext_background_color">#00ffffff</color>
+    <color name="edittext_hint_color">#30dddddd</color>
+    <color name="spinner_text_color">#ffffff</color>
+    <color name="button_text_color">#FFFFFF</color>
+    <color name="button_background_color">#22B243</color>
+    <color name="t_button_background_red">#EE393E</color>
+    <color name="button_disable_background_color">#6022B243</color>
+    <color name="place_buyorder_background">#00000000</color>
+    <color name="place_sellorder_background">#00000000</color>
+    <color name="t_button_disable_background_color">#60EE393E</color>
+    <color name="actionbar_backgroundbottom_color">#DA3B38</color>
+    <color name="actionbar_backgroundtop_color">#E34F4F</color>
+    <color name="actionbar_title_color">#ffffff</color>
+    <color name="actionbar_afacctno_color">#EEEE00</color>
+    <color name="footer_background_color">#2c2c38</color>
+    <color name="header_text_color">#AAAAAC</color>
+    <color name="header_background_color">#262630</color>
+    <color name="header_separation_color">#40A6A6A6</color>
+    <color name="tabselector_line_color">#D83C3D</color>
+    <color name="tabselector_text_color">#D83C3D</color>
+    <color name="listview_separation_color">#60A6A6A6</color>
+    <color name="news_title_color">#F4AF50</color>
+    <color name="press_blue">#00AEFF</color>
+    <color name="slidemenu_header_bgcolor">#2D3041</color>
+    <color name="slidemenu_header_textcolor">#E8923A</color>
+    <color name="slidemenu_inactiveitem_textcolor">#66FFFFFF</color>
+    <color name="slidemenu_activeitem_textcolor">#FFFFFF</color>
+    <color name="contextmenu_background_color">#242329</color>
+    <color name="bid3_background_color">#22312E</color>
+    <color name="bid2_background_color">#243930</color>
+    <color name="bid1_background_color">#254434</color>
+    <color name="offer3_background_color">#32212B</color>
+    <color name="offer2_background_color">#3A232B</color>
+    <color name="offer1_background_color">#45242B</color>
+    <color name="alertdialog_background_color">#302F37</color>
+    <color name="alertdialog_message_color">#99ffffff</color>
+    <color name="countnotifyunread_background">#ff0000</color>
+    <color name="kbhookitem_background">#eeFDFDFD</color>
+    <color name="kbhookitem_text">#cc000000</color>
+    <color name="kbhookitem_stroke">#cccccc</color>
+    <color name="textCursorColor">#0099ff</color>
+    <color name="pressCustomKeyboardColor">#0099ff</color>
+    <color name="bg_keycolor">#eeFDFDFD</color>
+    <color name="bg_keycolor2">#383842</color>
+    <color name="bg_keyboardcolor">#DEDFE4</color>
+    <color name="t_button_background_grey">#43434F</color>
+    <color name="bg_listviewitemselected_2">#9935B84D</color>
+
+    <!-- config color tablet -->
+    <color name="t_footer_background">#2B2B37</color>
+    <color name="t_footer_content">#1E1E28</color>
+    <color name="listviewitem_even_bg">#22222E	</color>
+    <color name="listviewitem_odd_bg">#1E1E28</color>
+    <color name="t_header_bg">#1E1E28</color>
+
+    <!-- tablet news -->
+    <color name="bg_listviewitemselected">#3E3E4F</color>
+    <!-- stock index -->
+    <color name="bidrate_color">#1FB440</color>
+    <color name="offrate_color">#DB4244</color>
+    <color name="buyoffbutton_color">#1BB869</color>
+    <color name="buybidbutton_color">#DD4142</color>
+    <color name="background_PNS">#F5C5D9</color>
+
+</resources>
