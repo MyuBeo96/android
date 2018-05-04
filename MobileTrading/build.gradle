@@ -29,7 +29,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false //Thu gon code
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             lintOptions {
                 disable 'MissingTranslation'
@@ -47,7 +47,7 @@ android {
             buildConfigField "String", "address_server", '"https://hftsso.fss.com.vn/MFlexTest"'
         }
         uat{
-            buildConfigField "String", "address_server", '""httcp://192.168.50.34/MFlexApps""'
+            buildConfigField "String", "address_server", '"http://118.69.230.209//MFlexApps"'
         }
         systemTest{
             buildConfigField "String", "address_server", '"http://192.168.18.190/MFlexApps"'

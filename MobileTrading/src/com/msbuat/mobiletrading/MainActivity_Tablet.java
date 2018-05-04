@@ -215,7 +215,7 @@ public class MainActivity_Tablet extends MainActivity {
         createDialogKeyboard();
         setSubAccountInfo(StaticObjectManager.acctnoItem);
         if (AppData.language.equals(AppData.LOCALE_EN)) {
-            logo.setImageResource(R.drawable.ic_top_logo_en);
+            logo.setImageResource(R.drawable.ic_fsc);
         }
     }
 
@@ -370,7 +370,7 @@ public class MainActivity_Tablet extends MainActivity {
     protected void onResume() {
         super.onResume();
         if (AppData.language.equals(AppData.LOCALE_EN)) {
-            logo.setImageResource(R.drawable.ic_top_logo_en);
+            logo.setImageResource(R.drawable.ic_fsc);
         }
         Configuration newConfig = new Configuration();
         newConfig.locale = new Locale(AppData.language);

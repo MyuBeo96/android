@@ -59,7 +59,8 @@ public class SlideMenu extends LinearLayout {
 
 	private void initialise() {
 		if (AppData.language.equals(AppData.LOCALE_EN)) {
-			logo.setImageResource(R.drawable.ic_slidemenu_logo_en);
+//			logo.setImageResource(R.drawable.ic_slidemenu_logo_en);
+			logo.setImageResource(R.drawable.ic_fsc);
 		}
 		initialiseData();
 		initialiseListener();
