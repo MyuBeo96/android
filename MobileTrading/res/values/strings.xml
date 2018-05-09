@@ -786,4 +786,6 @@
     <string name="confirm">Xác nhận</string>
     <string name="no">Không</string>
 
+    <string name="ok">"Chọn"</string>
+    <string name="cancel">"Hủy"</string>
 </resources>

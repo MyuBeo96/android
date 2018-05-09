@@ -195,10 +195,10 @@ public class Edittext_Gia extends LinearLayout {
 //                                } else {
 //                                    gia = gia.add(new BigDecimal(-1.0));
 //                                }
-                                if (gia.doubleValue() > 0 && gia.compareTo(PRICE_100) < 0) {
+                                if (gia.doubleValue() > 0 && gia.compareTo(PRICE_100) <= 0) {
                                     gia = gia.add(new BigDecimal(-0.01));
-                                } else if (gia.compareTo(PRICE_100) >= 0
-                                        && gia.compareTo(PRICE_500) < 0) {
+                                } else if (gia.compareTo(PRICE_100) > 0
+                                        && gia.compareTo(PRICE_500) <=0) {
                                     gia = gia.add(new BigDecimal(-0.05));
                                 } else {
                                     gia = gia.add(new BigDecimal(-0.1));

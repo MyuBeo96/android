@@ -3,6 +3,7 @@ package com.fss.mobiletrading.common;
 import android.content.Context;
 
 import com.fss.mobiletrading.connector.ConnectServer;
+import com.fss.mobiletrading.function.AppData;
 import com.fss.mobiletrading.object.AcctnoItem;
 import com.fss.mobiletrading.object.BRRptItem;
 import com.fss.mobiletrading.object.BankAccList;
@@ -15,6 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 public class StaticObjectManager {
 	public static ConnectServer connectServer;

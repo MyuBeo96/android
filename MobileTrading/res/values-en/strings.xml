@@ -178,7 +178,7 @@
     <string name="kieu">Type</string>
     <string name="Tu">From</string>
     <string name="Den">To</string>
-    <string name="stockcompany_info">Copyright 2018 KB Viet Nam Securities Incorporation\n Provided by FSS</string>
+    <string name="stockcompany_info">Copyright 2018 Funan Securities Incorporation\n Provided by FSS</string>
     <string name="LocTheoMaCK">Filter by symbol</string>
     <string name="BoLoc">Cancel filter</string>
     <string name="TimKiem">Search</string>
@@ -683,4 +683,7 @@
     <string name="LoadThongTinThiTruong">Load market information</string>
     <string name="confirm">Confirm</string>
     <string name="no">No</string>
+
+    <string name="ok">"Set"</string>
+    <string name="cancel">"Cancel"</string>
 </resources>

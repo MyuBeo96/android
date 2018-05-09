@@ -2,6 +2,7 @@ package com.msbuat.mobiletrading.design;
 
 import java.text.ParseException;
 import java.util.Calendar;
+import java.util.Locale;
 
 import android.app.DatePickerDialog;
 import android.app.Service;
@@ -21,7 +22,10 @@ import android.widget.RelativeLayout;
 
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.StaticObjectManager;
+import com.fss.mobiletrading.function.AppData;
 import com.msbuat.mobiletrading.R;
+
+import static java.util.Locale.CHINESE;
 
 public class InputDate extends RelativeLayout {
 
@@ -54,6 +58,8 @@ public class InputDate extends RelativeLayout {
 			btn = (ImageButton) findViewById(R.id.btn_inputdatehori);
 			line = findViewById(R.id.line_inputdatehori);
 		}
+		Locale locale = getResources().getConfiguration().locale;
+		Locale.setDefault(locale);
 
 		calendar = Calendar.getInstance();
 		text.getContent().setOnClickListener(new OnClickListener() {
@@ -71,6 +77,10 @@ public class InputDate extends RelativeLayout {
 			}
 		});
 		datePic = Common.createDialogDate(context, text.getContent());
+		datePic.setButton(DialogInterface.BUTTON_NEGATIVE, context.getString(R.string.cancel),
+				datePic);
+		datePic.setButton(DialogInterface.BUTTON_POSITIVE, context.getString(R.string.ok),
+				datePic);
 		text.getLabel().setText(typedArray.getString(1));
 		line.setBackgroundColor(typedArray.getColor(3,
 				getResources().getColor(R.color.lc_separation_color)));
@@ -94,6 +104,7 @@ public class InputDate extends RelativeLayout {
 				}
 			}
 		});
+
 	}
 
 	public void showDialogDate() {

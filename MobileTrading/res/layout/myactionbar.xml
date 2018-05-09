@@ -20,7 +20,7 @@
         android:layout_marginLeft="@dimen/actionbar_home_width"
         android:layout_marginRight="@dimen/actionbar_home_width"
         android:orientation="vertical"
-        android:paddingLeft="3dp" >
+        android:paddingLeft="2dp" >
 
         <TextView
             android:id="@+id/text_myactionbar_title"
