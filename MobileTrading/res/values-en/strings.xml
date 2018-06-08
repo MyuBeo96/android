@@ -41,6 +41,7 @@
     <string name="GiaThamChieu">Reference price</string>
     <string name="ChoKhop">Pending match</string>
     <string name="ChoVeQuyen">Rights in transit</string>
+    <string name="TienBanT0">Receiving T0</string>
     <string name="TienBanT1">Receiving T1</string>
     <string name="TienBanT2">Receiving T2</string>
     <string name="TienBanT3">Receiving T3</string>
@@ -61,6 +62,7 @@
     <string name="RtttrunoBLchuadenhan">Abandon the term Guarantee</string>
     <string name="TenNganHang">Bank</string>
     <string name="SoTKTaiMSI">Custody No. at KBSV</string>
+    <string name="SoTKTaiFSC">Custody No. at FSC</string>
     <string name="SoTaiKkhoanTaiFSC">Custody No. at FSC</string>
     <string name="SoTieuKhoanTaiFSC">Account No at FSC</string>
     <string name="DaHuy">Cancelled</string>
@@ -144,7 +146,7 @@
     <string name="Cancel">Cancel</string>
     <string name="XacNhan">Confirm</string>
     <string name="Sorry">Sorry! unable to create maps</string>
-    <string name="MaritimeBankBranch">Maritime Branchs</string>
+    <string name="FSCBankBranch">FSC Branchs</string>
     <string name="GPS">GPS is disabled in your device. Would you like to enable it?</string>
     <string name="Wifi">Wifi is disabled in your device. Would you like to enable it?</string>
     <string name="gotoGPS">Goto Settings Page To Enable GPS</string>
@@ -163,7 +165,7 @@
     <string name="msg_LoiKetNoi">"Unable to connect to server.\n Make sure your device is connected to the Internet"</string>
     <string name="ChuaNhapDL">You have not entered enough information</string>
     <string name="ChuaNhapDungDL">Passwords must have least 6 characters</string>
-    <string name="NhapPin">Please enter Pin code</string>
+    <string name="NhapPin">Please enter trading password</string>
     <string name="noti_loading">Please wait...</string>
     <string name="desc_list_item_icon">Item Icon</string>
     <string name="chu_tai_khoan">Account holders</string>
@@ -178,7 +180,7 @@
     <string name="kieu">Type</string>
     <string name="Tu">From</string>
     <string name="Den">To</string>
-    <string name="stockcompany_info">Copyright 2018 Funan Securities Incorporation\n Provided by FSS</string>
+    <string name="stockcompany_info">Copyright 2018 Funan Securities Company\n Provided by FSS</string>
     <string name="LocTheoMaCK">Filter by symbol</string>
     <string name="BoLoc">Cancel filter</string>
     <string name="TimKiem">Search</string>
@@ -231,6 +233,7 @@
     <string name="Thue">Tax</string>
     <string name="Gia1000">Price (x1000)</string>
     <string name="RTT">RTT</string>
+    <string name="TyLeKyQuy">Margin rate</string>
     <string name="SoLuuKy">Account</string>
     <string name="Logout">Logout</string>
     <string name="Logout2">Logout</string>
@@ -244,6 +247,7 @@
     <string name="TinTuc">News</string>
     <string name="XemTheoT_G">View by time</string>
     <string name="HangKhachHang">Account class&#160;</string>
+    <string name="NguoiNhanUyQuyen">Authorize</string>
     <string name="XinChao">Hello</string>
     <string name="MaKhachHang">Customer ID</string>
     <string name="Demo">Demo</string>
@@ -293,11 +297,11 @@
     <string name="SoCMND">ID card</string>
     <string name="NgayCap">ID card issued date</string>
     <string name="NoiCap">ID card issued place</string>
-    <string name="DiDong">Mobile</string>
+    <string name="DienThoaiDKSMS">Registration mobile to receive SMS</string>
     <string name="DienThoaiCoDinh">Home phone</string>
     <string name="DienThoaiLienLac">Contact phone</string>
     <string name="DiaChiDangKyVoiVSD">Home address</string>
-    <string name="DiaChiLienHeVoiFSC">Company\'s address</string>
+    <string name="DiaChiLienHe">Contact address</string>
     <string name="Email">Email</string>
     <string name="ChamSocBoi">Agent&#160;</string>
     <string name="SDTMoiGioiChamSoc">Agent phone</string>
@@ -445,7 +449,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="MatKhauDangNhap">Password</string>
-    <string name="MatKhauDatLenh">Pin</string>
+    <string name="MatKhauGiaoDich">Trading password</string>
+    <string name="MatKhauDatLenh">Trading password</string>
     <string name="login_btn_Login">Login</string>
     <string name="login_text_time">Timeout</string>
     <string name="login_text_minus">minute</string>
@@ -454,6 +459,9 @@
     <string name="activity_main_btn_ThiTruong">Markets</string>
     <string name="activity_main_btn_Menu">Menu</string>
     <string name="MaCK">Symbol</string>
+    <string name="SanGD">Floor trade</string>
+    <string name="LoaiGD">Trade type</string>
+    <string name="TrangThaiLenh">Order status</string>
     <string name="MaCK2">Sym</string>
     <string name="MaChungKhoan">Symbol</string>
     <string name="Ma">Sym</string>
@@ -461,6 +469,8 @@
     <string name="ThamChieu">Reference</string>
     <string name="datlenh_label_San">Floor</string>
     <string name="GiaKhopCuoi">Latest</string>
+    <string name="NNMua">Foreign buy</string>
+    <string name="NNBan">Foreign sell</string>
     <string name="datlenh_label_SucMua">PP</string>
     <string name="datlenh_label_TyLeVay">Rate</string>
     <string name="datlenh_label_HanMucMua">Hạn mức mua</string>
@@ -508,11 +518,11 @@
     <string name="chuyentienrangoai_label_ThongTin">Information</string>
     <string name="PhiVND">Fee (VND)</string>
     <string name="chuyentienrangoai_label_PhiThue">Tax fee</string>
-    <string name="chuyentienrangoai_hint_MaPin">OTP code</string>
+    <string name="chuyentienrangoai_hint_MaPin">Trading password</string>
     <string name="chuyentienrangoai_chitiet">Cash transfer info</string>
     <string name="chuyentienrangoai_khongcotk">No account registration transfers out</string>
     <string name="SoLuuKyNhan">Beneficiary\'s Custody</string>
-    <string name="chuyentiennoibo_hint_MaPin">Pin code</string>
+    <string name="chuyentiennoibo_hint_MaPin">Trading password</string>
     <string name="chuyentiennoibo_khongcotk">Unregistered internal account transfers</string>
     <string name="ungtruoc_label_CoTheUng">Max advancable amount</string>
     <string name="ungtruoc_label_DaUng">Advanced amount</string>
@@ -596,9 +606,9 @@
     <string name="doipass_lbl_passcu">Old password</string>
     <string name="doipass_lbl_passmoi">New password</string>
     <string name="doipass_lbl_again_passmoi">Confirm new password</string>
-    <string name="doipass_lbl_pincu">Old PIN</string>
-    <string name="doipass_lbl_pinmoi">New PIN</string>
-    <string name="doipass_lbl_again_pinmoi">Confirm new PIN</string>
+    <string name="doipass_lbl_pincu">Old trading password</string>
+    <string name="doipass_lbl_pinmoi">New trading password</string>
+    <string name="doipass_lbl_again_pinmoi">Confirm new trading password</string>
     <string name="sodu_danhmucchungkhoan">Portfolio</string>
     <string name="sodu_tonghopsodu">Balance</string>
     <string name="SoDu">Balance</string>
@@ -618,15 +628,15 @@
     <string name="lichsuct_NgayThucHien">implementation date</string>
     <string name="DoiMatKhauDangNhap">Change Login Password</string>
     <string name="DoiMatKhau">Change Login Password</string>
-    <string name="DoiMatKhauGiaoDich">Change PIN</string>
-    <string name="DoiPIN">Change PIN</string>
+    <string name="DoiMatKhauGiaoDich">Change trading password</string>
+    <string name="DoiPIN">Change trading password</string>
     <string name="ThongTinCaNhan">Contact Info</string>
     <string name="thietlaptk_OldPass">Old login password</string>
     <string name="thietlaptk_NewPass">New login password</string>
     <string name="thietlaptk_ConfirmPass">Re-type new login password</string>
-    <string name="thietlaptk_OldPin">Old PIN code</string>
-    <string name="thietlaptk_NewPin">New PIN code</string>
-    <string name="thietlaptk_ConfirmPin">Re-type new PIN code</string>
+    <string name="thietlaptk_OldPin">Old trading password </string>
+    <string name="thietlaptk_NewPin">New trading password </string>
+    <string name="thietlaptk_ConfirmPin">Re-type new trading password </string>
     <string name="boloc_EPS">EPS</string>
     <string name="boloc_PE">P/E</string>
     <string name="boloc_ROE">ROE</string>
@@ -686,4 +696,6 @@
 
     <string name="ok">"Set"</string>
     <string name="cancel">"Cancel"</string>
+    <string name="XacNhanHuyLenh">Cancel order confirm</string>
+    <string name="PastPlaceOrder">Order history</string>
 </resources>

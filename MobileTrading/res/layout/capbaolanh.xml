@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/edt_soLuuKy"
                 style="@style/EditText_Style"
                 android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                 app:labelText="@string/CBL_SoLuuKy"
                 app:orientation="vertical" />
 
-            <com.msbuat.mobiletrading.design.MySpinner
+            <com.fscuat.mobiletrading.design.MySpinner
                 android:id="@+id/Spin_SoTieuKhoan"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -44,14 +44,14 @@
                 android:layout_height="0.5dp"
                 android:background="@color/lc_separation_color" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_BaoLanhLyThuyet"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
                 app:labelText="@string/CBL_BaoLanhLyThuyet"
                 app:orientation="vertical" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_Rtt"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -71,7 +71,7 @@
                     android:gravity="center_vertical"
                     android:text="@string/CBL_SoTienSuDung" />
 
-                <com.msbuat.mobiletrading.design.NumberEditText
+                <com.fscuat.mobiletrading.design.NumberEditText
                     android:id="@+id/edt_SoTienSuDung"
                     style="@style/EditText_Style"
                     android:layout_width="match_parent"
@@ -91,14 +91,14 @@
                     android:background="@color/lc_separation_color" />
             </LinearLayout>
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_SoTienPheDuyet"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
                 app:labelText="@string/CBL_SoTienPheDuyet"
                 app:orientation="vertical" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_NgPheDuyet"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"

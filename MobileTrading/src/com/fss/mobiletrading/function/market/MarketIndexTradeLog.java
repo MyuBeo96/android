@@ -13,8 +13,8 @@ import android.widget.ListView;
 
 import com.fss.mobiletrading.adapter.TradeLog_Adapter;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.R;
 import com.mtrading.mobile.graph.IndexVolumeChartPoint;
 
 public class MarketIndexTradeLog extends AbstractFragment {

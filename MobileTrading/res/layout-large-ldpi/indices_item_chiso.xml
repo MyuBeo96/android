@@ -34,7 +34,7 @@
                 android:textSize="@dimen/t_cashtransfer_contenttextsize" />
         </RelativeLayout>
 
-        <com.msbuat.mobiletrading.design.TextViewHightLight
+        <com.fscuat.mobiletrading.design.TextViewHightLight
             android:id="@+id/text_indices_item_marketindex"
             style="@style/Content_Style"
             android:layout_width="wrap_content"
@@ -76,14 +76,14 @@
                 android:layout_marginRight="5dp"
                 android:scaleType="fitCenter" />
 
-            <com.msbuat.mobiletrading.design.TextViewHightLight
+            <com.fscuat.mobiletrading.design.TextViewHightLight
                 android:id="@+id/text_indices_item_marketchange"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white_text"
                 android:textSize="18sp" />
 
-            <com.msbuat.mobiletrading.design.TextViewHightLight
+            <com.fscuat.mobiletrading.design.TextViewHightLight
                 android:id="@+id/text_indices_item_marketchangeP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -116,7 +116,7 @@
                     android:layout_alignParentLeft="true"
                     android:text="@string/GiaTri" />
 
-                <com.msbuat.mobiletrading.design.TextViewHightLight
+                <com.fscuat.mobiletrading.design.TextViewHightLight
                     android:id="@+id/text_indices_item_value"
                     style="@style/Content_Style"
                     android:layout_width="wrap_content"
@@ -141,7 +141,7 @@
                     android:layout_height="match_parent"
                     android:text="@string/KhoiLuong_2" />
 
-                <com.msbuat.mobiletrading.design.TextViewHightLight
+                <com.fscuat.mobiletrading.design.TextViewHightLight
                     android:id="@+id/text_indices_item_volume"
                     style="@style/Content_Style"
                     android:layout_width="wrap_content"
@@ -169,7 +169,7 @@
                     android:layout_height="match_parent"
                     android:text="@string/GiaoDich_2" />
 
-                <com.msbuat.mobiletrading.design.TextViewHightLight
+                <com.fscuat.mobiletrading.design.TextViewHightLight
                     android:id="@+id/text_indices_item_trade"
                     style="@style/Content_Style"
                     android:layout_width="wrap_content"
@@ -202,7 +202,7 @@
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_up" />
 
-                    <com.msbuat.mobiletrading.design.TextViewHightLight
+                    <com.fscuat.mobiletrading.design.TextViewHightLight
                         android:id="@+id/text_indices_item_upstocks"
                         style="@style/Content_Style"
                         android:layout_width="wrap_content"
@@ -224,7 +224,7 @@
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_downred" />
 
-                    <com.msbuat.mobiletrading.design.TextViewHightLight
+                    <com.fscuat.mobiletrading.design.TextViewHightLight
                         android:id="@+id/text_indices_item_downstocks"
                         style="@style/Content_Style"
                         android:layout_width="wrap_content"
@@ -247,7 +247,7 @@
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_yellow" />
 
-                    <com.msbuat.mobiletrading.design.TextViewHightLight
+                    <com.fscuat.mobiletrading.design.TextViewHightLight
                         android:id="@+id/text_indices_item_refstocks"
                         style="@style/Content_Style"
                         android:layout_width="wrap_content"

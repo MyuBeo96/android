@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:id="@+id/rightoffregister_confirm"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -26,7 +26,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_DKQM_chitiet_Afacctno"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -34,35 +34,35 @@
                 app:labelText="@string/TieuKhoanDangKy"
                 app:orientation="vertical" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_DKQM_chitiet_MaCK"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
                 app:labelText="@string/MaCK"
                 app:orientation="vertical" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_DKQM_chitiet_SLduocmua"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
                 app:labelText="@string/dkqm_label_SLduocmua"
                 app:orientation="vertical" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_DKQM_chitiet_Gia"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
                 app:labelText="@string/Gia"
                 app:orientation="vertical" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_DKQM_chitiet_SoDu"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
                 app:labelText="@string/SoDu"
                 app:orientation="vertical" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/edt_DKQM_chitiet_SLMua"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -74,22 +74,22 @@
                 app:labelText="@string/SoLuongMua2"
                 app:orientation="vertical" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_DKQM_chitiet_TongTien"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
                 app:labelText="@string/TongTien"
                 app:orientation="vertical" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/edt_DKQM_chitiet_tradingcode"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
                 app:contentColor="@color/white_text"
-                app:contentHint="@string/MaXacThuc"
+                app:contentHint="@string/MatKhauGiaoDich"
                 app:editable="true"
                 app:inputType="textPassword"
-                app:labelText="@string/MaXacThuc"
+                app:labelText="@string/MatKhauGiaoDich"
                 android:visibility="gone"
                 app:orientation="vertical" />
 

@@ -13,8 +13,8 @@ import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.object.StockBalanceItem;
 import com.fss.mobiletrading.object.StockItem;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
 
 public class StockBalanceItemView extends LinearLayout {
 	Context context;

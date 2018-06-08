@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:id="@+id/listfavwatchlist"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,7 +16,7 @@
         android:orientation="vertical"
         android:visibility="gone" >
 
-        <com.msbuat.mobiletrading.design.LabelContentLayout
+        <com.fscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/edt_listfavwatchlist_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
             app:editable="true"
             app:labelText="@string/TenDanhMuc" />
 
-        <com.msbuat.mobiletrading.design.LabelContentLayout
+        <com.fscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/edt_listfavwatchlist_symbols"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

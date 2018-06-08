@@ -8,8 +8,8 @@ import android.widget.ArrayAdapter;
 
 import com.fss.mobiletrading.object.BangGia_Item;
 import com.fss.mobiletrading.view.FullWatchListItemView;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
 import java.util.List;
 
 public class FullWatchListAdapter extends ArrayAdapter<BangGia_Item> {

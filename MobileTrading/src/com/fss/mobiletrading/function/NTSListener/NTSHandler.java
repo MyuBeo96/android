@@ -17,8 +17,8 @@ import com.fss.mobiletrading.function.placeorder.PlaceOrder;
 import com.fss.mobiletrading.function.portfolio.Porfolio;
 import com.fss.mobiletrading.function.stocktransfer.StockTransfer;
 import com.logging.LogConfig;
-import com.msbuat.mobiletrading.MSTradeAppConfig;
-import com.msbuat.mobiletrading.MyApplication;
+import com.fscuat.mobiletrading.MSTradeAppConfig;
+import com.fscuat.mobiletrading.MyApplication;
 import com.webservices.signalr_websocket.SignalrConnManager;
 import com.webservices.signalr_websocket.SignalrConnection;
 

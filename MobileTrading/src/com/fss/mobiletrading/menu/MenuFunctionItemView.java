@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 
 public class MenuFunctionItemView extends LinearLayout {
 

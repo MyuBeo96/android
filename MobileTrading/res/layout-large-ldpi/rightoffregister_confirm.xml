@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:id="@+id/rightoffregister_confirm"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 
-        <com.msbuat.mobiletrading.design.LabelContentLayout
+        <com.fscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_DKQM_chitiet_MaCK"
             android:layout_width="0dp"
             android:layout_height="30dp"
@@ -122,7 +122,7 @@
             app:labelweight="0"
             app:separationColor="@color/transparent" />
 
-        <com.msbuat.mobiletrading.design.LabelContentLayout
+        <com.fscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_DKQM_chitiet_SLduocmua"
             android:layout_width="0dp"
             android:layout_height="30dp"
@@ -133,7 +133,7 @@
             app:labelweight="0"
             app:separationColor="@color/transparent" />
 
-        <com.msbuat.mobiletrading.design.LabelContentLayout
+        <com.fscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_DKQM_chitiet_Gia"
             android:layout_width="0dp"
             android:layout_height="30dp"
@@ -144,7 +144,7 @@
             app:labelweight="0"
             app:separationColor="@color/transparent" />
 
-        <com.msbuat.mobiletrading.design.LabelContentLayout
+        <com.fscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_DKQM_chitiet_SoDu"
             android:layout_width="0dp"
             android:layout_height="30dp"
@@ -162,7 +162,7 @@
             android:background="@drawable/bg_black_conner3_262630"
             android:gravity="center_vertical" >
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/edt_DKQM_chitiet_SLMua"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
@@ -178,7 +178,7 @@
                 app:singleLine="true" />
         </LinearLayout>
 
-        <com.msbuat.mobiletrading.design.LabelContentLayout
+        <com.fscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_DKQM_chitiet_TongTien"
             android:layout_width="0dp"
             android:layout_height="30dp"
@@ -202,7 +202,7 @@
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 
-        <com.msbuat.mobiletrading.design.SelectorImageView
+        <com.fscuat.mobiletrading.design.SelectorImageView
             android:id="@+id/img_rightoffregister_switch"
             android:layout_width="20dp"
             android:layout_height="20dp"
@@ -221,7 +221,7 @@
             android:textColor="@color/red_brown_text" />
     </LinearLayout>
 
-    <com.msbuat.mobiletrading.design.LabelContentLayout
+    <com.fscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/edt_DKQM_chitiet_tradingcode"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -231,7 +231,7 @@
         android:paddingLeft="5dp"
         android:visibility="gone"
         app:contentColor="@color/white_text"
-        app:contentHint="@string/MaXacThuc"
+        app:contentHint="@string/MatKhauGiaoDich"
         app:contentgravity="left"
         app:editable="true"
         app:inputType="textPassword"
@@ -278,7 +278,7 @@
             android:textColor="@drawable/color_button_green" />
     </LinearLayout>
 
-    <com.msbuat.mobiletrading.design.LabelContentLayout
+    <com.fscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_DKQM_chitiet_Afacctno"
         android:layout_width="0dp"
         android:layout_height="0dp"

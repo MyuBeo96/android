@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:id="@+id/check_order"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -8,13 +8,17 @@
     android:orientation="vertical"
     android:paddingLeft="@dimen/m_paddingLeft"
     android:paddingRight="@dimen/m_paddingRight" >
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none" >
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="5dp" >
 
-        <com.msbuat.mobiletrading.design.LabelContentLayout
+        <com.fscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_checkorder_SoLuuKy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,7 +26,7 @@
             app:labelText="@string/SoTaiKhoan"
             app:orientation="horizontal" />
 
-        <com.msbuat.mobiletrading.design.LabelContentLayout
+        <com.fscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_checkorder_TieuKhoan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -99,7 +103,7 @@
             android:layout_below="@+id/lay_solenh_chitiet1"
             android:background="@color/header_separation_color" />
 
-        <com.msbuat.mobiletrading.design.LabelContentLayout
+        <com.fscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_checkorder_SoLuong"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -108,7 +112,7 @@
             app:labelText="@string/SoLuong_2"
             app:orientation="horizontal" />
 
-        <com.msbuat.mobiletrading.design.LabelContentLayout
+        <com.fscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_checkorder_Gia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -118,7 +122,7 @@
             app:labelText="@string/Gia1000"
             app:orientation="horizontal" />
 
-        <com.msbuat.mobiletrading.design.LabelContentLayout
+        <com.fscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_checkorder_fromDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -127,7 +131,7 @@
             app:labelText="@string/TuNgay"
             app:orientation="horizontal" />
 
-        <com.msbuat.mobiletrading.design.LabelContentLayout
+        <com.fscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_checkorder_toDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -135,22 +139,47 @@
             android:visibility="gone"
             app:labelText="@string/DenNgay"
             app:orientation="horizontal" />
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal" >
-
+        <com.fscuat.mobiletrading.design.LabelContentLayout
+            android:id="@+id/edt_checkorder_TradingCode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_labelcontentverlayout_height"
+            app:contentColor="@color/white_text"
+            app:contentHint="@string/MatKhauGiaoDich"
+            android:layout_below="@+id/text_checkorder_Gia"
+            app:editable="true"
+            app:inputType="textPassword"
+            app:labelText="@string/MatKhauGiaoDich"
+            app:orientation="horizontal" />
         <Button
             android:id="@+id/btn_checkorder_Accept"
             style="@style/Button_Background1"
-            android:layout_width="0dp"
             android:layout_weight="5"
             android:text="@string/XacNhan"
-            android:textSize="18sp" />
-    </LinearLayout>
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/edt_checkorder_TradingCode"/>
+    </RelativeLayout>
+
+</ScrollView>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="5dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:orientation="horizontal" >-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_checkorder_Accept"-->
+            <!--style="@style/Button_Background1"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="@string/XacNhan"-->
+            <!--android:textSize="18sp" />-->
+    <!--</LinearLayout>-->
 
 </LinearLayout>

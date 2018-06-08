@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:id="@+id/chuyenkhoan_chungkhoan"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,7 +15,7 @@
         android:gravity="bottom"
         android:orientation="horizontal" >
 
-        <com.msbuat.mobiletrading.design.MySpinner
+        <com.fscuat.mobiletrading.design.MySpinner
             android:id="@+id/spn_ChuyenKhoanCK_senderafacctno"
             style="@style/LabelContentLayout_Style"
             app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
@@ -23,7 +23,7 @@
             app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
             app:textMySpinner="@string/TieuKhoanChuyen" />
 
-        <com.msbuat.mobiletrading.design.MySpinner
+        <com.fscuat.mobiletrading.design.MySpinner
             android:id="@+id/spn_ChuyenKhoanCK_TKNhan"
             style="@style/LabelContentLayoutMarginLeft_Style"
             app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
@@ -31,7 +31,7 @@
             app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
             app:textMySpinner="@string/chuyenkhoanck_label_TKNhan" />
 
-        <com.msbuat.mobiletrading.design.MySpinner
+        <com.fscuat.mobiletrading.design.MySpinner
             android:id="@+id/spn_ChuyenKhoanCK_MaCK"
             style="@style/LabelContentLayoutMarginLeft_Style"
             app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
@@ -46,7 +46,7 @@
         android:gravity="bottom"
         android:orientation="horizontal" >
 
-        <com.msbuat.mobiletrading.design.LabelContentLayout
+        <com.fscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_ChuyenKhoanCK_HienCo"
             style="@style/LabelContentLayout_Style"
             app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
@@ -54,7 +54,7 @@
             app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
             app:orientation="vertical" />
 
-        <com.msbuat.mobiletrading.design.LabelContentLayout
+        <com.fscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/edt_ChuyenKhoanCK_SoLuong"
             style="@style/LabelContentLayoutMarginLeft_Style"
             app:contentColor="@color/white_text"

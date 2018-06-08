@@ -10,8 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.fss.mobiletrading.common.SimpleAction;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
 
 public class FavWatchListItemView extends LinearLayout {
 	TextView name;

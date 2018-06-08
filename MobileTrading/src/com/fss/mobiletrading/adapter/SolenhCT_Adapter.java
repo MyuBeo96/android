@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 import com.fss.mobiletrading.object.OrderDetailsItem;
 import com.fss.mobiletrading.view.SoLenhCT_View;
 import com.fss.mobiletrading.view.SoLenhCT_View;

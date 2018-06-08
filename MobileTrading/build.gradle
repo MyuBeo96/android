@@ -17,13 +17,14 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
     useLibrary "org.apache.http.legacy"
-
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
     defaultConfig {
-        applicationId "com.msbuat.mobiletrading"
+        applicationId "com.fscuat.mobiletrading"
         minSdkVersion 15
-        targetSdkVersion 23
-        versionCode 25
-        versionName "2.1.1"
+        targetSdkVersion 19
+        versionCode 2
+        versionName "1.0.0"
         multiDexEnabled true
 
     }
@@ -50,7 +51,7 @@ android {
             buildConfigField "String", "address_server", '"http://118.69.230.209//MFlexApps"'
         }
         systemTest{
-            buildConfigField "String", "address_server", '"http://192.168.18.190/MFlexApps"'
+            buildConfigField "String", "address_server", '"http://14.161.11.106/MFlexApps"'
         }
     }
     compileOptions {

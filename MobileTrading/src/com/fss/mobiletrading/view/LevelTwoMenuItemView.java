@@ -8,7 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.LevelTwoMenu_Adapter;
 import com.fss.mobiletrading.menu.MenuItemAction;
 

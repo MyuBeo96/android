@@ -23,9 +23,9 @@ import android.widget.TextView;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.common.XmlParser;
 import com.fss.mobiletrading.function.AppData;
-import com.msbuat.mobiletrading.Login;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.Login;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.R;
 
 public class SlideMenu extends LinearLayout {
 

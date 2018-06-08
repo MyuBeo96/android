@@ -10,13 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.DanhSachChamNguong_Adapter;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.object.DanhSachChamNguongItem;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
 
 public class MatchAlertList extends AbstractFragment {
 	final String GETALLALERT_RESULT = "GetAllAlertResultService";

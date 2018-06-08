@@ -13,12 +13,12 @@ import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MSTradeAppConfig;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
-import com.msbuat.mobiletrading.design.LabelContentLayout;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MSTradeAppConfig;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.design.LabelContentLayout;
 
 public class ChangeTradingPassword extends AbstractFragment {
 	static final String CHANGEPASSWORD = "SuccessService#1";
@@ -27,12 +27,13 @@ public class ChangeTradingPassword extends AbstractFragment {
 	LabelContentLayout edt_ConfirmPin;
 	LabelContentLayout edt_NewPin;
 	LabelContentLayout edt_OldPin;
+	View viewsp;
 
 	public static ChangeTradingPassword newInstance(MainActivity mActivity) {
 
 		ChangeTradingPassword self = new ChangeTradingPassword();
 		self.mainActivity = mActivity;
-		self.TITLE = mActivity.getStringResource(R.string.DoiPIN);
+		self.TITLE = mActivity.getStringResource(R.string.DoiMatKhauGiaoDich);
 		return self;
 	}
 
@@ -43,6 +44,11 @@ public class ChangeTradingPassword extends AbstractFragment {
 		initView(view);
 		initListener();
 		return view;
+	}
+	@Override
+	public void addActionToActionBar() {
+		super.addActionToActionBar();
+		setBackLogoActionMenu();
 	}
 
 	@Override
@@ -65,9 +71,11 @@ public class ChangeTradingPassword extends AbstractFragment {
 				.findViewById(R.id.edt_thietlaptk_NewPin));
 		edt_ConfirmPin = ((LabelContentLayout) view
 				.findViewById(R.id.edt_thietlaptk_ConfirmPin));
+		viewsp = (View) view.findViewById(R.id.viewsp);
 		if (DeviceProperties.isTablet) {
 			Common.setupUI(view.findViewById(R.id.changetradingpassword),
 					this.getDialog());
+			viewsp.setVisibility(View.VISIBLE);
 		} else {
 			Common.setupUI(view.findViewById(R.id.changetradingpassword),
 					mainActivity);

@@ -39,6 +39,7 @@ public class AccountInfo {
 	public String Class;
 	public String AgentPhone;
 	public String AgentName;
+	public String Authorize;
 
 	public AccountInfo(HashMap<String, String> hm) {
 		FullName = hm.get("FullName");
@@ -77,5 +78,6 @@ public class AccountInfo {
 		Class = hm.get("Class");
 		AgentPhone = hm.get("AgentPhone");
 		AgentName = hm.get("AgentName");
+		Authorize = hm.get("Authorize");
 	}
 }

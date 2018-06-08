@@ -1,7 +1,7 @@
 package com.fss.mobiletrading.function;
 
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.AbstractFragment;
 
 public class MenuFunction extends AbstractFragment {
 

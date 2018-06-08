@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:id="@+id/internalcashtransfer_register"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -11,7 +11,7 @@
     android:paddingLeft="@dimen/m_paddingLeft"
     android:paddingRight="@dimen/m_paddingRight" >
 
-    <com.msbuat.mobiletrading.design.LabelContentLayout
+    <com.fscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/edt_DKCT_noibo_SoLuuKy"
         android:layout_width="match_parent"
         android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -22,7 +22,7 @@
         app:labelText="@string/SoLuuKyNhan"
         app:orientation="vertical" />
 
-    <com.msbuat.mobiletrading.design.LabelContentLayout
+    <com.fscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_DKCT_noibo_NguoiNhan"
         android:layout_width="match_parent"
         android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -32,7 +32,7 @@
         app:labelText="@string/TenNguoiThuHuong"
         app:orientation="vertical" />
 
-    <com.msbuat.mobiletrading.design.MySpinner
+    <com.fscuat.mobiletrading.design.MySpinner
         android:id="@+id/spn_DKCT_noibo_SoTieuKhoan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

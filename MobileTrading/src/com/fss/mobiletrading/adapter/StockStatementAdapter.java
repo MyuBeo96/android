@@ -7,8 +7,8 @@ import android.widget.ArrayAdapter;
 
 import com.fss.mobiletrading.object.StockStatementItem;
 import com.fss.mobiletrading.view.StockStatementItemView;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
 import java.util.List;
 
 public class StockStatementAdapter extends ArrayAdapter<StockStatementItem> {

@@ -86,21 +86,21 @@
         </RelativeLayout>
     </LinearLayout>
 
-    <com.msbuat.mobiletrading.design.Indices_View
+    <com.fscuat.mobiletrading.design.Indices_View
         android:id="@+id/indices_marketinfo_HOSE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="@dimen/m_paddingLeft"
         android:paddingRight="@dimen/m_paddingRight" />
 
-    <com.msbuat.mobiletrading.design.Indices_View
+    <com.fscuat.mobiletrading.design.Indices_View
         android:id="@+id/indices_marketinfo_HNX"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="@dimen/m_paddingLeft"
         android:paddingRight="@dimen/m_paddingRight" />
 
-    <com.msbuat.mobiletrading.design.Indices_View
+    <com.fscuat.mobiletrading.design.Indices_View
         android:id="@+id/indices_marketinfo_UPCOM"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

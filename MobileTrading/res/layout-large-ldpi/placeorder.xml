@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:id="@+id/datlenh"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -169,7 +169,7 @@
                             android:gravity="center_vertical"
                             android:text="@string/SoLuong_2" />
 
-                        <com.msbuat.mobiletrading.design.Edittext_SoLuong
+                        <com.fscuat.mobiletrading.design.Edittext_SoLuong
                             android:id="@+id/cus_edt_DatLenh_SoLuong"
                             android:layout_width="match_parent"
                             android:layout_height="45dp"
@@ -199,7 +199,7 @@
                             android:gravity="center_vertical"
                             android:text="@string/LoaiLenh" />
 
-                        <com.msbuat.mobiletrading.design.Edittext_LoaiLenh
+                        <com.fscuat.mobiletrading.design.Edittext_LoaiLenh
                             android:id="@+id/cus_edt_DatLenh_LoaiLenh"
                             android:layout_width="match_parent"
                             android:layout_height="45dp"
@@ -227,7 +227,7 @@
                             android:gravity="center_vertical"
                             android:text="@string/Gia1000" />
 
-                        <com.msbuat.mobiletrading.design.Edittext_Gia
+                        <com.fscuat.mobiletrading.design.Edittext_Gia
                             android:id="@+id/cus_edt_DatLenh_Gia"
                             android:layout_width="match_parent"
                             android:layout_height="45dp"
@@ -256,7 +256,7 @@
                             android:gravity="center_vertical"
                             android:text="@string/datlenh_label_SplitQtty" />
 
-                        <com.msbuat.mobiletrading.design.Edittext_SoLuong
+                        <com.fscuat.mobiletrading.design.Edittext_SoLuong
                             android:id="@+id/edttg_DatLenh_SplitQtty"
                             android:layout_width="match_parent"
                             android:layout_height="45dp"
@@ -271,6 +271,18 @@
                             android:layout_below="@+id/edttg_DatLenh_SplitQtty"
                             android:background="@color/lc_separation_color" />
                     </RelativeLayout>
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/edt_amendorder_TradingCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m_labelcontentverlayout_height"
+                        app:contentColor="@color/white_text"
+                        app:contentHint="@string/MatKhauGiaoDich"
+                        android:layout_below="@+id/lay_order_splitqtty"
+                        app:editable="true"
+                        app:inputType="textPassword"
+                        app:labelText="@string/MatKhauGiaoDich"
+                        app:orientation="horizontal"
+                        android:visibility="gone"/>
 
                     <RelativeLayout
                         android:id="@+id/lay_order_date"
@@ -336,7 +348,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
 
-                        <com.msbuat.mobiletrading.design.SelectorImageView
+                        <com.fscuat.mobiletrading.design.SelectorImageView
                             android:id="@+id/img_nororderlist_item_iscancel"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
@@ -482,7 +494,7 @@
                                 android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
                                 android:layout_below="@+id/lbl_datlenh_SucMuaBuy"
                                 android:paddingLeft="5dp"
-                                android:text="@string/RTT"
+                                android:text="@string/TyLeKyQuy"
                                 android:textColor="#ff777777"
                                 android:textSize="@dimen/placeorder_orderinfo_textsize" />
 
@@ -524,7 +536,7 @@
                                 android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
                                 android:layout_alignBottom="@+id/text_datlenh_rttsell"
                                 android:paddingLeft="5dp"
-                                android:text="@string/RTT"
+                                android:text="@string/TyLeKyQuy"
                                 android:textColor="#ff777777"
                                 android:textSize="@dimen/placeorder_orderinfo_textsize" />
 
@@ -538,6 +550,109 @@
                                 android:gravity="right"
                                 android:textColor="@color/white_text"
                                 android:textSize="@dimen/placeorder_orderinfo_textsize" />
+                            <TextView
+                                android:id="@+id/lbl_datlenh_roomnn"
+                                android:layout_width="wrap_content"
+                                android:layout_below="@+id/text_datlenh_rttsell"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_alignBottom="@+id/text_DatLenh_RoomNN"
+                                android:paddingLeft="5dp"
+                                android:text="@string/NNMua"
+                                android:textColor="#ff777777"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:id="@+id/text_DatLenh_RoomNN"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_below="@+id/text_datlenh_rttsell"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/lbl_datlenh_roomnn"
+                                android:gravity="right"
+                                android:textColor="@color/white_text"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize"
+                                android:visibility="gone"/>
+                            <TextView
+                                android:id="@+id/text_DatLenh_Company"
+                                style="@style/Label_Style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="2"
+                                android:paddingLeft="5dp"
+                                android:layout_below="@+id/lbl_datlenh_roomnn"
+                                android:visibility="gone"/>
+                            <TextView
+                                android:id="@+id/lbl_datlenh_nnmua"
+                                android:layout_width="wrap_content"
+                                android:layout_below="@+id/text_DatLenh_Company"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_alignBottom="@+id/text_DatLenh_NNMua"
+                                android:paddingLeft="5dp"
+                                android:text="@string/NNMua"
+                                android:textColor="#ff777777"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:id="@+id/text_DatLenh_NNMua"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_below="@+id/text_datlenh_rttsell"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/lbl_datlenh_nnmua"
+                                android:gravity="right"
+                                android:textColor="@color/white_text"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize"
+                                android:visibility="gone"/>
+                            <TextView
+                                android:id="@+id/lbl_datlenh_nnban"
+                                android:layout_width="wrap_content"
+                                android:layout_below="@+id/lbl_datlenh_nnmua"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_alignBottom="@+id/text_DatLenh_NNMua"
+                                android:paddingLeft="5dp"
+                                android:text="@string/NNMua"
+                                android:textColor="#ff777777"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:id="@+id/text_DatLenh_NNBan"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/placeorder_sucmua_tylevay_height"
+                                android:layout_below="@+id/text_datlenh_rttsell"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/lbl_datlenh_nnban"
+                                android:gravity="right"
+                                android:textColor="@color/white_text"
+                                android:textSize="@dimen/placeorder_orderinfo_textsize"
+                                android:visibility="gone"/>
+                            <TextView
+                                android:id="@+id/lbl_datlenh_nnbansell"
+                                android:layout_width="wrap_content"
+                                android:layout_height="18dp"
+                                android:layout_alignBottom="@+id/text_DatLenh_NNSell"
+                                android:paddingLeft="5dp"
+                                android:text="@string/NNBan"
+                                android:textColor="#ff777777"
+                                android:textSize="12.0sp"
+                                android:visibility="gone"/>
+                            <TextView
+                                android:id="@+id/text_DatLenh_NNBanSell"
+                                android:layout_width="match_parent"
+                                android:layout_height="18dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/lbl_datlenh_nnbansell"
+                                android:gravity="right"
+                                android:textColor="@color/white_text"
+                                android:textSize="12.0sp"
+                                android:visibility="gone"/>
+
+
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -634,7 +749,6 @@
                         android:layout_marginTop="5dp"
                         android:visibility="gone" >
                     </com.fss.mobiletrading.keyboard.KBoardPrice>
-
                     <com.fss.mobiletrading.keyboard.KBoardQuantity
                         android:id="@+id/t_placeorder_kboardsymbol_quantity"
                         android:layout_width="match_parent"
@@ -649,7 +763,7 @@
                         android:layout_width="match_parent"
                         android:layout_marginRight="0dp"
                         android:layout_marginTop="10dp"
-                        android:text="@string/XacNhan"
+                        android:text="@string/DatLenh"
                         android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>

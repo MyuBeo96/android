@@ -8,11 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.TabsPagerAdapter;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
 
 public class Alert_ViewPager extends AbstractFragment {
 	public static int DOT_BIEN_CO_BAN = 4;

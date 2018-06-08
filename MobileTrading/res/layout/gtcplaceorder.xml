@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:id="@+id/datlenhgtc"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -428,7 +428,7 @@
                     android:gravity="center_vertical"
                     android:text="@string/SoLuong_2" />
 
-                <com.msbuat.mobiletrading.design.Edittext_SoLuong
+                <com.fscuat.mobiletrading.design.Edittext_SoLuong
                     android:id="@+id/cus_edt_datlenhgtc_SoLuong"
                     android:layout_width="200dp"
                     android:layout_height="45dp"
@@ -451,7 +451,7 @@
                     android:gravity="center_vertical"
                     android:text="@string/Gia1000" />
 
-                <com.msbuat.mobiletrading.design.Edittext_Gia
+                <com.fscuat.mobiletrading.design.Edittext_Gia
                     android:id="@+id/cus_edt_datlenhgtc_Gia"
                     android:layout_width="200dp"
                     android:layout_height="45dp"
@@ -465,7 +465,7 @@
                     android:layout_below="@+id/cus_edt_datlenhgtc_Gia"
                     android:background="@color/header_separation_color" />
 
-                <com.msbuat.mobiletrading.design.InputDate
+                <com.fscuat.mobiletrading.design.InputDate
                     android:id="@+id/edt_datlenhgtc_TuNgay"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
@@ -481,7 +481,7 @@
                     android:layout_below="@+id/edt_datlenhgtc_TuNgay"
                     android:background="@color/header_separation_color" />
 
-                <com.msbuat.mobiletrading.design.InputDate
+                <com.fscuat.mobiletrading.design.InputDate
                     android:id="@+id/edt_datlenhgtc_DenNgay"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"

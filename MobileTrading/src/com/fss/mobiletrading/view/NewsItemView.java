@@ -6,8 +6,8 @@ import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.msbuat.mobiletrading.Login;
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.Login;
+import com.fscuat.mobiletrading.R;
 import com.fss.mobiletrading.object.NewsItem;
 
 public class NewsItemView extends LinearLayout {

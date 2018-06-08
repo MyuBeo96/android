@@ -31,17 +31,20 @@ import com.fss.mobiletrading.object.FindStock;
 import com.fss.mobiletrading.object.ResultObj;
 import com.fss.mobiletrading.object.StockDetailsItem;
 import com.fss.mobiletrading.object.StockItem;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MSTradeAppConfig;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
-import com.msbuat.mobiletrading.design.Edittext_Gia;
-import com.msbuat.mobiletrading.design.Edittext_LoaiLenh;
-import com.msbuat.mobiletrading.design.Edittext_SoLuong;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MSTradeAppConfig;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.design.Edittext_Gia;
+import com.fscuat.mobiletrading.design.Edittext_LoaiLenh;
+import com.fscuat.mobiletrading.design.Edittext_SoLuong;
+import com.fscuat.mobiletrading.design.LabelContentLayout;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.fss.mobiletrading.object.StockItem.HOSE;
 
 public class AmendOrder extends AbstractFragment {
 
@@ -58,6 +61,7 @@ public class AmendOrder extends AbstractFragment {
 	protected Edittext_Gia edttg_Gia;
 	protected Edittext_LoaiLenh edttg_LoaiLenh;
 	protected Edittext_SoLuong edttg_SoLuong;
+	protected LabelContentLayout edt_TradingPw;
 	protected FindStock findStock;
 
 	protected TextView tv_GiaKhopCuoi;
@@ -79,11 +83,18 @@ public class AmendOrder extends AbstractFragment {
 	protected TextView lbl_ChoVe;
 	protected TextView lbl_PP0;
 	protected TextView lbl_Rttsell;
+	protected TextView lbl_NNBan;
+	protected TextView lbl_NNBanSell;
 
 	protected TextView tv_KLduocban;
 	protected TextView tv_ChoVe;
 	protected TextView tv_PP0;
 	protected TextView tv_Rttsell;
+	protected TextView tv_Company;
+	protected TextView tv_RoomNN;
+	protected TextView tv_NNMua;
+	protected TextView tv_NNBan;
+	protected TextView tv_NNBanSell;
 
 	protected LinearLayout stockIndex;
 
@@ -128,6 +139,7 @@ public class AmendOrder extends AbstractFragment {
 		edttg_LoaiLenh = (Edittext_LoaiLenh) view
 				.findViewById(R.id.cus_edt_DatLenh_LoaiLenh);
 		edttg_Gia = (Edittext_Gia) view.findViewById(R.id.cus_edt_DatLenh_Gia);
+		edt_TradingPw = (LabelContentLayout) view.findViewById(R.id.edt_amendorder_TradingCode);
 		kBoardPrice = (KBoardPrice) view
 				.findViewById(R.id.t_placeorder_kboardsymbol_price);
 		kBoardQuantity = (KBoardQuantity) view
@@ -168,6 +180,16 @@ public class AmendOrder extends AbstractFragment {
 		lbl_PP0 = (TextView) view.findViewById(R.id.lbl_datlenh_SucMuaSell);
 		tv_PP0 = (TextView) view.findViewById(R.id.text_datlenh_SucMuaSell);
 
+		tv_Company = (TextView) view.findViewById(R.id.text_DatLenh_Company);
+		tv_RoomNN = (TextView) view.findViewById(R.id.text_DatLenh_RoomNN);
+		tv_NNMua = (TextView) view.findViewById(R.id.text_DatLenh_NNMua);
+
+		lbl_NNBan = (TextView) view.findViewById(R.id.lbl_datlenh_nnban);
+		tv_NNBan = (TextView) view.findViewById(R.id.text_DatLenh_NNBan);
+
+		lbl_NNBanSell = (TextView) view.findViewById(R.id.lbl_datlenh_nnbansell);
+		tv_NNBanSell = (TextView) view.findViewById(R.id.text_DatLenh_NNBanSell);
+
 		edt_SplitQtty = ((Edittext_SoLuong) view
 				.findViewById(R.id.edttg_DatLenh_SplitQtty));
 
@@ -181,6 +203,7 @@ public class AmendOrder extends AbstractFragment {
 		// .findViewById(R.id.kb_datlenh_quantity);
 		// keyboardPrice = (KeyboardPrice) view
 		// .findViewById(R.id.kb_datlenh_price);
+		btn_DatLenh.setText(R.string.AmendOrder);
 		Common.setupUI(view.findViewById(R.id.datlenh), mainActivity);
 		initialise();
 		initialiseListener();
@@ -311,6 +334,7 @@ public class AmendOrder extends AbstractFragment {
 
 			@Override
 			public void onClick(View v) {
+
 				CallAmendOrder(orderSetParams);
 			}
 		});
@@ -367,12 +391,19 @@ public class AmendOrder extends AbstractFragment {
 				edttg_Gia.setEnabled(false);
 			}
 		}
+		edt_TradingPw.setText(StringConst.EMPTY);
+		//Check không được sửa field chữ mờ hơn
+		edttg_LoaiLenh.getEditContext().setTextColor(getColorResource(R.color.color_background_edittext));
+
+		if(edttg_SoLuong.tradeplace== StockItem.HOSE) {
+			edttg_SoLuong.toEditText().setTextColor(getColorResource(R.color.color_background_edittext));
+		}
 	}
 
 	@Override
 	public void addActionToActionBar() {
 		super.addActionToActionBar();
-		// setBackLogoAction();
+		 setBackLogoAction();
 	}
 
 	protected void functionBtnBanClick() {
@@ -401,6 +432,12 @@ public class AmendOrder extends AbstractFragment {
 		tv_TyLeVay.setVisibility(TextView.GONE);
 		tv_KLduocmua.setVisibility(TextView.GONE);
 		tv_Rttbuy.setVisibility(TextView.GONE);
+		if (!DeviceProperties.isTablet) {
+			lbl_NNBanSell.setVisibility(TextView.VISIBLE);
+			tv_NNBanSell.setVisibility(TextView.VISIBLE);
+			lbl_NNBan.setVisibility(TextView.GONE);
+			tv_NNBan.setVisibility(TextView.GONE);
+		}
 
 	}
 
@@ -430,6 +467,12 @@ public class AmendOrder extends AbstractFragment {
 		tv_TyLeVay.setVisibility(TextView.VISIBLE);
 		tv_KLduocmua.setVisibility(TextView.VISIBLE);
 		tv_Rttbuy.setVisibility(TextView.VISIBLE);
+		if (!DeviceProperties.isTablet) {
+			lbl_NNBan.setVisibility(TextView.VISIBLE);
+			tv_NNBan.setVisibility(TextView.VISIBLE);
+			lbl_NNBanSell.setVisibility(TextView.GONE);
+			tv_NNBanSell.setVisibility(TextView.GONE);
+		}
 
 	}
 
@@ -440,6 +483,13 @@ public class AmendOrder extends AbstractFragment {
 			showDialogMessage(getStringResource(R.string.thong_bao),
 					getStringResource(R.string.ChuaNhapDL));
 			return;
+		}
+		if(edt_TradingPw.getText().length()==0){
+			if(edt_TradingPw.getVisibility()!=View.VISIBLE) {
+				edt_TradingPw.setVisibility(View.VISIBLE);
+			}
+			showDialogMessage(getStringResource(R.string.thong_bao), getStringResource(R.string.NhapPin));
+			edt_TradingPw.requestFocus();
 		}
 		List<String> list_key = new ArrayList<String>();
 		List<String> list_value = new ArrayList<String>();
@@ -478,6 +528,10 @@ public class AmendOrder extends AbstractFragment {
 		{
 			list_key.add("Price");
 			list_value.add(edttg_Gia.getText().toString());
+		}
+		{
+			list_key.add("TradingPassword");
+			list_value.add(edt_TradingPw.getText().toString());
 		}
 
 		StaticObjectManager.connectServer.callHttpPostService(AMENDORDER, this,
@@ -543,11 +597,26 @@ public class AmendOrder extends AbstractFragment {
 		tv_San.setText(StringConst.EMPTY);
 		tv_GiaKhopCuoi.setText(StringConst.EMPTY);
 		tv_RefPrice.setText(StringConst.EMPTY);
+		edt_TradingPw.setText(StringConst.EMPTY);
+		tv_NNBan.setText(StringConst.EMPTY);
+		tv_NNBanSell.setText(StringConst.EMPTY);
+		tv_NNMua.setText(StringConst.EMPTY);
+		tv_Company.setText(StringConst.EMPTY);
+		tv_RoomNN.setText(StringConst.EMPTY);
 	}
 
 	protected void displayStockInfo() {
 
 		if (findStock != null) {
+			tv_Company.setText(findStock.stockInfo.stockname);
+			tv_RoomNN.setText(Common
+					.formatAmount(findStock.stockInfo.foreignRemain));
+			tv_NNMua.setText(Common
+					.formatAmount(findStock.stockInfo.foreignBuy));
+			tv_NNBan.setText(Common
+					.formatAmount(findStock.stockInfo.foreignSell));
+			tv_NNBanSell.setText(Common
+					.formatAmount(findStock.stockInfo.foreignSell));
 			tv_PPSE.setText(Common
 					.formatAmount(findStock.stockInfo.CashAvaiable));
 			tv_PP0.setText(Common
@@ -573,6 +642,7 @@ public class AmendOrder extends AbstractFragment {
 					findStock.stockInfo.CeilPrice,
 					findStock.stockInfo.FloorPrice,
 					findStock.stockInfo.RefPrice)));
+
 		}
 	}
 

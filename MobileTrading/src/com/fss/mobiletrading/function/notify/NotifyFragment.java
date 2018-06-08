@@ -28,10 +28,10 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnLastItemVisibleListener;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
 
 import java.util.ArrayList;
 
@@ -221,6 +221,11 @@ public class NotifyFragment extends AbstractFragment {
             default:
                 break;
         }
+    }
+    @Override
+    public void addActionToActionBar() {
+        super.addActionToActionBar();
+        setBackLogoActionMenu();
     }
 
     @Override

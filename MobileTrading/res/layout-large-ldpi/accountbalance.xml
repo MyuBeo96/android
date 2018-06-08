@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:id="@+id/accountbalance"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
-        <com.msbuat.mobiletrading.design.MySpinner
+        <com.fscuat.mobiletrading.design.MySpinner
             android:id="@+id/spn_accountbalance"
             android:layout_width="match_parent"
             android:layout_height="35dp"
@@ -44,7 +44,7 @@
                 android:gravity="bottom"
                 android:orientation="horizontal" >
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_tienmat"
                     style="@style/LabelContentLayout_Style"
                     app:contentColor="@color/white_text"
@@ -53,7 +53,7 @@
                     app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_ungtoida"
                     style="@style/LabelContentLayoutMarginLeft_Style"
                     app:contentColor="@color/white_text"
@@ -62,7 +62,7 @@
                     app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_cotucchove"
                     style="@style/LabelContentLayoutMarginLeft_Style"
                     app:contentColor="@color/white_text"
@@ -78,7 +78,7 @@
                 android:gravity="bottom"
                 android:orientation="horizontal" >
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_tongno"
                     style="@style/LabelContentLayout_Style"
                     app:contentColor="@color/white_text"
@@ -87,7 +87,7 @@
                     app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_RTT"
                     style="@style/LabelContentLayoutMarginLeft_Style"
                     app:contentColor="@color/white_text"
@@ -96,7 +96,7 @@
                     app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_tiennopbosung"
                     style="@style/LabelContentLayoutMarginLeft_Style"
                     app:contentColor="@color/white_text"
@@ -112,7 +112,7 @@
                 android:gravity="bottom"
                 android:orientation="horizontal" >
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_choveT0"
                     style="@style/LabelContentLayout_Style"
                     app:contentColor="@color/white_text"
@@ -121,7 +121,7 @@
                     app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_choveT1"
                     style="@style/LabelContentLayoutMarginLeft_Style"
                     app:contentColor="@color/white_text"
@@ -130,7 +130,7 @@
                     app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_choveT2"
                     style="@style/LabelContentLayoutMarginLeft_Style"
                     app:contentColor="@color/white_text"
@@ -146,7 +146,7 @@
                 android:gravity="bottom"
                 android:orientation="horizontal" >
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_ruttoida"
                     style="@style/LabelContentLayout_Style"
                     app:contentColor="@color/white_text"
@@ -155,7 +155,7 @@
                     app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_GiaTriNAV"
                     style="@style/LabelContentLayoutMarginLeft_Style"
                     app:contentColor="@color/white_text"

@@ -12,10 +12,10 @@ import com.fss.mobiletrading.adapter.AuthorizationInfo_Adapter;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.object.AuthorizationInfoItem;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
 
 import java.util.ArrayList;
 import java.util.List;

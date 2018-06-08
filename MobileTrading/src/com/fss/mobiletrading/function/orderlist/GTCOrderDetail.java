@@ -14,24 +14,26 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.msbuat.mobiletrading.R;
+import com.fss.mobiletrading.consts.StringConst;
+import com.fscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.SolenhCT_Adapter;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.function.placeorder.PlaceOrder;
 import com.fss.mobiletrading.object.OrderDetailsItem;
 import com.fss.mobiletrading.object.SolenhItem;
-import com.msbuat.mobiletrading.Login;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.MyActionBar.Action;
-import com.msbuat.mobiletrading.design.LabelContentLayout;
-import com.msbuat.mobiletrading.design.NumberEditText;
-import com.msbuat.mobiletrading.design.VerticalListview;
+import com.fscuat.mobiletrading.Login;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.MyActionBar.Action;
+import com.fscuat.mobiletrading.design.LabelContentLayout;
+import com.fscuat.mobiletrading.design.NumberEditText;
+import com.fscuat.mobiletrading.design.VerticalListview;
 
 public class GTCOrderDetail extends OrderDetail {
 
 	LabelContentLayout tv_chitiet_fromDate;
 	LabelContentLayout tv_chitiet_toDate;
+	LabelContentLayout edt_TradingPw;
 
 	public static GTCOrderDetail newInstance(MainActivity mActivity) {
 		GTCOrderDetail self = new GTCOrderDetail();
@@ -67,6 +69,7 @@ public class GTCOrderDetail extends OrderDetail {
 				.findViewById(R.id.text_solenh_chitiet_fromDate));
 		tv_chitiet_toDate = ((LabelContentLayout) view
 				.findViewById(R.id.text_solenh_chitiet_toDate));
+		edt_TradingPw = (LabelContentLayout) view.findViewById(R.id.edt_orderdetail_TradingCode);
 		view.findViewById(R.id.layout_solenh_chitiet_ChiTietKhop)
 				.setVisibility(View.GONE);
 
@@ -121,6 +124,7 @@ public class GTCOrderDetail extends OrderDetail {
 		tv_chitiet_TrangThai.setText(item.Status);
 		tv_chitiet_fromDate.setText(item.fromDate);
 		tv_chitiet_toDate.setText(item.toDate);
+		edt_TradingPw.setText(StringConst.EMPTY);
 
 		if (item.Side.equals(PlaceOrder.SIDE_NB)) {
 			tv_chitiet_OrderSide.setText(getStringResource(R.string.Mua));
@@ -157,6 +161,7 @@ public class GTCOrderDetail extends OrderDetail {
 	}
 
 	protected void CallCancelOrder(SolenhItem item) {
+		if(edt_TradingPw.getText().length()!=0){
 		if (item != null) {
 			List<String> list_key = new ArrayList<String>();
 			List<String> list_value = new ArrayList<String>();
@@ -197,10 +202,19 @@ public class GTCOrderDetail extends OrderDetail {
 				list_key.add("Price");
 				list_value.add(item.Price);
 			}
+			{
+				list_key.add("TradingPassword");
+				list_value.add(edt_TradingPw.getText().toString());
+			}
 
 			StaticObjectManager.connectServer.callHttpPostService(CANCELORDER,
 					this, list_key, list_value);
 			btn_chitiet_HuyLenh.setEnabled(false);
+		}
+	}else {
+		showDialogMessage(getStringResource(R.string.thong_bao),getStringResource(R.string.NhapPin));
+			edt_TradingPw.setVisibility(View.VISIBLE);
+		edt_TradingPw.requestFocus();
 		}
 	}
 

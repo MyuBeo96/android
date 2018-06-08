@@ -19,7 +19,7 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ListView;
 
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.ConfirmOrder_Adapter;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.StaticObjectManager;
@@ -27,11 +27,11 @@ import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.object.ConfirmOrderItem;
 import com.fss.mobiletrading.object.ItemString2;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.design.InputDate;
-import com.msbuat.mobiletrading.design.LabelContentLayout;
-import com.msbuat.mobiletrading.design.MySpinner;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.design.InputDate;
+import com.fscuat.mobiletrading.design.LabelContentLayout;
+import com.fscuat.mobiletrading.design.MySpinner;
 
 public class ConfirmOrder extends AbstractFragment {
 

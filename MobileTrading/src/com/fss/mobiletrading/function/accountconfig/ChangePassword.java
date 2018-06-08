@@ -14,12 +14,12 @@ import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MSTradeAppConfig;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
-import com.msbuat.mobiletrading.design.LabelContentLayout;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MSTradeAppConfig;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.design.LabelContentLayout;
 
 public class ChangePassword extends AbstractFragment {
 	static final String CHANGEPASSWORD = "SuccessService#1";
@@ -29,6 +29,7 @@ public class ChangePassword extends AbstractFragment {
 	LabelContentLayout edt_ConfirmPass;
 	LabelContentLayout edt_NewPass;
 	LabelContentLayout edt_OldPass;
+	View viewsp;
 
 	public static ChangePassword newInstance(MainActivity mActivity) {
 		ChangePassword self = new ChangePassword();
@@ -70,9 +71,11 @@ public class ChangePassword extends AbstractFragment {
 		edt_ConfirmPass = ((LabelContentLayout) view
 				.findViewById(R.id.edt_thietlaptk_ConfirmPass));
 		btn_Cancel = (Button) view.findViewById(R.id.btn_HuyPass);
+		viewsp = (View) view.findViewById(R.id.viewsp);
 		if (DeviceProperties.isTablet) {
 			Common.setupUI(view.findViewById(R.id.changepassword),
 					this.getDialog());
+			viewsp.setVisibility(View.VISIBLE);
 		} else {
 			Common.setupUI(view.findViewById(R.id.changepassword), mainActivity);
 		}
@@ -121,6 +124,11 @@ public class ChangePassword extends AbstractFragment {
 				}
 			}
 		});
+	}
+	@Override
+	public void addActionToActionBar() {
+		super.addActionToActionBar();
+		setBackLogoActionMenu();
 	}
 
 	@Override

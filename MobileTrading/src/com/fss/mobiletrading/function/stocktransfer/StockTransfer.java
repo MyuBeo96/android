@@ -15,12 +15,12 @@ import com.fss.mobiletrading.object.ChuyenKhoanCK_Item;
 import com.fss.mobiletrading.object.FindStockSenAccObj;
 import com.fss.mobiletrading.object.ItemString;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.design.LabelContentLayout;
-import com.msbuat.mobiletrading.design.MyContextMenu;
-import com.msbuat.mobiletrading.design.MySpinner;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.design.LabelContentLayout;
+import com.fscuat.mobiletrading.design.MyContextMenu;
+import com.fscuat.mobiletrading.design.MySpinner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -163,6 +163,11 @@ public class StockTransfer extends AbstractFragment {
         // chọn theo tiểu khoản đang chọn của chương trình
         spn_senderAfacctno.setSelection(list_TKgui
                 .indexOf(StaticObjectManager.acctnoItem));
+    }
+    @Override
+    public void addActionToActionBar() {
+        super.addActionToActionBar();
+        setBackLogoActionMenu();
     }
 
     @Override

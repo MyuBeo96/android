@@ -102,6 +102,11 @@
             </tabmenu>
             <tabmenu
                 style="2"
+                class="com.fss.mobiletrading.function.pastplaceorder.PastPlaceOrder"
+                title="Lịch sử đặt lệnh">
+            </tabmenu>
+            <tabmenu
+                style="2"
                 class="com.fss.mobiletrading.function.coporateactions.CoporateActions"
                 title="Lịch sự kiện quyền" >
             </tabmenu>

@@ -51,6 +51,7 @@
     <color name="text_hint_color_bgwhite">#30000000</color>
     <color name="lc_separation_color">#60A6A6A6</color>
     <color name="edittext_text_color">#ffffff</color>
+    <color name="edt_pin_cancelorder_color">#000</color>
     <color name="edittext_background_color">#00ffffff</color>
     <color name="edittext_hint_color">#30dddddd</color>
     <color name="spinner_text_color">#ffffff</color>
@@ -113,6 +114,6 @@
     <color name="offrate_color">#DB4244</color>
     <color name="buyoffbutton_color">#1BB869</color>
     <color name="buybidbutton_color">#DD4142</color>
-    <color name="background_PNS">#F5C5D9</color>
+    <color name="background_color">#2C2E42</color>
 
 </resources>

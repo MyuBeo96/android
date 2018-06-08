@@ -18,7 +18,7 @@
         <child>
             <tabmenu
                 class="com.fss.mobiletrading.function.orderlist.NormalOrderList"
-                title="Sổ lệnh thường" >
+                title="一般下單目錄" >
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.orderlist.GTCOrderList"
@@ -53,7 +53,7 @@
     <tabmenu
         class="null"
         icon="selector_slidemenu_giaodichdb"
-        title="Giao dịch đặc biệt" >
+        title="特別交易" >
         <child>
             <tabmenu
                 class="com.fss.mobiletrading.function.rightoffregister.RightOffRegister"
@@ -86,12 +86,16 @@
                 class="com.fss.mobiletrading.function.OrderHistory"
                 title="成交历史" >
             </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.pastplaceorder.PastPlaceOrder"
+                title="下單歷史">
+            </tabmenu>
         </child>
     </tabmenu>
     <tabmenu
         class="null"
         icon="selector_slidemenu_thongtintt"
-        title="Thông tin thị trường" >
+        title="信息市场" >
         <child>
             <tabmenu
                 class="com.fss.mobiletrading.function.market.MarketInfo"
@@ -126,12 +130,12 @@
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.accountconfig.AccountConfig"
-                title="Thay đổi thông tin cá nhân" >
+                title="更改個人信息" >
             </tabmenu>
-            <tabmenu
-                class="com.fss.mobiletrading.function.authorizationinfo.AuthorizationInfo"
-                title="授权人信息" >
-            </tabmenu>
+            <!--<tabmenu-->
+                <!--class="com.fss.mobiletrading.function.authorizationinfo.AuthorizationInfo"-->
+                <!--title="授权人信息" >-->
+            <!--</tabmenu>-->
         </child>
     </tabmenu>
     <tabmenu

@@ -11,13 +11,13 @@ import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.function.AppData;
 import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.Login;
-import com.msbuat.mobiletrading.MSTradeAppConfig;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.design.MyContextMenu.OnItemSelectedListener;
-import com.msbuat.mobiletrading.design.MySpinner;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.Login;
+import com.fscuat.mobiletrading.MSTradeAppConfig;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.design.MyContextMenu.OnItemSelectedListener;
+import com.fscuat.mobiletrading.design.MySpinner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -126,6 +126,11 @@ public class CashTransfer extends AbstractFragment {
                 }
             }
         });
+    }
+    @Override
+    public void addActionToActionBar() {
+        super.addActionToActionBar();
+        setBackLogoActionMenu();
     }
 
     @Override

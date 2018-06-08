@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:id="@+id/confirm_order_dialog_details"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -17,67 +17,67 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_confirmorderdetails_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:labelText="@string/Ngay" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_confirmorderdetails_afacctno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:labelText="@string/TieuKhoan" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_confirmorderdetails_symbol"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:labelText="@string/MaCK" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_confirmorderdetails_market"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:labelText="@string/ThiTruong" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_confirmorderdetails_buysell"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:labelText="@string/Mua_Ban" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_confirmorderdetails_ordertype"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:labelText="@string/LoaiLenh" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_confirmorderdetails_trademethod"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:labelText="@string/KenhGiaoDich" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_confirmorderdetails_quantity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:labelText="@string/KhoiLuong" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_confirmorderdetails_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:labelText="@string/Gia" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_confirmorderdetails_orderid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:labelText="@string/SoHieuLenh" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/edt_confirmorderdetails_pin"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"

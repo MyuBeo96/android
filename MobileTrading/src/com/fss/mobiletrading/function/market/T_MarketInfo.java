@@ -37,14 +37,14 @@ import com.fss.mobiletrading.function.news.NewsService;
 import com.fss.mobiletrading.object.IndicesItem;
 import com.fss.mobiletrading.object.NewsItem;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.BuildConfig;
-import com.msbuat.mobiletrading.MSTradeAppConfig;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.design.FilterArrayAdapter.Condition;
-import com.msbuat.mobiletrading.design.Indices_View;
-import com.msbuat.mobiletrading.design.SearchTextUI;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.BuildConfig;
+import com.fscuat.mobiletrading.MSTradeAppConfig;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.design.FilterArrayAdapter.Condition;
+import com.fscuat.mobiletrading.design.Indices_View;
+import com.fscuat.mobiletrading.design.SearchTextUI;
 
 public class T_MarketInfo extends AbstractFragment {
 

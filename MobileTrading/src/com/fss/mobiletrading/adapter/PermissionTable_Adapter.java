@@ -7,8 +7,8 @@ import android.widget.ArrayAdapter;
 
 import com.fss.mobiletrading.function.authorizationinfo.PermissionInfoItem;
 import com.fss.mobiletrading.view.PermissionInfoItemView;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
 import java.util.HashMap;
 import java.util.List;
 

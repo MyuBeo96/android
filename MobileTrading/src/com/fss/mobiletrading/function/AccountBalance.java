@@ -22,13 +22,13 @@ import com.fss.mobiletrading.object.MoneyInfoItem;
 import com.fss.mobiletrading.object.Order;
 import com.fss.mobiletrading.object.ResultObj;
 import com.fss.mobiletrading.object.StockBalanceItem;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
-import com.msbuat.mobiletrading.design.LabelContentLayout;
-import com.msbuat.mobiletrading.design.MyContextMenu;
-import com.msbuat.mobiletrading.design.MySpinner;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.design.LabelContentLayout;
+import com.fscuat.mobiletrading.design.MyContextMenu;
+import com.fscuat.mobiletrading.design.MySpinner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -218,7 +218,11 @@ public class AccountBalance extends AbstractFragment {
 			}
 		});
 	}
-
+	@Override
+	public void addActionToActionBar() {
+		super.addActionToActionBar();
+		setBackLogoActionMenu();
+	}
 	public void onResume() {
 		super.onResume();
 		spn_switch.setSelection(0);

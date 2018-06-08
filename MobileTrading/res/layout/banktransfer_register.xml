@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:id="@+id/bankcashtransfer_register"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/edt_banktransferregis_accountbank"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -38,7 +38,7 @@
                     app:orientation="vertical"
                     app:singleLine="true" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/edt_banktransferregis_beneficiaryname"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -49,21 +49,21 @@
                     app:orientation="vertical"
                     app:singleLine="true" />
 
-                <com.msbuat.mobiletrading.design.MySpinner
+                <com.fscuat.mobiletrading.design.MySpinner
                     android:id="@+id/spn_banktransferregis_beneficiarybank"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:hasLabel="true"
                     app:textMySpinner="@string/NganHangNguoiThuHuong" />
 
-                <com.msbuat.mobiletrading.design.MySpinner
+                <com.fscuat.mobiletrading.design.MySpinner
                     android:id="@+id/spn_banktransferregis_branch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:hasLabel="true"
                     app:textMySpinner="@string/PhongGiaoDich" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/edt_banktransferregis_city"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"

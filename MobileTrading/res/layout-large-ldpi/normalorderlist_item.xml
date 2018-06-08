@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -12,7 +12,7 @@
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 
-        <com.msbuat.mobiletrading.design.SelectorImageView
+        <com.fscuat.mobiletrading.design.SelectorImageView
             android:id="@+id/img_nororderlist_item_iscancel"
             android:layout_width="30dp"
             android:layout_height="30dp"

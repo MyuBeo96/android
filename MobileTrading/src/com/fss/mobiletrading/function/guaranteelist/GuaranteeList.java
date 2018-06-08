@@ -22,13 +22,13 @@ import com.fss.mobiletrading.function.guaranteelist.GuaranteeListService;
 import com.fss.mobiletrading.object.AcctnoItem;
 import com.fss.mobiletrading.object.AcctnoItemChild;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MSTradeAppConfig;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.design.LabelContentLayout;
-import com.msbuat.mobiletrading.design.MyContextMenu.OnItemSelectedListener;
-import com.msbuat.mobiletrading.design.MySpinner;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MSTradeAppConfig;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.design.LabelContentLayout;
+import com.fscuat.mobiletrading.design.MyContextMenu.OnItemSelectedListener;
+import com.fscuat.mobiletrading.design.MySpinner;
 
 public class GuaranteeList extends AbstractFragment {
 	public static final String GETGUARANTEELIST = "GetGuaranteeListService#GETGUARANTEELIST";

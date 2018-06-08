@@ -2,7 +2,7 @@ package com.fss.mobiletrading.allocateguarantee;
 
 import com.fss.mobiletrading.connector.IConnectServer;
 import com.fss.mobiletrading.interfaces.INotifier;
-import com.msbuat.mobiletrading.MSTradeAppConfig;
+import com.fscuat.mobiletrading.MSTradeAppConfig;
 
 import java.util.ArrayList;
 import java.util.List;

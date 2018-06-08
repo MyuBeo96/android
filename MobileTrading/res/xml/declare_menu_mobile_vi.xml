@@ -86,6 +86,9 @@
                 class="com.fss.mobiletrading.function.OrderHistory"
                 title="Lịch sử khớp lệnh" >
             </tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.pastplaceorder.PastPlaceOrder"
+                title="Lịch sử đặt lệnh"></tabmenu>
         </child>
     </tabmenu>
     <tabmenu
@@ -122,7 +125,7 @@
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.accountconfig.ChangeTradingPassword"
-                title="Đổi PIN" >
+                title="Đổi mật khẩu giao dịch" >
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.accountconfig.AccountConfig"

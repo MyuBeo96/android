@@ -31,7 +31,7 @@
                 android:gravity="bottom"
                 android:orientation="horizontal">
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/edt_soLuuKy"
                     style="@style/EditText_Style"
                     android:layout_width="0dp"
@@ -44,7 +44,7 @@
                     app:labelText="@string/CBL_SoLuuKy"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.MySpinner
+                <com.fscuat.mobiletrading.design.MySpinner
                     android:id="@+id/Spin_SoTieuKhoan"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -55,7 +55,7 @@
                     app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                     app:textMySpinner="@string/CBL_SoTieuKhoan" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_BaoLanhLyThuyet"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -73,7 +73,7 @@
                 android:gravity="bottom"
                 android:orientation="horizontal">
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_Rtt"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -97,7 +97,7 @@
                         android:gravity="center_vertical"
                         android:text="@string/CBL_SoTienSuDung" />
 
-                    <com.msbuat.mobiletrading.design.NumberEditText
+                    <com.fscuat.mobiletrading.design.NumberEditText
                         android:id="@+id/edt_SoTienSuDung"
                         style="@style/EditText_Style"
                         android:layout_width="match_parent"
@@ -114,7 +114,7 @@
                         android:layout_height="0.5dp"
                         android:background="@color/lc_separation_color" />
                 </LinearLayout>
-                <!-- <com.msbuat.mobiletrading.design.LabelContentLayout -->
+                <!-- <com.fscuat.mobiletrading.design.LabelContentLayout -->
                 <!-- android:id="@+id/edt_SoTienSuDung" -->
                 <!-- style="@style/EditText_Style" -->
                 <!-- android:layout_width="0dp" -->
@@ -127,7 +127,7 @@
                 <!-- app:labelText="@string/CBL_SoTienSuDung" -->
                 <!-- app:orientation="vertical" /> -->
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_SoTienPheDuyet"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -144,7 +144,7 @@
                 android:gravity="bottom"
                 android:orientation="horizontal">
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_NgPheDuyet"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"

@@ -1,7 +1,7 @@
 package com.fss.mobiletrading.object;
 
 import com.fss.mobiletrading.interfaces.IMenuItem;
-import com.msbuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.MainActivity;
 
 public class MenuFunctionItem implements IMenuItem {
 

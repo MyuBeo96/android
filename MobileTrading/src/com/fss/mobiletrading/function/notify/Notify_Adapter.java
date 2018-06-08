@@ -3,7 +3,7 @@ package com.fss.mobiletrading.function.notify;
 import java.util.HashMap;
 import java.util.List;
 
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 
 import android.content.Context;
 import android.view.View;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -11,13 +11,13 @@
         android:layout_marginTop="3dp"
         android:orientation="horizontal" >
 
-        <com.msbuat.mobiletrading.design.InputDate
+        <com.fscuat.mobiletrading.design.InputDate
             android:id="@+id/edt_confirmorder_fromdate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="5" />
 
-        <com.msbuat.mobiletrading.design.InputDate
+        <com.fscuat.mobiletrading.design.InputDate
             android:id="@+id/edt_confirmorder_todate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp" >
 
-        <com.msbuat.mobiletrading.design.MySpinner
+        <com.fscuat.mobiletrading.design.MySpinner
             android:id="@+id/spn_confirmorder_exectype"
             android:layout_width="150dp"
             android:layout_height="wrap_content"

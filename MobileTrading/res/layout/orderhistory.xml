@@ -19,7 +19,7 @@
             android:paddingLeft="@dimen/m_paddingLeft"
             android:paddingRight="@dimen/m_paddingRight" >
 
-            <com.msbuat.mobiletrading.design.SearchTextUI
+            <com.fscuat.mobiletrading.design.SearchTextUI
                 android:id="@+id/searchtext_listview"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -31,14 +31,14 @@
                 android:layout_height="0dp"
                 android:visibility="gone" />
 
-            <com.msbuat.mobiletrading.design.InputDate
+            <com.fscuat.mobiletrading.design.InputDate
                 android:id="@+id/date_cashstatement_fromdate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 app:separationColorInputDate="@color/transparent" />
 
-            <com.msbuat.mobiletrading.design.InputDate
+            <com.fscuat.mobiletrading.design.InputDate
                 android:id="@+id/date_cashstatement_todate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

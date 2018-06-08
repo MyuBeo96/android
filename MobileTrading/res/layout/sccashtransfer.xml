@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:id="@+id/SCcashtransfer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,49 +20,49 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
-            <com.msbuat.mobiletrading.design.MySpinner
+            <com.fscuat.mobiletrading.design.MySpinner
                 android:id="@+id/spn_CToutSC_sender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:hasLabel="true"
                 app:textMySpinner="@string/TieuKhoanChuyen" />
 
-            <com.msbuat.mobiletrading.design.MySpinner
+            <com.fscuat.mobiletrading.design.MySpinner
                 android:id="@+id/spn_CToutSC_SoTKNH"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:hasLabel="true"
                 app:textMySpinner="@string/SoTaiKhoanNganHang" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_CToutSC_NganHang"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
                 app:labelText="@string/NganHangNguoiThuHuong"
                 app:orientation="vertical" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_CToutSC_NguoiNhan"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
                 app:labelText="@string/TenNguoiThuHuong"
                 app:orientation="vertical" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_CToutSC_TinhThanhPho"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
                 app:labelText="@string/TinhThanhPho"
                 app:orientation="vertical" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_CToutSC_PGD"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
                 app:labelText="@string/PhongGiaoDich"
                 app:orientation="vertical" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_CToutSC_SoDu"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -80,7 +80,7 @@
                     android:layout_width="match_parent"
                     android:text="@string/SoTienChuyen" />
 
-                <com.msbuat.mobiletrading.design.NumberEditText
+                <com.fscuat.mobiletrading.design.NumberEditText
                     android:id="@+id/edt_CToutSC_SoTienChuyen"
                     style="@style/EditText_Style"
                     android:layout_width="match_parent"
@@ -96,7 +96,7 @@
                 android:layout_height="0.5dp"
                 android:background="@color/header_separation_color" />
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/edt_CToutSC_NoiDung"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -134,7 +134,8 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:visibility="gone" />
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_CToutSC_sotientoidaduocchuyen"
                 android:layout_width="0dp"
                 android:layout_height="0dp"

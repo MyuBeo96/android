@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.common.StaticObjectManager;
@@ -23,10 +23,10 @@ import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.object.AccountInfo;
 import com.fss.mobiletrading.object.AcctnoItem;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.Login;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.design.LabelContentLayout;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.Login;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.design.LabelContentLayout;
 
 public class AccountConfig extends AbstractFragment {
 	static final String ACCOUNTINFORMATION = "AccountInformationService";
@@ -48,6 +48,9 @@ public class AccountConfig extends AbstractFragment {
 	LabelContentLayout text_accountinfor_CareBy;
 	LabelContentLayout text_accountinfor_BrokerPhone;
 	LabelContentLayout text_accountinfor_CustomerClass;
+	LabelContentLayout text_accountinfor_Authorize;
+	LabelContentLayout edt_accountinfor_TradingPw;
+	View view_accountinfor_tradingcode;
 
 	Button btn_accountinfor_Accept;
 	Button btn_accountinfor_Cancel;
@@ -102,6 +105,11 @@ public class AccountConfig extends AbstractFragment {
 				.findViewById(R.id.lc_thietlaptk_brokerphone);
 		text_accountinfor_CustomerClass = (LabelContentLayout) view
 				.findViewById(R.id.lc_thietlaptk_customerclass);
+		text_accountinfor_Authorize = (LabelContentLayout) view
+				.findViewById(R.id.lc_thietlaptk_authorize);
+		edt_accountinfor_TradingPw = (LabelContentLayout) view
+				.findViewById(R.id.lc_thietlaptk_tradingcode);
+		view_accountinfor_tradingcode = (View) view.findViewById(R.id.view_accountinfor_tradingcode);
 
 		btn_accountinfor_Accept = (Button) view
 				.findViewById(R.id.btn_accountconfig_Accept);
@@ -220,7 +228,11 @@ public class AccountConfig extends AbstractFragment {
 		});
 
 	}
-
+	@Override
+	public void addActionToActionBar() {
+		super.addActionToActionBar();
+		setBackLogoActionMenu();
+	}
 	public void onResume() {
 		super.onResume();
 		AcctnoItem acctno = StaticObjectManager.acctnoItem;
@@ -241,37 +253,47 @@ public class AccountConfig extends AbstractFragment {
 			list_key.add("custodycd");
 			list_value.add(custodycd);
 		}
-
 		StaticObjectManager.connectServer.callHttpPostService(
 				ACCOUNTINFORMATION, this, list_key, list_value);
 	}
 
 	private void CallUpdateInfo() {
-		List<String> list_key = new ArrayList<String>();
-		List<String> list_value = new ArrayList<String>();
-		{
-			list_key.add("link");
-			list_value.add(getStringResource(R.string.controller_UpdateInfo));
+		if (edt_accountinfor_TradingPw.getText().length() != 0) {
+			List<String> list_key = new ArrayList<String>();
+			List<String> list_value = new ArrayList<String>();
+			{
+				list_key.add("link");
+				list_value.add(getStringResource(R.string.controller_UpdateInfo));
+			}
+			{
+				list_key.add("VSDAdd");
+				list_value.add(text_accountinfor_VSDRegistryPlace.getText());
+			}
+			{
+				list_key.add("HomePhone");
+				list_value.add(edt_accountinfor_homephone.getText());
+			}
+			{
+				list_key.add("MSBSAdd");
+				list_value.add(edt_accountinfor_MSBSContactPlace.getText());
+			}
+			{
+				list_key.add("EmailAdd");
+				list_value.add(edt_accountinfor_Email.getText());
+			}
+			{
+				list_key.add("Pin");
+				list_value.add(edt_accountinfor_TradingPw.getText().toString());
+			}
+
+			StaticObjectManager.connectServer.callHttpPostService(UPDATEINFO, this,
+					list_key, list_value);
+			btn_accountinfor_Accept.setEnabled(false);
+		} else {
+			showDialogMessage(getStringResource(R.string.thong_bao), getStringResource(R.string.NhapPin));
+			edt_accountinfor_TradingPw.setVisibility(View.VISIBLE);
+			edt_accountinfor_TradingPw.requestFocus();
 		}
-		{
-			list_key.add("VSDAdd");
-			list_value.add(text_accountinfor_VSDRegistryPlace.getText());
-		}
-		{
-			list_key.add("HomePhone");
-			list_value.add(edt_accountinfor_homephone.getText());
-		}
-		{
-			list_key.add("MSBSAdd");
-			list_value.add(edt_accountinfor_MSBSContactPlace.getText());
-		}
-		{
-			list_key.add("EmailAdd");
-			list_value.add(edt_accountinfor_Email.getText());
-		}
-		StaticObjectManager.connectServer.callHttpPostService(UPDATEINFO, this,
-				list_key, list_value);
-		btn_accountinfor_Accept.setEnabled(false);
 	}
 
 	public static void CallChangePassword(INotifier notifier, String link,
@@ -395,6 +417,8 @@ public class AccountConfig extends AbstractFragment {
 			text_accountinfor_CareBy.setText(accountInfo.AgentName);
 			text_accountinfor_BrokerPhone.setText(accountInfo.AgentPhone);
 			text_accountinfor_CustomerClass.setText(accountInfo.Class);
+			text_accountinfor_Authorize.setText(accountInfo.Authorize);
+			edt_accountinfor_TradingPw.setText(StringConst.EMPTY);
 		}
 	}
 

@@ -10,7 +10,7 @@ import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.function.watchlist.BangGia_View;
 import com.fss.mobiletrading.function.watchlist.T_BangGia_View;
 import com.fss.mobiletrading.object.BangGia_Item;
-import com.msbuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.DeviceProperties;
 import java.util.List;
 
 /**

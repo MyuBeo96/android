@@ -98,7 +98,12 @@
             <tabmenu
                 style="2"
                 class="com.fss.mobiletrading.function.OrderHistory"
-                title="Order History" >
+                title="Matched history" >
+            </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.pastplaceorder.PastPlaceOrder"
+                title="Order History">
             </tabmenu>
             <tabmenu
                 style="2"

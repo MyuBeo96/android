@@ -2,10 +2,10 @@ package com.fss.mobiletrading.function;
 
 import java.util.HashMap;
 
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

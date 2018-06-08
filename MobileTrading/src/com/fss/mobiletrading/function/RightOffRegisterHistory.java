@@ -18,14 +18,14 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.LichSuDKQM_Adapter;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.object.LichSuDKQM_Item;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
 
 public class RightOffRegisterHistory extends AbstractFragment {
 	public final String ADDSHARESSTATEMENT = "AddSharesStatementService";

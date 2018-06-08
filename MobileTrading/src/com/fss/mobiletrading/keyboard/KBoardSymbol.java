@@ -12,7 +12,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 
 public class KBoardSymbol extends LinearLayout {
 

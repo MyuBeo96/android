@@ -7,8 +7,8 @@ import android.widget.ArrayAdapter;
 
 import com.fss.mobiletrading.function.coporateactions.CoporateActionItem;
 import com.fss.mobiletrading.view.CoporateActionView;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
 import java.util.HashMap;
 import java.util.List;
 

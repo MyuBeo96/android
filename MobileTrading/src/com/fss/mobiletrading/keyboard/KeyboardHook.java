@@ -8,7 +8,7 @@ import com.fss.mobiletrading.adapter.KBHookAdapter;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.object.StockItem;
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 
 import android.app.Service;
 import android.content.Context;

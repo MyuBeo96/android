@@ -20,13 +20,13 @@ import com.fss.mobiletrading.object.OrderDetailsItem;
 import com.fss.mobiletrading.object.ResultObj;
 import com.fss.mobiletrading.object.SolenhItem;
 import com.fss.mobiletrading.object.StockItem;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.MyActionBar.Action;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
-import com.msbuat.mobiletrading.design.LabelContentLayout;
-import com.msbuat.mobiletrading.design.VerticalListview;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.MyActionBar.Action;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.design.LabelContentLayout;
+import com.fscuat.mobiletrading.design.VerticalListview;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +46,7 @@ public class OrderDetail extends AbstractFragment {
     LabelContentLayout tv_chitiet_PriceType;
     LabelContentLayout tv_chitiet_Gia;
     LabelContentLayout tv_chitiet_SoLuong;
+    LabelContentLayout edt_TradingPw;
     Button btn_chitiet_HuyLenh;
     Button btn_chitiet_SuaLenh;
     protected VerticalListview lv_SolenhCT;
@@ -85,6 +86,7 @@ public class OrderDetail extends AbstractFragment {
                 .findViewById(R.id.text_solenh_chitiet_status));
         tv_chitiet_PriceType = (LabelContentLayout) view
                 .findViewById(R.id.text_solenh_chitiet_pricetype);
+        edt_TradingPw = (LabelContentLayout) view.findViewById(R.id.edt_orderdetail_TradingCode);
         lv_SolenhCT = ((VerticalListview) view
                 .findViewById(R.id.listview_solenhthuongCT));
         btn_chitiet_HuyLenh = ((Button) view
@@ -105,21 +107,7 @@ public class OrderDetail extends AbstractFragment {
 
             @Override
             public void onClick(View v) {
-                showDialogMessage(getStringResource(R.string.HuyLenh),
-                        getStringResource(R.string.BanCoMuonHuyLenhKhong),
-                        new SimpleAction() {
-
-                            @Override
-                            public void performAction(Object obj) {
                                 CallCancelOrder(item);
-                            }
-                        }, new SimpleAction() {
-
-                            @Override
-                            public void performAction(Object obj) {
-                            }
-                        }, getStringResource(R.string.Yes),
-                        getStringResource(R.string.No));
             }
         });
         btn_chitiet_SuaLenh.setOnClickListener(new OnClickListener() {
@@ -237,6 +225,7 @@ public class OrderDetail extends AbstractFragment {
         tv_chitiet_SoLuong.setText(Common.formatAmount(item.Qtty));
         tv_chitiet_KLKhop.setText(Common.formatAmount(item.Matched));
         tv_chitiet_TrangThai.setText(item.Status);
+        edt_TradingPw.setText(StringConst.EMPTY);
 
         if (item.Side.equals(PlaceOrder.SIDE_NB)) {
             tv_chitiet_OrderSide.setText(getStringResource(R.string.Mua));
@@ -257,50 +246,60 @@ public class OrderDetail extends AbstractFragment {
     }
 
     protected void CallCancelOrder(SolenhItem item) {
-        if (item != null) {
-            List<String> list_key = new ArrayList<String>();
-            List<String> list_value = new ArrayList<String>();
-            {
-                list_key.add("link");
-                list_value
-                        .add(getStringResource(R.string.controller_CancelOrder));
-            }
-            {
-                list_key.add("OrderId");
-                list_value.add(item.OrderId);
-            }
-            {
-                list_key.add("CustodyCd");
-                list_value.add(item.CustodyCd);
-            }
-            {
-                list_key.add("AfAcctno");
-                list_value.add(item.AfAcctno);
-            }
-            {
-                list_key.add("Symbol");
-                list_value.add(item.Symbol);
-            }
-            {
-                list_key.add("Side");
-                list_value.add(item.Side);
-            }
-            {
-                list_key.add("Qtty");
-                list_value.add(item.Qtty);
-            }
-            {
-                list_key.add("PriceType");
-                list_value.add(item.PriceType);
-            }
-            {
-                list_key.add("Price");
-                list_value.add(item.Price);
-            }
+        if (edt_TradingPw.getText().length() != 0) {
+            if (item != null) {
+                List<String> list_key = new ArrayList<String>();
+                List<String> list_value = new ArrayList<String>();
+                {
+                    list_key.add("link");
+                    list_value
+                            .add(getStringResource(R.string.controller_CancelOrder));
+                }
+                {
+                    list_key.add("OrderId");
+                    list_value.add(item.OrderId);
+                }
+                {
+                    list_key.add("CustodyCd");
+                    list_value.add(item.CustodyCd);
+                }
+                {
+                    list_key.add("AfAcctno");
+                    list_value.add(item.AfAcctno);
+                }
+                {
+                    list_key.add("Symbol");
+                    list_value.add(item.Symbol);
+                }
+                {
+                    list_key.add("Side");
+                    list_value.add(item.Side);
+                }
+                {
+                    list_key.add("Qtty");
+                    list_value.add(item.Qtty);
+                }
+                {
+                    list_key.add("PriceType");
+                    list_value.add(item.PriceType);
+                }
+                {
+                    list_key.add("Price");
+                    list_value.add(item.Price);
+                }
+                {
+                    list_key.add("TradingPassword");
+                    list_value.add(edt_TradingPw.getText().toString());
+                }
 
-            StaticObjectManager.connectServer.callHttpPostService(CANCELORDER,
-                    this, list_key, list_value);
-            btn_chitiet_HuyLenh.setEnabled(false);
+                StaticObjectManager.connectServer.callHttpPostService(CANCELORDER,
+                        this, list_key, list_value);
+                btn_chitiet_HuyLenh.setEnabled(false);
+            }
+        } else {
+            showDialogMessage(getStringResource(R.string.thong_bao), getStringResource(R.string.NhapPin));
+            edt_TradingPw.setVisibility(View.VISIBLE);
+            edt_TradingPw.requestFocus();
         }
     }
 
@@ -326,8 +325,8 @@ public class OrderDetail extends AbstractFragment {
     /**
      * Truyền vào id của lệnh muốn xem chi tiết trước khi được resume
      *
-     * @param item : object của SoLenhItem, nếu truyền vào item là null thì không
-     *             hiển thị gì
+     * @param obj : object của SoLenhItem, nếu truyền vào item là null thì không
+     *            hiển thị gì
      */
 
     @Override

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:id="@+id/banggia"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -9,13 +9,13 @@
     android:focusableInTouchMode="true"
     android:orientation="vertical" >
 
-    <com.msbuat.mobiletrading.design.SearchStockUI
+    <com.fscuat.mobiletrading.design.SearchStockUI
         android:id="@+id/searchtext_watchlist_all"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone" />
 
-    <com.msbuat.mobiletrading.design.TabSelector
+    <com.fscuat.mobiletrading.design.TabSelector
         android:id="@+id/tab_watchlist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
         android:layout_marginTop="5dp"
         android:orientation="horizontal" >
 
-        <com.msbuat.mobiletrading.design.TabItem
+        <com.fscuat.mobiletrading.design.TabItem
             android:id="@+id/tab_watchlist_all"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
             android:gravity="center"
             app:textTabItem="@string/solenh_label_All" />
 
-        <com.msbuat.mobiletrading.design.TabItem
+        <com.fscuat.mobiletrading.design.TabItem
             android:id="@+id/tab_watchlist_hose"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             android:gravity="center"
             app:textTabItem="@string/banggia_lbl_10" />
 
-        <com.msbuat.mobiletrading.design.TabItem
+        <com.fscuat.mobiletrading.design.TabItem
             android:id="@+id/tab_watchlist_hnx"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -47,14 +47,14 @@
             android:gravity="center"
             app:textTabItem="@string/banggia_lbl_02" />
 
-        <com.msbuat.mobiletrading.design.TabItem
+        <com.fscuat.mobiletrading.design.TabItem
             android:id="@+id/tab_watchlist_upcom"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2.0"
             android:gravity="center"
             app:textTabItem="@string/banggia_lbl_04" />
-    </com.msbuat.mobiletrading.design.TabSelector>
+    </com.fscuat.mobiletrading.design.TabSelector>
 
     <ListView
         android:id="@+id/listview_BangGia"

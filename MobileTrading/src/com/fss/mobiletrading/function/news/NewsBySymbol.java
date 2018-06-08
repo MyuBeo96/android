@@ -19,12 +19,12 @@ import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.function.AppData;
 import com.fss.mobiletrading.object.NewsItem;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.Login;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
-import com.msbuat.mobiletrading.design.FilterArrayAdapter.Condition;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.Login;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.design.FilterArrayAdapter.Condition;
 
 import java.util.ArrayList;
 import java.util.List;

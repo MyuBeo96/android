@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.msbuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.AbstractFragment;
 
 public class TabsPagerAdapter extends FragmentStatePagerAdapter {
 	FragmentManager fm;

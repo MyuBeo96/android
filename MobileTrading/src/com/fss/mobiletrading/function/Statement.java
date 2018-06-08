@@ -6,11 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.design.MyContextMenu;
-import com.msbuat.mobiletrading.design.MySpinner;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.design.MyContextMenu;
+import com.fscuat.mobiletrading.design.MySpinner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -82,6 +82,11 @@ public class Statement extends AbstractFragment {
                         }
                     }
                 });
+    }
+    @Override
+    public void addActionToActionBar() {
+        super.addActionToActionBar();
+        setBackLogoActionMenu();
     }
 
     @Override

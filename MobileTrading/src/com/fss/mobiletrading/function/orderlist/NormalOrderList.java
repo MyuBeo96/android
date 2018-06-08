@@ -1,61 +1,65 @@
 package com.fss.mobiletrading.function.orderlist;
 
-    import android.app.Dialog;
-    import android.graphics.Point;
-    import android.graphics.drawable.ColorDrawable;
-    import android.os.AsyncTask;
-    import android.os.Bundle;
-    import android.os.Handler;
-    import android.text.Editable;
-    import android.text.TextWatcher;
-    import android.view.LayoutInflater;
-    import android.view.View;
-    import android.view.View.OnClickListener;
-    import android.view.View.OnLongClickListener;
-    import android.view.ViewGroup;
-    import android.view.Window;
-    import android.view.WindowManager;
-    import android.widget.AdapterView;
-    import android.widget.AdapterView.OnItemSelectedListener;
-    import android.widget.ListView;
-    import android.widget.TextView;
+import android.app.Dialog;
+import android.graphics.Point;
+import android.graphics.drawable.ColorDrawable;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler;
+import android.support.v7.app.ActionBar;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnLongClickListener;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.TextView;
 
-    import com.fss.mobiletrading.adapter.Solenh_Adapter;
-    import com.fss.mobiletrading.common.Common;
-    import com.fss.mobiletrading.common.SimpleAction;
-    import com.fss.mobiletrading.common.StaticObjectManager;
-    import com.fss.mobiletrading.consts.StringConst;
-    import com.fss.mobiletrading.function.AppConfig;
-    import com.fss.mobiletrading.function.ChooseAfacctno;
-    import com.fss.mobiletrading.function.placeorder.OrderSetParams;
-    import com.fss.mobiletrading.object.AcctnoItem;
-    import com.fss.mobiletrading.object.Order;
-    import com.fss.mobiletrading.object.ResultObj;
-    import com.fss.mobiletrading.object.SolenhItem;
-    import com.fss.mobiletrading.object.StockItem;
-    import com.msbuat.mobiletrading.AbstractFragment;
-    import com.msbuat.mobiletrading.DeviceProperties;
-    import com.msbuat.mobiletrading.MainActivity;
-    import com.msbuat.mobiletrading.MyActionBar.Action;
-    import com.msbuat.mobiletrading.R;
-    import com.msbuat.mobiletrading.design.SearchStockUI;
-    import com.msbuat.mobiletrading.design.SearchTextUI;
-    import com.msbuat.mobiletrading.design.SearchTextUI.OnHideListener;
-    import com.msbuat.mobiletrading.design.SelectorImageView;
-    import com.msbuat.mobiletrading.design.TabSelector;
+import com.fss.mobiletrading.adapter.Solenh_Adapter;
+import com.fss.mobiletrading.common.Common;
+import com.fss.mobiletrading.common.SimpleAction;
+import com.fss.mobiletrading.common.StaticObjectManager;
+import com.fss.mobiletrading.consts.StringConst;
+import com.fss.mobiletrading.function.AppConfig;
+import com.fss.mobiletrading.function.ChooseAfacctno;
+import com.fss.mobiletrading.function.placeorder.OrderSetParams;
+import com.fss.mobiletrading.object.AcctnoItem;
+import com.fss.mobiletrading.object.Order;
+import com.fss.mobiletrading.object.ResultObj;
+import com.fss.mobiletrading.object.SolenhItem;
+import com.fss.mobiletrading.object.StockItem;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.MyActionBar.Action;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.design.SearchStockUI;
+import com.fscuat.mobiletrading.design.SearchTextUI;
+import com.fscuat.mobiletrading.design.SearchTextUI.OnHideListener;
+import com.fscuat.mobiletrading.design.SelectorImageView;
+import com.fscuat.mobiletrading.design.TabSelector;
 
-    import java.util.ArrayList;
-    import java.util.List;
-    import java.util.Timer;
-    import java.util.TimerTask;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
-    public class NormalOrderList extends AbstractFragment {
-        private static final int UPDATE_INTERVAL = 3000;
-        static final String AMENDORDER = "SuccessService#AMENDORDER";
-        static final String CANCELORDER = "SuccessService#CANCELORDER";
-        static final String DOCANCELORDER = "DoCancelOrderService#DOCANCELORDER";
-        static final String MORDER = "MorderService#MORDER";
-        static final String MORDERREALTIME = "MorderService#MORDERREALTIME";
+public class NormalOrderList extends AbstractFragment {
+    private static final int UPDATE_INTERVAL = 3000;
+    static final String AMENDORDER = "SuccessService#AMENDORDER";
+    static final String CANCELORDER = "SuccessService#CANCELORDER";
+    static final String DOCANCELORDER = "DoCancelOrderService#DOCANCELORDER";
+    static final String MORDER = "MorderService#MORDER";
+    static final String MORDERREALTIME = "MorderService#MORDERREALTIME";
     static final String ORDERDETAILS = "OrderDetailsService#ORDERDETAILS";
 
     TabSelector tabSelector;
@@ -84,7 +88,7 @@ package com.fss.mobiletrading.function.orderlist;
     String statusOrder2 = "All"; // status 2
     String filterSymbol = StringConst.EMPTY; // filter by symbol
     String filterText = StringConst.EMPTY; // filter by text
-
+    Dialog dialog_resultcancelallorderTab;
     Dialog dialog_resultcancelallorder;
     TextView tv_resultcancelallorder_OK;
     ListView lv_resultcancelallorder;
@@ -99,6 +103,13 @@ package com.fss.mobiletrading.function.orderlist;
     SolenhItem cancelItem;
     private Runnable updateMOrderRunable;
     private static boolean isUpdating;
+    //Custom dialog
+    protected EditText edt_dialog_TradingPw;
+    protected TextView tv_XacNhan;
+    protected TextView tv_Huy;
+    protected LinearLayout linearLayout_input;
+    Dialog dialog;
+
 
     public static NormalOrderList newInstance(MainActivity mActivity) {
 
@@ -174,6 +185,83 @@ package com.fss.mobiletrading.function.orderlist;
                     .setTextColor(getColorResource(R.color.header_text_color));
             selectCancelAll.setVisibility(View.GONE);
         }
+
+    }
+
+    //input trading password cancelorder
+    private void inputTradingPw(boolean isShow) {
+        dialog = new Dialog(mainActivity, R.style.style_dialog);
+        dialog.setContentView(R.layout.input_tradingpw_dialog);
+        linearLayout_input = (LinearLayout) dialog.findViewById(R.id.linearLayout_input);
+        edt_dialog_TradingPw = (EditText) dialog.findViewById(R.id.edt_dialog_tradingcode);
+        tv_XacNhan = (TextView) dialog.findViewById(R.id.text_dialog_possitive);
+        tv_Huy = (TextView) dialog.findViewById(R.id.text_dialog_negative);
+
+        tv_XacNhan.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cancelOrder();
+            }
+        });
+        tv_Huy.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.getWindow().setLayout(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+        dialog.show();
+    }
+    // tv_cancelAll Tablet
+    private void inputTradingPwAllcancel(boolean isShow){
+        dialog = new Dialog(mainActivity, R.style.style_dialog);
+        dialog.setContentView(R.layout.input_tradingpw_dialog);
+        edt_dialog_TradingPw = (EditText) dialog.findViewById(R.id.edt_dialog_tradingcode);
+        tv_XacNhan = (TextView) dialog.findViewById(R.id.text_dialog_possitive);
+        tv_Huy = (TextView) dialog.findViewById(R.id.text_dialog_negative);
+        final String orderIds = adapterSolenh
+                .getSelectedCancelItem();
+        tv_XacNhan.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CallDoCancelOrder(orderIds);
+//                selectCancelAll.setActivated(false);
+//                adapterSolenh
+//                        .selectedCancelAllItem(false);
+
+            }
+        });
+        tv_Huy.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.getWindow().setLayout(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+        dialog.show();
+
+    }
+    //Cancel order actionBar
+    private void inputAllCancelActionBar(boolean isShow){
+        dialog = new Dialog(mainActivity, R.style.style_dialog);
+        dialog.setContentView(R.layout.input_tradingpw_dialog);
+        edt_dialog_TradingPw = (EditText) dialog.findViewById(R.id.edt_dialog_tradingcode);
+        tv_XacNhan = (TextView) dialog.findViewById(R.id.text_dialog_possitive);
+        tv_Huy = (TextView) dialog.findViewById(R.id.text_dialog_negative);
+        tv_XacNhan.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CallDoCancelOrder();
+            }
+        });
+        tv_Huy.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.getWindow().setLayout(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+        dialog.show();
     }
 
     private void initData() {
@@ -259,24 +347,8 @@ package com.fss.mobiletrading.function.orderlist;
                             && ((SolenhItem) obj).isCancellable.equals("true")) {
                         cancelItem = (SolenhItem) obj;
                         adapterSolenh.selectedCancelAllItem(false);
-                        showDialogMessage(
-                                getStringResource(R.string.thong_bao),
-                                getStringResource(R.string.BanCoMuonHuyLenhKhong),
-                                new SimpleAction() {
+                        inputTradingPw(true);
 
-                                    @Override
-                                    public void performAction(Object obj) {
-                                        // positive
-                                        cancelOrder();
-                                    }
-                                }, new SimpleAction() {
-
-                                    @Override
-                                    public void performAction(Object obj) {
-                                        // negative
-                                    }
-                                }, getStringResource(R.string.Yes),
-                                getStringResource(R.string.No));
                     } else {
                         showDialogMessage(R.string.thong_bao,
                                 R.string.solenh_lenhkhongduocphephuy);
@@ -330,27 +402,8 @@ package com.fss.mobiletrading.function.orderlist;
                         showDialogMessage(R.string.thong_bao,
                                 R.string.KhongCoLenhDeHuy);
                     } else {
-                        showDialogMessage(
-                                getStringResource(R.string.HuyLenh),
-                                getStringResource(R.string.BanCoMuonHuyCacLenhDaChonKhong),
-                                new SimpleAction() {
-
-                                    @Override
-                                    public void performAction(Object obj) {
-                                        CallDoCancelOrder(orderIds);
-                                        selectCancelAll.setActivated(false);
-                                        adapterSolenh
-                                                .selectedCancelAllItem(false);
-                                    }
-                                }, new SimpleAction() {
-
-                                    @Override
-                                    public void performAction(Object obj) {
-                                    }
-                                }, getStringResource(R.string.Yes),
-                                getStringResource(R.string.No));
+                        inputTradingPwAllcancel(true);
                     }
-
                 }
             });
 
@@ -489,6 +542,7 @@ package com.fss.mobiletrading.function.orderlist;
         isUpdating = false;
     }
 
+
     @Override
     public void onShowed() {
         super.onShowed();
@@ -506,6 +560,7 @@ package com.fss.mobiletrading.function.orderlist;
     @Override
     public void addActionToActionBar() {
         super.addActionToActionBar();
+        setBackLogoActionMenu();
         if (action_CancelAllOrder == null) {
             action_CancelAllOrder = new Action() {
 
@@ -516,24 +571,8 @@ package com.fss.mobiletrading.function.orderlist;
                         showDialogMessage(R.string.thong_bao,
                                 R.string.KhongCoLenhDeHuy);
                     } else {
-                        showDialogMessage(
-                                getStringResource(R.string.HuyTatCaLenh),
-                                getStringResource(R.string.BanCoMuonHuyTatCaKhong),
-                                new SimpleAction() {
-
-                                    @Override
-                                    public void performAction(Object obj) {
-                                        CallDoCancelOrder();
-                                    }
-                                }, new SimpleAction() {
-
-                                    @Override
-                                    public void performAction(Object obj) {
-                                    }
-                                }, getStringResource(R.string.Yes),
-                                getStringResource(R.string.No));
+                        inputAllCancelActionBar(true);
                     }
-
                 }
 
                 @Override
@@ -547,7 +586,6 @@ package com.fss.mobiletrading.function.orderlist;
                 }
             };
         }
-
         if (action_CancelFilter == null) {
             action_CancelFilter = new Action() {
 
@@ -585,95 +623,114 @@ package com.fss.mobiletrading.function.orderlist;
     }
 
     private void CallCancelOrder(SolenhItem item) {
-        List<String> list_key = new ArrayList<String>();
-        List<String> list_value = new ArrayList<String>();
-        {
-            list_key.add("link");
-            list_value.add(getStringResource(R.string.controller_CancelOrder));
-        }
-        {
-            list_key.add("OrderId");
-            list_value.add(item.OrderId);
-        }
-        {
-            list_key.add("CustodyCd");
-            list_value.add(item.CustodyCd);
-        }
-        {
-            list_key.add("AfAcctno");
-            list_value.add(item.AfAcctno);
-        }
-        {
-            list_key.add("Symbol");
-            list_value.add(item.Symbol);
-        }
-        {
-            list_key.add("Side");
-            list_value.add(item.Side);
-        }
-        {
-            list_key.add("Qtty");
-            list_value.add(item.Qtty);
-        }
-        {
-            list_key.add("PriceType");
-            list_value.add(item.PriceType);
-        }
-        {
-            list_key.add("Price");
-            list_value.add(item.Price);
-        }
+        if (edt_dialog_TradingPw.getText().length() != 0) {
+            List<String> list_key = new ArrayList<String>();
+            List<String> list_value = new ArrayList<String>();
+            {
+                list_key.add("link");
+                list_value.add(getStringResource(R.string.controller_CancelOrder));
+            }
+            {
+                list_key.add("OrderId");
+                list_value.add(item.OrderId);
+            }
+            {
+                list_key.add("CustodyCd");
+                list_value.add(item.CustodyCd);
+            }
+            {
+                list_key.add("AfAcctno");
+                list_value.add(item.AfAcctno);
+            }
+            {
+                list_key.add("Symbol");
+                list_value.add(item.Symbol);
+            }
+            {
+                list_key.add("Side");
+                list_value.add(item.Side);
+            }
+            {
+                list_key.add("Qtty");
+                list_value.add(item.Qtty);
+            }
+            {
+                list_key.add("PriceType");
+                list_value.add(item.PriceType);
+            }
+            {
+                list_key.add("Price");
+                list_value.add(item.Price);
+            }
+            {
+                list_key.add("TradingPassword");
+                list_value.add(edt_dialog_TradingPw.getText().toString());
+            }
 
-        StaticObjectManager.connectServer.callHttpPostService(CANCELORDER,
-                this, list_key, list_value);
+            StaticObjectManager.connectServer.callHttpPostService(CANCELORDER,
+                    this, list_key, list_value);
+
+        } else {
+            showDialogMessage(getStringResource(R.string.thong_bao), getStringResource(R.string.NhapPin));
+            edt_dialog_TradingPw.requestFocus();
+        }
     }
 
     private void CallDoCancelOrder() {
-        StringBuilder builder = new StringBuilder();
-        for (SolenhItem item : listSolenhItem) {
-            builder.append(item.OrderId + ",");
+        if (edt_dialog_TradingPw.getText().length() != 0) {
+            StringBuilder builder = new StringBuilder();
+            for (SolenhItem item : listSolenhItem) {
+                builder.append(item.OrderId + ",");
+            }
+            if (builder.length() > 0) {
+                builder.deleteCharAt(builder.length() - 1);
+            }
+            List<String> list_key = new ArrayList<String>();
+            List<String> list_value = new ArrayList<String>();
+            {
+                list_key.add("link");
+                list_value
+                        .add(getStringResource(R.string.controller_doOrderCancel));
+            }
+            {
+                list_key.add("pv_oderIDs");
+                list_value.add(builder.toString());
+            }
+            {
+                list_key.add("pv_Pin");
+                list_value.add(edt_dialog_TradingPw.getText().toString());
+            }
+            StaticObjectManager.connectServer.callHttpPostService(DOCANCELORDER,
+                    this, list_key, list_value);
+        } else {
+            showDialogMessage(getStringResource(R.string.thong_bao), getStringResource(R.string.NhapPin));
+            edt_dialog_TradingPw.requestFocus();
         }
-        if (builder.length() > 0) {
-            builder.deleteCharAt(builder.length() - 1);
-        }
-        List<String> list_key = new ArrayList<String>();
-        List<String> list_value = new ArrayList<String>();
-        {
-            list_key.add("link");
-            list_value
-                    .add(getStringResource(R.string.controller_doOrderCancel));
-        }
-        {
-            list_key.add("pv_oderIDs");
-            list_value.add(builder.toString());
-        }
-        {
-            list_key.add("pv_Pin");
-            list_value.add(null);
-        }
-        StaticObjectManager.connectServer.callHttpPostService(DOCANCELORDER,
-                this, list_key, list_value);
     }
 
     private void CallDoCancelOrder(String orderIds) {
-
-        List<String> list_key = new ArrayList<String>();
-        List<String> list_value = new ArrayList<String>();
-        {
-            list_key.add("link");
-            list_value
-                    .add(getStringResource(R.string.controller_doOrderCancel));
+        if (edt_dialog_TradingPw.getText().length() != 0) {
+            List<String> list_key = new ArrayList<String>();
+            List<String> list_value = new ArrayList<String>();
+            {
+                list_key.add("link");
+                list_value
+                        .add(getStringResource(R.string.controller_doOrderCancel));
+            }
+            {
+                list_key.add("pv_oderIDs");
+                list_value.add(orderIds);
+            }
+            {
+                list_key.add("pv_Pin");
+                list_value.add(edt_dialog_TradingPw.getText().toString());
+            }
+            StaticObjectManager.connectServer.callHttpPostService(DOCANCELORDER,
+                    this, list_key, list_value);
+        } else {
+            showDialogMessage(getStringResource(R.string.thong_bao), getStringResource(R.string.NhapPin));
+            edt_dialog_TradingPw.requestFocus();
         }
-        {
-            list_key.add("pv_oderIDs");
-            list_value.add(orderIds);
-        }
-        {
-            list_key.add("pv_Pin");
-            list_value.add(null);
-        }
-        StaticObjectManager.connectServer.callHttpPostService(DOCANCELORDER,
-                this, list_key, list_value);
     }
 
     private void CallMOrder(String key) {
@@ -746,20 +803,45 @@ package com.fss.mobiletrading.function.orderlist;
                 }
                 break;
             case CANCELORDER:
+//               showDialogMessage(getStringResource(R.string.thong_bao),
+//                        getStringResource(R.string.Giaodichthanhcong));
                 showDialogMessage(getStringResource(R.string.thong_bao),
-                        getStringResource(R.string.Giaodichthanhcong));
+                        getStringResource(R.string.Giaodichthanhcong),
+                        new SimpleAction() {
+
+                            @Override
+                            public void performAction(Object obj) {
+                                dialog.dismiss();
+                            }
+
+                        });
+
                 break;
             case AMENDORDER:
                 showDialogMessage(getStringResource(R.string.thong_bao),
                         getStringResource(R.string.Giaodichthanhcong));
+
                 break;
             case DOCANCELORDER:
-                // showDialogMessage(getStringResource(R.string.thong_bao),
-                // rObj.EM);
                 list_resultcancelallorder.clear();
                 list_resultcancelallorder.addAll((List<SolenhItem>) rObj.obj);
                 adapter_resultcancelallorder.notifyDataSetChanged();
                 dialog_resultcancelallorder.show();
+                showDialogMessage(getStringResource(R.string.thong_bao),
+                        getStringResource(R.string.Giaodichthanhcong),
+                        new SimpleAction() {
+
+                            @Override
+                            public void performAction(Object obj) {
+                                if(DeviceProperties.isTablet){
+                                    selectCancelAll.setActivated(false);
+                                    adapterSolenh
+                                            .selectedCancelAllItem(false);
+                                }
+                                dialog.dismiss();
+                            }
+
+                        });
                 break;
             case ChooseAfacctno.CHANGE_ACCTNO:
                 ChooseAfacctno chooseAfacctno = (ChooseAfacctno) mainActivity.mapFragment
@@ -799,7 +881,6 @@ package com.fss.mobiletrading.function.orderlist;
                 break;
             case DOCANCELORDER:
                 break;
-
             default:
                 break;
         }

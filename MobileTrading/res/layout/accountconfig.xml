@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app1="http://schemas.android.com/apk/res-auto"
     android:id="@+id/thietlaptk"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_fragment"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -28,7 +29,7 @@
                 android:orientation="vertical"
                 android:visibility="visible" >
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/lc_thietlaptk_fullname"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -36,7 +37,7 @@
                     app:labelText="@string/TenDayDu"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/lc_thietlaptk_birthday"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -44,7 +45,7 @@
                     app:labelText="@string/NgaySinh"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/lc_thietlaptk_gender"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -52,7 +53,7 @@
                     app:labelText="@string/GioiTinh"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/lc_thietlaptk_idpeople"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -60,7 +61,7 @@
                     app:labelText="@string/SoCMT"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/lc_thietlaptk_idpeoplecreateday"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -68,7 +69,7 @@
                     app:labelText="@string/NgayCap"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/lc_thietlaptk_idpeoplecreateplace"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -76,43 +77,42 @@
                     app:labelText="@string/NoiCap"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/lc_thietlaptk_mobile"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
                     app:contentColor="@color/green_text"
-                    app:labelText="@string/DiDong"
+                    app:labelText="@string/DienThoaiDKSMS"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/lc_thietlaptk_homephone"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
-                    app:contentColor="@color/white_text"
-                    app:contentHint="@string/DienThoaiLienLac"
-                    app:editable="true"
+                    app:contentColor="@color/green_text"
                     app:labelText="@string/DienThoaiLienLac"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/lc_thietlaptk_VSDregistryplace"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
                     app:contentColor="@color/green_text"
-                    app:labelText="@string/DiaChiDangKyVoiVSD"
+                    app:labelText="@string/DiaChiLienHe"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/lc_thietlaptk_MSBScontactplace"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
                     app:contentColor="@color/white_text"
-                    app:contentHint="@string/DiaChiLienHeVoiFSC"
+                    app:contentHint="@string/DiaChiLienHe"
                     app:editable="true"
-                    app:labelText="@string/DiaChiLienHeVoiFSC"
-                    app:orientation="vertical" />
+                    app:labelText="@string/DiaChiLienHe"
+                    app:orientation="vertical"
+                    android:visibility="gone"/>
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/lc_thietlaptk_email"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -122,7 +122,7 @@
                     app:labelText="@string/Email"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/lc_thietlaptk_careby"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -130,7 +130,7 @@
                     app:labelText="@string/ChamSocBoi"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/lc_thietlaptk_brokerphone"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -138,7 +138,7 @@
                     app:labelText="@string/SDTMoiGioiChamSoc"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/lc_thietlaptk_customerclass"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -146,6 +146,31 @@
                     app:labelText="@string/HangKhachHang"
                     app:orientation="vertical" />
 
+                <com.fscuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/lc_thietlaptk_authorize"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/green_text"
+                    app:labelText="@string/NguoiNhanUyQuyen"
+                    app:orientation="vertical" />
+                <com.fscuat.mobiletrading.design.LabelContentLayout
+                    android:id="@+id/lc_thietlaptk_tradingcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    app:contentColor="@color/white_text"
+                    app1:inputType="textPassword"
+                    app:contentHint="@string/MatKhauGiaoDich"
+                    app:editable="true"
+                    app:labelText="@string/MatKhauGiaoDich"
+                    app:orientation="vertical"
+                    android:visibility="gone"/>
+                <View
+                    android:id="@+id/view_accountinfor_tradingcode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/t_cashtransfer_frame_marginLeft"
+                    android:layout_weight="1"
+                    android:visibility="gone"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

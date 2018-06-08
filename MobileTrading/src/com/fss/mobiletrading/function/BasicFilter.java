@@ -20,16 +20,16 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.BoLocCoBan_Adapter;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.object.BoLocCoBanItem;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.design.RangeSeekBar;
-import com.msbuat.mobiletrading.design.RangeSeekBarLayout;
-import com.msbuat.mobiletrading.design.RangeSeekBar.OnRangeSeekBarChangeListener;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.design.RangeSeekBar;
+import com.fscuat.mobiletrading.design.RangeSeekBarLayout;
+import com.fscuat.mobiletrading.design.RangeSeekBar.OnRangeSeekBarChangeListener;
 
 public class BasicFilter extends AbstractFragment {
 

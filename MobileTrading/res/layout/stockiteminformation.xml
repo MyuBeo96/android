@@ -42,7 +42,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <com.msbuat.mobiletrading.design.SearchTextUI
+    <com.fscuat.mobiletrading.design.SearchTextUI
         android:id="@+id/searchtext_listview"
         android:layout_width="0dp"
         android:layout_height="0dp"

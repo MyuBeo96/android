@@ -18,8 +18,8 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.msbuat.mobiletrading.Login;
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.Login;
+import com.fscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.BangGia_Adapter;
 import com.fss.mobiletrading.adapter.SolenhGTC_Adapter;
 import com.fss.mobiletrading.common.Common;

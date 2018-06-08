@@ -20,7 +20,7 @@
             android:padding="0dp"
             android:singleLine="true" />
 
-        <com.msbuat.mobiletrading.design.TextViewWithRptField
+        <com.fscuat.mobiletrading.design.TextViewWithRptField
             android:id="@+id/edt_content"
             style="@style/Content_Style"
             android:layout_width="0dp"

@@ -9,8 +9,8 @@ import com.fss.mobiletrading.function.rightoffregister.OnRegisterListener;
 import com.fss.mobiletrading.function.rightoffregister.OnWatchRoRListener;
 import com.fss.mobiletrading.function.rightoffregister.RightOffRegisterItem;
 import com.fss.mobiletrading.function.rightoffregister.RightOffRegisterItemView;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
 import java.util.List;
 
 public class RightOffRegister_Adapter extends

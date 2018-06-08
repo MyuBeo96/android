@@ -14,12 +14,12 @@ import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.object.AcctnoDetail;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.MyActionBar.Action;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
-import com.msbuat.mobiletrading.design.LabelContentLayout;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.MyActionBar.Action;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.design.LabelContentLayout;
 
 import java.util.ArrayList;
 import java.util.List;

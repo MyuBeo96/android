@@ -13,7 +13,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.BrokerAlertAdapter;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
@@ -21,8 +21,8 @@ import com.fss.mobiletrading.function.news.NewsDetail;
 import com.fss.mobiletrading.object.BrokerAlertItem;
 import com.fss.mobiletrading.object.NewsItem;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
 
 public class MSBSMessage extends AbstractFragment {
 

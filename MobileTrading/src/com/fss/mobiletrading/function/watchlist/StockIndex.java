@@ -23,12 +23,12 @@ import com.fss.mobiletrading.function.placeorder.PlaceOrder;
 import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.object.ResultObj;
 import com.fss.mobiletrading.object.StockDetailsItem;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MSTradeAppConfig;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
-import com.msbuat.mobiletrading.design.TextViewHightLight;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MSTradeAppConfig;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.design.TextViewHightLight;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -86,6 +86,8 @@ public class StockIndex extends AbstractFragment {
 	TextViewHightLight tv_TongKhoiLuong;
 	TextViewHightLight tv_foreignRemain;
 	TextViewHightLight tv_Average;
+	TextViewHightLight tv_BangGiaCT_NNMua;
+	TextViewHightLight tv_BangGiaCT_NNban;
 	RelativeLayout lay_percentBidOff;
 	TextView tv_market;
 
@@ -176,6 +178,8 @@ public class StockIndex extends AbstractFragment {
 				.findViewById(R.id.text_BangGiaCT_Average));
 		tv_market = ((TextView) view
 				.findViewById(R.id.text_stockinfo_index_market));
+		tv_BangGiaCT_NNban = (TextViewHightLight) view.findViewById(R.id.text_BangGiaCT_NNBan);
+		tv_BangGiaCT_NNMua = (TextViewHightLight) view.findViewById(R.id.text_BangGiaCT_NNMua);
 		tv_Bid1 = ((TextViewHightLight) view
 				.findViewById(R.id.text_BangGiaCT_Bid1));
 		tv_Bid2 = ((TextViewHightLight) view
@@ -529,6 +533,9 @@ public class StockIndex extends AbstractFragment {
 		tv_OfferPrice1.setText(tv_OfferPrice1.getText());
 		tv_OfferPrice2.setText(tv_OfferPrice2.getText());
 		tv_OfferPrice3.setText(tv_OfferPrice3.getText());
+		tv_BangGiaCT_NNMua.setText(tv_BangGiaCT_NNMua.getText());
+		tv_BangGiaCT_NNban.setText(tv_BangGiaCT_NNban.getText());
+
 	}
 
 	private void displayView(StockDetailsItem item) {
@@ -586,6 +593,8 @@ public class StockIndex extends AbstractFragment {
 					tv_Average.setTextColor(getResources().getColor(
 							Common.getColor(item.averagePrice, item.ceiling,
 									item.floor, item.reference)));
+					tv_BangGiaCT_NNban.setText(item.foreignSell);
+					tv_BangGiaCT_NNMua.setText(item.foreignBuy);
 					// tv_average.setContentColor(getResources().getColor(
 					// Common.getColor(stockDetailsItem.averagePrice,
 					// stockDetailsItem.ceiling, stockDetailsItem.floor,
@@ -703,6 +712,8 @@ public class StockIndex extends AbstractFragment {
 				tv_OfferPrice2.setText(StringConst.EMPTY);
 				tv_OfferPrice3.setText(StringConst.EMPTY);
 				tv_Average.setText(StringConst.EMPTY);
+				tv_BangGiaCT_NNMua.setText(StringConst.EMPTY);
+				tv_BangGiaCT_NNMua.setText(StringConst.EMPTY);
 				// imgview_kyhieu.setImageResource(0);
 			}
 		});

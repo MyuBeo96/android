@@ -3,7 +3,7 @@ package com.fss.mobiletrading.object;
 import java.util.HashMap;
 
 import com.fss.mobiletrading.consts.StringConst;
-import com.msbuat.mobiletrading.Login;
+import com.fscuat.mobiletrading.Login;
 
 public class BankAccItem {
 

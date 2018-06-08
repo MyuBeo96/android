@@ -166,6 +166,10 @@
         <item name="android:windowTitleStyle">@style/alertdialog_title_style</item>
         <item name="android:windowBackground">@color/alertdialog_background_color</item>
     </style>
+    <style name="style_dialog" parent="AlertDialog.AppCompat">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/background_alertdialog</item>
+    </style>
 
     <style name="alertdialog_title_style" parent="android:Widget.TextView">
         <item name="android:background">@color/alertdialog_background_color</item>

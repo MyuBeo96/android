@@ -35,18 +35,18 @@ import com.fss.mobiletrading.object.FindStock;
 import com.fss.mobiletrading.object.ResultObj;
 import com.fss.mobiletrading.object.StockBalanceItem;
 import com.fss.mobiletrading.object.StockItem;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.MainActivity_Mobile;
-import com.msbuat.mobiletrading.MainActivity_Tablet;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
-import com.msbuat.mobiletrading.design.DialogDate;
-import com.msbuat.mobiletrading.design.Edittext_Gia;
-import com.msbuat.mobiletrading.design.Edittext_LoaiLenh;
-import com.msbuat.mobiletrading.design.Edittext_SoLuong;
-import com.msbuat.mobiletrading.design.MyContextMenu;
-import com.msbuat.mobiletrading.design.MyContextMenu.OnItemSelectedListener;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.MainActivity_Mobile;
+import com.fscuat.mobiletrading.MainActivity_Tablet;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.design.DialogDate;
+import com.fscuat.mobiletrading.design.Edittext_Gia;
+import com.fscuat.mobiletrading.design.Edittext_LoaiLenh;
+import com.fscuat.mobiletrading.design.Edittext_SoLuong;
+import com.fscuat.mobiletrading.design.MyContextMenu;
+import com.fscuat.mobiletrading.design.MyContextMenu.OnItemSelectedListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -128,11 +128,18 @@ public class PlaceOrder extends AbstractFragment {
     protected TextView lbl_ChoVe;
     protected TextView lbl_PP0;
     protected TextView lbl_Rttsell;
+    protected TextView lbl_NNBan;
+    protected TextView lbl_NNBanSell;
 
     protected TextView tv_KLduocban;
     protected TextView tv_ChoVe;
     protected TextView tv_PP0;
     protected TextView tv_Rttsell;
+    protected TextView tv_Company;
+    protected TextView tv_RoomNN;
+    protected TextView tv_NNMua;
+    protected TextView tv_NNBan;
+    protected TextView tv_NNBanSell;
 
     protected String[] list_Sell_Symbol;
     private String[] listAllStock;
@@ -201,7 +208,7 @@ public class PlaceOrder extends AbstractFragment {
         return placeOrderType;
     }
 
-//    public void setPlaceOrderType(int placeOrderType) {
+    //    public void setPlaceOrderType(int placeOrderType) {
 //        if (placeOrderType == NORMALORDER_TYPE) {
 //            this.placeOrderType = placeOrderType;
 //            setNormalPlaceOrderType();
@@ -217,12 +224,13 @@ public class PlaceOrder extends AbstractFragment {
             setNormalPlaceOrderType();
         } else if (placeOrderType == GTCORDER_TYPE) {
             this.placeOrderType = placeOrderType;
-            if(!DeviceProperties.isTablet) {
+            if (!DeviceProperties.isTablet) {
                 ((MainActivity_Mobile) getActivity()).setActionbarPlaceOrder(R.color.placeorder_buy_color);
             }
             setGTCPlaceOrderType();
         }
     }
+
     private void setNormalPlaceOrderType() {
         if (view_splitQtty != null) {
             view_splitQtty.setVisibility(View.VISIBLE);
@@ -346,6 +354,15 @@ public class PlaceOrder extends AbstractFragment {
         lbl_PP0 = (TextView) view.findViewById(R.id.lbl_datlenh_SucMuaSell);
         tv_PP0 = (TextView) view.findViewById(R.id.text_datlenh_SucMuaSell);
 
+        tv_Company = (TextView) view.findViewById(R.id.text_DatLenh_Company);
+        tv_RoomNN = (TextView) view.findViewById(R.id.text_DatLenh_RoomNN);
+        tv_NNMua = (TextView) view.findViewById(R.id.text_DatLenh_NNMua);
+
+        lbl_NNBan = (TextView) view.findViewById(R.id.lbl_datlenh_nnban);
+        tv_NNBan = (TextView) view.findViewById(R.id.text_DatLenh_NNBan);
+
+        lbl_NNBanSell = (TextView) view.findViewById(R.id.lbl_datlenh_nnbansell);
+        tv_NNBanSell = (TextView) view.findViewById(R.id.text_DatLenh_NNBanSell);
         edt_SplitQtty = ((Edittext_SoLuong) view
                 .findViewById(R.id.edttg_DatLenh_SplitQtty));
 
@@ -581,7 +598,7 @@ public class PlaceOrder extends AbstractFragment {
                 btn_DatLenh.setBackgroundResource(R.drawable.backgroundbutton);
                 functionBtnMuaClick();
                 if (!DeviceProperties.isTablet) {
-                    ((MainActivity_Mobile)getActivity()).setActionbarPlaceOrder(R.color.placeorder_buy_color);
+                    ((MainActivity_Mobile) getActivity()).setActionbarPlaceOrder(R.color.placeorder_buy_color);
                 }
 
 
@@ -595,9 +612,8 @@ public class PlaceOrder extends AbstractFragment {
                 lay_CTin1.setBackgroundResource(R.color.place_sellorder_background);
                 btn_DatLenh.setBackgroundResource(R.drawable.background_sellbutton);
                 functionBtnBanClick();
-                if(!DeviceProperties.isTablet)
-                {
-                    ((MainActivity_Mobile)getActivity()).setActionbarPlaceOrder(R.color.placeorder_sell_color);
+                if (!DeviceProperties.isTablet) {
+                    ((MainActivity_Mobile) getActivity()).setActionbarPlaceOrder(R.color.placeorder_sell_color);
                 }
             }
         });
@@ -808,6 +824,12 @@ public class PlaceOrder extends AbstractFragment {
         tv_San.setText(StringConst.EMPTY);
         tv_GiaKhopCuoi.setText(StringConst.EMPTY);
         tv_RefPrice.setText(StringConst.EMPTY);
+
+        tv_Company.setText(StringConst.EMPTY);
+        tv_RoomNN.setText(StringConst.EMPTY);
+        tv_NNMua.setText(StringConst.EMPTY);
+        tv_NNBan.setText(StringConst.EMPTY);
+        tv_NNBanSell.setText(StringConst.EMPTY);
     }
 
     public void onPause() {
@@ -980,6 +1002,15 @@ public class PlaceOrder extends AbstractFragment {
     protected void displayFormStockInfo() {
         try {
             if (findStock != null) {
+                tv_Company.setText(findStock.stockInfo.stockname);
+                tv_RoomNN.setText(Common
+                        .formatAmount(findStock.stockInfo.foreignRemain));
+                tv_NNMua.setText(Common
+                        .formatAmount(findStock.stockInfo.foreignBuy));
+                tv_NNBan.setText(Common
+                        .formatAmount(findStock.stockInfo.foreignSell));
+                tv_NNBanSell.setText(Common
+                        .formatAmount(findStock.stockInfo.foreignSell));
                 tv_PPSE.setText(Common
                         .formatAmount(findStock.stockInfo.CashAvaiable));
                 tv_PP0.setText(Common
@@ -1063,6 +1094,12 @@ public class PlaceOrder extends AbstractFragment {
             tv_TyLeVay.setVisibility(TextView.GONE);
             tv_KLduocmua.setVisibility(TextView.GONE);
             tv_Rttbuy.setVisibility(TextView.GONE);
+            if (!DeviceProperties.isTablet) {
+                lbl_NNBanSell.setVisibility(TextView.VISIBLE);
+                tv_NNBanSell.setVisibility(TextView.VISIBLE);
+                lbl_NNBan.setVisibility(TextView.GONE);
+                tv_NNBan.setVisibility(TextView.GONE);
+            }
         } else {
             // hiển thị và ẩn các trường tương ứng
             lbl_KLduocban.setVisibility(TextView.GONE);
@@ -1084,6 +1121,12 @@ public class PlaceOrder extends AbstractFragment {
             tv_TyLeVay.setVisibility(TextView.VISIBLE);
             tv_KLduocmua.setVisibility(TextView.VISIBLE);
             tv_Rttbuy.setVisibility(TextView.VISIBLE);
+            if (!DeviceProperties.isTablet) {
+                lbl_NNBan.setVisibility(TextView.VISIBLE);
+                tv_NNBan.setVisibility(TextView.VISIBLE);
+                lbl_NNBanSell.setVisibility(TextView.GONE);
+                tv_NNBanSell.setVisibility(TextView.GONE);
+            }
         }
     }
 
@@ -1135,6 +1178,10 @@ public class PlaceOrder extends AbstractFragment {
             tv_TyLeVay.setVisibility(TextView.GONE);
             tv_KLduocmua.setVisibility(TextView.GONE);
             tv_Rttbuy.setVisibility(TextView.GONE);
+            if (!DeviceProperties.isTablet) {
+                lbl_NNBanSell.setVisibility(TextView.VISIBLE);
+                tv_NNBanSell.setVisibility(TextView.VISIBLE);
+            }
         } else {
             // hiển thị và ẩn các trường tương ứng
             lbl_KLduocban.setVisibility(TextView.GONE);
@@ -1156,6 +1203,10 @@ public class PlaceOrder extends AbstractFragment {
             tv_TyLeVay.setVisibility(TextView.VISIBLE);
             tv_KLduocmua.setVisibility(TextView.VISIBLE);
             tv_Rttbuy.setVisibility(TextView.VISIBLE);
+            if (!DeviceProperties.isTablet) {
+                lbl_NNBan.setVisibility(TextView.VISIBLE);
+                tv_NNBan.setVisibility(TextView.VISIBLE);
+            }
         }
     }
 
@@ -1296,6 +1347,12 @@ public class PlaceOrder extends AbstractFragment {
         mainActivity
                 .sendArgumentToFragment(OrderConfirm.class.getName(), order);
         mainActivity.navigateFragment(OrderConfirm.class.getName());
+    }
+
+    @Override
+    public void addActionToActionBar() {
+        super.addActionToActionBar();
+        setBackLogoActionMenu();
     }
 
     @Override

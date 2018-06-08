@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_fragment"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/m_paddingLeft"
+        android:paddingRight="@dimen/m_paddingRight">
+
+        <ImageView
+            android:id="@+id/image_symbol"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_datlenh_mack" />
+        <com.fss.designcontrol.SymbolEdittext
+            android:id="@+id/edt_stock"
+            style="@style/EditText_Style"
+            android:layout_width="150dp"
+            android:layout_height="@dimen/m_labelcontenthorilayout_height"
+            android:layout_toRightOf="@+id/image_symbol"
+            android:hint="@string/MaChungKhoan"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="textCapCharacters|textNoSuggestions"
+            android:textCursorDrawable="@drawable/shape_textcursoredittext" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_stock"
+            android:orientation="horizontal">
+
+            <com.fscuat.mobiletrading.design.InputDate
+                android:id="@+id/fromdate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                app:separationColorInputDate="@color/transparent" />
+
+            <com.fscuat.mobiletrading.design.InputDate
+                android:id="@+id/todate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="5"
+                app:separationColorInputDate="@color/transparent" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/line_orderhistory_1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/header_separation_color" />
+
+        <LinearLayout
+            android:id="@+id/lay_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_orderhistory_1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="2.8"
+                android:text="@string/saoketien_label_ngay" />
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="1.5"
+                android:text="@string/Mua_Ban" />
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="1.8"
+                android:text="@string/MaCK" />
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="2.0"
+                android:text="@string/KL_2" />
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/header_separation_color" />
+
+            <TextView
+                style="@style/Table_Header"
+                android:layout_weight="2.0"
+                android:text="@string/Gia" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_header"
+            android:layout_centerHorizontal="true"
+            android:text="@string/error_no_data_to_display"
+            android:textColor="@color/label_text_color" />
+
+        <ListView
+            android:id="@+id/listview_pastplaceorder"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_header"
+            android:background="@color/bg_fragment"
+            android:divider="@color/listview_separation_color"
+            android:dividerHeight="0.5dp"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+</LinearLayout>

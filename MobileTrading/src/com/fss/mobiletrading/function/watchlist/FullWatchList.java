@@ -16,12 +16,12 @@ import android.widget.TextView;
 import com.fss.mobiletrading.adapter.FullWatchListAdapter;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.object.BangGia_Item;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.MainActivity_Tablet;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
-import com.msbuat.mobiletrading.design.SearchStockUI;
-import com.msbuat.mobiletrading.design.TabSelector;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.MainActivity_Tablet;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.design.SearchStockUI;
+import com.fscuat.mobiletrading.design.TabSelector;
 
 import java.util.ArrayList;
 

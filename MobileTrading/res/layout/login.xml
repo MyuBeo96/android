@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:id="@+id/login"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -114,7 +114,7 @@
                     android:layout_width="200dp"
                     android:layout_height="65dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="30dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/ic_fsc_logo" />
 
@@ -126,7 +126,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="40dp"
                     android:background="@drawable/background_white_conner"
                     android:orientation="vertical"
                     android:padding="5dp" >
@@ -217,13 +217,15 @@
                         android:id="@+id/line_login_pin"
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
-                        android:background="#dddddd" />
+                        android:background="#dddddd"
+                        android:visibility="gone"/>
 
                     <LinearLayout
                         android:id="@+id/lay_login_pin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <LinearLayout
                             android:layout_width="40dp"
@@ -342,7 +344,7 @@
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal" >
 
-                    <com.msbuat.mobiletrading.design.MyButton
+                    <com.fscuat.mobiletrading.design.MyButton
                         android:id="@+id/btn_login_Login"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
@@ -350,7 +352,7 @@
                         android:background="@drawable/background_button_login"
                         app:textMyButton="@string/login_btn_Login" />
 
-                    <com.msbuat.mobiletrading.design.MyButton
+                    <com.fscuat.mobiletrading.design.MyButton
                         android:id="@+id/btn_login_LoginDemo"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
@@ -368,7 +370,7 @@
                     android:layout_alignRight="@+id/lay_login_button"
                     android:layout_below="@+id/lay_login_button"
                     android:layout_marginBottom="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="30dp"
                     android:background="@drawable/background_location_button"
                     android:padding="5dp" >
 
@@ -426,7 +428,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lbl_login_guide"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="40dp"
                     android:gravity="center"
                     android:text="@string/stockcompany_info"
                     android:textColor="@color/white_text"

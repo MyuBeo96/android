@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 import com.fss.mobiletrading.object.DotBienGiaKhoiLuongItem;
 
 public class DotBienGiaKhoiLuongItemView extends LinearLayout {

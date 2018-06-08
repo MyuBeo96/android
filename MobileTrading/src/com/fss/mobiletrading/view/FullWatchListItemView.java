@@ -13,8 +13,8 @@ import com.fss.mobiletrading.common.MTradingColor;
 import com.fss.mobiletrading.common.MTradingColor.PriceColor;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.object.BangGia_Item;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
 
 public class FullWatchListItemView extends LinearLayout {
 	ImageView img_Sign;

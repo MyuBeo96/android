@@ -21,9 +21,9 @@ import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.function.placeorder.PlaceOrder;
 import com.fss.mobiletrading.object.SolenhItem;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
-import com.msbuat.mobiletrading.design.SelectorImageView;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.design.SelectorImageView;
 
 public class NorOrderListItemView extends LinearLayout {
 

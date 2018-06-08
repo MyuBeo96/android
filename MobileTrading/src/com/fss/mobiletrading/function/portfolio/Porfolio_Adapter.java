@@ -6,8 +6,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
 import com.fss.mobiletrading.common.SimpleAction;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
 
 import java.util.List;
 

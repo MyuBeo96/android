@@ -21,12 +21,12 @@ import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.object.LichSuLenh_Item;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.design.FilterArrayAdapter.Condition;
-import com.msbuat.mobiletrading.design.InputDate;
-import com.msbuat.mobiletrading.design.InputDate.OnChangeTextDateListener;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.design.FilterArrayAdapter.Condition;
+import com.fscuat.mobiletrading.design.InputDate;
+import com.fscuat.mobiletrading.design.InputDate.OnChangeTextDateListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -195,6 +195,12 @@ public class OrderHistory extends AbstractFragment {
 				}, DELAYTIME);
 			}
 		});
+	}
+
+	@Override
+	public void addActionToActionBar() {
+		super.addActionToActionBar();
+		setBackLogoActionMenu();
 	}
 
 	@Override

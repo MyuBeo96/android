@@ -10,7 +10,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.ScrollView;
 
 import com.fss.mobiletrading.object.SolenhItem;
-import com.msbuat.mobiletrading.MyActionBar.Action;
+import com.fscuat.mobiletrading.MyActionBar.Action;
 
 public class CustomHorizontalScrollView extends HorizontalScrollView {
 

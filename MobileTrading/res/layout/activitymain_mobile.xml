@@ -17,7 +17,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.msbuat.mobiletrading.MyActionBar
+            <com.fscuat.mobiletrading.MyActionBar
                 android:id="@+id/actionbar"
                 style="@style/ActionBar" />
 

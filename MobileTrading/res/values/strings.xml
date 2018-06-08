@@ -77,6 +77,7 @@
     <string name="MenhGia">Mệnh giá</string>
     <string name="TyLePhanBo">Tỷ lệ phân bố</string>
     <string name="GiaDatMua">Giá đặt mua</string>
+    <string name="TrangThaiLenh">Trạng thái lệnh</string>
     <string name="ThoiGianChuyenNhuong">Thời gian chuyển nhượng</string>
     <string name="ThoiGianNopTien">Thời gian nộp tiền</string>
     <string name="Dong">Đóng</string>
@@ -110,7 +111,6 @@
     <string name="ThoiGian">Thời gian</string>
     <string name="TieuKhoanDangKy">Tiểu khoản đăng ký</string>
     <string name="ThongTinKhachHang">Thông tin khách hàng</string>
-    <string name="search">Tìm kiếm</string>
     <string name="allcustomers">Tất cả khách hàng</string>
     <string name="HoTenKhachHang">Họ tên khách hàng</string>
     <string name="TongTaiSan">Tổng tài sản</string>
@@ -151,7 +151,7 @@
     <string name="Cancel">Hủy</string>
     <string name="XacNhan">Xác nhận</string>
     <string name="Sorry">Xin lỗi không thể tạo bản đồ</string>
-    <string name="MaritimeBankBranch">Các chi nhánh Maritime</string>
+    <string name="FSCBankBranch">Các chi nhánh FSC</string>
     <string name="GPS">GPS trên thiết bị của bạn đã bị tắt, bạn có muốn bật nó lên không</string>
     <string name="Wifi">Wifi trên thiết bị của bạn đã bị tắt, bạn có muốn bật nó lên không</string>
     <string name="gotoGPS">Đi đến phần thiết lập GPS</string>
@@ -170,7 +170,7 @@
     <string name="msg_LoiKetNoi">"Không thể kết nối được tới Server.\n Hãy chắc chắn rằng thiết bị của bạn được kết nối với Internet"</string>
     <string name="ChuaNhapDL">Bạn chưa nhập đầy đủ thông tin</string>
     <string name="ChuaNhapDungDL">Mật khẩu phải có ít nhất 6 ký tự</string>
-    <string name="NhapPin">Vui lòng nhập mã Pin</string>
+    <string name="NhapPin">Vui lòng nhập mật khẩu giao dịch</string>
     <string name="noti_loading">Bạn vui lòng đợi trong giây lát</string>
     <string name="desc_list_item_icon">Item Icon</string>
     <string name="chu_tai_khoan">Chủ tài khoản</string>
@@ -238,6 +238,7 @@
     <string name="Thue">Thuế</string>
     <string name="Gia1000">Giá (x1000)</string>
     <string name="RTT">Rtt</string>
+    <string name="TyLeKyQuy">Tỷ lệ ký quỹ</string>
     <string name="SoLuuKy">Số lưu ký</string>
     <string name="Logout">Đăng xuất</string>
     <string name="Logout2">Thoát</string>
@@ -251,6 +252,7 @@
     <string name="TinTuc">Tin tức</string>
     <string name="XemTheoT_G">Xem theo T/G</string>
     <string name="HangKhachHang">Hạng khách hàng&#160;</string>
+    <string name="NguoiNhanUyQuyen">Người nhận ủy quyền</string>
     <string name="XinChao">Xin chào</string>
     <string name="MaKhachHang">Mã khách hàng</string>
     <string name="Demo">Demo</string>
@@ -299,11 +301,11 @@
     <string name="SoCMND">Số CMND/CCCD</string>
     <string name="NgayCap">Ngày cấp</string>
     <string name="NoiCap">Nơi cấp</string>
-    <string name="DiDong">Di động</string>
+    <string name="DienThoaiDKSMS">Điện thoại đăng ký nhận SMS</string>
     <string name="DienThoaiCoDinh">Điện thoại cố định</string>
     <string name="DienThoaiLienLac">Điện thoại liên lạc</string>
     <string name="DiaChiDangKyVoiVSD">Địa chỉ đăng ký với VSD</string>
-    <string name="DiaChiLienHeVoiFSC">Địa chỉ liên hệ với FSC</string>
+    <string name="DiaChiLienHe">Địa chỉ liên hệ</string>
     <string name="Email">Email</string>
     <string name="ChamSocBoi">Chăm sóc bởi&#160;</string>
     <string name="SDTMoiGioiChamSoc">SĐT môi giới chăm sóc</string>
@@ -433,9 +435,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="MatKhauDangNhap">Mật khẩu đăng nhập</string>
+    <string name="MatKhauGiaoDich">Mật khẩu giao dịch</string>
     <string name="MatKhauDatLenh">Mật khẩu đặt lệnh</string>
     <string name="login_btn_Login">Đăng nhập</string>
-    <string name="default_username">093C</string>
+    <string name="default_username">093</string>
     <string name="login_text_time">Timeout</string>
     <string name="login_text_minus">phút</string>
     <string name="ghi_nho">Lưu thông tin</string>
@@ -443,6 +446,9 @@
     <string name="activity_main_btn_ThiTruong">T.Trường</string>
     <string name="activity_main_btn_Menu">Menu</string>
     <string name="MaCK">Mã CK</string>
+    <string name="SanGD">Sàn GD</string>
+    <string name="LoaiGD">Loại GD</string>
+    <string name="KLDat">KL đặt</string>
     <string name="MaCK2">Mã CK</string>
     <string name="MaChungKhoan">Mã chứng khoán</string>
     <string name="Ma">Mã</string>
@@ -450,6 +456,8 @@
     <string name="ThamChieu">Tham chiếu</string>
     <string name="datlenh_label_San">Sàn</string>
     <string name="GiaKhopCuoi">Khớp cuối</string>
+    <string name="NNMua">NN mua</string>
+    <string name="NNBan">NN bán</string>
     <string name="datlenh_label_SucMua">Sức mua</string>
     <string name="datlenh_label_TyLeVay">Tỷ lệ vay</string>
     <string name="datlenh_label_HanMucMua">Hạn mức mua</string>
@@ -473,7 +481,6 @@
     <string name="HuyHet">Hủy hết</string>
     <string name="GioDat">Giờ đặt</string>
     <string name="KLKhop">KL khớp</string>
-    <string name="KLDat">KL đặt</string>
     <string name="ConLai">Còn lại</string>
     <string name="solenh_lenhkhongduocphephuy">Lệnh này không được phép hủy</string>
     <string name="solenh_lenhkhongduocphepsua">Lệnh này không được phép sửa</string>
@@ -500,7 +507,7 @@
     <string name="chuyentienrangoai_chitiet">Thông tin lệnh chuyển tiền</string>
     <string name="chuyentienrangoai_khongcotk">Chưa đăng ký tài khoản chuyển tiền ra ngoài</string>
     <string name="SoLuuKyNhan">Số lưu ký nhận</string>
-    <string name="chuyentiennoibo_hint_MaPin">Mã Pin</string>
+    <string name="chuyentiennoibo_hint_MaPin">Mật khẩu giao dịch</string>
     <string name="chuyentiennoibo_khongcotk">Chưa đăng ký tiểu khoản chuyển tiền nội bộ</string>
     <string name="ungtruoc_label_CoTheUng">Số tiền có thể ứng</string>
     <string name="ungtruoc_label_SoTienUng">Số tiền ứng</string>
@@ -581,9 +588,9 @@
     <string name="doipass_lbl_passcu">Password cũ</string>
     <string name="doipass_lbl_passmoi">Password mới</string>
     <string name="doipass_lbl_again_passmoi">Nhập lại password</string>
-    <string name="doipass_lbl_pincu">PIN cũ</string>
-    <string name="doipass_lbl_pinmoi">PIN mới</string>
-    <string name="doipass_lbl_again_pinmoi">Nhập lại PIN</string>
+    <string name="doipass_lbl_pincu">Mật khẩu giao dịch cũ</string>
+    <string name="doipass_lbl_pinmoi">Mật khẩu giao dịch mới</string>
+    <string name="doipass_lbl_again_pinmoi">Nhập lại Mật khẩu giao dịch</string>
     <string name="sodu_danhmucchungkhoan">Danh mục chứng khoán</string>
     <string name="sodu_tonghopsodu">Tổng hợp số dư</string>
     <string name="SoDu">Số dư</string>
@@ -626,14 +633,14 @@
     <string name="DoiMatKhauDangNhap">Đổi mật khẩu đăng nhập</string>
     <string name="DoiMatKhau">Đổi mật khẩu</string>
     <string name="DoiMatKhauGiaoDich">Đổi mật khẩu giao dịch</string>
-    <string name="DoiPIN">Đổi PIN</string>
+    <string name="DoiPIN">Đổi mật khẩu giao dịch</string>
     <string name="ThongTinCaNhan">Thông tin cá nhân</string>
     <string name="thietlaptk_OldPass">Mật khẩu cũ</string>
     <string name="thietlaptk_NewPass">Mật khẩu mới</string>
     <string name="thietlaptk_ConfirmPass">Xác nhận mật khẩu mới</string>
-    <string name="thietlaptk_OldPin">PIN cũ</string>
-    <string name="thietlaptk_NewPin">PIN mới</string>
-    <string name="thietlaptk_ConfirmPin">Xác nhận PIN mới</string>
+    <string name="thietlaptk_OldPin">Mật khẩu giao dịch cũ</string>
+    <string name="thietlaptk_NewPin">Mật khẩu giao dịch mới</string>
+    <string name="thietlaptk_ConfirmPin">Xác nhận mật khẩu giao dịch mới</string>
     <string name="boloc_EPS">EPS</string>
     <string name="boloc_PE">P/E</string>
     <string name="boloc_ROE">ROE</string>
@@ -788,4 +795,6 @@
 
     <string name="ok">"Chọn"</string>
     <string name="cancel">"Hủy"</string>
+    <string name="XacNhanHuyLenh">Xác nhận hủy lệnh</string>
+    <string name="PastPlaceOrder">Lịch sử đặt lệnh</string>
 </resources>

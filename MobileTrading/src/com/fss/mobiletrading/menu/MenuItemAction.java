@@ -3,8 +3,8 @@ package com.fss.mobiletrading.menu;
 import java.util.List;
 
 import com.fss.mobiletrading.interfaces.IStringAction;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.MainActivity_Tablet;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.MainActivity_Tablet;
 
 public class MenuItemAction implements IStringAction {
 

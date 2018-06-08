@@ -14,9 +14,9 @@ import android.widget.TextView;
 
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.design.DialogLoading;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.design.DialogLoading;
 import com.mtrading.mobile.graph.IndexVolumeChartPoint;
 import com.mtrading.mobile.graph.IndexVolumeChartView;
 import com.mtrading.mobile.graph.IndexVolumeChartView.OnChartClickListener;

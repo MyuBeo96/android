@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" >
 
-    <com.msbuat.mobiletrading.design.LabelContentLayout
+    <com.fscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_inputdatehori"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

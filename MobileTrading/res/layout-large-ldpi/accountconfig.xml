@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app1="http://schemas.android.com/apk/res-auto"
     android:id="@+id/thietlaptk"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_fragment"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/lay_thietlaptk_accountinfo"
@@ -32,7 +33,7 @@
                     android:gravity="bottom"
                     android:orientation="horizontal" >
 
-                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/lc_thietlaptk_fullname"
                         style="@style/LabelContentLayout_Style"
                         app:contentColor="@color/green_text"
@@ -41,7 +42,7 @@
                         app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                         app:orientation="vertical" />
 
-                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/lc_thietlaptk_birthday"
                         style="@style/LabelContentLayoutMarginLeft_Style"
                         app:contentColor="@color/green_text"
@@ -50,7 +51,7 @@
                         app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                         app:orientation="vertical" />
 
-                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/lc_thietlaptk_gender"
                         style="@style/LabelContentLayoutMarginLeft_Style"
                         app:contentColor="@color/green_text"
@@ -66,7 +67,7 @@
                     android:gravity="bottom"
                     android:orientation="horizontal" >
 
-                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/lc_thietlaptk_idpeople"
                         style="@style/LabelContentLayout_Style"
                         app:contentColor="@color/green_text"
@@ -75,7 +76,7 @@
                         app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                         app:orientation="vertical" />
 
-                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/lc_thietlaptk_idpeoplecreateday"
                         style="@style/LabelContentLayoutMarginLeft_Style"
                         app:contentColor="@color/green_text"
@@ -84,7 +85,7 @@
                         app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                         app:orientation="vertical" />
 
-                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/lc_thietlaptk_idpeoplecreateplace"
                         style="@style/LabelContentLayoutMarginLeft_Style"
                         app:contentColor="@color/green_text"
@@ -100,32 +101,30 @@
                     android:gravity="bottom"
                     android:orientation="horizontal" >
 
-                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/lc_thietlaptk_mobile"
                         style="@style/LabelContentLayout_Style"
                         app:contentColor="@color/green_text"
                         app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
-                        app:labelText="@string/DiDong"
+                        app:labelText="@string/DienThoaiDKSMS"
                         app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                         app:orientation="vertical" />
 
-                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/lc_thietlaptk_homephone"
                         style="@style/LabelContentLayoutMarginLeft_Style"
-                        app:contentColor="@color/white_text"
-                        app:contentHint="@string/DienThoaiLienLac"
+                        app:contentColor="@color/green_text"
                         app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
-                        app:editable="true"
                         app:labelText="@string/DienThoaiLienLac"
                         app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                         app:orientation="vertical" />
 
-                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/lc_thietlaptk_VSDregistryplace"
                         style="@style/LabelContentLayoutMarginLeft_Style"
                         app:contentColor="@color/green_text"
                         app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
-                        app:labelText="@string/DiaChiDangKyVoiVSD"
+                        app:labelText="@string/DiaChiLienHe"
                         app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                         app:orientation="vertical" />
                 </LinearLayout>
@@ -136,20 +135,20 @@
                     android:gravity="bottom"
                     android:orientation="horizontal" >
 
-                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/lc_thietlaptk_MSBScontactplace"
                         style="@style/LabelContentLayout_Style"
                         app:contentColor="@color/white_text"
-                        app:contentHint="@string/DiaChiLienHeVoiFSC"
+                        app:contentHint="@string/DiaChiLienHe"
                         app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
                         app:editable="true"
-                        app:labelText="@string/DiaChiLienHeVoiFSC"
+                        app:labelText="@string/DiaChiLienHe"
                         app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
-                        app:orientation="vertical" />
-
-                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                        app:orientation="vertical"
+                        android:visibility="gone"/>
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/lc_thietlaptk_email"
-                        style="@style/LabelContentLayoutMarginLeft_Style"
+                        style="@style/LabelContentLayout_Style"
                         app:contentColor="@color/white_text"
                         app:contentHint="@string/Email"
                         app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
@@ -157,13 +156,21 @@
                         app:labelText="@string/Email"
                         app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                         app:orientation="vertical" />
-
-                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/lc_thietlaptk_careby"
                         style="@style/LabelContentLayoutMarginLeft_Style"
                         app:contentColor="@color/green_text"
-                        app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
                         app:labelText="@string/ChamSocBoi"
+                        app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                        app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+                        app:orientation="vertical" />
+
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/lc_thietlaptk_brokerphone"
+                        style="@style/LabelContentLayoutMarginLeft_Style"
+                        app:contentColor="@color/green_text"
+                        app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                        app:labelText="@string/SDTMoiGioiChamSoc"
                         app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                         app:orientation="vertical" />
                 </LinearLayout>
@@ -174,29 +181,36 @@
                     android:gravity="bottom"
                     android:orientation="horizontal" >
 
-                    <com.msbuat.mobiletrading.design.LabelContentLayout
-                        android:id="@+id/lc_thietlaptk_brokerphone"
-                        style="@style/LabelContentLayout_Style"
-                        app:contentColor="@color/green_text"
-                        app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
-                        app:labelText="@string/SDTMoiGioiChamSoc"
-                        app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
-                        app:orientation="vertical" />
-
-                    <com.msbuat.mobiletrading.design.LabelContentLayout
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/lc_thietlaptk_customerclass"
-                        style="@style/LabelContentLayoutMarginLeft_Style"
+                        style="@style/LabelContentLayout_Style"
                         app:contentColor="@color/green_text"
                         app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
                         app:labelText="@string/HangKhachHang"
                         app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                         app:orientation="vertical" />
 
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/t_cashtransfer_frame_marginLeft"
-                        android:layout_weight="1" />
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/lc_thietlaptk_authorize"
+                        style="@style/LabelContentLayoutMarginLeft_Style"
+                        app:contentColor="@color/green_text"
+                        app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                        app:labelText="@string/NguoiNhanUyQuyen"
+                        app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+                        app:orientation="vertical" />
+
+                    <com.fscuat.mobiletrading.design.LabelContentLayout
+                        android:id="@+id/lc_thietlaptk_tradingcode"
+                        style="@style/LabelContentLayoutMarginLeft_Style"
+                        app1:inputType="textPassword"
+                        app:contentColor="@color/white_text"
+                        app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
+                        app:labelText="@string/MatKhauGiaoDich"
+                        app:editable="true"
+                        app1:contentHint="@string/MatKhauGiaoDich"
+                        app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
+                        app:orientation="vertical"
+                        android:visibility="invisible"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -245,7 +259,7 @@
                         android:layout_alignBottom="@+id/btn_changepassword"
                         android:layout_centerHorizontal="true"
                         android:background="@drawable/bg_grey_button_corner5"
-                        android:text="@string/DoiPIN"
+                        android:text="@string/DoiMatKhauGiaoDich"
                         android:visibility="gone" />
 
                     <Button

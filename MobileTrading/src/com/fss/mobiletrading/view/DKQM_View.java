@@ -8,8 +8,8 @@ import android.widget.TextView;
 
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.function.rightoffregister.RightOffRegisterItem;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
 
 public class DKQM_View extends LinearLayout {
 	TextView tv_MaCK;

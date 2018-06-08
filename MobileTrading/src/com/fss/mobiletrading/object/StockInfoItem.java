@@ -50,6 +50,10 @@ public class StockInfoItem {
 	public String stockname;
 	public String totaltradingColor;
 	public String totaltradingColorValue;
+	public String foreignRemain;
+	public String foreignSell;
+	public String foreignBuy;
+	public String floorCode;
 
 	public StockInfoItem(HashMap<String, String> hm) {
 		this.CashAvaiable = hm.get("CashAvaiable");
@@ -99,6 +103,10 @@ public class StockInfoItem {
 		this.lastChangeTick = hm.get("lastChangeTick");
 		this.totaltradingColorValue = hm.get("totaltradingColorValue");
 		this.totaltradingColor = hm.get("totaltradingColor");
+		this.foreignRemain =  hm.get("foreignRemain");
+		this.foreignSell = hm.get("foreignSell");
+		this.foreignBuy = hm.get("foreignBuy");
+		this.floorCode = hm.get("FloorCode");
 	}
 }
 

@@ -19,7 +19,8 @@
         android:layout_toLeftOf="@+id/line"
         android:gravity="center"
         android:textColor="@color/white_text"
-        android:textSize="@dimen/m_tabselector_text_size" />
+        android:textSize="@dimen/m_tabselector_text_size"
+        android:maxLines="2"/>
 
     <View
         android:id="@+id/line_tabitem"

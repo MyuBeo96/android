@@ -21,7 +21,7 @@
                     <tabmenu
                         style="1"
                         class="com.fss.mobiletrading.function.orderlist.NormalOrderList"
-                        title="Sổ lệnh thường" >
+                        title="一般下單目錄" >
                     </tabmenu>
                     <tabmenu
                         style="1"
@@ -55,7 +55,7 @@
             <tabmenu
                 style="1"
                 class="null"
-                title="Giao dịch đặc biệt" >
+                title="特別交易" >
                 <child>
                     <tabmenu
                         style="2"
@@ -100,6 +100,11 @@
                 class="com.fss.mobiletrading.function.OrderHistory"
                 title="成交历史" >
             </tabmenu>
+            <tabmenu
+                style="2"
+                class="com.fss.mobiletrading.function.pastplaceorder.PastPlaceOrder"
+                title="下單歷史">
+                </tabmenu>
             <tabmenu
                 style="2"
                 class="com.fss.mobiletrading.function.coporateactions.CoporateActions"

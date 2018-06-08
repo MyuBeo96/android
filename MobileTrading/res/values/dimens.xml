@@ -42,6 +42,7 @@
     <dimen name="m_header_textsize">14sp</dimen>
     <dimen name="m_header_height">35sp</dimen>
     <dimen name="m_text_height">30dp</dimen>
+    <dimen name="m_text_height_confirmorder">20dp</dimen>
     <dimen name="m_button_height">40dp</dimen>
     <dimen name="m_button_width">90dp</dimen>
 
@@ -78,7 +79,7 @@
     <!-- tab menu -->
     <dimen name="m_tabselector_height">35dp</dimen>
     <dimen name="m_tabselector_width">150dp</dimen>
-    <dimen name="m_tabselector_text_size">14dp</dimen>
+    <dimen name="m_tabselector_text_size">13dp</dimen>
 
     <!-- activity_main -->
     <dimen name="t_header_height">50dp</dimen>

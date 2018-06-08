@@ -7,7 +7,7 @@ import com.fss.mobiletrading.common.MyJsonArray;
 import com.fss.mobiletrading.object.BankAccItem;
 import com.fss.mobiletrading.object.BankAccList;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.MSTradeAppConfig;
+import com.fscuat.mobiletrading.MSTradeAppConfig;
 
 public class GetBankAccListService extends AbstractProcessJsonArrayService {
 

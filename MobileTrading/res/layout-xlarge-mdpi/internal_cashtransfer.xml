@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:id="@+id/internal_cashtransfer"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -85,7 +85,7 @@
                         android:background="@color/lc_separation_color" />
                 </RelativeLayout>
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_internalcashtransfer_SenderCustodyCd"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -98,7 +98,7 @@
                     app:labelweight="5"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.MySpinner
+                <com.fscuat.mobiletrading.design.MySpinner
                     android:id="@+id/spn_internalcashtransfer_SenderAfacctno"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -117,7 +117,7 @@
                 android:gravity="bottom"
                 android:orientation="horizontal" >
 
-                <com.msbuat.mobiletrading.design.MySpinner
+                <com.fscuat.mobiletrading.design.MySpinner
                     android:id="@+id/spn_internalcashtransfer_SoTKNhan"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -127,7 +127,7 @@
                     app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                     app:textMySpinner="@string/SoTieuKhoanNhan" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_internalcashtransfer_SoLuuKy"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -139,7 +139,7 @@
                     app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                     app:orientation="vertical" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_internalcashtransfer_BeneficiaryName"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -173,7 +173,7 @@
                         android:text="@string/SoTienDeNghiChuyen"
                         android:textSize="@dimen/t_cashtransfer_labletextsize" />
 
-                    <com.msbuat.mobiletrading.design.NumberEditText
+                    <com.fscuat.mobiletrading.design.NumberEditText
                         android:id="@+id/edt_internalcashtransfer_SoTienChuyen"
                         style="@style/EditText_Style"
                         android:layout_width="match_parent"
@@ -199,7 +199,7 @@
                 android:gravity="bottom"
                 android:orientation="vertical" >
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/edt_internalcashtransfer_NoiDung"
                     android:layout_width="match_parent"
                     android:layout_height="67.5dp"
@@ -224,7 +224,7 @@
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal" >
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_internalcashtransfer_tienmat"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -236,7 +236,7 @@
                     app:orientation="vertical"
                     app:separationColor="@color/transparent" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_internalcashtransfer_advancecash"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -249,7 +249,7 @@
                     app:orientation="vertical"
                     app:separationColor="@color/transparent" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_internalcashtransfer_sotiendichvu"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -267,7 +267,7 @@
                 android:layout_height="76.5dp"
                 android:orientation="horizontal" >
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_internalcashtransfer_phiungdutinh"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -279,7 +279,7 @@
                     app:orientation="vertical"
                     app:separationColor="@color/transparent" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_internalcashtransfer_sotientoidaduocchuyen"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -292,7 +292,7 @@
                     app:orientation="vertical"
                     app:separationColor="@color/transparent" />
 
-                <com.msbuat.mobiletrading.design.LabelContentLayout
+                <com.fscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_internalcashtransfer_amounttotal"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -353,7 +353,7 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <com.msbuat.mobiletrading.design.LabelContentLayout
+            <com.fscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_internalcashtransfer_cashavailable"
                 android:layout_width="0dp"
                 android:layout_height="0dp"

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.msbuat.mobiletrading"
-    android:versionCode="17"
-    android:versionName="2.0.5">
+    package="com.fscuat.mobiletrading"
+    android:versionCode="2"
+    android:versionName="1.0.0">
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="15"
         android:targetSdkVersion="19" />
 
     <permission
-        android:name="com.msbuat.mobiletrading.permission.MAPS_RECEIVE"
+        android:name="com.fscuat.mobiletrading.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.msbuat.mobiletrading.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.fscuat.mobiletrading.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
@@ -29,7 +29,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!--<uses-permission android:name="android.permission.GET_ACCOUNTS" />-->
     <!-- <uses-permission android:name="com.yahoo.mobile.client.android.permissions.YAHOO_INTER_APP" /> -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
@@ -38,15 +38,15 @@
     <!-- android:protectionLevel="signature" /> -->
 
     <permission
-        android:name="com.msbuat.mobiletrading.permission.C2D_MESSAGE"
+        android:name="com.fscuat.mobiletrading.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.androidhive.pushnotifications.permission.C2D_MESSAGE" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
+    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
 
     <application
         android:name=".MyApplication"
@@ -101,7 +101,7 @@
                 <!-- Receives the registration id. -->
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
-                <category android:name="com.msbuat.mobiletrading" />
+                <category android:name="com.fscuat.mobiletrading" />
             </intent-filter>
         </receiver>
 

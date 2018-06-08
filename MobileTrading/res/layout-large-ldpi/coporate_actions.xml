@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.msbuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
@@ -25,7 +25,7 @@
                 android:layout_weight="1"
                 android:gravity="center" >
 
-                <com.msbuat.mobiletrading.design.InputDate
+                <com.fscuat.mobiletrading.design.InputDate
                     android:id="@+id/edt_coporate_actions_fromdate"
                     android:layout_width="250dp"
                     android:layout_height="@dimen/t_singleLine_height"
@@ -39,7 +39,7 @@
                 android:layout_weight="1"
                 android:gravity="center" >
 
-                <com.msbuat.mobiletrading.design.InputDate
+                <com.fscuat.mobiletrading.design.InputDate
                     android:id="@+id/edt_coporate_actions_todate"
                     android:layout_width="250dp"
                     android:layout_height="@dimen/t_singleLine_height"

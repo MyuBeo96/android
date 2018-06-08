@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.fss.mobiletrading.connector.IConnectServer;
 import com.fss.mobiletrading.interfaces.INotifier;
-import com.msbuat.mobiletrading.MSTradeAppConfig;
+import com.fscuat.mobiletrading.MSTradeAppConfig;
 
 public class GuaranteeListService {
 	public static void getGuaranteeList(String pv_afacctno, INotifier notifier, String key, IConnectServer conn){

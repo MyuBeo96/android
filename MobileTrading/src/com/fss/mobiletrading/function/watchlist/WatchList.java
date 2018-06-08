@@ -27,14 +27,14 @@ import com.fss.mobiletrading.connector.RequestRealtime.MyRequest;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.object.BangGia_Item;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
-import com.msbuat.mobiletrading.MainActivity_Tablet;
-import com.msbuat.mobiletrading.MyActionBar.Action;
-import com.msbuat.mobiletrading.R;
-import com.msbuat.mobiletrading.DeviceProperties;
-import com.msbuat.mobiletrading.design.SearchStockUI;
-import com.msbuat.mobiletrading.design.TabSelector;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.MainActivity_Tablet;
+import com.fscuat.mobiletrading.MyActionBar.Action;
+import com.fscuat.mobiletrading.R;
+import com.fscuat.mobiletrading.DeviceProperties;
+import com.fscuat.mobiletrading.design.SearchStockUI;
+import com.fscuat.mobiletrading.design.TabSelector;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -448,6 +448,7 @@ public class WatchList extends AbstractFragment {
 	@Override
 	public void addActionToActionBar() {
 		super.addActionToActionBar();
+		setBackLogoActionMenu();
 		setHomeLogoAction();
 		if (action_SearchSymbol == null) {
 			action_SearchSymbol = new Action() {

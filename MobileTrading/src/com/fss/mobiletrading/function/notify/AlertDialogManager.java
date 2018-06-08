@@ -1,6 +1,6 @@
 package com.fss.mobiletrading.function.notify;
 
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 
 import android.app.AlertDialog;
 import android.content.Context;

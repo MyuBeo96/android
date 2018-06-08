@@ -23,13 +23,13 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.msbuat.mobiletrading.R;
+import com.fscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.DotBienGia_Adapter;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.object.DotBienGiaItem;
 import com.fss.mobiletrading.object.ResultObj;
-import com.msbuat.mobiletrading.AbstractFragment;
-import com.msbuat.mobiletrading.MainActivity;
+import com.fscuat.mobiletrading.AbstractFragment;
+import com.fscuat.mobiletrading.MainActivity;
 
 public class PriceFilter extends AbstractFragment {
 	int DotBienTrong;

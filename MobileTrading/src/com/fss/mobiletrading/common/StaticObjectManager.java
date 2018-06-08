@@ -9,7 +9,7 @@ import com.fss.mobiletrading.object.BRRptItem;
 import com.fss.mobiletrading.object.BankAccList;
 import com.fss.mobiletrading.object.LoginItem;
 import com.fss.mobiletrading.object.StockItem;
-import com.msbuat.mobiletrading.CallAnotherAppManager;
+import com.fscuat.mobiletrading.CallAnotherAppManager;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
