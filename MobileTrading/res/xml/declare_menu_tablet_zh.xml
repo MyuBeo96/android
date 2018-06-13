@@ -16,29 +16,29 @@
             <tabmenu
                 style="1"
                 class="null"
-                title="订单记录" >
+                title="下單表" >
                 <child>
                     <tabmenu
                         style="1"
                         class="com.fss.mobiletrading.function.orderlist.NormalOrderList"
-                        title="一般下單目錄" >
+                        title="普通委託列表" >
                     </tabmenu>
                     <tabmenu
                         style="1"
                         class="com.fss.mobiletrading.function.orderlist.GTCOrderList"
-                        title="条件订单列表" >
+                        title="預約下單表" >
                     </tabmenu>
                 </child>
             </tabmenu>
             <tabmenu
                 style="1"
                 class="null"
-                title="转账" >
+                title="轉賬" >
                 <child>
                     <tabmenu
                         style="2"
                         class="com.fss.mobiletrading.function.cashtransfer.CashTransfer"
-                        title="转账" >
+                        title="轉賬" >
                     </tabmenu>
                     <!--<tabmenu-->
                     <!--style="2"-->
@@ -48,24 +48,24 @@
                     <tabmenu
                         style="2"
                         class="com.fss.mobiletrading.function.cashtransfer.CashTransferList"
-                        title="收款人列表" >
+                        title="受款人名單" >
                     </tabmenu>
                 </child>
             </tabmenu>
             <tabmenu
                 style="1"
                 class="null"
-                title="特別交易" >
+                title="特殊交易" >
                 <child>
                     <tabmenu
                         style="2"
                         class="com.fss.mobiletrading.function.rightoffregister.RightOffRegister"
-                        title="登记购买权" >
+                        title="登記認購權" >
                     </tabmenu>
                     <tabmenu
                         style="2"
                         class="com.fss.mobiletrading.function.stocktransfer.StockTransfer"
-                        title="证券转账" >
+                        title="證券轉賬" >
                     </tabmenu>
                 </child>
             </tabmenu>
@@ -78,27 +78,27 @@
 
     <tabmenu
         class="null"
-        title="账户管理" >
+        title="賬戶管理" >
         <child>
             <tabmenu
                 style="2"
                 class="com.fss.mobiletrading.function.AccountBalance"
-                title="余额" >
+                title="餘額" >
             </tabmenu>
             <tabmenu
                 style="2"
                 class="com.fss.mobiletrading.function.portfolio.Porfolio"
-                title="投资组合" >
+                title="投資組合" >
             </tabmenu>
             <tabmenu
                 style="2"
                 class="com.fss.mobiletrading.function.Statement"
-                title="银行账号明细表" >
+                title="證券明細" >
             </tabmenu>
             <tabmenu
                 style="2"
                 class="com.fss.mobiletrading.function.OrderHistory"
-                title="成交历史" >
+                title="成交歷史" >
             </tabmenu>
             <tabmenu
                 style="2"
@@ -108,18 +108,18 @@
             <tabmenu
                 style="2"
                 class="com.fss.mobiletrading.function.coporateactions.CoporateActions"
-                title="公司活动详情公（公司行事歷）" >
+                title="股權事件" >
             </tabmenu>
             <tabmenu
                 style="2"
                 class="com.fss.mobiletrading.function.searchstock.SearchStock"
-                title="证券信息" >
+                title="證券信息" >
             </tabmenu>
         </child>
     </tabmenu>
     <tabmenu
         class="com.fss.mobiletrading.function.accountconfig.AccountConfig"
-        title="个人信息" >
+        title="個人信息" >
     </tabmenu>
 
 </listmenu>

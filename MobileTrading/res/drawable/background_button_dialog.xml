@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/alertdialog_background_color" android:state_activated="false"></item>
+    <item android:color="@color/color_background_edittext" android:state_activated="true"></item>>
+</shape>

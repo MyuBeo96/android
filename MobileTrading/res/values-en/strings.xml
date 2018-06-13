@@ -62,9 +62,9 @@
     <string name="RtttrunoBLchuadenhan">Abandon the term Guarantee</string>
     <string name="TenNganHang">Bank</string>
     <string name="SoTKTaiMSI">Custody No. at KBSV</string>
-    <string name="SoTKTaiFSC">Custody No. at FSC</string>
-    <string name="SoTaiKkhoanTaiFSC">Custody No. at FSC</string>
-    <string name="SoTieuKhoanTaiFSC">Account No at FSC</string>
+    <string name="SoTKTaiFNS">Custody No. at FNS</string>
+    <string name="SoTaiKkhoanTaiFNS">Custody No. at FNS</string>
+    <string name="SoTieuKhoanTaiFNS">Account No at FNS</string>
     <string name="DaHuy">Cancelled</string>
     <string name="Gia1">Price 1</string>
     <string name="Gia2">Price 2</string>
@@ -141,12 +141,13 @@
     <string name="DienThoai">Phone</string>
     <string name="TimKiemTheoMa">Search by symbol</string>
     <string name="DaXoaThanhCong">Delete orders success</string>
+    <string name="KetQuaHuyLenh">Cancel orders result</string>
     <string name="Yes">Yes</string>
     <string name="No">No</string>
     <string name="Cancel">Cancel</string>
     <string name="XacNhan">Confirm</string>
     <string name="Sorry">Sorry! unable to create maps</string>
-    <string name="FSCBankBranch">FSC Branchs</string>
+    <string name="FNSBankBranch">FNS Branchs</string>
     <string name="GPS">GPS is disabled in your device. Would you like to enable it?</string>
     <string name="Wifi">Wifi is disabled in your device. Would you like to enable it?</string>
     <string name="gotoGPS">Goto Settings Page To Enable GPS</string>
@@ -388,7 +389,7 @@
     <string name="FullWatchList">Rich Price Board</string>
     <string name="ChangeAccount">Choose Sub Account</string>
     <string name="Report">Report</string>
-    <string name="About">Contacts FSC</string>
+    <string name="About">Contacts FNS</string>
     <string name="MSINotification">Broker Alerts</string>
     <string name="CashTransferList">Transfer Register List</string>
     <string name="ConditionalTrade">Conditional Order</string>
@@ -698,4 +699,5 @@
     <string name="cancel">"Cancel"</string>
     <string name="XacNhanHuyLenh">Cancel order confirm</string>
     <string name="PastPlaceOrder">Order history</string>
+    <string name="update_newversion">Aplication uses old version, recent update version for continue use.</string>
 </resources>

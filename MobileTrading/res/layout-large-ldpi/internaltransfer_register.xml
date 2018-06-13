@@ -77,11 +77,11 @@
             android:layout_height="@dimen/t_cashtransfer_frame_content"
             android:layout_marginLeft="@dimen/t_cashtransfer_frame_marginLeft"
             app:contentColor="@color/white_text"
-            app:contentHint="@string/SoTaiKkhoanTaiFSC"
+            app:contentHint="@string/SoTaiKkhoanTaiFNS"
             app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
             app:editable="true"
             app:inputType="textCap"
-            app:labelText="@string/SoTaiKkhoanTaiFSC"
+            app:labelText="@string/SoTaiKkhoanTaiFNS"
             app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
             app:orientation="vertical" />
 

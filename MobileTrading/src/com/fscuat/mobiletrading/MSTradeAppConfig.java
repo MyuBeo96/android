@@ -9,7 +9,7 @@ public class MSTradeAppConfig {
 
 //       public static String address_server = "https://hftsso.fss.com.vn/MFlexTest";//test
 //   public static String address_server = "http://192.168.18.190/MFlexApps";//PNS
-    //   public static String address_server = "http://192.168.50.34/MFlexApps";//PNS-DBFSC
+    //   public static String address_server = "http://192.168.50.34/MFlexApps";//PNS-DBFNS
 
 
     /*Config Login SSO*/

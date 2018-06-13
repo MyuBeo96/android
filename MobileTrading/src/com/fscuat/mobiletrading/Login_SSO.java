@@ -364,7 +364,7 @@ public class Login_SSO extends FragmentActivity implements INotifier {
             @Override
             public void onClick(View v) {
                 if (dialog_forgetpass != null) {
-                    edt_forgetpassword_account.getText().clear();
+//                    edt_forgetpassword_account.getText().clear();
                     edt_forgetpassword_idpeople.getText().clear();
                     edt_forgetpassword_phone.getText().clear();
                     edt_forgetpassword_email.getText().clear();

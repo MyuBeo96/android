@@ -796,7 +796,7 @@ public class StockIndex extends AbstractFragment {
 
 	/**
 	 * truyền vào mã chứng khoán để xem thông tin về mã
-	 * 
+	 *
 	 * @param symbol
 	 */
 	public void receiverparameter(String symbol) {
@@ -807,6 +807,11 @@ public class StockIndex extends AbstractFragment {
 			if (!rs) {
 				clearView();
 			}
+//			StockItemInformation stockItemInformation = (StockItemInformation) mainActivity.mapFragment
+//					.get(StockItemInformation.class.getName());
+//			if (stockItemInformation != null) {
+//				stockItemInformation.receiverParameter(symbol);
+//			}
 		}
 	}
 

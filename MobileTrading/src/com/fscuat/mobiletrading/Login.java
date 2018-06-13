@@ -355,18 +355,18 @@ public class Login extends FragmentActivity implements INotifier {
 										getResources().getString(
 												R.string.KhongMoDuocLink));
 							}
+//						} else if (position == 1) {
+//							// hướng dẫn môi giới sử dụng ms-trade
+//							boolean response = StaticObjectManager.callAnotherAppManager
+//									.goToUrl(MSTradeAppConfig.link_Guide_Broker);
+//							if (!response) {
+//								showDialogMessage(
+//										getResources().getString(
+//												R.string.thong_bao),
+//										getResources().getString(
+//												R.string.KhongMoDuocLink));
+//							}
 						} else if (position == 1) {
-							// hướng dẫn môi giới sử dụng ms-trade
-							boolean response = StaticObjectManager.callAnotherAppManager
-									.goToUrl(MSTradeAppConfig.link_Guide_Broker);
-							if (!response) {
-								showDialogMessage(
-										getResources().getString(
-												R.string.thong_bao),
-										getResources().getString(
-												R.string.KhongMoDuocLink));
-							}
-						} else if (position == 2) {
 							// hướng dẫn nộp tiền
 							boolean response = StaticObjectManager.callAnotherAppManager
 									.goToUrl(MSTradeAppConfig.link_PaymentGuide);
@@ -422,7 +422,7 @@ public class Login extends FragmentActivity implements INotifier {
 			@Override
 			public void onClick(View v) {
 				if (dialog_forgetpass != null) {
-					edt_forgetpassword_account.getText().clear();
+//					edt_forgetpassword_account.getText().clear();
 					edt_forgetpassword_idpeople.getText().clear();
 					edt_forgetpassword_phone.getText().clear();
 					edt_forgetpassword_email.getText().clear();
@@ -528,6 +528,7 @@ public class Login extends FragmentActivity implements INotifier {
 
 	private void updateText() {
 		btn_Login.setText(getResources().getString(R.string.login_btn_Login));
+		btn_LoginDemo.setText(getResources().getString(R.string.Demo));
 		tv_remember.setText(getResources().getString(R.string.ghi_nho));
 		tv_ForgerPassword.setText(getResources()
 				.getString(R.string.QuenMatKhau));

@@ -16,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 
+import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.object.StockItem;
 import com.fscuat.mobiletrading.R;
 
@@ -172,7 +173,6 @@ public class Edittext_Gia extends LinearLayout {
 
         textwatcher.add(tw);
         edtPrice.addTextChangedListener(tw);
-
         btn_Decrease.setOnClickListener(
                 new OnClickListener() {
 
@@ -198,7 +198,7 @@ public class Edittext_Gia extends LinearLayout {
                                 if (gia.doubleValue() > 0 && gia.compareTo(PRICE_100) <= 0) {
                                     gia = gia.add(new BigDecimal(-0.01));
                                 } else if (gia.compareTo(PRICE_100) > 0
-                                        && gia.compareTo(PRICE_500) <=0) {
+                                        && gia.compareTo(PRICE_500) <= 0) {
                                     gia = gia.add(new BigDecimal(-0.05));
                                 } else {
                                     gia = gia.add(new BigDecimal(-0.1));

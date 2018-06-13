@@ -56,7 +56,7 @@
             android:background="@color/t_header_bg"
             android:maxLines="2"
             android:singleLine="false"
-            android:text="@string/SoTKTaiFSC" />
+            android:text="@string/SoTKTaiFNS" />
 
         <TextView
             style="@style/Table_Header"
@@ -65,7 +65,7 @@
             android:background="@color/t_header_bg"
             android:maxLines="2"
             android:singleLine="false"
-            android:text="@string/SoTieuKhoanTaiFSC" />
+            android:text="@string/SoTieuKhoanTaiFNS" />
     </LinearLayout>
 
     <LinearLayout

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
@@ -33,6 +34,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class MapActivity extends Activity {
 
@@ -56,6 +58,8 @@ public class MapActivity extends Activity {
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		}
 		Log.i("Language", ""+AppData.language);
+//		Configuration newConfig = new Configuration();
+//		onConfigurationChanged(newConfig);
 		imgbtnSearch.setText(R.string.Search);
 	}
 
@@ -120,7 +124,7 @@ public class MapActivity extends Activity {
 	public void onCreateContextMenu(ContextMenu menu, View v,
 			ContextMenuInfo menuInfo) {
 		super.onCreateContextMenu(menu, v, menuInfo);
-		menu.setHeaderTitle(R.string.FSCBankBranch);
+		menu.setHeaderTitle(R.string.FNSBankBranch);
 		try {
 			for (int i = 0; i < pointArr.size(); i++) {
 				menu.add(0, i, 0, pointArr.get(i).getBrName());

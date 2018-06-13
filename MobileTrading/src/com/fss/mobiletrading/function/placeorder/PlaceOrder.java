@@ -486,7 +486,8 @@ public class PlaceOrder extends AbstractFragment {
             // set giá
             if (orderInit.priceOrder != null) {
                 edttg_Gia.setText(orderInit.priceOrder);
-            } else {
+            }
+            else {
                 edttg_Gia.setText(StringConst.EMPTY);
             }
 
@@ -515,6 +516,7 @@ public class PlaceOrder extends AbstractFragment {
     }
 
     protected void initialiseListener() {
+
         if (DeviceProperties.isTablet) {
             edt_fromdate.addTextChangedListener(new TextWatcher() {
 
@@ -661,6 +663,7 @@ public class PlaceOrder extends AbstractFragment {
 
             }
         });
+
         edttg_Gia.setOnFocusChangeListener(new OnFocusChangeListener() {
 
             @Override
@@ -677,7 +680,7 @@ public class PlaceOrder extends AbstractFragment {
                     if (DeviceProperties.isTablet) {
                         // showKBPrice(false, null);
                     } else {
-                        mainActivity.showKBoardPrice(false, null);
+                        mainActivity.showKBoardPrice(false, edttg_Gia.toEditText());
                     }
                     if (edttg_Gia.getText().length() > 0
                             && !edttg_Gia.getText().toString().contains(".")) {
@@ -687,6 +690,7 @@ public class PlaceOrder extends AbstractFragment {
                 }
             }
         });
+
         edttg_Gia.addTextChangedListener(new TextWatcher() {
 
             @Override
@@ -1416,6 +1420,7 @@ public class PlaceOrder extends AbstractFragment {
                     break;
                 case ERR_AT_PRICE:
                     edttg_Gia.requestFocus(View.FOCUS_RIGHT);
+                    edttg_Gia.setText(StringConst.EMPTY);
                     break;
                 case ERR_AT_PRICETYPE:
                     edttg_LoaiLenh.requestFocus(View.FOCUS_RIGHT);

@@ -4,32 +4,32 @@
     <tabmenu
         class="com.fss.mobiletrading.function.placeorder.PlaceOrder"
         icon="selector_slidemenu_datlenh"
-        title="订单" >
+        title="下單" >
     </tabmenu>
     <tabmenu
         class="com.fss.mobiletrading.function.placeorder.GTCPlaceOrder"
         icon="selector_slidemenu_datlenhgtc"
-        title="条件订单" >
+        title="條件委託" >
     </tabmenu>
     <tabmenu
         class="null"
         icon="selector_slidemenu_solenh"
-        title="订单记录" >
+        title="下單表" >
         <child>
             <tabmenu
                 class="com.fss.mobiletrading.function.orderlist.NormalOrderList"
-                title="一般下單目錄" >
+                title="普通委託列表" >
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.orderlist.GTCOrderList"
-                title="条件订单列表" >
+                title="預約下單表" >
             </tabmenu>
         </child>
     </tabmenu>
     <tabmenu
         class="com.fss.mobiletrading.function.watchlist.WatchList"
         icon="selector_slidemenu_banggia"
-        title="价格表" >
+        title="股价板" >
     </tabmenu>
     <tabmenu
         class="null"
@@ -38,7 +38,7 @@
         <child>
             <tabmenu
                 class="com.fss.mobiletrading.function.cashtransfer.CashTransfer"
-                title="转账" >
+                title="轉賬" >
             </tabmenu>
             <!--<tabmenu-->
             <!--class="com.fss.mobiletrading.function.cashtransfer.CashTransferRegister"-->
@@ -46,45 +46,45 @@
             <!--</tabmenu>-->
             <tabmenu
                 class="com.fss.mobiletrading.function.cashtransfer.CashTransferList"
-                title="收款人列表" >
+                title="受款人名單" >
             </tabmenu>
         </child>
     </tabmenu>
     <tabmenu
         class="null"
         icon="selector_slidemenu_giaodichdb"
-        title="特別交易" >
+        title="特殊交易" >
         <child>
             <tabmenu
                 class="com.fss.mobiletrading.function.rightoffregister.RightOffRegister"
-                title="登记购买权" >
+                title="登記認購權" >
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.stocktransfer.StockTransfer"
-                title="证券转账" >
+                title="證券轉賬" >
             </tabmenu>
         </child>
     </tabmenu>
     <tabmenu
         class="null"
         icon="selector_slidemenu_quanlytk"
-        title="账户管理" >
+        title="賬戶管理" >
         <child>
             <tabmenu
                 class="com.fss.mobiletrading.function.AccountBalance"
-                title="余额" >
+                title="餘額" >
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.portfolio.Porfolio"
-                title="投资组合" >
+                title="投資組合" >
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.Statement"
-                title="银行账号明细表" >
+                title="證券明細" >
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.OrderHistory"
-                title="成交历史" >
+                title="成交歷史" >
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.pastplaceorder.PastPlaceOrder"
@@ -95,7 +95,7 @@
     <tabmenu
         class="null"
         icon="selector_slidemenu_thongtintt"
-        title="信息市场" >
+        title="市場信息" >
         <child>
             <tabmenu
                 class="com.fss.mobiletrading.function.market.MarketInfo"
@@ -103,26 +103,26 @@
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.notify.NotifyFragment"
-                title="FSC通牒（通報）" >
+                title="FNS通知" >
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.coporateactions.CoporateActions"
-                title="公司活动详情公（公司行事歷）" >
+                title="股權事件" >
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.searchstock.SearchStock"
-                title="证券信息" >
+                title="證券信息" >
             </tabmenu>
         </child>
     </tabmenu>
     <tabmenu
         class="null"
         icon="selector_slidemenu_thongtinkh"
-        title="个人信息" >
+        title="個人信息" >
         <child>
             <tabmenu
                 class="com.fss.mobiletrading.function.accountconfig.ChangePassword"
-                title="修改登录密码" >
+                title="修改登錄密碼" >
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.accountconfig.ChangeTradingPassword"
@@ -130,7 +130,7 @@
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.accountconfig.AccountConfig"
-                title="更改個人信息" >
+                title="修改个人信息" >
             </tabmenu>
             <!--<tabmenu-->
                 <!--class="com.fss.mobiletrading.function.authorizationinfo.AuthorizationInfo"-->
@@ -141,7 +141,7 @@
     <tabmenu
         class="com.fss.mobiletrading.function.AboutUs"
         icon="selector_slidemenu_lienhe"
-        title="联系富南" >
+        title=" 聯繫" >
     </tabmenu>
     <tabmenu
         class="null"

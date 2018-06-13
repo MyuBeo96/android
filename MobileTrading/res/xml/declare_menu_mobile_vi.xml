@@ -102,7 +102,7 @@
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.notify.NotifyFragment"
-                title="Thông điệp FSC" >
+                title="Thông điệp FNS" >
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.coporateactions.CoporateActions"
@@ -140,7 +140,7 @@
     <tabmenu
         class="com.fss.mobiletrading.function.AboutUs"
         icon="selector_slidemenu_lienhe"
-        title="Liên hệ FSC" >
+        title="Liên hệ FNS" >
     </tabmenu>
     <tabmenu
         class="null"

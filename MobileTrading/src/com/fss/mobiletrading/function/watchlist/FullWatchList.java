@@ -146,6 +146,11 @@ public class FullWatchList extends WatchList {
 					stockItemInformation.receiverParameter(listItemBangGiaClone
 							.get(position).Symbol);
 				}
+//				StockIndex stockIndex = (StockIndex) mainActivity.mapFragment
+//						.get(StockIndex.class.getName());
+//				if (stockIndex != null) {
+//					stockIndex.receiverparameter(listItemBangGiaClone.get(position).Symbol);
+//				}
 			}
 		});
 		if (!DeviceProperties.isTablet) {

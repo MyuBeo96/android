@@ -141,7 +141,7 @@
     <tabmenu
         class="com.fss.mobiletrading.function.AboutUs"
         icon="selector_slidemenu_lienhe"
-        title="Contacts FSC" >
+        title="Contacts FNS" >
     </tabmenu>
     <tabmenu
         class="null"

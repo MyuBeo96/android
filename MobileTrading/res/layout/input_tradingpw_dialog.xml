@@ -73,7 +73,8 @@
         android:layout_weight="5"
         android:gravity="center"
         android:text="@string/cancel"
-        android:textColor="@color/red_brown_text" />
+        android:textColor="@color/red_brown_text"
+        android:background="@drawable/background_alertdialog"/>
     <View
         android:id="@+id/line_dialog_2"
         android:layout_width="0.5dp"
@@ -87,7 +88,8 @@
         android:layout_weight="5"
         android:gravity="center"
         android:text="@string/XacNhan"
-        android:textColor="@color/green_text" />
+        android:textColor="@color/green_text"
+        android:background="@drawable/background_alertdialog"/>
 
 </LinearLayout>
 

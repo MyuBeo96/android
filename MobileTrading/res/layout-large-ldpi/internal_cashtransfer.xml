@@ -134,7 +134,7 @@
                     android:layout_weight="1"
                     app:contentColor="@color/white_text"
                     app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
-                    app:labelText="@string/SoTaiKkhoanTaiFSC"
+                    app:labelText="@string/SoTaiKkhoanTaiFNS"
                     app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                     app:orientation="vertical" />
 

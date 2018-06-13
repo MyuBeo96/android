@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/alertdialog_title_height"
         android:gravity="center"
-        android:text="@string/DaXoaThanhCong"
+        android:text="@string/KetQuaHuyLenh"
         android:textColor="@color/white_text"
         android:textSize="18sp" />
 

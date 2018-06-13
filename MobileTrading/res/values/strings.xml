@@ -49,9 +49,9 @@
     <string name="TienCoTheUng">Tiền có thể ứng</string>
     <string name="TaiKhoanThuHuong">Tài khoản thụ hưởng</string>
     <string name="TenNganHang">Tên ngân hàng</string>
-    <string name="SoTKTaiFSC">Số TK tại FSC</string>
-    <string name="SoTaiKkhoanTaiFSC">Số tài khoản tại FSC</string>
-    <string name="SoTieuKhoanTaiFSC">Số tiểu khoản tại FSC</string>
+    <string name="SoTKTaiFNS">Số TK tại FNS</string>
+    <string name="SoTaiKkhoanTaiFNS">Số tài khoản tại FNS</string>
+    <string name="SoTieuKhoanTaiFNS">Số tiểu khoản tại FNS</string>
     <string name="DaHuy">Đã hủy</string>
     <string name="Gia1">Giá 1</string>
     <string name="Gia2">Giá 2</string>
@@ -146,12 +146,13 @@
     <string name="DienThoai">Điện thoại</string>
     <string name="TimKiemTheoMa">Tìm kiếm theo mã</string>
     <string name="DaXoaThanhCong">Đã xóa thành công</string>
+    <string name="KetQuaHuyLenh">Kết quả hủy lệnh</string>
     <string name="Yes">Có</string>
     <string name="No">Không</string>
     <string name="Cancel">Hủy</string>
     <string name="XacNhan">Xác nhận</string>
     <string name="Sorry">Xin lỗi không thể tạo bản đồ</string>
-    <string name="FSCBankBranch">Các chi nhánh FSC</string>
+    <string name="FNSBankBranch">Các chi nhánh FNS</string>
     <string name="GPS">GPS trên thiết bị của bạn đã bị tắt, bạn có muốn bật nó lên không</string>
     <string name="Wifi">Wifi trên thiết bị của bạn đã bị tắt, bạn có muốn bật nó lên không</string>
     <string name="gotoGPS">Đi đến phần thiết lập GPS</string>
@@ -391,7 +392,7 @@
     <string name="FullWatchList">Bảng giá đầy đủ</string>
     <string name="ChangeAccount">Chọn tiểu khoản</string>
     <string name="Report">Báo cáo</string>
-    <string name="About">Liên hệ FSC</string>
+    <string name="About">Liên hệ FNS</string>
     <string name="MSINotification">Thông điệp KBSV</string>
     <string name="CashTransferList">Danh sách người thụ hưởng</string>
     <string name="ConditionalTrade">Đặt lệnh điều kiện</string>
@@ -692,7 +693,7 @@
     <string name="logout_msg">Bạn có muốn đăng xuất tài khoản?</string>
 
     <!-- service -->
-    <string name="app_name">FSC-Mobile</string>
+    <string name="app_name">FNS-Mobile</string>
     <string name="controller_Login">/MAccount/Login</string>
     <string name="controller_LoginBroker">/MAccount/LoginBroker</string>
     <string name="controller_AT">/MStock/AT</string>
@@ -797,4 +798,5 @@
     <string name="cancel">"Hủy"</string>
     <string name="XacNhanHuyLenh">Xác nhận hủy lệnh</string>
     <string name="PastPlaceOrder">Lịch sử đặt lệnh</string>
+    <string name="update_newversion">Ứng dụng sử dụng là phiên bản cũ, đề nghị cập nhật bản mới nhất để tiếp tục sử dụng.</string>
 </resources>

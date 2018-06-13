@@ -112,7 +112,7 @@
     <string name="chuyentienrangoai_label_ThongTin">信息</string>
     <string name="CK1CK2CK3">股票1，股票2，股票3，股票4等</string>
     <string name="Clear">刪除</string>
-    <string name="ConditionalTrade">預約委託</string>
+    <string name="ConditionalTrade">預約下單</string>
     <string name="ConfirmOrder">確認委託</string>
     <string name="ConLai">剩餘</string>
     <string name="Conversation">會話</string>
@@ -146,13 +146,14 @@
     <string name="dau_tu_hieu_qua">有效</string>
     <string name="dau_tu_luot_song">短期</string>
     <string name="DaXoaThanhCong">已刪除</string>
-    <string name="Demo">Demo</string>
+    <string name="KetQuaHuyLenh">Cancel orders result</string>
+    <string name="Demo">演示</string>
     <string name="Den">從</string>
     <string name="DenNgay">至</string>
     <string name="desc_list_item_icon">項目圖標</string>
     <string name="DiaChiDangKyVoiVSD">登記地址</string>
     <string name="DiaChiLienHe">聯繫地址</string>
-    <string name="DienThoaiDKSMS">手机</string>
+    <string name="DienThoaiDKSMS">登記收SMS手機號碼</string>
     <string name="DienGiai">陳述</string>
     <string name="DienThoai">電話</string>
     <string name="DienThoai_2">電話</string>
@@ -256,7 +257,7 @@
     <string name="GTCOrderDetail">預約委託詳情</string>
     <string name="GTGD">交易價值</string>
     <string name="HangKhachHang">顧客級別</string>
-    <string name="NguoiNhanUyQuyen">Authorize</string>
+    <string name="NguoiNhanUyQuyen">授權方</string>
     <string name="HDKHSD">客戶指南</string>
     <string name="HDMGSD">經紀人指南</string>
     <string name="hello_world">Hello world!</string>
@@ -353,7 +354,7 @@
     <string name="MaCK2">證券代碼</string>
     <string name="MaCKDuocHuongQuyen">除權證券代碼</string>
     <string name="MaKhachHang">客戶編號</string>
-    <string name="FSCBankBranch">越南航海股份商贸银行各分行</string>
+    <string name="FNSBankBranch">越南航海股份商贸银行各分行</string>
     <string name="MarketCalendar">股市行事曆</string>
     <string name="MarketIndex">市場</string>
     <string name="MarketInfo">市場</string>
@@ -366,7 +367,7 @@
     <string name="MoCua">開盤</string>
     <string name="MoiGioi">經紀人</string>
     <string name="msg_LoiKetNoi">“無法連接服務器。\n請確保您的設備已連接到互聯網”</string>
-    <string name="MSINotification">FSC給予</string>
+    <string name="MSINotification">FNS給予</string>
     <string name="Mua">買入</string>
     <string name="Mua_Ban">買入/賣出</string>
     <string name="Mua_Ban_2">買入/賣出</string>
@@ -392,7 +393,7 @@
     <string name="NgayThucHien">實行日</string>
     <string name="NguoiNhan">受款人</string>
     <string name="Nhap">輸入</string>
-    <string name="NhapPin">請輸入Pin碼</string>
+    <string name="NhapPin">請輸入交易密碼</string>
     <string name="No">否</string>
     <string name="NoBaoLanh">擔保欠款</string>
     <string name="NoiCap">簽發地</string>
@@ -438,7 +439,7 @@
     <string name="RoRPolicy">本人同意從資金賬戶中轉款到富南證券公司賬戶以登記認購股權！</string>
     <string name="RoRPolicy_Error">不同意以上条款？</string>
     <string name="RTT">融資比例</string>
-    <string name="TyLeKyQuy">Margin rate</string>
+    <string name="TyLeKyQuy">實際融資比率</string>
     <string name="Rttconobaolanh">融資比例有擔保債款</string>
     <string name="RTTgomnobaolanh">融資比例（含擔保債款）</string>
     <string name="RtttrunoBLchuadenhan">融資比例扣除未到期的擔保債務</string>
@@ -516,8 +517,8 @@
     <string name="SoTaiKhoanNganHang">銀行賬號</string>
     <string name="SoTaiKhoanNganHang_2">銀行賬號</string>
     <string name="SoTaiKhoanNhan">受款賬號</string>
-    <string name="SoTaiKkhoanTaiFSC">FSC開立的賬號</string>
-    <string name="SoTieuKhoanTaiFSC">在FSC开立的子账号</string>
+    <string name="SoTaiKkhoanTaiFNS">FNS開立的賬號</string>
+    <string name="SoTieuKhoanTaiFNS">在FNS开立的子账号</string>
     <string name="SoTienChoVe">待到賬金額</string>
     <string name="SoTienChuyen">轉賬金額</string>
     <string name="SoTienChuyenVND">轉賬金額（越盾）</string>
@@ -531,8 +532,8 @@
     <string name="SoTieuKhoan">子賬號</string>
     <string name="SoTieuKhoanChuyenTien">轉賬的子賬戶</string>
     <string name="SoTieuKhoanNhan">受款子帳號</string>
-    <string name="SoTieuKhoanTaiMSI">在FSC開立的子賬號</string>
-    <string name="SoTKTaiFSC">在FSC開立的賬號</string>
+    <string name="SoTieuKhoanTaiMSI">在FNS開立的子賬號</string>
+    <string name="SoTKTaiFNS">在FNS開立的賬號</string>
     <string name="Statement">明細表</string>
     <string name="StickerFilter">股票過濾</string>
     <string name="stockcompany_info">富南證券股份公司版權所有\n由FSS提供</string>
@@ -680,10 +681,11 @@
 
     <string name="SanGD">Floor trade</string>
     <string name="LoaiGD">Trade type</string>
-    <string name="TrangThaiLenh">订单状态</string>
+    <string name="TrangThaiLenh">委託狀態</string>
     <string name="showpassword"> 显示密码</string>
-    <string name="ChuaNhapDungDL">Passwords must have least 6 characters</string>
-    <string name="GiaTriVon">Investment value</string>
-    <string name="DienThoaiLienLac">Contact phone</string>
-    <string name="About">联系富南</string>
+    <string name="ChuaNhapDungDL">密碼至少要有6個字元</string>
+    <string name="GiaTriVon">本金價值</string>
+    <string name="DienThoaiLienLac">聯繫電話</string>
+    <string name="About">聯繫</string>
+    <string name="update_newversion">Aplication uses old version, recent update version for continue use.</string>
 </resources>

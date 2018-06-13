@@ -21,6 +21,8 @@
         android:layout_toLeftOf="@+id/btn_Increace"
         android:layout_toRightOf="@+id/btn_Decrease"
         android:gravity="center"
+
+
         android:hint="@string/Nhap"
         android:inputType="numberDecimal"
         android:singleLine="true"

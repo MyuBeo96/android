@@ -176,6 +176,12 @@ public class NormalOrderList extends AbstractFragment {
                         @Override
                         public void onClick(View v) {
                             dialog_resultcancelallorder.dismiss();
+                            dialog.dismiss();
+                            if(DeviceProperties.isTablet){
+                                    selectCancelAll.setActivated(false);
+                                    adapterSolenh
+                                            .selectedCancelAllItem(false);
+                                }
                         }
                     });
         }
@@ -827,21 +833,6 @@ public class NormalOrderList extends AbstractFragment {
                 list_resultcancelallorder.addAll((List<SolenhItem>) rObj.obj);
                 adapter_resultcancelallorder.notifyDataSetChanged();
                 dialog_resultcancelallorder.show();
-                showDialogMessage(getStringResource(R.string.thong_bao),
-                        getStringResource(R.string.Giaodichthanhcong),
-                        new SimpleAction() {
-
-                            @Override
-                            public void performAction(Object obj) {
-                                if(DeviceProperties.isTablet){
-                                    selectCancelAll.setActivated(false);
-                                    adapterSolenh
-                                            .selectedCancelAllItem(false);
-                                }
-                                dialog.dismiss();
-                            }
-
-                        });
                 break;
             case ChooseAfacctno.CHANGE_ACCTNO:
                 ChooseAfacctno chooseAfacctno = (ChooseAfacctno) mainActivity.mapFragment
