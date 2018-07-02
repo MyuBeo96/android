@@ -79,7 +79,7 @@ public class StockItemInformation extends AbstractFragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
+							 Bundle savedInstanceState) {
 		View view = inflater.inflate(getLayoutId(), container, false);
 		container_stockIndex = (LinearLayout) view
 				.findViewById(R.id.container_stockindex);
@@ -146,13 +146,13 @@ public class StockItemInformation extends AbstractFragment {
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 
 			}
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 
 			}
 
@@ -302,7 +302,7 @@ public class StockItemInformation extends AbstractFragment {
 
 	/**
 	 * Truy�?n vào mã chứng khoán cần lấy thông tin
-	 * 
+	 *
 	 * @param symbol
 	 */
 	public void receiverParameter(String symbol) {

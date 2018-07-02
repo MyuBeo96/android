@@ -199,10 +199,6 @@
     <string name="BanCoMuonXoaDanhMucNayKhong">Bạn có muốn xóa danh mục </string>
     <string name="XoaDanhMuc">Xóa danh mục </string>
     <string name="KhongXoaDuocDanhMucMacDinh">Không xóa được danh mục mặc định</string>
-    <string name="VuotQuaKhoiLuongBanChoPhep">Vượt quá khối lượng bán cho phép</string>
-    <string name="VuotQuaKhoiLuongMuaChoPhep">Vượt quá khối lượng mua cho phép</string>
-    <string name="VuotQuaKhoiLuongChoPhep">Vượt quá khối lượng cho phép</string>
-    <string name="VuotQuaSoTienChoPhep">Vượt quá số tiền cho phép</string>
     <string name="SoLuongBan">Số lượng được bán</string>
     <string name="GiaBan">Giá bán</string>
     <string name="GiaTri">Giá trị</string>
@@ -393,7 +389,7 @@
     <string name="ChangeAccount">Chọn tiểu khoản</string>
     <string name="Report">Báo cáo</string>
     <string name="About">Liên hệ FNS</string>
-    <string name="MSINotification">Thông điệp KBSV</string>
+    <string name="MSINotification">Thông điệp FNS</string>
     <string name="CashTransferList">Danh sách người thụ hưởng</string>
     <string name="ConditionalTrade">Đặt lệnh điều kiện</string>
     <string name="GTCOrder">Sổ lệnh điều kiện</string>
@@ -798,5 +794,4 @@
     <string name="cancel">"Hủy"</string>
     <string name="XacNhanHuyLenh">Xác nhận hủy lệnh</string>
     <string name="PastPlaceOrder">Lịch sử đặt lệnh</string>
-    <string name="update_newversion">Ứng dụng sử dụng là phiên bản cũ, đề nghị cập nhật bản mới nhất để tiếp tục sử dụng.</string>
 </resources>

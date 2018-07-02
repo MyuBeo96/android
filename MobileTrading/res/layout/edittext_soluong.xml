@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/edittext_background_color" >
+    android:background="@color/edittext_background_color">
 
     <ImageButton
         android:id="@+id/btn_EdittextSoLuong_Giam"
@@ -13,7 +13,7 @@
         android:background="@drawable/background_button_minus"
         android:padding="0dp" />
 
-    <EditText android:textCursorDrawable="@drawable/shape_textcursoredittext"
+    <EditText
         android:id="@+id/edt_EdittextSoLuong"
         style="@style/EditText_Style1"
         android:layout_width="fill_parent"
@@ -26,6 +26,7 @@
         android:inputType="number"
         android:singleLine="true"
         android:textColorHint="@color/edittext_hint_color"
+        android:textCursorDrawable="@drawable/shape_textcursoredittext"
         android:textSize="12sp" />
 
     <ImageButton

@@ -3,11 +3,11 @@
 
     <tabmenu
         class="com.fss.mobiletrading.function.market.T_MarketInfo"
-        title="市场" >
+        title="市場" >
     </tabmenu>
     <tabmenu
         class="com.fss.mobiletrading.function.watchlist.StockItemInformation"
-        title="证券" >
+        title="證券" >
     </tabmenu>
     <tabmenu
         class="null"
@@ -16,7 +16,7 @@
             <tabmenu
                 style="1"
                 class="null"
-                title="下單表" >
+                title="下單回報" >
                 <child>
                     <tabmenu
                         style="1"
@@ -26,7 +26,7 @@
                     <tabmenu
                         style="1"
                         class="com.fss.mobiletrading.function.orderlist.GTCOrderList"
-                        title="預約下單表" >
+                        title="預約下單回報" >
                     </tabmenu>
                 </child>
             </tabmenu>
@@ -93,7 +93,7 @@
             <tabmenu
                 style="2"
                 class="com.fss.mobiletrading.function.Statement"
-                title="證券明細" >
+                title="明細回報" >
             </tabmenu>
             <tabmenu
                 style="2"
@@ -108,7 +108,7 @@
             <tabmenu
                 style="2"
                 class="com.fss.mobiletrading.function.coporateactions.CoporateActions"
-                title="股權事件" >
+                title="股權行事歷" >
             </tabmenu>
             <tabmenu
                 style="2"
@@ -119,7 +119,7 @@
     </tabmenu>
     <tabmenu
         class="com.fss.mobiletrading.function.accountconfig.AccountConfig"
-        title="個人信息" >
+        title="客戶信息" >
     </tabmenu>
 
 </listmenu>

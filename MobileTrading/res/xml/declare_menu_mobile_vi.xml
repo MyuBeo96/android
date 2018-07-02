@@ -84,11 +84,11 @@
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.OrderHistory"
-                title="Lịch sử khớp lệnh" >
+                title="L.S khớp lệnh" >
             </tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.pastplaceorder.PastPlaceOrder"
-                title="Lịch sử đặt lệnh"></tabmenu>
+                title="L.S đặt lệnh"></tabmenu>
         </child>
     </tabmenu>
     <tabmenu

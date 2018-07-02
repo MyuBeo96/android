@@ -486,8 +486,7 @@ public class PlaceOrder extends AbstractFragment {
             // set giá
             if (orderInit.priceOrder != null) {
                 edttg_Gia.setText(orderInit.priceOrder);
-            }
-            else {
+            } else {
                 edttg_Gia.setText(StringConst.EMPTY);
             }
 
@@ -696,7 +695,6 @@ public class PlaceOrder extends AbstractFragment {
             @Override
             public void onTextChanged(CharSequence s, int start, int before,
                                       int count) {
-
             }
 
             @Override
@@ -713,6 +711,7 @@ public class PlaceOrder extends AbstractFragment {
                 }
             }
         });
+
         edttg_LoaiLenh.setOnClickChangeButton(new OnClickListener() {
 
             @Override

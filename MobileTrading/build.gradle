@@ -51,7 +51,7 @@ android {
             buildConfigField "String", "address_server", '"http://118.69.230.209//MFlexApps"'
         }
         systemTest{
-            buildConfigField "String", "address_server", '"http://14.161.11.106/MFlexApps"'
+            buildConfigField "String", "address_server", '"http://14.161.11.106:2309/MFlexApps"'
         }
     }
     compileOptions {

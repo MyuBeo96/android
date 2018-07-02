@@ -139,6 +139,7 @@ public class Edittext_Gia extends LinearLayout {
                 return true;
             }
         });
+
         edtPrice.setFilters(new InputFilter[]{new FomatPrice()});
         doubleFloorPrice = 0d;
         doubleCeilPrice = 0d;
@@ -162,6 +163,7 @@ public class Edittext_Gia extends LinearLayout {
                 try {
                     Double value = Double.parseDouble(s.toString());
                     if (value < 0) {
+                        removeTextChangedListener(this);
                         removeAllTextChangedListener();
                         edtPrice.setText("0.00");
                         addAllTextChangedListener();

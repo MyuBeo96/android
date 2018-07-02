@@ -147,7 +147,7 @@
     <string name="Cancel">Cancel</string>
     <string name="XacNhan">Confirm</string>
     <string name="Sorry">Sorry! unable to create maps</string>
-    <string name="FNSBankBranch">FNS Branchs</string>
+    <string name="FNSBankBranch">FNS Branches</string>
     <string name="GPS">GPS is disabled in your device. Would you like to enable it?</string>
     <string name="Wifi">Wifi is disabled in your device. Would you like to enable it?</string>
     <string name="gotoGPS">Goto Settings Page To Enable GPS</string>
@@ -194,10 +194,6 @@
     <string name="BanCoMuonXoaDanhMucNayKhong">Do you want to delete  </string>
     <string name="XoaDanhMuc">Delete list </string>
     <string name="KhongXoaDuocDanhMucMacDinh">Not delete default list</string>
-    <string name="VuotQuaKhoiLuongBanChoPhep">Exceeded sales volume allows</string>
-    <string name="VuotQuaKhoiLuongMuaChoPhep">Exceeded buys volume allows</string>
-    <string name="VuotQuaKhoiLuongChoPhep">Exceeded volume allows</string>
-    <string name="VuotQuaSoTienChoPhep">Exceeded amount allows</string>
     <string name="SoLuongBan">Qty</string>
     <string name="GiaBan">Price</string>
     <string name="GiaTri">Value</string>
@@ -699,5 +695,4 @@
     <string name="cancel">"Cancel"</string>
     <string name="XacNhanHuyLenh">Cancel order confirm</string>
     <string name="PastPlaceOrder">Order history</string>
-    <string name="update_newversion">Aplication uses old version, recent update version for continue use.</string>
 </resources>

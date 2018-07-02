@@ -144,7 +144,7 @@ public class StockIndex extends AbstractFragment {
 	}
 
 	public View onCreateView(LayoutInflater paramLayoutInflater,
-			ViewGroup paramViewGroup, Bundle paramBundle) {
+							 ViewGroup paramViewGroup, Bundle paramBundle) {
 		View view = paramLayoutInflater.inflate(getLayout(), paramViewGroup,
 				false);
 		if (mainActivity == null) {
@@ -479,7 +479,7 @@ public class StockIndex extends AbstractFragment {
 	}
 
 	public static boolean CallStockDetails(String lastSeq, String symbol,
-			INotifier notifier, String key) {
+										   INotifier notifier, String key) {
 		if (symbol != null && symbol.length() > 0) {
 			List<String> list_key = new ArrayList<String>();
 			List<String> list_value = new ArrayList<String>();
@@ -730,25 +730,9 @@ public class StockIndex extends AbstractFragment {
 	protected void process(String key, ResultObj rObj) {
 
 		switch (key) {
-		case STOCKDETAILS:
-			if (rObj.obj != null) {
-				StockDetailsItem stockDetailsItem = ((StockDetailsItem) rObj.obj);
-				if (!lastSeq.equals(stockDetailsItem.LS)) {
-					displayView(stockDetailsItem);
-					if (lastSeq.length() == 0 || lastSeq.equals("0")) {
-						stockDetail.setNewData(true);
-					} else {
-						stockDetail.setNewData(false);
-					}
-					stockDetail.setStockDetailsItem(stockDetailsItem);
-					lastSeq = stockDetailsItem.LS;
-				}
-			}
-			break;
-		case STOCKDETAILSREALTIME:
-			if (rObj.obj != null) {
-				StockDetailsItem stockDetailsItem = ((StockDetailsItem) rObj.obj);
-				if (symbol.equals(stockDetailsItem.symbol)) {
+			case STOCKDETAILS:
+				if (rObj.obj != null) {
+					StockDetailsItem stockDetailsItem = ((StockDetailsItem) rObj.obj);
 					if (!lastSeq.equals(stockDetailsItem.LS)) {
 						displayView(stockDetailsItem);
 						if (lastSeq.length() == 0 || lastSeq.equals("0")) {
@@ -760,11 +744,27 @@ public class StockIndex extends AbstractFragment {
 						lastSeq = stockDetailsItem.LS;
 					}
 				}
-			}
-			break;
+				break;
+			case STOCKDETAILSREALTIME:
+				if (rObj.obj != null) {
+					StockDetailsItem stockDetailsItem = ((StockDetailsItem) rObj.obj);
+					if (symbol.equals(stockDetailsItem.symbol)) {
+						if (!lastSeq.equals(stockDetailsItem.LS)) {
+							displayView(stockDetailsItem);
+							if (lastSeq.length() == 0 || lastSeq.equals("0")) {
+								stockDetail.setNewData(true);
+							} else {
+								stockDetail.setNewData(false);
+							}
+							stockDetail.setStockDetailsItem(stockDetailsItem);
+							lastSeq = stockDetailsItem.LS;
+						}
+					}
+				}
+				break;
 
-		default:
-			break;
+			default:
+				break;
 		}
 	}
 
@@ -774,16 +774,16 @@ public class StockIndex extends AbstractFragment {
 	protected void isReceivedResponse(String key) {
 		super.isReceivedResponse(key);
 		switch (key) {
-		case STOCKDETAILS:
-			handler.postDelayed(clearHighLight, HIGHLIGHT_INTERVAL);
-			break;
-		case STOCKDETAILSREALTIME:
-			handler.postDelayed(clearHighLight, HIGHLIGHT_INTERVAL);
-			requestRealtime.trigger();
-			break;
+			case STOCKDETAILS:
+				handler.postDelayed(clearHighLight, HIGHLIGHT_INTERVAL);
+				break;
+			case STOCKDETAILSREALTIME:
+				handler.postDelayed(clearHighLight, HIGHLIGHT_INTERVAL);
+				requestRealtime.trigger();
+				break;
 
-		default:
-			break;
+			default:
+				break;
 		}
 	}
 

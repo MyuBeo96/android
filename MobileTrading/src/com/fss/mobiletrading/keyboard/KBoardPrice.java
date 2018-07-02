@@ -8,6 +8,7 @@ import android.inputmethodservice.KeyboardView.OnKeyboardActionListener;
 import android.text.Editable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.TranslateAnimation;
 import android.widget.EditText;
@@ -69,14 +70,14 @@ public class KBoardPrice extends LinearLayout {
         mKeyboardView.setOnKeyboardActionListener(mOnKeyboardActionListener);
     }
 
-    private OnKeyboardActionListener mOnKeyboardActionListener = new OnKeyboardActionListener() {
+    public OnKeyboardActionListener mOnKeyboardActionListener = new OnKeyboardActionListener() {
         @Override
         public void onKey(int primaryCode, int[] keyCodes) {
             if (focusCurrent == null) {
                 return;
             }
             EditText edt = ((EditText) focusCurrent);
-            Editable editable = edt.getText();
+            final Editable editable = edt.getText();
             int cursorStart = edt.getSelectionStart();
             int cursorEnd = edt.getSelectionEnd();
             if (primaryCode < 0 || editable == null) {
@@ -139,6 +140,7 @@ public class KBoardPrice extends LinearLayout {
                             Character.toString((char) primaryCode));
                     break;
             }
+            edt.setSelection(editable.toString().length());
         }
 
         @Override

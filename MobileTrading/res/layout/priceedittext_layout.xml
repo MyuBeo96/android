@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/edittext_background_color" >
+    android:background="@color/edittext_background_color">
 
     <ImageButton
         android:id="@+id/btn_Decrease"
@@ -21,15 +21,13 @@
         android:layout_toLeftOf="@+id/btn_Increace"
         android:layout_toRightOf="@+id/btn_Decrease"
         android:gravity="center"
-
-
         android:hint="@string/Nhap"
+        android:digits="0123456789.,"
         android:inputType="numberDecimal"
         android:singleLine="true"
         android:textColorHint="@color/edittext_hint_color"
         android:textCursorDrawable="@drawable/shape_textcursoredittext"
         android:textSize="12sp" />
-
     <ImageButton
         android:id="@+id/btn_Increace"
         android:layout_width="30dp"

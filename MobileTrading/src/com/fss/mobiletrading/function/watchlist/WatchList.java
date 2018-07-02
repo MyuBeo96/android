@@ -349,12 +349,12 @@ public class WatchList extends AbstractFragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-				StockItemInformation stockItemInformation = (StockItemInformation) mainActivity.mapFragment
-						.get(StockItemInformation.class.getName());
-				if (stockItemInformation != null) {
-					stockItemInformation.receiverParameter(listItemBangGiaClone
-							.get(position).Symbol);
-				}
+                StockItemInformation stockItemInformation = (StockItemInformation) mainActivity.mapFragment
+                        .get(StockItemInformation.class.getName());
+                if (stockItemInformation != null) {
+                    stockItemInformation.receiverParameter(listItemBangGiaClone
+                            .get(position).Symbol);
+                }
 //                StockIndex stockIndex = (StockIndex) mainActivity.mapFragment
 //                        .get(StockIndex.class.getName());
 //                if (stockIndex != null) {

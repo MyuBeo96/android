@@ -1,18 +1,18 @@
 package com.fscuat.mobiletrading;
 
-public class MSTradeAppConfig {
+    public class MSTradeAppConfig {
 
 //        public static String address_server = "http://m.fss.com.vn/MFlexTest";
-    //public static String address_server = "https://kbmobile.kbsec.com.vn/mobiapp"; // server that cu
+        //public static String address_server = "https://kbmobile.kbsec.com.vn/mobiapp"; // server that cu
 //    public static String address_server = "httpPlacs://hftuat.fss.com.vn/MFlexTest";//uat
 //    public static String address_server = "http://owa.msi.com.vn/MFlexApps";   // server uat moi
 
 //       public static String address_server = "https://hftsso.fss.com.vn/MFlexTest";//test
 //   public static String address_server = "http://192.168.18.190/MFlexApps";//PNS
-    //   public static String address_server = "http://192.168.50.34/MFlexApps";//PNS-DBFNS
+        //   public static String address_server = "http://192.168.50.34/MFlexApps";//PNS-DBFNS
 
 
-    /*Config Login SSO*/
+        /*Config Login SSO*/
 //    link mở ssou hft
 //    [6/28/2016 2:30:25 PM] FSS- giang xuan: hftsso.fss.com.vn/MFlexTest/Account/LoginOAth
 //    [6/28/2016 2:30:35 PM] FSS- giang xuan: server gpush
@@ -21,31 +21,31 @@ public class MSTradeAppConfig {
 //    public static String MobileServerUrl = "https://hftuat.fss.com.vn/MFlexTest/Account/LoginOAuth?lang=";
 //    public static String returnLoginUrl = "https://hftuat.fss.com.vn/MFlexTest/";
 //    public static String NTServerUrl = "https://hftuat.fss.com.vn/NTSServer";
-    //    test
+        //    test
 //    pblic static String MobileServerUrl = "https://hftsso.fss.com.vn/MFlexTest/Account/LoginOAuth?lang=";
 //    public static String returnLoginUrl = "https://hftsso.fss.com.vn/MFlexTest/";
 //    public static String NTServerUrl = "https://hftsso.fss.com.vn/NTSServer";
 //    production
-    public static String MobileServerUrl = "https://owa.msi.com.vn/MFlexApps/Account/LoginOAuth?lang=";
-    public static String returnLoginUrl = "https://owa.msi.com.vn/MFlexApps/";
-    public static String NTServerUrl = "https://owa.msi.com.vn/NTSServer";
+        public static String MobileServerUrl = "https://owa.msi.com.vn/MFlexApps/Account/LoginOAuth?lang=";
+        public static String returnLoginUrl = "https://owa.msi.com.vn/MFlexApps/";
+        public static String NTServerUrl = "https://owa.msi.com.vn/NTSServer";
 
 
-    public static final String controller_FindCustodyCd = "/MAccount/FindCustodyCd";
-    public static final String controller_ChooseAcctno = "/MAccount/ChooseAcctno";
-    public static final String controller_checkSession = "/MAccount/checkSession";
+        public static final String controller_FindCustodyCd = "/MAccount/FindCustodyCd";
+        public static final String controller_ChooseAcctno = "/MAccount/ChooseAcctno";
+        public static final String controller_checkSession = "/MAccount/checkSession";
 
-    /* login */
-    public static final String controller_ResetPass = "/MAccount/ResetPass";
-    //    logoutSSO
-    public static final String logout_SSO = "/Account/LogOff";
-    //    get config server
-    public static final String getConfigServer = "/MClientConfig/getConfigApp";
-    /* market */
-    public static final String controller_MarketIndex = "/MHome/Mkt";
-    public static final String controller_MarketChart = "/MHome/MarketChart";
-    /* watchlist */
-    public static final String controller_GetAllWatchListDefault = "/MWatchList/GetAllWatchListDefault";
+        /* login */
+        public static final String controller_ResetPass = "/MAccount/ResetPass";
+        //    logoutSSO
+        public static final String logout_SSO = "/Account/LogOff";
+        //    get config server
+        public static final String getConfigServer = "/MClientConfig/getConfigApp";
+        /* market */
+        public static final String controller_MarketIndex = "/MHome/Mkt";
+        public static final String controller_MarketChart = "/MHome/MarketChart";
+        /* watchlist */
+        public static final String controller_GetAllWatchListDefault = "/MWatchList/GetAllWatchListDefault";
     public static final String controller_StockDetails = "/MWatchList/StockDetails";
     public static final String controller_GetDefaultWatchList = "/MWatchList/GetDefaultWatchList";
     public static final String controller_RmFrWL = "/MWatchList/RmFrWL";
