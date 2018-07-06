@@ -527,6 +527,14 @@ public class Login extends FragmentActivity implements INotifier {
 	}
 
 	private void updateText() {
+		if(AppData.language.equals(AppData.LOCALE_ZH)){
+			tv_TimeOut.setVisibility(View.GONE);
+			tv_Minus.setText((getResources().getString(R.string.timeoutTQ)));
+		}else {
+			tv_TimeOut.setVisibility(View.VISIBLE);
+			tv_TimeOut.setText(getResources().getString(R.string.timeoutsau));
+			tv_Minus.setText(getResources().getString(R.string.phut));
+		}
 		btn_Login.setText(getResources().getString(R.string.login_btn_Login));
 		btn_LoginDemo.setText(getResources().getString(R.string.Demo));
 		tv_remember.setText(getResources().getString(R.string.ghi_nho));
@@ -535,8 +543,6 @@ public class Login extends FragmentActivity implements INotifier {
 		tv_FindBranch.setText(getResources()
 				.getString(R.string.ChiNhanhGanNhat));
 		tv_Guide.setText(getResources().getString(R.string.HuongDan));
-		tv_TimeOut.setText(getResources().getString(R.string.timeoutsau));
-		tv_Minus.setText(getResources().getString(R.string.phut));
 		tv_chooseLang
 				.setText(getResources().getString(R.string.LuaChonNgonNgu));
 		tv_scinfo.setText(getResources().getString(R.string.stockcompany_info));

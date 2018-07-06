@@ -58,7 +58,7 @@
     <string name="ConditionalTrade">預約下單</string>
     <string name="ConfirmOrder">確認委託</string>
     <string name="CoporateAction">股權行事歷</string>
-    <string name="DaDangKyMuaHet">全部登記買入（登記購買全部）</string>
+    <string name="DaDangKyMuaHet">認購所有個股之股權</string>
     <string name="DaHuy">已取消</string>
     <string name="DaKhop">已撮合</string>
     <string name="DaXoaThanhCong">已成功刪除</string>
@@ -139,7 +139,7 @@
     <string name="HinhThucChuyenKhoan">轉賬形式</string>
     <string name="HoTen">姓名</string>
     <string name="HoTenKhachHang">客戶姓名</string>
-    <string name="HoatDong">委託激活中</string>
+    <string name="HoatDong">委託生效中</string>
     <string name="HuongDan">指南</string>
     <string name="HuongDanNopTien">入金指南</string>
     <string name="HuyHet">全部取消</string>
@@ -161,9 +161,9 @@
     <string name="KetQuaHuyLenh">取消委託結果</string>
     <string name="KhachHang">客戶</string>
     <string name="KhoiLuong">數量</string>
-    <string name="KhoiLuongChuyen">轉出量</string>
+    <string name="KhoiLuongChuyen">轉出股數</string>
     <string name="KhoiLuongGiam">减少量</string>
-    <string name="KhoiLuongHienCo">現有量</string>
+    <string name="KhoiLuongHienCo">持有股數</string>
     <string name="KhoiLuongKhop">成交量</string>
     <string name="KhoiLuongTang">上涨數量</string>
     <string name="KhoiLuong_2">數量</string>
@@ -238,7 +238,7 @@
     <string name="NguoiNhanUyQuyen">授權方</string>
     <string name="Nhap">輸入</string>
     <string name="NhapPin">請輸入交易密碼</string>
-    <string name="NoiCap">簽發地</string>
+    <string name="NoiCap">簽發處</string>
     <string name="NoiDung">內容</string>
     <string name="NoiDungChuyenTien">轉賬內容</string>
     <string name="Notice_ChuyenTien3">轉賬時間為24/7</string>
@@ -249,7 +249,7 @@
     <string name="OrderHistory">成交歷史</string>
     <string name="OrderList">下單回報</string>
     <string name="PastPlaceOrder">下單歷史</string>
-    <string name="PercentLaiLo">盈/虧比率</string>
+    <string name="PercentLaiLo">盈/虧率(%)</string>
     <string name="PermissionTable">股權名單</string>
     <string name="PhiGiaoDich">交易費</string>
     <string name="PhiUngDuTinh">預算預支費</string>
@@ -270,9 +270,9 @@
     <string name="RoRPolicy_Error">您未同意以上条款</string>
     <string name="RoomNuocNgoai">外資額度</string>
     <string name="SDTMoiGioiChamSoc">經紀人電話</string>
-    <string name="SLCoTheChuyen">可轉數量</string>
+    <string name="SLCoTheChuyen">可轉股數</string>
     <string name="STT">序號</string>
-    <string name="San">交易所</string>
+    <string name="San">跌停</string>
     <string name="SanGD">交易所</string>
     <string name="Search">查找</string>
     <string name="SearchStock">證券信息</string>
@@ -285,7 +285,7 @@
     <string name="SoDu">餘額</string>
     <string name="SoDuChungKhoan">證券餘額</string>
     <string name="SoDuCuoi">期末餘額</string>
-    <string name="SoDuCuoiKy">期末余额</string>
+    <string name="SoDuCuoiKy">期末餘額</string>
     <string name="SoDuDauKy">期初餘額</string>
     <string name="SoDuTien">現金餘額</string>
     <string name="SoDuTienVND">現金餘額(VND)</string>
@@ -295,7 +295,7 @@
     <string name="SoLuongCKDuocMua">可認購股數</string>
     <string name="SoLuongChungKhoanChoVe">待到賬證券</string>
     <string name="SoLuongChungKhoanSoHuu">股票庫存</string>
-    <string name="SoLuongChuyen">證券轉出量</string>
+    <string name="SoLuongChuyen">證券轉出股數</string>
     <string name="SoLuongDaDangKyMua">已認購股數</string>
     <string name="SoLuongDuocMua">可認購股數</string>
     <string name="SoLuongKhop">成交量</string>
@@ -305,7 +305,7 @@
     <string name="SoLuongPhaiLonHon0">數量須大於0</string>
     <string name="SoLuong_2">數量</string>
     <string name="SoLuuKy">證券賬號</string>
-    <string name="SoLuuKyNhan">受款子賬號</string>
+    <string name="SoLuuKyNhan">受款子賬戶</string>
     <string name="SoTKTaiFNS">FNS之證券賬號</string>
     <string name="SoTaiKhoan">賬號</string>
     <string name="SoTaiKhoanKhongTonTai">賬號不存在</string>
@@ -359,7 +359,7 @@
     <string name="ThanhPho">城市</string>
     <string name="Thap">低</string>
     <string name="ThapNhat">最低</string>
-    <string name="ThayDoi">修改</string>
+    <string name="ThayDoi">變動</string>
     <string name="ThemMoi">新增</string>
     <string name="ThiTruong">市場</string>
     <string name="ThoiGian">時間</string>
@@ -408,9 +408,9 @@
     <string name="TrangThaiLenh">委託狀態</string>
     <string name="TrungBinh">平均</string>
     <string name="Tu">自</string>
-    <string name="TuNgay">到</string>
+    <string name="TuNgay">從</string>
     <string name="Ty">10億</string>
-    <string name="TyLeKyQuy">融資比率</string>
+    <string name="TyLeKyQuy">融資實際比例</string>
     <string name="TyLePhanBo">分配比例</string>
     <string name="Tyle">比例</string>
     <string name="UPCOM">UPCOM</string>
@@ -423,7 +423,7 @@
     <string name="WatchList">價格表</string>
     <string name="Wifi">您的裝置已關閉網路，是否重啟？</string>
     <string name="XacNhan">確認</string>
-    <string name="XacNhanHuyLenh">取消訂單確認</string>
+    <string name="XacNhanHuyLenh">取消委託確認</string>
     <string name="XacNhanLenh">確認委託</string>
     <string name="Xem">查閱</string>
     <string name="XemTheoT_G">按時間查看</string>
@@ -445,7 +445,7 @@
     <string name="banggia_MuaGia1KL1">價格1/數量1</string>
     <string name="banggia_MuaGia2KL2">價格2/數量2</string>
     <string name="banggia_MuaGia3KL3">價格3/數量3</string>
-    <string name="banggia_change">修改</string>
+    <string name="banggia_change">變動</string>
     <string name="banggia_lbl_02">HNX</string>
     <string name="banggia_lbl_04">UPCOM</string>
     <string name="banggia_lbl_10">HOSE</string>
@@ -458,7 +458,7 @@
     <string name="cap_nhat">更新</string>
     <string name="cbl_Not">否</string>
     <string name="cbl_OK">是</string>
-    <string name="change">修改</string>
+    <string name="change">變動</string>
     <string name="chi_tiet">明細</string>
     <string name="chu_tai_khoan">主賬戶</string>
     <string name="chuyenkhoanck_NoStock">沒有任何證券能轉</string>
@@ -473,11 +473,11 @@
     <string name="chuyentienrangoai_label_ThongTin">信息</string>
     <string name="confirm">確認</string>
     <string name="danh_sach_ma">股票列表</string>
-    <string name="datlenh_label_ChoVe">待到帳中</string>
+    <string name="datlenh_label_ChoVe">待到賬中</string>
     <string name="datlenh_label_HanMucMua">購買力限額</string>
-    <string name="datlenh_label_KLDuocMua">最大買入量</string>
+    <string name="datlenh_label_KLDuocMua">可買進股數</string>
     <string name="datlenh_label_KLduocban">最大賣出量</string>
-    <string name="datlenh_label_San">交易所</string>
+    <string name="datlenh_label_San">跌停</string>
     <string name="datlenh_label_SplitQtty">除以數量</string>
     <string name="datlenh_label_SucMua">購買力</string>
     <string name="datlenh_label_TyLeVay">融資比例</string>
@@ -493,7 +493,7 @@
     <string name="dmck_item_GiaTT">市場價格</string>
     <string name="dmck_item_GiaTriTT">市場價值</string>
     <string name="dmck_item_TotalPL">盈/虧</string>
-    <string name="dmck_item_TotalPLpercent">盈/虧率</string>
+    <string name="dmck_item_TotalPLpercent">盈/虧率(%)</string>
     <string name="doipass_lbl_again_passmoi">重新輸入新密碼</string>
     <string name="doipass_lbl_again_pinmoi">重新輸入交易密碼</string>
     <string name="doipass_lbl_passcu">舊密碼</string>
@@ -512,7 +512,7 @@
     <string name="error_no_enter_subaccount">請輸入子賬號</string>
     <string name="error_processjson"></string>
     <string name="error_timeout">登錄逾時或已在其他裝置登錄了</string>
-    <string name="ghi_nho">儲存信息</string>
+    <string name="ghi_nho">保存信息</string>
     <string name="gotoGPS">設置定位</string>
     <string name="gotoWifi">設置Wifi</string>
     <string name="kieu">類型</string>
@@ -530,6 +530,7 @@
     <string name="msg_LoiKetNoi">無法連接服務器。請確保您的設備已連接到互聯網</string>
     <string name="ngay_tao">創建日期</string>
     <string name="no">否</string>
+    <string name="No">否</string>
     <string name="noti_loading">請稍等</string>
     <string name="ok">确定</string>
     <string name="options_clear">刪除</string>
@@ -539,7 +540,7 @@
     <string name="percent">％</string>
     <string name="percent_change">變動比率</string>
     <string name="phut">分</string>
-    <string name="saoketien_label_Amount">修改</string>
+    <string name="saoketien_label_Amount">變動</string>
     <string name="saoketien_label_ngay">日期</string>
     <string name="server_register_error">無法在演示服務器登記成功</string>
     <string name="server_registered">來自演示服務器：成功添加設備</string>
@@ -567,13 +568,13 @@
     <string name="solenh_label_Khophet">已撮合名單</string>
     <string name="solenh_lenhkhongduocphephuy">此委託不能取消</string>
     <string name="solenh_lenhkhongduocphepsua">此委託不能修改</string>
-    <string name="stockcompany_info">富南證券股份公司版權所有由FSS提供</string>
+    <string name="stockcompany_info">富南證券股份公司版權所有\n由FSS提供</string>
     <string name="supplier_info">由FSS提供</string>
     <string name="tai_khoan_moi_gioi">經紀人賬戶</string>
     <string name="thietlaptk_ConfirmPass">確認新密碼</string>
-    <string name="thietlaptk_ConfirmPin">確認新的交易碼</string>
+    <string name="thietlaptk_ConfirmPin">確認新交易密碼</string>
     <string name="thietlaptk_NewPass">新登錄密碼</string>
-    <string name="thietlaptk_NewPin">新交易码</string>
+    <string name="thietlaptk_NewPin">新交易密碼</string>
     <string name="thietlaptk_OldPass">舊登錄密碼</string>
     <string name="thietlaptk_OldPin">舊交易密碼</string>
     <string name="thong_bao">通知</string>
@@ -593,5 +594,7 @@
     <string name="ungtruoc_label_SoTienUng">預支金額</string>
     <string name="ungtruoc_label_TienNhan">預支扣掉費用後實得金額</string>
     <string name="xacnhandangkyquyenmua">確認認購股權</string>
+
+    <string name="timeoutTQ">分鐘後逾時</string>
 
 </resources>
