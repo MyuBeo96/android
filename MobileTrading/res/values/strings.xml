@@ -680,7 +680,7 @@
     <string name="dotbiengia_kl_lbl_GiaDotBien">Giá đột biến</string>
     <string name="dotbiengia_lbl_Notice">KLGD>=ss1 &amp; ss2 trong ss3</string>
     <string name="dotbiengiakhoiluong_lbl_Notice">ss1 &amp; KLGD>=ss2 &amp; KLGD>= ss3 KLGDTB trong ss4</string>
-    <string name="SendEmail">Gửi email</string>
+    <string name="SendEmailEmail">Gửi email</string>
     <string name="livechat_LiveChat">Live chat</string>
     <string name="livechat_TuVanDauTu">Tư vấn đầu tư</string>
     <string name="livechat_vietgidovaoday">Viết tin nhắn ở đây</string>
