@@ -56,6 +56,7 @@ public class MarketIndex extends AbstractFragment {
 	TextViewHightLight tv_marketIndex;
 	TextView tv_noChange;
 	TextView tv_marketIndexStatus;
+	TextView lbl_marketindex_TotalValue;
 	ViewPager viewPager;
 	int viewPaperSelection;
 	private MarketIndexGraphView graphView;
@@ -106,6 +107,8 @@ public class MarketIndex extends AbstractFragment {
 				.findViewById(R.id.marketindex_viewpager));
 		tv_marketIndexStatus = ((TextView) localView
 				.findViewById(R.id.text_marketindex_Status));
+		lbl_marketindex_TotalValue = (TextView) localView
+				.findViewById(R.id.lbl_marketindex_TotalValue);
 		initialise();
 		initialiseListener();
 		return localView;
@@ -267,15 +270,25 @@ public class MarketIndex extends AbstractFragment {
 		tv_marketIndex.setText(marketIndexItem.marketIndex);
 		tv_TotalShare.setText(Common.formatAmount(marketIndexItem.totalVolume));
 		if (marketIndexItem.totalValue.length() > 9) {
-			tv_TotalValue
-					.setText(NumberFormat
-							.getNumberInstance(Locale.US)
-							.format(Double
-									.parseDouble(marketIndexItem.totalValue) / 1000000000)
-							+ " " + getStringResource(R.string.Ty));
+			if(AppData.language.equals(AppData.LOCALE_ZH)){
+				tv_TotalValue
+						.setText(NumberFormat
+										.getNumberInstance(Locale.US)
+										.format(Double
+												.parseDouble(marketIndexItem.totalValue) / 1000000000));
+				lbl_marketindex_TotalValue.setText(getStringResource(R.string.thongtinthitruong_lbl_TotalValue_Billion));
+			}else {
+				tv_TotalValue
+						.setText(NumberFormat
+								.getNumberInstance(Locale.US)
+								.format(Double
+										.parseDouble(marketIndexItem.totalValue) / 1000000000)
+								+ " " + getStringResource(R.string.Ty));
+			}
 		} else {
 			tv_TotalValue.setText(Common
 					.formatAmount(marketIndexItem.totalValue));
+			lbl_marketindex_TotalValue.setText(getStringResource(R.string.thongtinthitruong_lbl_TotalValue));
 		}
 		tv_TotalTrade.setText(Common.formatAmount(marketIndexItem.totalTrade));
 		tv_advances.setText(marketIndexItem.advances);

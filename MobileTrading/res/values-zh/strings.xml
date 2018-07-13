@@ -120,7 +120,7 @@
     <string name="GiaTriThiTruong">市場價值</string>
     <string name="GiaTriVon">本金價值</string>
     <string name="GiaVon">成本價</string>
-    <string name="Giam">下降</string>
+    <string name="Giam">減少</string>
     <string name="Giamua">買入價</string>
     <string name="GiaoDich">交易</string>
     <string name="GiaoDich_2">交易</string>
@@ -162,10 +162,10 @@
     <string name="KhachHang">客戶</string>
     <string name="KhoiLuong">數量</string>
     <string name="KhoiLuongChuyen">轉出股數</string>
-    <string name="KhoiLuongGiam">减少量</string>
+    <string name="KhoiLuongGiam">減少數量</string>
     <string name="KhoiLuongHienCo">持有股數</string>
     <string name="KhoiLuongKhop">成交量</string>
-    <string name="KhoiLuongTang">上涨數量</string>
+    <string name="KhoiLuongTang">增加數量</string>
     <string name="KhoiLuong_2">數量</string>
     <string name="KhongCoLenhDeHuy">無取消的委託</string>
     <string name="KhongMoDuocLink">無法啟用鏈接</string>
@@ -346,7 +346,7 @@
     <string name="TaiKhoanDangNhap">登錄賬戶</string>
     <string name="TaiKhoanNganHang">銀行賬戶</string>
     <string name="TaiKhoanThuHuong">受款賬戶</string>
-    <string name="Tang">資金增加</string>
+    <string name="Tang">增加</string>
     <string name="TenCK">股票名稱</string>
     <string name="TenChucNang">功能名稱</string>
     <string name="TenCongTy">公司名稱</string>
@@ -409,7 +409,7 @@
     <string name="TrungBinh">平均</string>
     <string name="Tu">自</string>
     <string name="TuNgay">從</string>
-    <string name="Ty">10億</string>
+    <string name="Ty"></string>
     <string name="TyLeKyQuy">融資實際比例</string>
     <string name="TyLePhanBo">分配比例</string>
     <string name="Tyle">比例</string>
@@ -564,7 +564,7 @@
     <string name="solenh_chitiet_SoLuuKy">證券賬號</string>
     <string name="solenh_chitiet_btn_SuaLenh">修改委託</string>
     <string name="solenh_chitiet_title">委託詳情</string>
-    <string name="solenh_label_All">所有委託</string>
+    <string name="solenh_label_All">股票代碼</string>
     <string name="solenh_label_Khophet">已撮合名單</string>
     <string name="solenh_lenhkhongduocphephuy">此委託不能取消</string>
     <string name="solenh_lenhkhongduocphepsua">此委託不能修改</string>
@@ -583,6 +583,7 @@
     <string name="thongtinthitruong_lbl_TotalShare">總數量</string>
     <string name="thongtinthitruong_lbl_TotalTrade">總交易數量</string>
     <string name="thongtinthitruong_lbl_TotalValue">總價值</string>
+    <string name="thongtinthitruong_lbl_TotalValue_Billion">總價值 (十億)</string>
     <string name="tilevaymargin">融資比例</string>
     <string name="tilevaytopup"></string>
     <string name="timeoutsau">超時</string>

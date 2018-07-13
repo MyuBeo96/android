@@ -13,7 +13,8 @@
         </shape></item>
     <item android:state_enabled="true" android:state_pressed="true"><shape>
             <solid android:color="#ff00cccc" />
-            <corners android:radius="30dp" />
+
+            <corners android:radius="30dp" />
         </shape></item>
 
 </selector>

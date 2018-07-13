@@ -141,7 +141,7 @@
     <tabmenu
         class="com.fss.mobiletrading.function.AboutUs"
         icon="selector_slidemenu_lienhe"
-        title=" 聯繫" >
+        title="聯繫FNS" >
     </tabmenu>
     <tabmenu
         class="null"
