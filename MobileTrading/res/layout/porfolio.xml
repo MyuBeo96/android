@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_marginLeft="@dimen/m_paddingLeft"
     android:layout_marginRight="@dimen/m_paddingRight"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:weightSum="10">
 
-    <com.handmark.pulltorefresh.library.PullToRefreshListView
-        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    <com.handmark.pulltorefresh.library.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
         android:id="@+id/pull_refresh_Porfolio"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
         android:divider="@color/listview_separation_color"
         android:fadingEdge="none"
         android:fastScrollEnabled="false"
@@ -21,4 +23,111 @@
         android:smoothScrollbar="true"
         ptr:ptrHeaderTextAppearance="@style/TextAppearance" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/listview_separation_color" />
+
+    <TextView
+        style="@style/Label_Style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="0.6"
+        android:background="@color/header_background_color"
+        android:text="@string/TongHop" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/listview_separation_color" />
+
+    <com.fscuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_porfolio_TongGTriVon"
+        style="@style/Label_Style"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="0.6"
+        app:contentColor="@color/white_text"
+        app:contentgravity="right"
+        app:editable="true"
+        app:labelText="@string/TongGiaTriVon"
+        app:labelweight="5"
+        app:orientation="horizontal"
+        app:separationColor="@color/transparent" />
+
+    <com.fscuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_porfolio_TongGTriTT"
+        style="@style/Label_Style"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="0.6"
+        app:contentgravity="right"
+        app:editable="true"
+        app:labelText="@string/TongGiaTriTT"
+        app:labelweight="5"
+        app:orientation="horizontal"
+        app:separationColor="@color/transparent" />
+
+    <com.fscuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_porfolio_LaiLo"
+        style="@style/Label_Style"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_weight="0.6"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        app:contentgravity="right"
+        app:editable="true"
+        app:labelText="@string/dmck_item_TotalPL"
+        app:labelweight="5"
+        app:orientation="horizontal"
+        app:separationColor="@color/transparent" />
+
+    <com.fscuat.mobiletrading.design.LabelContentLayout
+        android:id="@+id/text_porfolio_PercentLaiLo"
+        style="@style/Label_Style"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_weight="0.6"
+        app:contentgravity="right"
+        app:editable="true"
+        app:labelText="@string/dmck_item_TotalPLpercent"
+        app:labelweight="5"
+        app:orientation="horizontal"
+        app:separationColor="@color/transparent"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+    <!--Tablet-->
+    <TextView
+        android:id="@+id/text_totalmarketvalue"
+        style="@style/Content_Style"
+        android:layout_width="150dp"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_giavonTotal"
+        style="@style/Content_Style"
+        android:layout_width="150dp"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_plTotal"
+        style="@style/Content_Style"
+        android:layout_width="100dp"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_percentplTotal"
+        style="@style/Content_Style"
+        android:layout_width="50dp"
+        android:gravity="center"
+        android:visibility="gone" />
 </LinearLayout>

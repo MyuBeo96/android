@@ -115,7 +115,7 @@
     <!-- stockinfo_index -->
     <dimen name="t_stockinfo_index_labelsize">16sp</dimen>
     <dimen name="t_stockinfo_index_contentsize">17sp</dimen>
-    <dimen name="button_bidoffer_width">50dp</dimen>
+    <dimen name="button_bidoffer_width">38dp</dimen>
     <dimen name="button_bidoffer_height">25dp</dimen>
     <dimen name="stockinfo_index_bidofflabelsize">14sp</dimen>
 

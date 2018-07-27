@@ -8,6 +8,7 @@ import android.content.res.Resources.NotFoundException;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -66,6 +67,7 @@ public class MainActivity_Tablet extends MainActivity {
     LinearLayout menulevelthird;
     LinearLayout contain_function;
     LinearLayout contain_watchlist;
+    LinearLayout contain_watchlist_price;
     LinearLayout lay_chooseacc;
     LinearLayout lay_agentinfo;
     LinearLayout lay_customerclass;
@@ -163,7 +165,7 @@ public class MainActivity_Tablet extends MainActivity {
         menulevelthird = (LinearLayout) findViewById(R.id.lay_tablet_activitymain_menulevel3);
         contain_function = (LinearLayout) findViewById(R.id.container_tablet_activitymain_function);
         contain_watchlist = (LinearLayout) findViewById(R.id.container_tablet_activitymain_watchlist);
-
+contain_watchlist_price = (LinearLayout) findViewById(R.id.container_tablet_activitymain_watchlist_price);
         logo = (ImageView) findViewById(R.id.img_tablet_activitymain_logo);
         btn_Buy = (Button) findViewById(R.id.btn_tablet_activitymain_buy);
         btn_Sell = (Button) findViewById(R.id.btn_tablet_activitymain_sell);
@@ -703,12 +705,14 @@ public class MainActivity_Tablet extends MainActivity {
     boolean isShowFullPriceBoard = false;
 
     public void showFullPriceBoard(boolean isshowfull) {
+        LayoutParams pr_price = contain_watchlist_price.getLayoutParams();
         LayoutParams pr = contain_watchlist.getLayoutParams();
         if (isshowfull) {
             if (!isShowFullPriceBoard) {
                 displayFragment(FullWatchList.class.getName(),
                         contain_watchlist.getId());
                 fm.executePendingTransactions();
+                pr_price.width = LayoutParams.MATCH_PARENT;
                 pr.width = LayoutParams.MATCH_PARENT;
                 isShowFullPriceBoard = true;
             }
@@ -717,6 +721,8 @@ public class MainActivity_Tablet extends MainActivity {
                 displayFragment(WatchList.class.getName(),
                         contain_watchlist.getId());
                 fm.executePendingTransactions();
+                pr_price.width = getResources().getDimensionPixelSize(
+                        R.dimen.t_framewatchlist_width);;
                 pr.width = getResources().getDimensionPixelSize(
                         R.dimen.t_framewatchlist_width);
                 isShowFullPriceBoard = false;

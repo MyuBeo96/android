@@ -146,7 +146,7 @@
     <string name="HuyLenh">取消委託</string>
     <string name="HuyTatCaLenh">取消所有委託</string>
     <string name="Index">指數</string>
-    <string name="InternalCashTransferDetail">轉賬確認</string>
+    <string name="InternalCashTransferDetail">確認轉賬</string>
     <string name="InternalTransfer">內部轉賬</string>
     <string name="InternalTransferRegister">申請內部轉賬</string>
     <string name="KL">數量</string>
@@ -180,7 +180,7 @@
     <string name="LoadThongTinTaiKhoan">加載賬戶信息</string>
     <string name="LoadThongTinThiTruong">加載市場信息</string>
     <string name="LoaiCK">證券類型</string>
-    <string name="LoaiGD">Trade type</string>
+    <string name="LoaiGD">交易類型</string>
     <string name="LoaiLenh">委託類型</string>
     <string name="LoaiSuKien">行事曆類型</string>
     <string name="LocTheoMaCK">按股票代碼篩選</string>
@@ -597,5 +597,9 @@
     <string name="xacnhandangkyquyenmua">確認認購股權</string>
 
     <string name="timeoutTQ">分鐘後逾時</string>
+    <string name="TongHop">綜合</string>
+    <string name="TongGiaTriVon">本金</string>
+    <string name="TongGiaTriTT">市值</string>
+    <string name="DonViGia">價格單位：1,000 VND。</string>
 
 </resources>

@@ -7,14 +7,14 @@
     android:background="@color/bg_fragment"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@color/header_background_color"
         android:orientation="horizontal"
-        android:paddingLeft="@dimen/m_paddingLeft" >
+        android:paddingLeft="@dimen/m_paddingLeft">
 
         <Button
             android:id="@+id/btn_openfav"
@@ -111,7 +111,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:visibility="gone" >
+        android:visibility="gone">
 
         <com.fscuat.mobiletrading.design.TabItem
             android:id="@+id/tab_fullwatchlist_all"
@@ -150,7 +150,7 @@
         android:layout_width="match_parent"
         android:layout_height="28dp"
         android:background="@color/bg_fragment"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <View
             android:layout_width="15dp"
@@ -159,8 +159,7 @@
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="3" >
-        </View>
+            android:layout_weight="3"></View>
 
         <TextView
             style="@style/Table_Header"
@@ -168,8 +167,7 @@
             android:layout_weight="7.5"
             android:background="@color/transparent"
             android:text="@string/DuMua"
-            android:textAllCaps="true" >
-        </TextView>
+            android:textAllCaps="true"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -177,8 +175,7 @@
             android:layout_weight="4"
             android:background="@color/transparent"
             android:text="@string/KhopLenh"
-            android:textAllCaps="true" >
-        </TextView>
+            android:textAllCaps="true"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -186,8 +183,7 @@
             android:layout_weight="7.5"
             android:background="@color/transparent"
             android:text="@string/DuBan"
-            android:textAllCaps="true" >
-        </TextView>
+            android:textAllCaps="true"></TextView>
     </LinearLayout>
 
     <LinearLayout
@@ -197,7 +193,7 @@
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingLeft="@dimen/m_paddingLeft"
-        android:paddingRight="@dimen/m_paddingRight" >
+        android:paddingRight="@dimen/m_paddingRight">
 
         <View
             android:layout_width="15dp"
@@ -209,8 +205,7 @@
             android:layout_weight="1.5"
             android:background="@color/transparent"
             android:text="@string/MaCK"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -218,8 +213,7 @@
             android:layout_weight="1.5"
             android:background="@color/transparent"
             android:text="@string/TongKL_2"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -227,8 +221,7 @@
             android:layout_weight="1"
             android:background="@color/transparent"
             android:text="@string/Gia3"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -236,8 +229,7 @@
             android:layout_weight="1.5"
             android:background="@color/transparent"
             android:text="@string/KL3"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -245,8 +237,7 @@
             android:layout_weight="1"
             android:background="@color/transparent"
             android:text="@string/Gia2"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -254,8 +245,7 @@
             android:layout_weight="1.5"
             android:background="@color/transparent"
             android:text="@string/KL2"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -263,8 +253,7 @@
             android:layout_weight="1"
             android:background="@color/transparent"
             android:text="@string/Gia1"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -272,8 +261,7 @@
             android:layout_weight="1.5"
             android:background="@color/transparent"
             android:text="@string/KL1"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -281,8 +269,7 @@
             android:layout_weight="1"
             android:background="@color/transparent"
             android:text="@string/Gia"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -290,8 +277,7 @@
             android:layout_weight="1.5"
             android:background="@color/transparent"
             android:text="@string/ThayDoi"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -299,8 +285,7 @@
             android:layout_weight="1.5"
             android:background="@color/transparent"
             android:text="@string/KL_3"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -308,8 +293,7 @@
             android:layout_weight="1"
             android:background="@color/transparent"
             android:text="@string/Gia1"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -317,8 +301,7 @@
             android:layout_weight="1.5"
             android:background="@color/transparent"
             android:text="@string/KL1"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -326,8 +309,7 @@
             android:layout_weight="1"
             android:background="@color/transparent"
             android:text="@string/Gia2"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -335,8 +317,7 @@
             android:layout_weight="1.5"
             android:background="@color/transparent"
             android:text="@string/KL2"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -344,8 +325,7 @@
             android:layout_weight="1"
             android:background="@color/transparent"
             android:text="@string/Gia3"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
 
         <TextView
             style="@style/Table_Header"
@@ -353,8 +333,7 @@
             android:layout_weight="1.5"
             android:background="@color/transparent"
             android:text="@string/KL3"
-            android:textAllCaps="false" >
-        </TextView>
+            android:textAllCaps="false"></TextView>
     </LinearLayout>
 
     <View

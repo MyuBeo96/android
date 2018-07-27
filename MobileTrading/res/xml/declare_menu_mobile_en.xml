@@ -4,149 +4,125 @@
     <tabmenu
         class="com.fss.mobiletrading.function.placeorder.PlaceOrder"
         icon="selector_slidemenu_datlenh"
-        title="Order" >
-    </tabmenu>
+        title="Order"></tabmenu>
     <tabmenu
         class="com.fss.mobiletrading.function.placeorder.GTCPlaceOrder"
         icon="selector_slidemenu_datlenhgtc"
-        title="Conditional Order" >
-    </tabmenu>
-    <tabmenu
-        class="null"
-        icon="selector_slidemenu_solenh"
-        title="Order List" >
-        <child>
-            <tabmenu
-                class="com.fss.mobiletrading.function.orderlist.NormalOrderList"
-                title="Normal Order List" >
-            </tabmenu>
-            <tabmenu
-                class="com.fss.mobiletrading.function.orderlist.GTCOrderList"
-                title="Conditional Order List" >
-            </tabmenu>
-        </child>
-    </tabmenu>
+        title="Conditional Order"></tabmenu>
     <tabmenu
         class="com.fss.mobiletrading.function.watchlist.WatchList"
         icon="selector_slidemenu_banggia"
-        title="Price Board" >
-    </tabmenu>
+        title="Price Board"></tabmenu>
     <tabmenu
         class="null"
-        icon="selector_slidemenu_chuyentien"
-        title="Cash Transfer" >
+        icon="selector_slidemenu_giaodich"
+        title="Trading">
         <child>
             <tabmenu
-                class="com.fss.mobiletrading.function.cashtransfer.CashTransfer"
-                title="Cash Transfer" >
-            </tabmenu>
-            <!--<tabmenu-->
+                class="null"
+                title="Order List"></tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.orderlist.NormalOrderList"
+                title="         Normal Order List"></tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.orderlist.GTCOrderList"
+                title="         Conditional Order List"></tabmenu>
+
+            <tabmenu
+                class="null"
+                title="Cash Transfer">
+                <tabmenu
+                    class="com.fss.mobiletrading.function.cashtransfer.CashTransfer"
+                    title="         Cash Transfer"></tabmenu>
+                <!--<tabmenu-->
                 <!--class="com.fss.mobiletrading.function.cashtransfer.CashTransferRegister"-->
                 <!--title="Beneficiary Register" >-->
-            <!--</tabmenu>-->
-            <tabmenu
-                class="com.fss.mobiletrading.function.cashtransfer.CashTransferList"
-                title="Transfer Register List" >
+                <!--</tabmenu>-->
+                <tabmenu
+                    class="com.fss.mobiletrading.function.cashtransfer.CashTransferList"
+                    title="         Transfer Register List"></tabmenu>
             </tabmenu>
-        </child>
-    </tabmenu>
-    <tabmenu
-        class="null"
-        icon="selector_slidemenu_giaodichdb"
-        title="Other Payment" >
-        <child>
+
             <tabmenu
-                class="com.fss.mobiletrading.function.rightoffregister.RightOffRegister"
-                title="Share Buying Right" >
-            </tabmenu>
-            <tabmenu
-                class="com.fss.mobiletrading.function.stocktransfer.StockTransfer"
-                title="Stock Transfer" >
+                class="null"
+                title="Other Payment">
+                <tabmenu
+                    class="com.fss.mobiletrading.function.rightoffregister.RightOffRegister"
+                    title="         Share Buying Right"></tabmenu>
+                <tabmenu
+                    class="com.fss.mobiletrading.function.stocktransfer.StockTransfer"
+                    title="         Stock Transfer"></tabmenu>
             </tabmenu>
         </child>
     </tabmenu>
     <tabmenu
         class="null"
         icon="selector_slidemenu_quanlytk"
-        title="Historical Data" >
+        title="Historical Data">
         <child>
             <tabmenu
                 class="com.fss.mobiletrading.function.AccountBalance"
-                title="Balance" >
-            </tabmenu>
+                title="Balance"></tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.portfolio.Porfolio"
-                title="Porfolio" >
-            </tabmenu>
+                title="Porfolio"></tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.Statement"
-                title="Statement" >
-            </tabmenu>
+                title="Statement"></tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.OrderHistory"
-                title="Matched history" >
-            </tabmenu>
+                title="Matched history"></tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.pastplaceorder.PastPlaceOrder"
-                title="Order history">
-                </tabmenu>
+                title="Order history"></tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.coporateactions.CoporateActions"
+                title="Coporate Actions"></tabmenu>
+            <tabmenu
+                class="com.fss.mobiletrading.function.searchstock.SearchStock"
+                title="Stock Info"></tabmenu>
         </child>
     </tabmenu>
     <tabmenu
         class="null"
         icon="selector_slidemenu_thongtintt"
-        title="Market Information" >
+        title="Market Information">
         <child>
             <tabmenu
                 class="com.fss.mobiletrading.function.market.MarketInfo"
-                title="Markets" >
-            </tabmenu>
+                title="Markets"></tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.notify.NotifyFragment"
-                title="Notification" >
-            </tabmenu>
-            <tabmenu
-                class="com.fss.mobiletrading.function.coporateactions.CoporateActions"
-                title="Coporate Actions" >
-            </tabmenu>
-            <tabmenu
-                class="com.fss.mobiletrading.function.searchstock.SearchStock"
-                title="Stock Info" >
-            </tabmenu>
+                title="Notification"></tabmenu>
         </child>
     </tabmenu>
     <tabmenu
         class="null"
         icon="selector_slidemenu_thongtinkh"
-        title="Personal Information" >
+        title="Personal Information">
         <child>
             <tabmenu
                 class="com.fss.mobiletrading.function.accountconfig.ChangePassword"
-                title="Change Login Password" >
-            </tabmenu>
+                title="Change Login Password"></tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.accountconfig.ChangeTradingPassword"
-                title="Change Trading Password" >
-            </tabmenu>
+                title="Change Trading Password"></tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.accountconfig.AccountConfig"
-                title="Change Contact Info" >
-            </tabmenu>
+                title="Change Contact Info"></tabmenu>
             <!--<tabmenu-->
-                <!--class="com.fss.mobiletrading.function.authorizationinfo.AuthorizationInfo"-->
-                <!--title="Authorization Information" >-->
+            <!--class="com.fss.mobiletrading.function.authorizationinfo.AuthorizationInfo"-->
+            <!--title="Authorization Information" >-->
             <!--</tabmenu>-->
         </child>
     </tabmenu>
     <tabmenu
         class="com.fss.mobiletrading.function.AboutUs"
         icon="selector_slidemenu_lienhe"
-        title="Contacts FNS" >
-    </tabmenu>
+        title="Contacts FNS"></tabmenu>
     <tabmenu
         class="null"
         icon="selector_slidemenu_logout"
-        title="Logout" >
-    </tabmenu>
+        title="Logout"></tabmenu>
 
 </listmenu>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
@@ -183,7 +184,7 @@
                 xmlns:ptr="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/pull_refresh_Porfolio"
                 android:layout_width="match_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="wrap_content"
                 android:divider="@color/listview_separation_color"
                 android:fadingEdge="none"
                 android:fastScrollEnabled="false"
@@ -192,7 +193,178 @@
                 android:headerDividersEnabled="false"
                 android:scrollbars="none"
                 android:smoothScrollbar="true"
-                ptr:ptrHeaderTextAppearance="@style/TextAppearance" />
+                ptr:ptrHeaderTextAppearance="@style/TextAppearance"
+                android:layout_weight="9"/>
+            <!--Phone-->
+            <com.fscuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_porfolio_TongGTriVon"
+                style="@style/Label_Style1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:contentColor="@color/white_text"
+                app:editable="true"
+                app:contentgravity="left"
+                app:labelText="@string/TongGiaTriVon"
+                app:labelweight="5"
+                app:orientation="horizontal"
+                app:separationColor="@color/transparent"
+                android:layout_marginTop="2dp"
+                android:visibility="gone"/>
+
+            <com.fscuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_porfolio_TongGTriTT"
+                style="@style/Label_Style1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:editable="true"
+                app:contentgravity="left"
+                app:labelText="@string/TongGiaTriTT"
+                app:labelweight="5"
+                app:orientation="horizontal"
+                app:separationColor="@color/transparent"
+                android:visibility="gone"/>
+
+            <com.fscuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_porfolio_LaiLo"
+                style="@style/Label_Style1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:editable="true"
+                app:contentgravity="left"
+                app:labelText="@string/LaiLo"
+                app:labelweight="5"
+                app:orientation="horizontal"
+                app:separationColor="@color/transparent"
+                android:visibility="gone"/>
+
+            <com.fscuat.mobiletrading.design.LabelContentLayout
+                android:id="@+id/text_porfolio_PercentLaiLo"
+                style="@style/Label_Style1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:editable="true"
+                app:contentgravity="left"
+                app:labelText="@string/PercentLaiLo"
+                app:labelweight="5"
+                app:orientation="horizontal"
+                app:separationColor="@color/transparent"
+                android:visibility="gone"/>
+            <!---->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/listview_separation_color" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/text_item1"
+                style="@style/Content_Style"
+                android:layout_width="100dp"
+                android:gravity="center"
+                android:text="@string/TongCong"/>
+
+            <TextView
+                android:id="@+id/text_total"
+                style="@style/Content_Style"
+                android:layout_width="150dp"
+                android:gravity="center"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/text_stockavailable"
+                style="@style/Content_Style"
+                android:layout_width="150dp"
+                android:gravity="center"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/text_chovequyen"
+                style="@style/Content_Style"
+                android:layout_width="100dp"
+                android:gravity="center"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/text_pendingmatch"
+                style="@style/Content_Style"
+                android:layout_width="50dp"
+                android:gravity="center"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/text_marketprice"
+                style="@style/Content_Style"
+                android:layout_width="80dp"
+                android:gravity="center"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/text_totalmarketvalue"
+                style="@style/Content_Style"
+                android:layout_width="150dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/text_receivingT0"
+                style="@style/Content_Style"
+                android:layout_width="100dp"
+                android:gravity="center"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/text_receivingT1"
+                style="@style/Content_Style"
+                android:layout_width="100dp"
+                android:gravity="center"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/text_receivingT2"
+                style="@style/Content_Style"
+                android:layout_width="100dp"
+                android:gravity="center"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/text_receivingT3"
+                style="@style/Content_Style"
+                android:layout_width="100dp"
+                android:gravity="center"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/text_giabinhquan"
+                style="@style/Content_Style"
+                android:layout_width="150dp"
+                android:gravity="center"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/text_giavonTotal"
+                style="@style/Content_Style"
+                android:layout_width="150dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/text_plTotal"
+                style="@style/Content_Style"
+                android:layout_width="100dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/text_percentplTotal"
+                style="@style/Content_Style"
+                android:layout_width="50dp"
+                android:gravity="center" />
+            </LinearLayout>
         </LinearLayout>
     </HorizontalScrollView>
 

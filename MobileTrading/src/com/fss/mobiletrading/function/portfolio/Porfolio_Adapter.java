@@ -1,6 +1,7 @@
 package com.fss.mobiletrading.function.portfolio;
 
 import android.content.Context;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -35,7 +36,6 @@ public class Porfolio_Adapter extends ArrayAdapter<PorfolioItem> {
 		item_even_bg_color = context.getResources().getColor(
 				R.color.listviewitem_even_bg);
 	}
-
 	public View getView(int position, View convertView, ViewGroup ViewGroup) {
 		if (convertView == null) {
 			if (DeviceProperties.isTablet) {

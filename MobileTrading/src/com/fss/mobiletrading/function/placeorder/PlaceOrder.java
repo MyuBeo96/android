@@ -1005,6 +1005,8 @@ public class PlaceOrder extends AbstractFragment {
     protected void displayFormStockInfo() {
         try {
             if (findStock != null) {
+                Log.i("placeorder", "RoomNN" + "\n" +findStock.stockInfo.foreignRemain + "RoomNNFormat" + "\n" + Common
+                        .formatAmount(findStock.stockInfo.foreignRemain));
                 tv_Company.setText(findStock.stockInfo.stockname);
                 tv_RoomNN.setText(Common
                         .formatAmount(findStock.stockInfo.foreignRemain));

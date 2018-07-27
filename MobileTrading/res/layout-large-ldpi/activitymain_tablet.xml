@@ -11,19 +11,20 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/t_header_height"
         android:background="@drawable/actionbar_background">
+
         <RelativeLayout
             android:id="@+id/layout_logo"
             android:layout_width="@dimen/t_framewatchlist_width"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
-            android:background="@color/header_background_color"
-            >
+            android:background="@color/header_background_color">
+
             <ImageView
                 android:id="@+id/img_tablet_activitymain_logo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_alignParentLeft="true"
                 android:layout_above="@+id/activitymain_tablet_line0"
+                android:layout_alignParentLeft="true"
                 android:paddingBottom="10dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="15dp"
@@ -75,19 +76,41 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/container_tablet_activitymain_watchlist"
+        android:id="@+id/container_tablet_activitymain_watchlist_price"
         android:layout_width="@dimen/t_framewatchlist_width"
         android:layout_height="match_parent"
         android:layout_above="@+id/large_activitymain_footer"
         android:layout_below="@+id/large_activitymain_header"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:id="@+id/container_tablet_activitymain_watchlist"
+            android:layout_width="@dimen/t_framewatchlist_width"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/large_activitymain_footer"
+            android:layout_below="@+id/large_activitymain_header"
+            android:layout_weight="9"
+            android:orientation="vertical"></LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_donvigia"
+            style="@style/Label_Style"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_above="@+id/large_activitymain_footer"
+            android:layout_below="@+id/container_tablet_activitymain_watchlist"
+            android:paddingLeft="10dp"
+            android:text="@string/DonViGia"
+            android:textSize="13sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/lay_tablet_activitymain_menulevelseconds"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/large_activitymain_header"
-        android:layout_toRightOf="@+id/container_tablet_activitymain_watchlist"
+        android:layout_toRightOf="@+id/container_tablet_activitymain_watchlist_price"
         android:orientation="vertical">
 
         <LinearLayout
@@ -131,7 +154,7 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/large_activitymain_footer"
         android:layout_below="@+id/lay_tablet_activitymain_menulevelseconds"
-        android:layout_toRightOf="@+id/container_tablet_activitymain_watchlist"
+        android:layout_toRightOf="@+id/container_tablet_activitymain_watchlist_price"
         android:orientation="vertical"></LinearLayout>
 
     <LinearLayout
@@ -388,7 +411,7 @@
                     android:layout_height="30dp"
                     android:layout_marginLeft="10dp"
                     android:src="@drawable/ic_contact_phone"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/text_phone2"
@@ -398,7 +421,7 @@
                     android:layout_marginLeft="3dp"
                     android:gravity="center_vertical"
                     android:textSize="12sp"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
 
                 <ImageView
                     android:id="@+id/img_email"
@@ -423,7 +446,7 @@
                     android:layout_height="30dp"
                     android:layout_marginLeft="10dp"
                     android:src="@drawable/ic_contact_face"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/text_face"
@@ -434,7 +457,7 @@
                     android:gravity="center_vertical"
                     android:text="Facebook"
                     android:textSize="12sp"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
 
                 <ImageView
                     android:id="@+id/img_skype"
@@ -442,7 +465,7 @@
                     android:layout_height="30dp"
                     android:layout_marginLeft="10dp"
                     android:src="@drawable/ic_contact_skype"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/text_skype"
@@ -453,7 +476,7 @@
                     android:gravity="center_vertical"
                     android:text="Skype"
                     android:textSize="12sp"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
 
                 <ImageView
                     android:id="@+id/img_yahoo"
@@ -461,7 +484,7 @@
                     android:layout_height="30dp"
                     android:layout_marginLeft="10dp"
                     android:src="@drawable/ic_contact_yahoo"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/text_yahoo"
@@ -472,7 +495,7 @@
                     android:gravity="center_vertical"
                     android:text="Yahoo"
                     android:textSize="12sp"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

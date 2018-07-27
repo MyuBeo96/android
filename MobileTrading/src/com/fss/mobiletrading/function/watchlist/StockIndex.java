@@ -234,6 +234,9 @@ public class StockIndex extends AbstractFragment {
 		tv_ratioOffVol = (TextView) view.findViewById(R.id.text_offpercent);
 		v_ratioBidVol = view.findViewById(R.id.view_bidpercent);
 		Common.setupUI(view.findViewById(R.id.stockinfo_index), mainActivity);
+		if(!DeviceProperties.isTablet){
+
+		}
 		initialise();
 		initialiseListener();
 		return view;

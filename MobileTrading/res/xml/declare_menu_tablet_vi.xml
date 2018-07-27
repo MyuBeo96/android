@@ -98,12 +98,12 @@
             <tabmenu
                 style="2"
                 class="com.fss.mobiletrading.function.OrderHistory"
-                title="Lịch sử khớp lệnh" >
+                title="L.S khớp lệnh" >
             </tabmenu>
             <tabmenu
                 style="2"
                 class="com.fss.mobiletrading.function.pastplaceorder.PastPlaceOrder"
-                title="Lịch sử đặt lệnh">
+                title="L.S đặt lệnh">
             </tabmenu>
             <tabmenu
                 style="2"
@@ -113,7 +113,7 @@
             <tabmenu
                 style="2"
                 class="com.fss.mobiletrading.function.searchstock.SearchStock"
-                title="Thông tin chứng khoán" >
+                title="T.T chứng khoán" >
             </tabmenu>
         </child>
     </tabmenu>

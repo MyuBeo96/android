@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -378,7 +379,15 @@ public class AmendOrder extends AbstractFragment {
 			}
 			edttg_SoLuong.setText(orderSetParams.quantityOrder);
 			edttg_LoaiLenh.setTextWhenDisable(orderSetParams.priceType);
-			edttg_Gia.setText(orderSetParams.priceOrder);
+			edttg_Gia.setText(String.valueOf(orderSetParams.priceOrder));
+			String priceNew;
+			Double price;
+			if(orderSetParams.priceOrder.contains(",")){
+			priceNew = orderSetParams.priceOrder.replaceAll(",", "");
+				price = (Double.parseDouble(priceNew)/1000);
+				Log.i("sualenh",orderSetParams.priceOrder +"\n"+ price);
+				edttg_Gia.setText(String.valueOf(price));
+			}
 			// edt_SplitQtty.setText(orderSetParams.splitOrder);
 			if (orderSetParams.isQuantityAmend) {
 				edttg_SoLuong.setEnabled(true);

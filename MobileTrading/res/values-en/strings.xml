@@ -695,4 +695,8 @@
     <string name="cancel">"Cancel"</string>
     <string name="XacNhanHuyLenh">Cancel order confirm</string>
     <string name="PastPlaceOrder">Order history</string>
+    <string name="TongHop">General</string>
+    <string name="TongGiaTriVon"> Total investment value</string>
+    <string name="TongGiaTriTT">Total market value</string>
+    <string name="DonViGia">Price Unit: 1,000 VND.</string>
 </resources>

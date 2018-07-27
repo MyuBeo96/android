@@ -269,27 +269,27 @@ public class MarketIndex extends AbstractFragment {
 		tv_indexChange.setText(marketIndexItem.indexChange);
 		tv_marketIndex.setText(marketIndexItem.marketIndex);
 		tv_TotalShare.setText(Common.formatAmount(marketIndexItem.totalVolume));
-		if (marketIndexItem.totalValue.length() > 9) {
-			if(AppData.language.equals(AppData.LOCALE_ZH)){
-				tv_TotalValue
-						.setText(NumberFormat
-										.getNumberInstance(Locale.US)
-										.format(Double
-												.parseDouble(marketIndexItem.totalValue) / 1000000000));
-				lbl_marketindex_TotalValue.setText(getStringResource(R.string.thongtinthitruong_lbl_TotalValue_Billion));
-			}else {
-				tv_TotalValue
-						.setText(NumberFormat
-								.getNumberInstance(Locale.US)
-								.format(Double
-										.parseDouble(marketIndexItem.totalValue) / 1000000000)
-								+ " " + getStringResource(R.string.Ty));
-			}
-		} else {
+//		if (marketIndexItem.totalValue.length() > 9) {
+//			if(AppData.language.equals(AppData.LOCALE_ZH)){
+//				tv_TotalValue
+//						.setText(NumberFormat
+//										.getNumberInstance(Locale.US)
+//										.format(Double
+//												.parseDouble(marketIndexItem.totalValue) / 1000000000));
+//				lbl_marketindex_TotalValue.setText(getStringResource(R.string.thongtinthitruong_lbl_TotalValue_Billion));
+//			}else {
+//				tv_TotalValue
+//						.setText(NumberFormat
+//								.getNumberInstance(Locale.US)
+//								.format(Double
+//										.parseDouble(marketIndexItem.totalValue) / 1000000000)
+//								+ " " + getStringResource(R.string.Ty));
+//			}
+//		} else {
 			tv_TotalValue.setText(Common
 					.formatAmount(marketIndexItem.totalValue));
 			lbl_marketindex_TotalValue.setText(getStringResource(R.string.thongtinthitruong_lbl_TotalValue));
-		}
+//		}
 		tv_TotalTrade.setText(Common.formatAmount(marketIndexItem.totalTrade));
 		tv_advances.setText(marketIndexItem.advances);
 		tv_declines.setText(marketIndexItem.declines);

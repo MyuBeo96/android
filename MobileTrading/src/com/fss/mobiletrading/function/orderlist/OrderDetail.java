@@ -1,6 +1,7 @@
 package com.fss.mobiletrading.function.orderlist;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -36,7 +37,8 @@ public class OrderDetail extends AbstractFragment {
     final String ORDERDETAILS = "OrderDetailsService#ORDERDETAILS";
     final String CANCELORDER = "SuccessService#CANCELORDER";
     final String CHECKORDER = "CheckOrderService#CHECKORDER";
-
+    String  priceNew ;
+    Double price;
     LabelContentLayout tv_chitiet_CustodyCd;
     LabelContentLayout tv_chitiet_OrderSide;
     LabelContentLayout tv_chitiet_KLKhop;
@@ -55,7 +57,7 @@ public class OrderDetail extends AbstractFragment {
     SolenhCT_Adapter adapterSolenhCT;
 
     SolenhItem item;
-    StockItem stockItem;
+
 
     public static OrderDetail newInstance(MainActivity mActivity) {
         OrderDetail self = new OrderDetail();
@@ -147,6 +149,12 @@ public class OrderDetail extends AbstractFragment {
     public void addActionToActionBar() {
         super.addActionToActionBar();
         setBackLogoAction();
+        //set gia/1000
+        if(item.Price.contains(",")){
+            priceNew = item.Price.replaceAll(",", "");
+            price = (Double.parseDouble(priceNew)/1000);
+            priceNew= String.valueOf(price);
+        }
         if (!DeviceProperties.isTablet) {
             mainActivity.addAction(new Action() {
 
@@ -154,7 +162,7 @@ public class OrderDetail extends AbstractFragment {
                 public void performAction(View view) {
                     mainActivity.setOrderToPlaceOrder(new OrderSetParams(
                             item.CustodyCd, item.AfAcctno, item.Symbol,
-                            item.Side, item.Price, item.Qtty));
+                            item.Side, priceNew, item.Qtty));
                 }
 
                 @Override

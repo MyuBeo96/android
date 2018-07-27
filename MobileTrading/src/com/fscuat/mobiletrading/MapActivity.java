@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.function.AppData;
 import com.fss.mobiletrading.interfaces.INotifier;
@@ -51,18 +52,18 @@ public class MapActivity extends Activity {
 	protected void onCreate(Bundle arg0) {
 		super.onCreate(arg0);
 		setContentView(R.layout.map_activity);
+		getBaseContext().getResources().updateConfiguration(Login.newConfig,
+				getBaseContext().getResources().getDisplayMetrics());
 		imgbtnSearch = (Button) findViewById(R.id.btn_Search);
+		btnBack = (Button) findViewById(R.id.btn_Back);
 		if (DeviceProperties.isTablet) {
+			Log.i("Language", ""+AppData.language);
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 		} else {
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		}
-		Log.i("Language", ""+AppData.language);
-//		Configuration newConfig = new Configuration();
-//		onConfigurationChanged(newConfig);
-		imgbtnSearch.setText(R.string.Search);
+		Common.setupUI(findViewById(R.id.map_activity), this);
 	}
-
 	private void showGPSDisabledAlertToUser() {
 		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 		alertDialogBuilder
@@ -124,6 +125,8 @@ public class MapActivity extends Activity {
 	public void onCreateContextMenu(ContextMenu menu, View v,
 			ContextMenuInfo menuInfo) {
 		super.onCreateContextMenu(menu, v, menuInfo);
+		getBaseContext().getResources().updateConfiguration(Login.newConfig,
+				getBaseContext().getResources().getDisplayMetrics());
 		menu.setHeaderTitle(R.string.FNSBankBranch);
 		try {
 			for (int i = 0; i < pointArr.size(); i++) {
@@ -208,7 +211,6 @@ public class MapActivity extends Activity {
 				list_key, list_value);
 
 	}
-
 	private void initilizeMap() {
 		if (googleMap == null) {
 			googleMap = ((MapFragment) getFragmentManager().findFragmentById(

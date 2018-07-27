@@ -7,17 +7,17 @@
     android:background="@color/bg_fragment"
     android:orientation="vertical"
     android:paddingLeft="@dimen/m_paddingLeft"
-    android:paddingRight="@dimen/m_paddingLeft" >
+    android:paddingRight="@dimen/m_paddingLeft">
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true" >
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/text_BangGiaCT_TenCty"
@@ -28,12 +28,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5" >
+                    android:layout_weight="5">
 
                     <com.fscuat.mobiletrading.design.TextViewHightLight
                         android:id="@+id/text_BangGiaCT_GiaKhopCuoi"
@@ -80,13 +80,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:gravity="center_vertical"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             style="@style/Label_Style"
@@ -112,7 +112,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:gravity="center_vertical"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             style="@style/Label_Style"
@@ -138,7 +138,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:gravity="center_vertical"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             style="@style/Label_Style"
@@ -153,8 +153,8 @@
                             style="@style/Content_Style"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center_vertical|right"
                             android:layout_alignParentRight="true"
+                            android:gravity="center_vertical|right"
                             android:paddingLeft="10dp"
                             android:singleLine="true" />
                     </LinearLayout>
@@ -169,20 +169,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
                     android:orientation="vertical"
-                    android:paddingRight="10dp" >
+                    android:paddingRight="10dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:gravity="center_vertical"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             style="@style/Label_Style"
@@ -209,7 +209,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:gravity="center_vertical"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             style="@style/Label_Style"
@@ -236,7 +236,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:gravity="center_vertical"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             style="@style/Label_Style"
@@ -258,6 +258,7 @@
                             android:singleLine="true"
                             android:textColor="@color/color_San" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
@@ -285,6 +286,7 @@
                             android:singleLine="true"
                             android:textColor="@color/color_San" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
@@ -318,13 +320,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:gravity="center_vertical"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             style="@style/Label_Style"
@@ -351,6 +353,7 @@
                         android:layout_height="30dp"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
+
                         <TextView
                             style="@style/Label_Style"
                             android:layout_width="0dp"
@@ -384,7 +387,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:gravity="center_vertical"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             style="@style/Label_Style"
@@ -416,7 +419,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lbl_BangGiaCT_GiaMuaTotNhat"
@@ -443,20 +446,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <RelativeLayout
                         android:id="@+id/lay_stockinfo_index_bid1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/bid1_background_color"
-                        android:paddingRight="10dp" >
+                        android:paddingRight="10dp">
 
                         <Button
                             android:id="@+id/btn_stockitem_index_bid1"
@@ -489,7 +492,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/bid2_background_color"
-                        android:paddingRight="10dp" >
+                        android:paddingRight="10dp">
 
                         <Button
                             android:id="@+id/btn_stockitem_index_bid2"
@@ -522,7 +525,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/bid3_background_color"
-                        android:paddingRight="10dp" >
+                        android:paddingRight="10dp">
 
                         <Button
                             android:id="@+id/btn_stockitem_index_bid3"
@@ -555,14 +558,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <RelativeLayout
                         android:id="@+id/lay_stockinfo_index_offer1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/offer1_background_color"
-                        android:paddingLeft="10dp" >
+                        android:paddingLeft="10dp">
 
                         <com.fscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_OfferPrice1"
@@ -597,7 +600,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/offer2_background_color"
-                        android:paddingLeft="10dp" >
+                        android:paddingLeft="10dp">
 
                         <com.fscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_OfferPrice2"
@@ -632,7 +635,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/offer3_background_color"
-                        android:paddingLeft="10dp" >
+                        android:paddingLeft="10dp">
 
                         <com.fscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_OfferPrice3"
@@ -668,7 +671,7 @@
                 android:id="@+id/lay_percentBidOff"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:visibility="gone" >
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/text_bidpercent"
@@ -693,6 +696,14 @@
             <!--android:layout_width="0dp"-->
             <!--android:layout_height="0dp"-->
             <!--android:visibility="gone" />-->
+            <TextView
+                style="@style/Label_Style"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/DonViGia"
+                android:textSize="13sp" />
 
         </LinearLayout>
     </ScrollView>

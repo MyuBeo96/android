@@ -1,11 +1,15 @@
 package com.fss.mobiletrading.function.portfolio;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import com.fscuat.mobiletrading.design.LabelContentLayout;
+import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
@@ -32,6 +36,17 @@ public class Porfolio extends AbstractFragment {
     List<PorfolioItem> listPorfolioItem;
     PullToRefreshListView livPorfolio;
     ListView actualListView;
+    PorfolioItem porfolioItem;
+
+    LabelContentLayout text_TongGiaTriVon;
+    LabelContentLayout text_TongGiaTriTT;
+    LabelContentLayout text_LaiLo;
+    LabelContentLayout text_PercentLaiLo;
+
+    TextView text_totalmarketvalue;
+    TextView text_giavonTotal;
+    TextView text_plTotal;
+    TextView text_percentplTotal;
 
     public static Porfolio newInstance(MainActivity mActivity) {
 
@@ -55,6 +70,18 @@ public class Porfolio extends AbstractFragment {
         livPorfolio.getLoadingLayoutProxy().setRefreshingLabel(Refresh);
         livPorfolio.getLoadingLayoutProxy().setPullLabel(Refresh);
         livPorfolio.getLoadingLayoutProxy().setReleaseLabel(Refresh);
+
+
+        text_TongGiaTriVon = (LabelContentLayout) view.findViewById(R.id.text_porfolio_TongGTriVon);
+        text_TongGiaTriTT = (LabelContentLayout) view.findViewById(R.id.text_porfolio_TongGTriTT);
+        text_LaiLo = (LabelContentLayout) view.findViewById(R.id.text_porfolio_LaiLo);
+        text_PercentLaiLo = (LabelContentLayout) view.findViewById(R.id.text_porfolio_PercentLaiLo);
+
+        text_totalmarketvalue = (TextView) view.findViewById(R.id.text_totalmarketvalue);
+        text_giavonTotal = (TextView) view.findViewById(R.id.text_giavonTotal);
+        text_plTotal = (TextView) view.findViewById(R.id.text_plTotal);
+        text_percentplTotal = (TextView) view.findViewById(R.id.text_percentplTotal);
+
 
         actualListView = livPorfolio.getRefreshableView();
         actualListView.setAdapter(this.adapter);
@@ -111,6 +138,7 @@ public class Porfolio extends AbstractFragment {
             }
         });
     }
+
     @Override
     public void addActionToActionBar() {
         super.addActionToActionBar();
@@ -158,6 +186,12 @@ public class Porfolio extends AbstractFragment {
                     listPorfolioItem.clear();
                     listPorfolioItem.addAll((List<PorfolioItem>) rObj.obj);
                     adapter.notifyDataSetChanged();
+                    int count = adapter.getCount();
+                    Log.i("getCountdanhMuc", "" + actualListView.getAdapter().getCount() + "\n" + actualListView.getCount() + "\n" + adapter.getCount() + "\n"+rObj.obj);
+
+                    if(count>0){
+                    porfolioItem = ((List<PorfolioItem>) rObj.obj).get(count - 1);
+                    displayTotal();}
                 }
                 break;
             default:
@@ -196,5 +230,45 @@ public class Porfolio extends AbstractFragment {
     public void refresh() {
         super.refresh();
         CallGetPorfolio();
+    }
+
+    private void displayTotal() {
+        if (porfolioItem != null) {
+            if (DeviceProperties.isTablet) {
+                text_giavonTotal.setText(Common.formatAmount(porfolioItem.getTotalCostValue()));
+                text_totalmarketvalue.setText(Common.formatAmount(porfolioItem.getTotalMarketPrice()));
+                text_plTotal.setText(Common.formatAmount(porfolioItem.getTotalUnrealized_PL()));
+                text_percentplTotal.setText(porfolioItem.getTotalPercent_PL());
+
+                text_giavonTotal.setActivated(false);
+                text_totalmarketvalue.setActivated(false);
+                text_plTotal.setActivated(false);
+                text_percentplTotal.setActivated(false);
+
+                int color1 = Common.getColor(porfolioItem.getTotalPercent_PL());
+
+                text_giavonTotal.setTextColor(color1);
+                text_plTotal.setTextColor(color1);
+                text_percentplTotal.setTextColor(color1);
+            } else {
+
+                text_TongGiaTriVon.getEditContent().setText(Common.formatAmount(porfolioItem.getTOTALCOSTVALUE()));
+                text_TongGiaTriTT.getEditContent().setText(Common.formatAmount(porfolioItem.getTOTALMARKETPRICE()));
+                text_LaiLo.getEditContent().setText(Common.formatAmount(porfolioItem.getTOTALUNREALIZED_PL()));
+                text_PercentLaiLo.getEditContent().setText(porfolioItem.getTOTALPERCENT_PL());
+
+                text_TongGiaTriVon.setEnabled(false);
+                text_TongGiaTriTT.setEnabled(false);
+                text_LaiLo.setEnabled(false);
+                text_PercentLaiLo.setEnabled(false);
+
+                int color1 = Common.getColor(porfolioItem.getTOTALPERCENT_PL());
+
+                text_TongGiaTriTT.getEditContent().setTextColor(color1);
+                text_LaiLo.getEditContent().setTextColor(color1);
+                text_PercentLaiLo.getEditContent().setTextColor(color1);
+            }
+        }else
+            return;
     }
 }

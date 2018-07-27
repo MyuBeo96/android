@@ -23,7 +23,8 @@
             android:background="@color/transparent"
             android:scaleType="fitCenter"
             android:src="@drawable/ic_logout" />
-        <Button
+
+        <Button
             android:id="@+id/btn_chooseafacctno_logout2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,21 +38,21 @@
         <TextView
             android:id="@+id/lbl_chonTK_fullname"
             style="@style/Label_Style"
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:text="@string/XinChao" />
 
         <TextView
             android:id="@+id/text_chonTK_fullname"
             style="@style/Content_Style"
             android:layout_width="match_parent"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="20dp"
             android:layout_toRightOf="@+id/lbl_chonTK_fullname"
             android:textColor="@color/green_text" />
 
         <TextView
             android:id="@+id/lbl_chonTK_afacctno"
             style="@style/Label_Style"
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:layout_below="@+id/text_chonTK_fullname"
             android:text="@string/TKmacdinh" />
 
@@ -60,14 +61,14 @@
             style="@style/Content_Style"
             android:layout_width="match_parent"
             android:layout_below="@+id/text_chonTK_fullname"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="20dp"
             android:layout_toRightOf="@+id/lbl_chonTK_afacctno"
             android:textColor="@color/green_text" />
 
         <TextView
             android:id="@+id/lbl_chonTK_SoLuuKy"
             style="@style/Label_Style"
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:layout_below="@+id/text_chonTK_afacctno"
             android:text="@string/SoLuuKy" />
 
@@ -76,7 +77,7 @@
             style="@style/EditText_Style"
             android:layout_width="match_parent"
             android:layout_below="@+id/text_chonTK_afacctno"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="20dp"
             android:layout_toRightOf="@+id/lbl_chonTK_SoLuuKy"
             android:inputType="textCapCharacters"
             android:selectAllOnFocus="false"

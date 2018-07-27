@@ -23,8 +23,8 @@ android {
         applicationId "com.fscuat.mobiletrading"
         minSdkVersion 15
         targetSdkVersion 19
-        versionCode 12
-        versionName "1.0.7"
+        versionCode 13
+        versionName "1.0.8"
         multiDexEnabled true
 
     }

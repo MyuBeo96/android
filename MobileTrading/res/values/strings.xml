@@ -794,4 +794,8 @@
     <string name="cancel">"Hủy"</string>
     <string name="XacNhanHuyLenh">Xác nhận hủy lệnh</string>
     <string name="PastPlaceOrder">Lịch sử đặt lệnh</string>
+    <string name="TongHop">Tổng hợp</string>
+    <string name="TongGiaTriVon">Tổng giá trị vốn</string>
+    <string name="TongGiaTriTT">Tổng giá trị TT</string>
+    <string name="DonViGia">Đơn vị giá: 1,000 VNĐ.</string>
 </resources>

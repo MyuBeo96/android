@@ -3,6 +3,7 @@ package com.fscuat.mobiletrading.design;
 import android.app.Service;
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -75,6 +76,7 @@ public class Indices_View extends LinearLayout {
 		tv_MarketIndex.setText(item.MarketIndex);
 		tv_MarketVolume.setText(item.MarketVolume);
 		tv_MarketValue.setText(item.MarkettotalValue);
+		Log.i("Giatri", "/n" +item.MarkettotalValue );
 		tv_MarketChange.setText(item.MarketChange);
 		if (DeviceProperties.isTablet) {
 			tv_MarketChangeP.setText("(" + item.MarketChangeP + "%)");
