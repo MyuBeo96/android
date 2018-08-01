@@ -698,5 +698,5 @@
     <string name="TongHop">General</string>
     <string name="TongGiaTriVon"> Total investment value</string>
     <string name="TongGiaTriTT">Total market value</string>
-    <string name="DonViGia">Price Unit: 1,000 VND.</string>
+    <string name="DonViGia">Price Unit: 1,000 VND</string>
 </resources>
