@@ -272,12 +272,14 @@ public class OrderConfirm extends AbstractFragment {
                     .setTextColor(getColorResource(R.color.color_Mua));
             tv_checkorder_SoLuong.setActivated(true);
             tv_checkorder_Gia.setActivated(true);
+            btn_detail_ChapNhan.setBackgroundResource(R.drawable.backgroundbutton);
         } else {
             tv_checkorder_Side.setText(getStringResource(R.string.Ban));
             tv_checkorder_Side
                     .setTextColor(getColorResource(R.color.color_Ban));
             tv_checkorder_LoaiLenh
                     .setTextColor(getColorResource(R.color.color_Ban));
+            btn_detail_ChapNhan.setBackgroundResource(R.drawable.background_sellbutton);
             tv_checkorder_SoLuong.setActivated(false);
             tv_checkorder_Gia.setActivated(false);
         }

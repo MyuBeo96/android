@@ -94,7 +94,7 @@ public class PlaceOrder extends AbstractFragment {
     protected RelativeLayout lay_CTin1;
 
     protected Button btn_Ban;
-    protected Button btn_DatLenh;
+    public static Button btn_DatLenh;
     protected Button btn_Mua;
     protected SymbolEdittext edt_MaCK;
 
@@ -596,13 +596,9 @@ public class PlaceOrder extends AbstractFragment {
             @Override
             public void onClick(View v) {
                 lay_CTin1.setBackgroundResource(R.color.place_buyorder_background);
-                btn_DatLenh.setBackgroundResource(R.drawable.backgroundbutton);
+
                 functionBtnMuaClick();
-                if (!DeviceProperties.isTablet) {
-                    ((MainActivity_Mobile) getActivity()).setActionbarPlaceOrder(R.color.placeorder_buy_color);
-                }
-
-
+              buyChangeColorBackground();
             }
         });
         btn_Ban.setOnClickListener(new OnClickListener() {
@@ -611,11 +607,9 @@ public class PlaceOrder extends AbstractFragment {
             public void onClick(View v) {
 
                 lay_CTin1.setBackgroundResource(R.color.place_sellorder_background);
-                btn_DatLenh.setBackgroundResource(R.drawable.background_sellbutton);
+
                 functionBtnBanClick();
-                if (!DeviceProperties.isTablet) {
-                    ((MainActivity_Mobile) getActivity()).setActionbarPlaceOrder(R.color.placeorder_sell_color);
-                }
+             sellChangeColorBackground();
             }
         });
         edttg_SoLuong.setOnFocusChangeListener(new OnFocusChangeListener() {
@@ -1058,6 +1052,7 @@ public class PlaceOrder extends AbstractFragment {
         }
     }
 
+
     /**
      * vì khi gọi hàm functionBtnBanClick => clearForm => gọi findStock, ... =>
      * ảnh hưởng dữ liệu hàm này chỉ thay đổi về giao diện, không ảnh hưởng đến
@@ -1105,6 +1100,7 @@ public class PlaceOrder extends AbstractFragment {
                 lbl_NNBan.setVisibility(TextView.GONE);
                 tv_NNBan.setVisibility(TextView.GONE);
             }
+            sellChangeColorBackground();
         } else {
             // hiển thị và ẩn các trường tương ứng
             lbl_KLduocban.setVisibility(TextView.GONE);
@@ -1132,6 +1128,7 @@ public class PlaceOrder extends AbstractFragment {
                 lbl_NNBanSell.setVisibility(TextView.GONE);
                 tv_NNBanSell.setVisibility(TextView.GONE);
             }
+          buyChangeColorBackground();
         }
     }
 
@@ -1141,6 +1138,21 @@ public class PlaceOrder extends AbstractFragment {
         // xóa các trường hiện tại
         clearForm();
 
+    }
+    /**
+     * Thay đổi màu actionbar và button khi ở tab Buy/Sell
+     */
+    public void buyChangeColorBackground(){
+        btn_DatLenh.setBackgroundResource(R.drawable.backgroundbutton);
+        if (!DeviceProperties.isTablet) {
+            ((MainActivity_Mobile) getActivity()).setActionbarPlaceOrder(R.color.placeorder_buy_color);
+        }
+    }
+    public void sellChangeColorBackground(){
+        btn_DatLenh.setBackgroundResource(R.drawable.background_sellbutton);
+        if (!DeviceProperties.isTablet) {
+            ((MainActivity_Mobile) getActivity()).setActionbarPlaceOrder(R.color.placeorder_sell_color);
+        }
     }
 
     /**
@@ -1186,7 +1198,9 @@ public class PlaceOrder extends AbstractFragment {
             if (!DeviceProperties.isTablet) {
                 lbl_NNBanSell.setVisibility(TextView.VISIBLE);
                 tv_NNBanSell.setVisibility(TextView.VISIBLE);
+                ((MainActivity_Mobile) getActivity()).setActionbarPlaceOrder(R.color.placeorder_sell_color);
             }
+            btn_DatLenh.setBackgroundResource(R.drawable.background_sellbutton);
         } else {
             // hiển thị và ẩn các trường tương ứng
             lbl_KLduocban.setVisibility(TextView.GONE);
@@ -1211,7 +1225,9 @@ public class PlaceOrder extends AbstractFragment {
             if (!DeviceProperties.isTablet) {
                 lbl_NNBan.setVisibility(TextView.VISIBLE);
                 tv_NNBan.setVisibility(TextView.VISIBLE);
+                ((MainActivity_Mobile) getActivity()).setActionbarPlaceOrder(R.color.placeorder_buy_color);
             }
+            PlaceOrder.btn_DatLenh.setBackgroundResource(R.drawable.backgroundbutton);
         }
     }
 

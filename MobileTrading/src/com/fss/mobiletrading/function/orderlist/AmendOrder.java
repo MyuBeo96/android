@@ -19,6 +19,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.fscuat.mobiletrading.MainActivity_Mobile;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.common.StaticObjectManager;
@@ -446,8 +447,9 @@ public class AmendOrder extends AbstractFragment {
 			tv_NNBanSell.setVisibility(TextView.VISIBLE);
 			lbl_NNBan.setVisibility(TextView.GONE);
 			tv_NNBan.setVisibility(TextView.GONE);
+			((MainActivity_Mobile) getActivity()).setActionbarPlaceOrder(R.color.placeorder_sell_color);
 		}
-
+		btn_DatLenh.setBackgroundResource(R.drawable.background_sellbutton);
 	}
 
 	protected void functionBtnMuaClick() {
@@ -481,8 +483,9 @@ public class AmendOrder extends AbstractFragment {
 			tv_NNBan.setVisibility(TextView.VISIBLE);
 			lbl_NNBanSell.setVisibility(TextView.GONE);
 			tv_NNBanSell.setVisibility(TextView.GONE);
+			((MainActivity_Mobile) getActivity()).setActionbarPlaceOrder(R.color.placeorder_buy_color);
 		}
-
+		btn_DatLenh.setBackgroundResource(R.drawable.backgroundbutton);
 	}
 
 	protected void CallAmendOrder(AmendOrderModel item) {
@@ -493,60 +496,62 @@ public class AmendOrder extends AbstractFragment {
 					getStringResource(R.string.ChuaNhapDL));
 			return;
 		}
-		if(edt_TradingPw.getText().length()==0){
-			if(edt_TradingPw.getVisibility()!=View.VISIBLE) {
+		if (edt_TradingPw.getText().length() == 0) {
+			if (edt_TradingPw.getVisibility() != View.VISIBLE) {
 				edt_TradingPw.setVisibility(View.VISIBLE);
 			}
 			showDialogMessage(getStringResource(R.string.thong_bao), getStringResource(R.string.NhapPin));
 			edt_TradingPw.requestFocus();
+			return;
 		}
-		List<String> list_key = new ArrayList<String>();
-		List<String> list_value = new ArrayList<String>();
-		{
-			list_key.add("link");
-			list_value.add(getStringResource(R.string.controller_AmendOrder));
-		}
-		{
-			list_key.add("OrderId");
-			list_value.add(item.orderID);
-		}
-		{
-			list_key.add("CustodyCd");
-			list_value.add(item.custodycd);
-		}
-		{
-			list_key.add("AfAcctno");
-			list_value.add(item.afacctno);
-		}
-		{
-			list_key.add("Symbol");
-			list_value.add(item.symbolOrder);
-		}
-		{
-			list_key.add("Side");
-			list_value.add(item.sideOrder);
-		}
-		{
-			list_key.add("Qtty");
-			list_value.add(edttg_SoLuong.getText().toString());
-		}
-		{
-			list_key.add("PriceType");
-			list_value.add(item.priceType);
-		}
-		{
-			list_key.add("Price");
-			list_value.add(edttg_Gia.getText().toString());
-		}
-		{
-			list_key.add("TradingPassword");
-			list_value.add(edt_TradingPw.getText().toString());
+			List<String> list_key = new ArrayList<String>();
+			List<String> list_value = new ArrayList<String>();
+			{
+				list_key.add("link");
+				list_value.add(getStringResource(R.string.controller_AmendOrder));
+			}
+			{
+				list_key.add("OrderId");
+				list_value.add(item.orderID);
+			}
+			{
+				list_key.add("CustodyCd");
+				list_value.add(item.custodycd);
+			}
+			{
+				list_key.add("AfAcctno");
+				list_value.add(item.afacctno);
+			}
+			{
+				list_key.add("Symbol");
+				list_value.add(item.symbolOrder);
+			}
+			{
+				list_key.add("Side");
+				list_value.add(item.sideOrder);
+			}
+			{
+				list_key.add("Qtty");
+				list_value.add(edttg_SoLuong.getText().toString());
+			}
+			{
+				list_key.add("PriceType");
+				list_value.add(item.priceType);
+			}
+			{
+				list_key.add("Price");
+				list_value.add(edttg_Gia.getText().toString());
+			}
+			{
+				list_key.add("TradingPassword");
+				list_value.add(edt_TradingPw.getText().toString());
+			}
+
+			StaticObjectManager.connectServer.callHttpPostService(AMENDORDER, this,
+					list_key, list_value);
+			btn_DatLenh.setEnabled(false);
 		}
 
-		StaticObjectManager.connectServer.callHttpPostService(AMENDORDER, this,
-				list_key, list_value);
-		btn_DatLenh.setEnabled(false);
-	}
 
 	protected void CallFindStock() {
 		if (orderSetParams == null) {
