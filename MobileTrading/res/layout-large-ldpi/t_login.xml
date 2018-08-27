@@ -352,7 +352,9 @@
                         android:layout_alignRight="@+id/lay_login_input"
                         android:layout_below="@+id/lay_login_remember"
                         android:layout_marginTop="10dp"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal"
+                        android:weightSum="10"
+                        android:gravity="center">
 
                         <com.fscuat.mobiletrading.design.MyButton
                             android:id="@+id/btn_login_Login"
@@ -370,7 +372,7 @@
                             android:layout_weight="5"
                             android:background="@drawable/background_button_logindemo"
                             app:textMyButton="@string/Demo"
-                           />
+                           android:visibility="gone"/>
 
                     </LinearLayout>
 

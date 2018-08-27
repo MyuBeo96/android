@@ -23,8 +23,8 @@ android {
         applicationId "com.fscuat.mobiletrading"
         minSdkVersion 15
         targetSdkVersion 19
-        versionCode 14
-        versionName "1.0.9"
+        versionCode 17
+        versionName "1.1.2"
         multiDexEnabled true
 
     }
@@ -42,7 +42,7 @@ android {
     }
     productFlavors {
         production{
-            buildConfigField "String", "address_server", '"https://hftsso.fss.com.vn/MFlexTest"'
+            buildConfigField "String", "address_server", '"http://apps.funan.com.vn/MFlexApps"'
         }
         development{
             buildConfigField "String", "address_server", '"https://hftsso.fss.com.vn/MFlexTest"'

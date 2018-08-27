@@ -52,6 +52,7 @@ public class NorOrderListItemView extends LinearLayout {
 	Button btn_buy;
 	Button btn_sell;
 	OnSelectedCancelOrderItem onSelectedCancelOrderItem;
+	PlaceOrder placeOrder;
 
 	/**
 	 * only tablet
