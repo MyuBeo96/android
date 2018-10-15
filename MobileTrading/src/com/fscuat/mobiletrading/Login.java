@@ -190,7 +190,7 @@ public class Login extends FragmentActivity implements INotifier {
 		createDialogMessage();
 		contextMenu_Guide = new MyContextMenu(this);
 		List<String> listGuide = new ArrayList<String>();
-		listGuide.add(getResources().getString(R.string.HDKHSD));
+		listGuide.add(getResources().getString(R.string.HDMTK));
 //		listGuide.add(getResources().getString(R.string.HDMGSD));
 		listGuide.add(getResources().getString(R.string.HuongDanNopTien));
 		contextMenu_Guide.setChoises(listGuide);
@@ -214,10 +214,10 @@ public class Login extends FragmentActivity implements INotifier {
 				Context.MODE_PRIVATE);
 		if (DeviceProperties.isTablet) {
 			LoginService.CallGetLinkTabletGuide(this, GETLINKGUIDE);
-			LoginService.CallGetLinkTabletGuideBroker(this, GETLINKGUIDEBROKER);
+//			LoginService.CallGetLinkTabletGuideBroker(this, GETLINKGUIDEBROKER);
 		} else {
 			LoginService.CallGetLinkGuide(this, GETLINKGUIDE);
-			LoginService.CallGetLinkGuideBroker(this, GETLINKGUIDEBROKER);
+//			LoginService.CallGetLinkGuideBroker(this, GETLINKGUIDEBROKER);
 		}
 
 		LoginService.CallGetLinkPaymentGuide(this, GETLINKPAYMENTGUIDE);
