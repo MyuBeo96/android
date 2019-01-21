@@ -435,7 +435,7 @@
     <string name="MatKhauGiaoDich">Mật khẩu giao dịch</string>
     <string name="MatKhauDatLenh">Mật khẩu đặt lệnh</string>
     <string name="login_btn_Login">Đăng nhập</string>
-    <string name="default_username">093</string>
+    <string name="default_username">085</string>
     <string name="login_text_time">Timeout</string>
     <string name="login_text_minus">phút</string>
     <string name="ghi_nho">Lưu thông tin</string>
@@ -689,7 +689,7 @@
     <string name="logout_msg">Bạn có muốn đăng xuất tài khoản?</string>
 
     <!-- service -->
-    <string name="app_name">FNS-Mobile</string>
+    <string name="app_name">TCSC-Mobile</string>
     <string name="controller_Login">/MAccount/Login</string>
     <string name="controller_LoginBroker">/MAccount/LoginBroker</string>
     <string name="controller_AT">/MStock/AT</string>

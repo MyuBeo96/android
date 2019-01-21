@@ -116,7 +116,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="30dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_fsc_logo" />
+                    android:src="@drawable/ic_tcsc_logo" />
 
                 <LinearLayout
                     android:id="@+id/lay_login_input"

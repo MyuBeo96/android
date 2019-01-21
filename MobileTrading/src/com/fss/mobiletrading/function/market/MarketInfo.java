@@ -101,7 +101,8 @@ public class MarketInfo extends AbstractFragment {
 	}
 
 	private void initData() {
-		if (updateJIndex == null) {
+		//20190117 Toannds bo lay tin tuc
+		/*if (updateJIndex == null) {
 			updateJIndex = new Runnable() {
 
 				@Override
@@ -110,7 +111,7 @@ public class MarketInfo extends AbstractFragment {
 							INDEX);
 				}
 			};
-		}
+		}*/
 		if (clearHightLight == null) {
 			clearHightLight = new Runnable() {
 

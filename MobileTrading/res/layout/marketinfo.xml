@@ -113,6 +113,7 @@
         android:gravity="left|center_vertical"
         android:paddingLeft="@dimen/m_paddingLeft"
         android:paddingRight="@dimen/m_paddingRight"
+        android:visibility="invisible"
         android:text="@string/TinTuc" />
 
     <ListView
@@ -120,6 +121,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:divider="@color/listview_separation_color"
+        android:visibility="invisible"
         android:scrollbars="none" />
 
 </LinearLayout>

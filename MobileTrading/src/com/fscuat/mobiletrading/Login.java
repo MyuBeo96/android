@@ -1083,11 +1083,11 @@ public class Login extends FragmentActivity implements INotifier {
 			PackageInfo pInfo = getPackageManager().getPackageInfo(
 					getPackageName(), 0);
 			versionCode = pInfo.versionCode;
-			return "A." + String.valueOf(versionCode);
+			return "ANDROID#" + String.valueOf(versionCode);
 		} catch (NameNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return "A.1";
+		return "ANDROID#1";
 	}
 }

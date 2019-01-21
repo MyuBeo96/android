@@ -108,7 +108,7 @@ package com.fscuat.mobiletrading;
     /*
      * config app
      */
-    public static final String USERNAME_DEFAULT = "093";
+    public static final String USERNAME_DEFAULT = "085";
     public static final String timeout_default = "180";
     public static final String MSBBankId = "302";
     public static final String VersionApp = "A.1.3.0";

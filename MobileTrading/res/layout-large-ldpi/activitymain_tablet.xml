@@ -29,7 +29,7 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="15dp"
                 android:scaleType="fitStart"
-                android:src="@drawable/ic_fsc" />
+                android:src="@drawable/ic_tcsc" />
             <!--android:src="@drawable/ic_top_logo"-->
             <View
                 android:id="@+id/activitymain_tablet_line0"

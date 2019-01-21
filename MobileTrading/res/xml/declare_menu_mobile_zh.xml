@@ -96,7 +96,7 @@
                 title="市場"></tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.notify.NotifyFragment"
-                title="FNS傳遞信息"></tabmenu>
+                title="TCSC傳遞信息"></tabmenu>
         </child>
     </tabmenu>
     <tabmenu
@@ -122,7 +122,7 @@
     <tabmenu
         class="com.fss.mobiletrading.function.AboutUs"
         icon="selector_slidemenu_lienhe"
-        title="聯繫FNS"></tabmenu>
+        title="聯繫TCSC"></tabmenu>
     <tabmenu
         class="null"
         icon="selector_slidemenu_logout"
