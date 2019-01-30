@@ -126,7 +126,7 @@ public class BankAccItem {
 
 	public String toString() {
 		if (TYPE.matches("0")) {
-			return REG_ACCTNO + "." + MNEMONIC;
+			return REG_ACCTNO + "." + AFTYPE;
 		}
 		else {
 			return REG_ACCTNO;

@@ -330,7 +330,10 @@ private static final String link_GraphHOSE = BuildConfig.address_server
 		super.refresh();
 		callJIndex(INDEX);
 		requestRealtime.run();
-		callGetAllNews();
+
+		//20190121 Toannds bo goi lay all new
+		//callGetAllNews();
+
 		expandNews(false);
 		scrollview_index.scrollTo(0, 0);
 	}

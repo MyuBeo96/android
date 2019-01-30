@@ -101,7 +101,9 @@ public class StockItemInformation extends AbstractFragment {
 		searchTextUI.setVisibleButton(false);
 		searchTextUI.setVisibleClearField(true);
 		lay_news = (RelativeLayout) view.findViewById(R.id.lay_news);
-		setActivated(btn_news);
+		//setActivated(btn_news);
+		//20190121 Toannds set lai active nut xem theo TG
+		setActivated(btn_graph);
 		init();
 		initListener();
 		return view;

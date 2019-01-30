@@ -263,8 +263,8 @@ public class NotifyFragment extends AbstractFragment {
     @Override
     public void onResume() {
         super.onResume();
-        CallListNotify();
-        CallUnRead(this);
+        //CallListNotify();
+        //CallUnRead(this);
     }
 
     private void showNotifyDetail(boolean isShow) {

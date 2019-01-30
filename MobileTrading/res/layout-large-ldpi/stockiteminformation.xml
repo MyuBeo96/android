@@ -51,7 +51,8 @@
                 android:gravity="center"
                 android:text="@string/TinTuc"
                 android:textColor="@drawable/textcolor_stockinfo_tab_graphnews"
-                android:textSize="16.0sp" />
+                android:textSize="16.0sp"
+                android:visibility="invisible" />
         </LinearLayout>
     </RelativeLayout>
 
@@ -157,13 +158,14 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="5"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:visibility="invisible">
 
             <RelativeLayout
                 android:id="@+id/news_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/header_background_color" >
+                android:background="@color/header_background_color">
 
                 <TextView
                     style="@style/Label_Style"
@@ -219,8 +221,7 @@
                 android:layout_width="@dimen/t_stockitem_infor_news_width"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/news_header"
-                android:orientation="vertical" >
-            </LinearLayout>
+                android:orientation="vertical"></LinearLayout>
 
             <View
                 android:id="@+id/line"
@@ -236,8 +237,7 @@
                 android:layout_height="match_parent"
                 android:layout_below="@+id/news_header"
                 android:layout_toRightOf="@+id/line"
-                android:orientation="vertical" >
-            </LinearLayout>
+                android:orientation="vertical"></LinearLayout>
         </RelativeLayout>
     </LinearLayout>
 

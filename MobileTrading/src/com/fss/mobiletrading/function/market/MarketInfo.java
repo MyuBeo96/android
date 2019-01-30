@@ -101,8 +101,8 @@ public class MarketInfo extends AbstractFragment {
 	}
 
 	private void initData() {
-		//20190117 Toannds bo lay tin tuc
-		/*if (updateJIndex == null) {
+
+		if (updateJIndex == null) {
 			updateJIndex = new Runnable() {
 
 				@Override
@@ -111,7 +111,7 @@ public class MarketInfo extends AbstractFragment {
 							INDEX);
 				}
 			};
-		}*/
+		}
 		if (clearHightLight == null) {
 			clearHightLight = new Runnable() {
 
@@ -315,7 +315,10 @@ public class MarketInfo extends AbstractFragment {
 	public void onResume() {
 		super.onResume();
 		// CallControllerJIndex();
-		CallGetAllNews();
+
+		//20100121 Toannds bo goi lay tin tuc
+		//CallGetAllNews();
+
 		startUpdateJIndex();
 		AsynchTaskTimer();
 	}

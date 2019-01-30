@@ -119,8 +119,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/header_background_color"
+        android:paddingTop="3dp"
         android:paddingBottom="3dp"
-        android:paddingTop="3dp" >
+        android:visibility="invisible">
 
         <TextView
             style="@style/Label_Style"
@@ -174,7 +175,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:visibility="invisible">
 
         <ListView
             android:id="@+id/listview_News"
@@ -198,8 +200,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="6.3"
-            android:orientation="vertical" >
-        </LinearLayout>
+            android:orientation="vertical"></LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

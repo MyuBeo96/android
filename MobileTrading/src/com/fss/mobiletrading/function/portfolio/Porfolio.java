@@ -245,11 +245,13 @@ public class Porfolio extends AbstractFragment {
                 text_plTotal.setActivated(false);
                 text_percentplTotal.setActivated(false);
 
-                int color1 = Common.getColor(porfolioItem.getTotalPercent_PL());
+                if(porfolioItem.getTotalPercent_PL()!=null) {
+                    int color1 = Common.getColor(porfolioItem.getTotalPercent_PL());
 
-                text_giavonTotal.setTextColor(color1);
-                text_plTotal.setTextColor(color1);
-                text_percentplTotal.setTextColor(color1);
+                    text_giavonTotal.setTextColor(color1);
+                    text_plTotal.setTextColor(color1);
+                    text_percentplTotal.setTextColor(color1);
+                }
             } else {
 
                 text_TongGiaTriVon.getEditContent().setText(Common.formatAmount(porfolioItem.getTOTALCOSTVALUE()));
@@ -261,12 +263,13 @@ public class Porfolio extends AbstractFragment {
                 text_TongGiaTriTT.setEnabled(false);
                 text_LaiLo.setEnabled(false);
                 text_PercentLaiLo.setEnabled(false);
+                if(porfolioItem.getTOTALPERCENT_PL()!=null) {
+                    int color1 = Common.getColor(porfolioItem.getTOTALPERCENT_PL());
 
-                int color1 = Common.getColor(porfolioItem.getTOTALPERCENT_PL());
-
-                text_TongGiaTriTT.getEditContent().setTextColor(color1);
-                text_LaiLo.getEditContent().setTextColor(color1);
-                text_PercentLaiLo.getEditContent().setTextColor(color1);
+                    text_TongGiaTriTT.getEditContent().setTextColor(color1);
+                    text_LaiLo.getEditContent().setTextColor(color1);
+                    text_PercentLaiLo.getEditContent().setTextColor(color1);
+                }
             }
         }else
             return;
