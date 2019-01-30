@@ -51,7 +51,7 @@ package com.fscuat.mobiletrading;
     public static final String controller_RmFrWL = "/MWatchList/RmFrWL";
     public static final String controller_GetWLSymbols = "/MWatchList/GetWLSymbols";
     /* balance */
-    public static final String controller_GetMoneyInfo = "/MBalance/GetCashBalance";
+    public static final String controller_GetMoneyInfo = "/MBalance/GetMoneyInfo";
     /* cashtransfer */
     public static final String controller_GetCashTransferInfo = "/MCash/getCashTransferInfo";
     public static final String controller_GetTransferFeeAndTotal = "/MCash/getTransferFeeAndTotal";
