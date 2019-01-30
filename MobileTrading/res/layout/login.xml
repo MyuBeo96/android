@@ -404,8 +404,8 @@
                     android:id="@+id/lbl_login_forgetpassword"
                     style="@style/Label_Style"
                     android:layout_width="wrap_content"
-                    android:layout_alignLeft="@+id/lay_login_findbranch"
                     android:layout_below="@+id/lay_login_findbranch"
+                    android:layout_alignLeft="@+id/lay_login_findbranch"
                     android:text="@string/QuenMatKhau"
                     android:textColor="@color/white_text" />
 
