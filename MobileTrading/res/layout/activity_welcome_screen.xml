@@ -13,5 +13,5 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:scaleType="centerInside"
-        android:src="@drawable/ic_fsc_logo" />
+        android:src="@drawable/ic_tcsc_logo" />
 </RelativeLayout>

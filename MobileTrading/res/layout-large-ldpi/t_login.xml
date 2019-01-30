@@ -38,6 +38,7 @@
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:visibility="invisible"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/btn_login_ENlang"

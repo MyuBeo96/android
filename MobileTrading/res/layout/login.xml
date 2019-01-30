@@ -37,7 +37,8 @@
                 android:layout_height="30dp"
                 android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/btn_login_ENlang"
-                android:background="@drawable/selector_china" />
+                android:background="@drawable/selector_china"
+                android:visibility="invisible" />
 
             <Button
                 android:id="@+id/btn_login_ENlang"
