@@ -99,8 +99,10 @@ package com.fscuat.mobiletrading;
     public static final String controller_doGrantT0 = "/MBR/GrantT0";
 
     /* Place Order */
-    public static final String controller_CheckOrder = "/MTrade/CheckOrder";
-    public static final String controller_CheckGTCOrder = "/MTrade/CheckGTCOrder";
+    //public static final String controller_CheckOrder = "/MTrade/CheckOrder";
+    public static final String controller_CheckOrder = "/MTrade/Checkvalidorder";
+    //public static final String controller_CheckGTCOrder = "/MTrade/CheckGTCOrder";
+    public static final String controller_CheckGTCOrder = "/MTrade/CheckvalidGTCorder";
     public static final String controller_FindStock = "/MTrade/FindStock";
     public static final String controller_GetExchangebysymbol = "/MTrade/GetExchangebysymbol";
     public static final String controller_GetStocksByAffaccno = "/MStock/GetStocksByAffaccno";

@@ -45,7 +45,7 @@ android {
             buildConfigField "String", "address_server", '"http://apps.funan.com.vn/MFlexApps"'
         }
         development{
-            buildConfigField "String", "address_server", '"http://192.168.18.248/MFlexApps"'
+                buildConfigField "String", "address_server", '"http://14.161.11.106:1616/MFlexApp"'
         }
         uat{
             buildConfigField "String", "address_server", '"http://118.69.230.209//MFlexApps"'
