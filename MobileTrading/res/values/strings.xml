@@ -152,7 +152,7 @@
     <string name="Cancel">Hủy</string>
     <string name="XacNhan">Xác nhận</string>
     <string name="Sorry">Xin lỗi không thể tạo bản đồ</string>
-    <string name="FNSBankBranch">Các chi nhánh FNS</string>
+    <string name="FNSBankBranch">Các chi nhánh TCSC</string>
     <string name="GPS">GPS trên thiết bị của bạn đã bị tắt, bạn có muốn bật nó lên không</string>
     <string name="Wifi">Wifi trên thiết bị của bạn đã bị tắt, bạn có muốn bật nó lên không</string>
     <string name="gotoGPS">Đi đến phần thiết lập GPS</string>

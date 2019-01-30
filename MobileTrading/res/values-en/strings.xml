@@ -147,7 +147,7 @@
     <string name="Cancel">Cancel</string>
     <string name="XacNhan">Confirm</string>
     <string name="Sorry">Sorry! unable to create maps</string>
-    <string name="FNSBankBranch">FNS Branches</string>
+    <string name="FNSBankBranch">TCSC Branches</string>
     <string name="GPS">GPS is disabled in your device. Would you like to enable it?</string>
     <string name="Wifi">Wifi is disabled in your device. Would you like to enable it?</string>
     <string name="gotoGPS">Goto Settings Page To Enable GPS</string>
