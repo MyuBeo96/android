@@ -152,7 +152,6 @@
                         app:contentColor="@color/white_text"
                         app:contentHint="@string/Email"
                         app:contentsize_dimen="@dimen/t_cashtransfer_contenttextsize"
-                        app:editable="true"
                         app:labelText="@string/Email"
                         app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                         app:orientation="vertical" />

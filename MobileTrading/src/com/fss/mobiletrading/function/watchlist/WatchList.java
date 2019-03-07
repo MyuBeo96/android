@@ -882,11 +882,16 @@ public class WatchList extends AbstractFragment {
             // check nếu là các danh mục mặc định từ -1 -> -9 thì ẩn tab all
             try {
                 int criteriaId = Integer.parseInt(currentFav.getCriteriaId());
-                if (criteriaId != -10 && criteriaId < 0) {
-                    // ẩn tab all
-                    tabSelector.setVisibility(View.GONE, 0);
-                } else {
-                    tabSelector.setVisibility(View.VISIBLE, 0);
+                if(criteriaId == -2 || criteriaId == -4)
+                    tabSelector.setVisibility(View.GONE);
+                else {
+                    tabSelector.setVisibility(View.VISIBLE);
+                    if (criteriaId != -10 && criteriaId < 0) {
+                        // ẩn tab all
+                        tabSelector.setVisibility(View.GONE, 0);
+                    } else {
+                        tabSelector.setVisibility(View.VISIBLE, 0);
+                    }
                 }
                 if (adapterBangGia != null) {
                     if (criteriaId > 0) {

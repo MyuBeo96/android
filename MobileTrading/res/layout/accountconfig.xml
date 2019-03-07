@@ -118,7 +118,6 @@
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
                     app:contentColor="@color/white_text"
                     app:contentHint="@string/Email"
-                    app:editable="true"
                     app:labelText="@string/Email"
                     app:orientation="vertical" />
 

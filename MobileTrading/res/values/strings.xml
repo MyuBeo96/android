@@ -536,7 +536,7 @@
     <string name="sodutien_label_UngToiDa">Ứng tối đa</string>
     <string name="sodutien_label_RutToiDa">Rút tối đa</string>
     <string name="sodutien_label_TongNo">Tổng nợ</string>
-    <string name="sodutien_lable_GiaTriNAV">Giá trị NAV</string>
+    <string name="sodutien_lable_GiaTriNAV">Tài sản ròng(NAV)</string>
     <string name="TaiKhoanNganHang">Tài khoản ngân hàng</string>
     <string name="SoTieuKhoanNhan">Số tiểu khoản nhận</string>
     <string name="chuyenkhoanck_label_TKGui">Tiểu khoản gửi</string>
@@ -614,10 +614,10 @@
 
 
     <string name="TienNopBoSung">Tiền nộp bổ sung</string>
-    <string name="ChoVeT0">Chờ về T0</string>
-    <string name="ChoVeT1">Chờ về T1</string>
-    <string name="ChoVeT2">Chờ về T2</string>
-    <string name="ChoVeT3">Chờ về T3</string>
+    <string name="ChoVeT0">T0</string>
+    <string name="ChoVeT1">T1</string>
+    <string name="ChoVeT2">T2</string>
+    <string name="ChoVeT3">T3</string>
     <string name="CamCo">Cầm cố</string>
     <string name="dmck_item_GiaTT">Giá TT</string>
     <string name="dmck_item_GiaTriTT">Giá trị TT</string>

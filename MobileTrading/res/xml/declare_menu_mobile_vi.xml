@@ -109,7 +109,7 @@
                 title="Đổi mật khẩu giao dịch"></tabmenu>
             <tabmenu
                 class="com.fss.mobiletrading.function.accountconfig.AccountConfig"
-                title="Thay đổi thông tin cá nhân"></tabmenu>
+                title="Thông tin cá nhân"></tabmenu>
             <!--<tabmenu-->
             <!--class="com.fss.mobiletrading.function.authorizationinfo.AuthorizationInfo"-->
             <!--title="Thông tin người ủy quyền" >-->

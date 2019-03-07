@@ -283,7 +283,7 @@
     <string name="SoDuChungKhoan">Securities balance</string>
     <string name="SoDuDauKy">Beginning balance</string>
     <string name="SoDuCuoiKy">Ending balance</string>
-    <string name="sodutien_lable_GiaTriNAV">NAV value</string>
+    <string name="sodutien_lable_GiaTriNAV">Net asset (NAV)</string>
     <string name="KhoiLuongGiam">Debit</string>
     <string name="KhoiLuongTang">Crebit</string>
     <string name="GiaKhop">Matched price</string>
@@ -610,10 +610,10 @@
     <string name="sodu_tonghopsodu">Balance</string>
     <string name="SoDu">Balance</string>
     <string name="TienNopBoSung">Rtd</string>
-    <string name="ChoVeT0">Receiving T0</string>
-    <string name="ChoVeT1">Receiving T1</string>
-    <string name="ChoVeT2">Receiving T2</string>
-    <string name="ChoVeT3">Receiving T3</string>
+    <string name="ChoVeT0">T0</string>
+    <string name="ChoVeT1">T1</string>
+    <string name="ChoVeT2">T2</string>
+    <string name="ChoVeT3">T3</string>
     <string name="CamCo">Pledged</string>
     <string name="dmck_item_GiaTT">Market price</string>
     <string name="dmck_item_GiaTriTT">Market value</string>
