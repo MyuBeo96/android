@@ -9,8 +9,10 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.fscuat.mobiletrading.design.CustomPassLayout;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
@@ -41,10 +43,11 @@ public class OrderConfirm extends AbstractFragment {
     protected LabelContentLayout tv_checkorder_TieuKhoan;
     protected LabelContentLayout tv_checkorder_fromDate;
     protected LabelContentLayout tv_checkorder_toDate;
-    protected LabelContentLayout edt_checkorder_TradingPw;
+    protected CustomPassLayout edt_checkorder_TradingPw;
     protected TextView tv_checkorder_Side;
     protected Button btn_detail_ChapNhan;
     protected Button btn_detail_Cancel;
+    protected ImageButton checkboxTradingpass;
     OrderSetParams orderSetParams;
     long mLastConfirmClickTime = 0l;
 
@@ -78,11 +81,23 @@ public class OrderConfirm extends AbstractFragment {
                 .findViewById(R.id.text_checkorder_fromDate);
         tv_checkorder_toDate = (LabelContentLayout) view
                 .findViewById(R.id.text_checkorder_toDate);
-        edt_checkorder_TradingPw = (LabelContentLayout) view
+        edt_checkorder_TradingPw = (CustomPassLayout) view
                 .findViewById(R.id.edt_checkorder_TradingCode);
         btn_detail_ChapNhan = (Button) view
                 .findViewById(R.id.btn_checkorder_Accept);
+        checkboxTradingpass = (ImageButton) edt_checkorder_TradingPw.getcheckbox();
+        innitListener();
 
+        return view;
+    }
+
+    private  void innitListener(){
+        checkboxTradingpass.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkboxTradingpass.setSelected(!checkboxTradingpass.isSelected());
+            }
+        });
         btn_detail_ChapNhan.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -98,7 +113,6 @@ public class OrderConfirm extends AbstractFragment {
                 }
             }
         });
-        return view;
     }
 
     @Override
@@ -109,11 +123,20 @@ public class OrderConfirm extends AbstractFragment {
             getDialog().getWindow().setLayout(width, LayoutParams.WRAP_CONTENT);
         }
     }
-
+    private void customDisplay(){
+        if(StaticObjectManager.saveTradingPass){
+            edt_checkorder_TradingPw.setText(StaticObjectManager.tradingPass);
+            checkboxTradingpass.setSelected(StaticObjectManager.saveTradingPass);
+            edt_checkorder_TradingPw.setVisibility(View.GONE);
+        }
+        else
+            edt_checkorder_TradingPw.setText(StringConst.EMPTY);
+    }
     @Override
     public void onResume() {
         super.onResume();
         showOrder();
+        customDisplay();
     }
 
     @Override
@@ -291,7 +314,7 @@ public class OrderConfirm extends AbstractFragment {
         } else {
             tv_checkorder_Gia.getContent().setText(orderSetParams.priceType);
         }
-        edt_checkorder_TradingPw.setText(StringConst.EMPTY);
+        //edt_checkorder_TradingPw.setText(StringConst.EMPTY);
     }
 
     @Override
@@ -303,6 +326,11 @@ public class OrderConfirm extends AbstractFragment {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                StaticObjectManager.saveTradingPass= checkboxTradingpass.isSelected();
+                if(StaticObjectManager.saveTradingPass)
+                    StaticObjectManager.tradingPass = edt_checkorder_TradingPw.getText().toString();
+                else
+                    StaticObjectManager.tradingPass = StringConst.EMPTY;
                 showDialogMessage(
                         getStringResource(R.string.datlenh_title_DatLenhThanhCong),
                         getStringResource(R.string.datlenh_title_QuestionTradeConfirm),
@@ -329,6 +357,11 @@ public class OrderConfirm extends AbstractFragment {
 
                     e.printStackTrace();
                 }
+                StaticObjectManager.saveTradingPass= checkboxTradingpass.isSelected();
+                if(StaticObjectManager.saveTradingPass)
+                    StaticObjectManager.tradingPass = edt_checkorder_TradingPw.getText().toString();
+                else
+                    StaticObjectManager.tradingPass = StringConst.EMPTY;
                 showDialogMessage(
                         getStringResource(R.string.datlenh_title_DatLenhThanhCong),
                         getStringResource(R.string.datlenh_title_QuestionTradeConfirm),

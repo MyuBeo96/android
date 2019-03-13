@@ -139,7 +139,18 @@
             android:visibility="gone"
             app:labelText="@string/DenNgay"
             app:orientation="horizontal" />
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <!--<com.fscuat.mobiletrading.design.LabelContentLayout-->
+            <!--android:id="@+id/edt_checkorder_TradingCode"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/m_labelcontentverlayout_height"-->
+            <!--app:contentColor="@color/white_text"-->
+            <!--app:contentHint="@string/MatKhauGiaoDich"-->
+            <!--android:layout_below="@+id/text_checkorder_Gia"-->
+            <!--app:editable="true"-->
+            <!--app:inputType="textPassword"-->
+            <!--app:labelText="@string/MatKhauGiaoDich"-->
+            <!--app:orientation="horizontal" />-->
+        <com.fscuat.mobiletrading.design.CustomPassLayout
             android:id="@+id/edt_checkorder_TradingCode"
             android:layout_width="match_parent"
             android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -149,6 +160,7 @@
             app:editable="true"
             app:inputType="textPassword"
             app:labelText="@string/MatKhauGiaoDich"
+            app:labelRememberText="@string/remmber_tradingpass"
             app:orientation="horizontal" />
         <Button
             android:id="@+id/btn_checkorder_Accept"

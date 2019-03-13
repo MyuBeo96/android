@@ -32,9 +32,11 @@
         <attr name="contentSize" format="integer"></attr>
         <attr name="contentText" format="string"></attr>
         <attr name="labelText" format="string"></attr>
+        <attr name="labelRememberText" format="string"></attr>
         <attr name="contentHint" format="string"></attr>
         <attr name="separationColor"></attr>
         <attr name="editable" format="boolean"></attr>
+        <attr name="showLabel" format="boolean"></attr>
         <attr name="digits" format="string"></attr>
         <attr name="singleLine" format="boolean"></attr>
         <attr name="inputType" format="string">

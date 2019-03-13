@@ -11,9 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.fscuat.mobiletrading.design.CustomPassLayout;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.SolenhCT_Adapter;
@@ -33,7 +35,9 @@ public class GTCOrderDetail extends OrderDetail {
 
 	LabelContentLayout tv_chitiet_fromDate;
 	LabelContentLayout tv_chitiet_toDate;
-	LabelContentLayout edt_TradingPw;
+
+
+
 
 	public static GTCOrderDetail newInstance(MainActivity mActivity) {
 		GTCOrderDetail self = new GTCOrderDetail();
@@ -69,7 +73,9 @@ public class GTCOrderDetail extends OrderDetail {
 				.findViewById(R.id.text_solenh_chitiet_fromDate));
 		tv_chitiet_toDate = ((LabelContentLayout) view
 				.findViewById(R.id.text_solenh_chitiet_toDate));
-		edt_TradingPw = (LabelContentLayout) view.findViewById(R.id.edt_orderdetail_TradingCode);
+		edt_TradingPw = (CustomPassLayout) view.findViewById(R.id.edt_orderdetail_TradingCode);
+
+
 		view.findViewById(R.id.layout_solenh_chitiet_ChiTietKhop)
 				.setVisibility(View.GONE);
 
@@ -124,7 +130,7 @@ public class GTCOrderDetail extends OrderDetail {
 		tv_chitiet_TrangThai.setText(item.Status);
 		tv_chitiet_fromDate.setText(item.fromDate);
 		tv_chitiet_toDate.setText(item.toDate);
-		edt_TradingPw.setText(StringConst.EMPTY);
+		//edt_TradingPw.setText(StringConst.EMPTY);
 
 		if (item.Side.equals(PlaceOrder.SIDE_NB)) {
 			tv_chitiet_OrderSide.setText(getStringResource(R.string.Mua));

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
     android:layout_width="@dimen/alertdialog_width"
     android:id="@+id/linearLayout_input"
     android:layout_height="wrap_content"
@@ -21,20 +22,31 @@
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:background="@color/header_separation_color" />
-    <EditText
+    <!--<EditText-->
+        <!--android:id="@+id/edt_dialog_tradingcode"-->
+        <!--style="@style/EditText_Style_Input_Dialog"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:ems="10"-->
+        <!--android:hint="@string/MatKhauGiaoDich"-->
+        <!--android:inputType="textPassword|textNoSuggestions"-->
+        <!--android:singleLine="true"-->
+        <!--android:textColor="@color/black_text"-->
+        <!--android:textColorHint="@color/text_hint_color_bgwhite"-->
+        <!--android:textCursorDrawable="@drawable/shape_textcursoredittext" />-->
+    <com.fscuat.mobiletrading.design.CustomPassLayout
         android:id="@+id/edt_dialog_tradingcode"
-        style="@style/EditText_Style_Input_Dialog"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_margin="10dp"
-        android:ems="10"
-        android:hint="@string/MatKhauGiaoDich"
-        android:inputType="textPassword|textNoSuggestions"
-        android:singleLine="true"
-        android:textColor="@color/black_text"
-        android:textColorHint="@color/text_hint_color_bgwhite"
-        android:textCursorDrawable="@drawable/shape_textcursoredittext" />
-
+        android:layout_height="@dimen/m_labelcontentverlayout_height"
+        app:contentColor="@color/white_text"
+        app:contentHint="@string/MatKhauGiaoDich"
+        app:editable="true"
+        app:inputType="textPassword"
+        app:labelText="@string/MatKhauGiaoDich"
+        android:visibility="gone"
+        app:labelRememberText="@string/remmber_tradingpass"
+        app:orientation="horizontal" />
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"

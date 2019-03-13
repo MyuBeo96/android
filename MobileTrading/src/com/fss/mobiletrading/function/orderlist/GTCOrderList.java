@@ -14,9 +14,11 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.fscuat.mobiletrading.design.CustomPassLayout;
 import com.fss.mobiletrading.adapter.SolenhGTC_Adapter;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
@@ -63,9 +65,10 @@ public class GTCOrderList extends AbstractFragment {
     SolenhItem cancelItem;
     int filterDataHashcode;
     //Custom dialog
-    protected EditText edt_dialog_TradingPw;
+    protected CustomPassLayout edt_dialog_TradingPw;
     protected TextView tv_XacNhan;
     protected TextView tv_Huy;
+    protected ImageButton checkboxTradingpass;
     Dialog dialog;
 
     public static GTCOrderList newInstance(MainActivity mActivity) {
@@ -91,13 +94,32 @@ public class GTCOrderList extends AbstractFragment {
         Common.setupUI(view, mainActivity);
         return view;
     }
+    private void customDisplay(){
+        if(StaticObjectManager.saveTradingPass){
+            edt_dialog_TradingPw.setText(StaticObjectManager.tradingPass);
+            checkboxTradingpass.setSelected(StaticObjectManager.saveTradingPass);
+            edt_dialog_TradingPw.setVisibility(View.GONE);
+        }
+        else {
+            edt_dialog_TradingPw.setText(StringConst.EMPTY);
+            edt_dialog_TradingPw.setVisibility(View.VISIBLE);
+        }
+    }
     private void inputTradingPw(boolean isShow){
         dialog = new Dialog(mainActivity, R.style.style_dialog);
         LayoutInflater li = LayoutInflater.from(mainActivity);
         dialog.setContentView(R.layout.input_tradingpw_dialog);
-        edt_dialog_TradingPw = (EditText) dialog.findViewById(R.id.edt_dialog_tradingcode);
+        edt_dialog_TradingPw = (CustomPassLayout) dialog.findViewById(R.id.edt_dialog_tradingcode);
+        checkboxTradingpass= edt_dialog_TradingPw.getcheckbox();
+        checkboxTradingpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkboxTradingpass.setSelected(!checkboxTradingpass.isSelected());
+            }
+        });
         tv_XacNhan = (TextView) dialog.findViewById(R.id.text_dialog_possitive);
         tv_Huy = (TextView) dialog.findViewById(R.id.text_dialog_negative);
+        customDisplay();
         tv_XacNhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -372,6 +394,11 @@ public class GTCOrderList extends AbstractFragment {
                 }
                 break;
             case CANCELORDERGTC:
+                StaticObjectManager.saveTradingPass= checkboxTradingpass.isSelected();
+                if(StaticObjectManager.saveTradingPass)
+                    StaticObjectManager.tradingPass = edt_dialog_TradingPw.getText().toString();
+                else
+                    StaticObjectManager.tradingPass = StringConst.EMPTY;
                 showDialogMessage(getStringResource(R.string.thong_bao),
                         getStringResource(R.string.Giaodichthanhcong),
                         new SimpleAction() {

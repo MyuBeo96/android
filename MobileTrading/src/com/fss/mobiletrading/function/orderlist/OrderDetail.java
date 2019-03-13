@@ -7,7 +7,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
+import com.fscuat.mobiletrading.design.CustomPassLayout;
 import com.fss.mobiletrading.adapter.SolenhCT_Adapter;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
@@ -48,10 +50,11 @@ public class OrderDetail extends AbstractFragment {
     LabelContentLayout tv_chitiet_PriceType;
     LabelContentLayout tv_chitiet_Gia;
     LabelContentLayout tv_chitiet_SoLuong;
-    LabelContentLayout edt_TradingPw;
+    CustomPassLayout edt_TradingPw;
     Button btn_chitiet_HuyLenh;
     Button btn_chitiet_SuaLenh;
     protected VerticalListview lv_SolenhCT;
+    protected ImageButton checkboxTradingpass;
 
     List<OrderDetailsItem> listOrderDetails;
     SolenhCT_Adapter adapterSolenhCT;
@@ -88,7 +91,8 @@ public class OrderDetail extends AbstractFragment {
                 .findViewById(R.id.text_solenh_chitiet_status));
         tv_chitiet_PriceType = (LabelContentLayout) view
                 .findViewById(R.id.text_solenh_chitiet_pricetype);
-        edt_TradingPw = (LabelContentLayout) view.findViewById(R.id.edt_orderdetail_TradingCode);
+        edt_TradingPw = (CustomPassLayout) view.findViewById(R.id.edt_orderdetail_TradingCode);
+
         lv_SolenhCT = ((VerticalListview) view
                 .findViewById(R.id.listview_solenhthuongCT));
         btn_chitiet_HuyLenh = ((Button) view
@@ -119,7 +123,13 @@ public class OrderDetail extends AbstractFragment {
                 changeAccountAndAmendOrder();
             }
         });
-
+        checkboxTradingpass = edt_TradingPw.getcheckbox();
+        checkboxTradingpass.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkboxTradingpass.setSelected(!checkboxTradingpass.isSelected());
+            }
+        });
     }
 
     protected void initData() {
@@ -135,10 +145,21 @@ public class OrderDetail extends AbstractFragment {
         lv_SolenhCT.setAdapter(adapterSolenhCT);
 
     }
-
+    private void customDisplay(){
+        if(StaticObjectManager.saveTradingPass){
+            edt_TradingPw.setText(StaticObjectManager.tradingPass);
+            checkboxTradingpass.setSelected(StaticObjectManager.saveTradingPass);
+            edt_TradingPw.setVisibility(View.GONE);
+        }
+        else {
+            edt_TradingPw.setText(StringConst.EMPTY);
+            edt_TradingPw.setVisibility(View.VISIBLE);
+        }
+    }
     @Override
     public void onResume() {
         super.onResume();
+        customDisplay();
         if (item != null) {
             displayOrderDetail(item);
             CallOrderDetails(item.OrderId, item.CustodyCd);
@@ -233,7 +254,7 @@ public class OrderDetail extends AbstractFragment {
         tv_chitiet_SoLuong.setText(Common.formatAmount(item.Qtty));
         tv_chitiet_KLKhop.setText(Common.formatAmount(item.Matched));
         tv_chitiet_TrangThai.setText(item.Status);
-        edt_TradingPw.setText(StringConst.EMPTY);
+        //edt_TradingPw.setText(StringConst.EMPTY);
 
         if (item.Side.equals(PlaceOrder.SIDE_NB)) {
             tv_chitiet_OrderSide.setText(getStringResource(R.string.Mua));
@@ -354,6 +375,11 @@ public class OrderDetail extends AbstractFragment {
     protected void process(String key, ResultObj rObj) {
         switch (key) {
             case CANCELORDER:
+                StaticObjectManager.saveTradingPass= checkboxTradingpass.isSelected();
+                if(StaticObjectManager.saveTradingPass)
+                    StaticObjectManager.tradingPass = edt_TradingPw.getText().toString();
+                else
+                    StaticObjectManager.tradingPass = StringConst.EMPTY;
                 showDialogMessage(getStringResource(R.string.thong_bao),
                         getStringResource(R.string.Giaodichthanhcong),
                         new SimpleAction() {

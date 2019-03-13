@@ -452,6 +452,9 @@
     <string name="login_text_time">Timeout</string>
     <string name="login_text_minus">minute</string>
     <string name="ghi_nho">Remember</string>
+    <string name="remmber_otp">Remember OTP</string>
+    <string name="remmber_tradingpass">Remember trading password</string>
+    <string name="genOTP">Gen OTP</string>
     <string name="showpassword">Show password</string>
     <string name="activity_main_btn_ThiTruong">Markets</string>
     <string name="activity_main_btn_Menu">Menu</string>

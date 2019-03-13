@@ -21,6 +21,10 @@ import java.util.Locale;
 public class StaticObjectManager {
 	public static ConnectServer connectServer;
 	public static LoginItem loginInfo;
+	//luu mk
+	public static boolean saveTradingPass= false;
+	public static String tradingPass="";
+
 	public static AcctnoItem acctnoItem;
 	public static List<StockItem> listStock;
 	public static String[] listAllStock;
@@ -44,6 +48,7 @@ public class StaticObjectManager {
 		listBankAcc = null;
 		defaultbrokeracctno = null;
 		isLogin = false;
+		saveTradingPass= false;
 	}
 
 	public StaticObjectManager() {

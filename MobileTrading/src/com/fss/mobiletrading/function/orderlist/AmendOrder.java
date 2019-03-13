@@ -16,10 +16,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.fscuat.mobiletrading.MainActivity_Mobile;
+import com.fscuat.mobiletrading.design.CustomPassLayout;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.common.StaticObjectManager;
@@ -63,7 +65,7 @@ public class AmendOrder extends AbstractFragment {
 	protected Edittext_Gia edttg_Gia;
 	protected Edittext_LoaiLenh edttg_LoaiLenh;
 	protected Edittext_SoLuong edttg_SoLuong;
-	protected LabelContentLayout edt_TradingPw;
+	protected CustomPassLayout edt_TradingPw;
 	protected FindStock findStock;
 
 	protected TextView tv_GiaKhopCuoi;
@@ -99,6 +101,7 @@ public class AmendOrder extends AbstractFragment {
 	protected TextView tv_NNBanSell;
 
 	protected LinearLayout stockIndex;
+	protected ImageButton checkboxTradingpass;
 
 	AmendOrderModel orderSetParams;
 	boolean changedAfacctno = false;
@@ -141,7 +144,8 @@ public class AmendOrder extends AbstractFragment {
 		edttg_LoaiLenh = (Edittext_LoaiLenh) view
 				.findViewById(R.id.cus_edt_DatLenh_LoaiLenh);
 		edttg_Gia = (Edittext_Gia) view.findViewById(R.id.cus_edt_DatLenh_Gia);
-		edt_TradingPw = (LabelContentLayout) view.findViewById(R.id.edt_amendorder_TradingCode);
+		edt_TradingPw = (CustomPassLayout) view.findViewById(R.id.edt_amendorder_TradingCode);
+		checkboxTradingpass = edt_TradingPw.getcheckbox();
 		kBoardPrice = (KBoardPrice) view
 				.findViewById(R.id.t_placeorder_kboardsymbol_price);
 		kBoardQuantity = (KBoardQuantity) view
@@ -253,7 +257,12 @@ public class AmendOrder extends AbstractFragment {
 	TextWatcher edt_gia_textwatcher;
 
 	private void initialiseListener() {
-
+		checkboxTradingpass.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				checkboxTradingpass.setSelected(!checkboxTradingpass.isSelected());
+			}
+		});
 		edttg_SoLuong.setOnFocusChangeListener(new OnFocusChangeListener() {
 
 			@Override
@@ -351,10 +360,19 @@ public class AmendOrder extends AbstractFragment {
 			stockIndexView.clearView();
 		}
 	}
-
+	private void customDisplay(){
+		if(StaticObjectManager.saveTradingPass){
+			edt_TradingPw.setText(StaticObjectManager.tradingPass);
+			checkboxTradingpass.setSelected(StaticObjectManager.saveTradingPass);
+			edt_TradingPw.setVisibility(View.GONE);
+		}
+		else
+			edt_TradingPw.setText(StringConst.EMPTY);
+	}
 	@Override
 	public void onResume() {
 		super.onResume();
+		customDisplay();
 		if (orderSetParams != null) {
 			if (DeviceProperties.isTablet) {
 				StockIndex.CallStockDetails(StringConst.EMPTY,
@@ -401,7 +419,7 @@ public class AmendOrder extends AbstractFragment {
 				edttg_Gia.setEnabled(false);
 			}
 		}
-		edt_TradingPw.setText(StringConst.EMPTY);
+
 		//Check không được sửa field chữ mờ hơn
 		edttg_LoaiLenh.getEditContext().setTextColor(getColorResource(R.color.color_background_edittext));
 
@@ -696,6 +714,11 @@ public class AmendOrder extends AbstractFragment {
 			}
 			break;
 		case AMENDORDER:
+			StaticObjectManager.saveTradingPass= checkboxTradingpass.isSelected();
+			if(StaticObjectManager.saveTradingPass)
+				StaticObjectManager.tradingPass = edt_TradingPw.getText().toString();
+			else
+				StaticObjectManager.tradingPass = StringConst.EMPTY;
 			showDialogMessage(getStringResource(R.string.thong_bao),
 					getStringResource(R.string.Giaodichthanhcong),
 					new SimpleAction() {

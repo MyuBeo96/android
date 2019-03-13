@@ -513,6 +513,9 @@
     <string name="error_processjson"></string>
     <string name="error_timeout">登錄逾時或已在其他裝置登錄了</string>
     <string name="ghi_nho">保存信息</string>
+    <string name="remmber_otp">Remember OTP</string>
+    <string name="remmber_tradingpass">Remember trading password</string>
+    <string name="genOTP">Gen OTP</string>
     <string name="gotoGPS">設置定位</string>
     <string name="gotoWifi">設置Wifi</string>
     <string name="kieu">類型</string>

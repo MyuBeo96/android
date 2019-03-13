@@ -643,7 +643,19 @@
                         android:background="@color/header_separation_color"
                         android:paddingLeft="10dp" />
                 </RelativeLayout>
-                <com.fscuat.mobiletrading.design.LabelContentLayout
+                <!--<com.fscuat.mobiletrading.design.LabelContentLayout-->
+                    <!--android:id="@+id/edt_amendorder_TradingCode"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="@dimen/m_labelcontentverlayout_height"-->
+                    <!--app:contentColor="@color/white_text"-->
+                    <!--app:contentHint="@string/MatKhauGiaoDich"-->
+                    <!--android:layout_below="@+id/lay_order_splitqtty"-->
+                    <!--app:editable="true"-->
+                    <!--app:inputType="textPassword"-->
+                    <!--app:labelText="@string/MatKhauGiaoDich"-->
+                    <!--app:orientation="horizontal"-->
+                    <!--android:visibility="gone"/>-->
+                <com.fscuat.mobiletrading.design.CustomPassLayout
                     android:id="@+id/edt_amendorder_TradingCode"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -653,8 +665,9 @@
                     app:editable="true"
                     app:inputType="textPassword"
                     app:labelText="@string/MatKhauGiaoDich"
-                    app:orientation="horizontal"
-                    android:visibility="gone"/>
+                    android:visibility="gone"
+                    app:labelRememberText="@string/remmber_tradingpass"
+                    app:orientation="horizontal" />
 
                 <RelativeLayout
                     android:id="@+id/lay_order_date"
