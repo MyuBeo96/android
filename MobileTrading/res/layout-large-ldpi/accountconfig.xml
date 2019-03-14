@@ -224,6 +224,7 @@
                         style="@style/Button_Background1"
                         android:layout_width="0dp"
                         android:layout_weight="5"
+                        android:visibility="gone"
                         android:background="@drawable/bg_grey_button_corner5"
                         android:text="@string/Cancel" />
 
@@ -233,6 +234,7 @@
                         android:layout_width="0dp"
                         android:layout_marginLeft="10dp"
                         android:layout_weight="5"
+                        android:visibility="gone"
                         android:text="@string/XacNhan" />
                 </LinearLayout>
 

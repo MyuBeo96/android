@@ -81,7 +81,18 @@
                 app:labelText="@string/TongTien"
                 app:orientation="vertical" />
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <!--<com.fscuat.mobiletrading.design.LabelContentLayout-->
+                <!--android:id="@+id/edt_DKQM_chitiet_tradingcode"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/m_labelcontentverlayout_height"-->
+                <!--app:contentColor="@color/white_text"-->
+                <!--app:contentHint="@string/MatKhauGiaoDich"-->
+                <!--app:editable="true"-->
+                <!--app:inputType="textPassword"-->
+                <!--app:labelText="@string/MatKhauGiaoDich"-->
+                <!--android:visibility="gone"-->
+                <!--app:orientation="vertical" />-->
+            <com.fscuat.mobiletrading.design.CustomPassLayout
                 android:id="@+id/edt_DKQM_chitiet_tradingcode"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -91,7 +102,8 @@
                 app:inputType="textPassword"
                 app:labelText="@string/MatKhauGiaoDich"
                 android:visibility="gone"
-                app:orientation="vertical" />
+                app:labelRememberText="@string/remmber_tradingpass"
+                app:orientation="horizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"

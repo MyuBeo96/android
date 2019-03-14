@@ -7,7 +7,9 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
+import android.widget.ImageButton;
 
+import com.fscuat.mobiletrading.design.CustomPassLayout;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.common.StaticObjectManager;
@@ -41,8 +43,9 @@ public class BankCashTransferConfirm extends AbstractFragment {
 	LabelContentLayout tv_chitiet_TieuKhoan;
 	LabelContentLayout tv_chitiet_TinhTP;
 	LabelContentLayout tv_chitiet_TongTien;
-	LabelContentLayout edt_chitiet_MaPIN;
+	CustomPassLayout edt_chitiet_MaPIN;
 	Button btn_chitiet_ChapNhan;
+	protected ImageButton checkboxTradingpass;
 
 	public static BankCashTransferConfirm newInstance(MainActivity mActivity) {
 
@@ -83,8 +86,9 @@ public class BankCashTransferConfirm extends AbstractFragment {
 				.findViewById(R.id.text_CTout_chitiet_TongTien));
 		tv_chitiet_NoiDung = ((LabelContentLayout) view
 				.findViewById(R.id.text_CTout_chitiet_NoiDung));
-		edt_chitiet_MaPIN = ((LabelContentLayout) view
+		edt_chitiet_MaPIN = ((CustomPassLayout) view
 				.findViewById(R.id.edt_CTout_chitiet_tradingcode));
+		checkboxTradingpass = edt_chitiet_MaPIN.getcheckbox();
 		btn_chitiet_ChapNhan = ((Button) view
 				.findViewById(R.id.btn_CTout_chitiet_Accept));
 		if (DeviceProperties.isTablet) {
@@ -115,6 +119,12 @@ public class BankCashTransferConfirm extends AbstractFragment {
 	}
 
 	private void initListener() {
+		checkboxTradingpass.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				checkboxTradingpass.setSelected(!checkboxTradingpass.isSelected());
+			}
+		});
 		btn_chitiet_ChapNhan.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -149,10 +159,21 @@ public class BankCashTransferConfirm extends AbstractFragment {
 			});
 		}
 	}
-
+	private void customDisplay(){
+		if(StaticObjectManager.saveTradingPass){
+			edt_chitiet_MaPIN.setText(StaticObjectManager.tradingPass);
+			checkboxTradingpass.setSelected(StaticObjectManager.saveTradingPass);
+			edt_chitiet_MaPIN.setVisibility(View.GONE);
+		}
+		else {
+			edt_chitiet_MaPIN.setText(StringConst.EMPTY);
+			edt_chitiet_MaPIN.setVisibility(View.VISIBLE);
+		}
+	}
 	@Override
 	public void onResume() {
 		super.onResume();
+		customDisplay();
 		showTransferDetail();
 	}
 
@@ -272,7 +293,7 @@ public class BankCashTransferConfirm extends AbstractFragment {
 		tv_chitiet_TongTien.setText(Common
 				.formatAmount(conBankAccDetail.TotalAmount));
 		tv_chitiet_NoiDung.setText(conBankAccDetail.Desc);
-		edt_chitiet_MaPIN.setText(StringConst.EMPTY);
+		//edt_chitiet_MaPIN.setText(StringConst.EMPTY);
 	}
 
 	@Override
@@ -284,6 +305,11 @@ public class BankCashTransferConfirm extends AbstractFragment {
 				Thread.sleep(2000);
 			} catch (Exception e) {
 			}
+			StaticObjectManager.saveTradingPass= checkboxTradingpass.isSelected();
+			if(StaticObjectManager.saveTradingPass)
+				StaticObjectManager.tradingPass = edt_chitiet_MaPIN.getText().toString();
+			else
+				StaticObjectManager.tradingPass = StringConst.EMPTY;
 			showDialogMessage(getStringResource(R.string.thong_bao), rObj.EM,
 					new SimpleAction() {
 

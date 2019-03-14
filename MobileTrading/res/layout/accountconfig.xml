@@ -105,7 +105,7 @@
                     android:id="@+id/lc_thietlaptk_MSBScontactplace"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
-                    app:contentColor="@color/white_text"
+                    app:contentColor="@color/green_text"
                     app:contentHint="@string/DiaChiLienHe"
                     app:editable="true"
                     app:labelText="@string/DiaChiLienHe"
@@ -116,7 +116,7 @@
                     android:id="@+id/lc_thietlaptk_email"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/m_labelcontentverlayout_height"
-                    app:contentColor="@color/white_text"
+                    app:contentColor="@color/green_text"
                     app:contentHint="@string/Email"
                     app:labelText="@string/Email"
                     app:orientation="vertical" />
@@ -183,6 +183,7 @@
                         android:layout_width="0dp"
                         android:layout_marginRight="9dp"
                         android:layout_weight="5.0"
+                        android:visibility="gone"
                         android:text="@string/XacNhan" />
 
                     <Button
@@ -190,6 +191,7 @@
                         style="@style/Button_Background1"
                         android:layout_width="0dp"
                         android:layout_weight="5.0"
+                        android:visibility="gone"
                         android:text="@string/Cancel" />
                 </LinearLayout>
             </LinearLayout>

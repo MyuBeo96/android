@@ -10,8 +10,10 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout.LayoutParams;
 
+import com.fscuat.mobiletrading.design.CustomPassLayout;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.common.StaticObjectManager;
@@ -44,7 +46,8 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 	 */
 	Button btn_close;
 
-	LabelContentLayout edt_chitiet_MaPin;
+	CustomPassLayout edt_chitiet_MaPin;
+	protected ImageButton checkboxTradingpass;
 	LabelContentLayout edt_chitiet_SLMua;
 	RightOffRegisterItem rightOffRegisterItem;
 	/**
@@ -79,8 +82,9 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 				.findViewById(R.id.edt_DKQM_chitiet_SLMua));
 		tv_chitiet_TongTien = ((LabelContentLayout) view
 				.findViewById(R.id.text_DKQM_chitiet_TongTien));
-		edt_chitiet_MaPin = ((LabelContentLayout) view
+		edt_chitiet_MaPin = ((CustomPassLayout) view
 				.findViewById(R.id.edt_DKQM_chitiet_tradingcode));
+		checkboxTradingpass = edt_chitiet_MaPin.getcheckbox();
 		btn_chitiet_ChapNhan = ((Button) view
 				.findViewById(R.id.btn_DKQM_chitiet_Accept));
 
@@ -118,6 +122,12 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 	}
 
 	private void initListener() {
+		checkboxTradingpass.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				checkboxTradingpass.setSelected(!checkboxTradingpass.isSelected());
+			}
+		});
 		if (DeviceProperties.isTablet) {
 			isAcceptPolicy.setOnClickListener(new OnClickListener() {
 
@@ -183,10 +193,21 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 			}
 		});
 	}
-
+	private void customDisplay(){
+		if(StaticObjectManager.saveTradingPass){
+			edt_chitiet_MaPin.setText(StaticObjectManager.tradingPass);
+			checkboxTradingpass.setSelected(StaticObjectManager.saveTradingPass);
+			edt_chitiet_MaPin.setVisibility(View.GONE);
+		}
+		else {
+			edt_chitiet_MaPin.setText(StringConst.EMPTY);
+			edt_chitiet_MaPin.setVisibility(View.VISIBLE);
+		}
+	}
 	@Override
 	public void onResume() {
 		super.onResume();
+		customDisplay();
 		ShowDialogChiTiet();
 	}
 
@@ -350,7 +371,7 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 	private void ShowDialogChiTiet() {
 		if (rightOffRegisterItem != null) {
 			tv_chitiet_Afaactno.setText(rightOffRegisterItem.Afacctno);
-			edt_chitiet_MaPin.setText(StringConst.EMPTY);
+			//edt_chitiet_MaPin.setText(StringConst.EMPTY);
 			edt_chitiet_SLMua.setText(StringConst.EMPTY);
 			tv_chitiet_TongTien.setText(StringConst.EMPTY);
 			tv_chitiet_MaCK.setText(rightOffRegisterItem.Symbol);
@@ -392,6 +413,11 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 			}
 			break;
 		case RIGHTOFFREGISTERSUBMIT:
+			StaticObjectManager.saveTradingPass= checkboxTradingpass.isSelected();
+			if(StaticObjectManager.saveTradingPass)
+				StaticObjectManager.tradingPass = edt_chitiet_MaPin.getText().toString();
+			else
+				StaticObjectManager.tradingPass = StringConst.EMPTY;
 			RightOffRegister rightOffRegister = (RightOffRegister) mainActivity
 					.getFragmentByName(RightOffRegister.class.getName());
 			rightOffRegister.onResume();

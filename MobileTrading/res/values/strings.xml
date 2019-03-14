@@ -539,7 +539,7 @@
     <string name="sodutien_label_UngToiDa">Ứng tối đa</string>
     <string name="sodutien_label_RutToiDa">Rút tối đa</string>
     <string name="sodutien_label_TongNo">Tổng nợ</string>
-    <string name="sodutien_lable_GiaTriNAV">Tài sản ròng(NAV)</string>
+    <string name="sodutien_lable_GiaTriNAV">Tài sản ròng (NAV)</string>
     <string name="TaiKhoanNganHang">Tài khoản ngân hàng</string>
     <string name="SoTieuKhoanNhan">Số tiểu khoản nhận</string>
     <string name="chuyenkhoanck_label_TKGui">Tiểu khoản gửi</string>

@@ -221,10 +221,27 @@
             android:textColor="@color/red_brown_text" />
     </LinearLayout>
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <!--<com.fscuat.mobiletrading.design.LabelContentLayout-->
+        <!--android:id="@+id/edt_DKQM_chitiet_tradingcode"-->
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:background="@drawable/bg_black_conner3_262630"-->
+        <!--android:paddingLeft="5dp"-->
+        <!--android:visibility="gone"-->
+        <!--app:contentColor="@color/white_text"-->
+        <!--app:contentHint="@string/MatKhauGiaoDich"-->
+        <!--app:contentgravity="left"-->
+        <!--app:editable="true"-->
+        <!--app:inputType="textPassword"-->
+        <!--app:labelweight="0"-->
+        <!--app:orientation="vertical"-->
+        <!--app:separationColor="@color/transparent" />-->
+    <com.fscuat.mobiletrading.design.CustomPassLayout
         android:id="@+id/edt_DKQM_chitiet_tradingcode"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/m_labelcontentverlayout_height"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:background="@drawable/bg_black_conner3_262630"
@@ -232,12 +249,12 @@
         android:visibility="gone"
         app:contentColor="@color/white_text"
         app:contentHint="@string/MatKhauGiaoDich"
-        app:contentgravity="left"
         app:editable="true"
         app:inputType="textPassword"
-        app:labelweight="0"
-        app:orientation="vertical"
-        app:separationColor="@color/transparent" />
+        app:labelText="@string/MatKhauGiaoDich"
+        app:separationColor="@color/transparent"
+        app:labelRememberText="@string/remmber_tradingpass"
+        app:orientation="vertical" />
 
     <View
         android:layout_width="match_parent"
