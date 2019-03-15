@@ -477,6 +477,7 @@
     <string name="datlenh_label_HanMucMua">購買力限額</string>
     <string name="datlenh_label_KLDuocMua">可買進股數</string>
     <string name="datlenh_label_KLduocban">最大賣出量</string>
+    <string name="datlenh_label_Trangthaitieukhoan">Status</string>
     <string name="datlenh_label_San">跌停</string>
     <string name="datlenh_label_SplitQtty">除以數量</string>
     <string name="datlenh_label_SucMua">購買力</string>

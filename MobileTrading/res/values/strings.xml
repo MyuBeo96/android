@@ -463,6 +463,7 @@
     <string name="datlenh_label_HanMucMua">Hạn mức mua</string>
     <string name="datlenh_label_KLDuocMua">KL được mua</string>
     <string name="datlenh_label_KLduocban">KL được bán</string>
+    <string name="datlenh_label_Trangthaitieukhoan">Trạng thái tiểu khoản</string>
     <string name="datlenh_label_ChoVe">Chờ về</string>
     <string name="TongTien">Tổng tiền</string>
     <string name="LoaiLenh">Loại lệnh</string>

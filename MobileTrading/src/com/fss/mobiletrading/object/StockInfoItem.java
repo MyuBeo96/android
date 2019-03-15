@@ -3,6 +3,7 @@ package com.fss.mobiletrading.object;
 import java.util.HashMap;
 
 public class StockInfoItem {
+	public String AFStatus;
 	public String AvailableMORTAGE;
 	public String AvailableStrade;
 	public String CashAvaiable;
@@ -57,6 +58,7 @@ public class StockInfoItem {
 
 	public StockInfoItem(HashMap<String, String> hm) {
 		this.CashAvaiable = hm.get("CashAvaiable");
+		this.AFStatus = hm.get("AFStatus");
 		this.CeilPrice = hm.get("CeilPrice");
 		this.CeilPriceColor = hm.get("CeilPriceColor");
 		this.RefPrice = hm.get("RefPrice");

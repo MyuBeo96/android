@@ -406,6 +406,34 @@
                             android:textColor="@color/white_text"
                             android:textSize="12.0sp"
                             android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/lbl_datlenh_trangthaitieukhoan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:layout_alignBottom="@+id/text_datlenh_trangthaitieukhoan"
+                            android:layout_below="@+id/lbl_datlenh_nnban"
+                            android:paddingLeft="5dp"
+                            android:text="@string/datlenh_label_Trangthaitieukhoan"
+                            android:textColor="#ff777777"
+                            android:visibility="gone"
+                            android:textSize="12.0sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/text_datlenh_trangthaitieukhoan"
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp"
+                            android:layout_below="@+id/text_DatLenh_NNBan"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/lbl_datlenh_trangthaitieukhoan"
+                            android:layout_alignParentRight="true"
+                            android:gravity="right"
+                            android:textColor="@color/white_text"
+                            android:visibility="gone"
+                            android:textSize="12.0sp"
+                            />
+
                         <TextView
                             android:id="@+id/lbl_datlenh_nnbansell"
                             android:layout_width="wrap_content"
@@ -429,6 +457,32 @@
                             android:textColor="@color/white_text"
                             android:textSize="12.0sp"
                             android:visibility="gone"/>
+                        <TextView
+                            android:id="@+id/lbl_datlenh_trangthaitieukhoansell"
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:layout_alignBottom="@+id/text_datlenh_trangthaitieukhoansell"
+                            android:layout_below="@+id/lbl_datlenh_nnbansell"
+                            android:paddingLeft="5dp"
+                            android:text="@string/datlenh_label_Trangthaitieukhoan"
+                            android:textColor="#ff777777"
+                            android:visibility="gone"
+                            android:textSize="12.0sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/text_datlenh_trangthaitieukhoansell"
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp"
+                            android:layout_below="@+id/text_DatLenh_NNBanSell"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/lbl_datlenh_trangthaitieukhoansell"
+                            android:layout_alignParentRight="true"
+                            android:gravity="right"
+                            android:textColor="@color/white_text"
+                            android:visibility="gone"
+                            android:textSize="12.0sp"
+                            />
                         <TextView
                             android:id="@+id/lbl_datlenh_SucMuaSell"
                             android:layout_width="wrap_content"
@@ -521,6 +575,8 @@
                             android:textColor="@color/white_text"
                             android:textSize="12.0sp"
                             android:visibility="gone" />
+
+
                     </RelativeLayout>
                 </RelativeLayout>
 
