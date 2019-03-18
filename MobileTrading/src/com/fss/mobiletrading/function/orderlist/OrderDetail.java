@@ -153,7 +153,7 @@ public class OrderDetail extends AbstractFragment {
         }
         else {
             edt_TradingPw.setText(StringConst.EMPTY);
-            edt_TradingPw.setVisibility(View.VISIBLE);
+            //edt_TradingPw.setVisibility(View.VISIBLE);
         }
     }
     @Override

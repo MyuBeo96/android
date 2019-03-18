@@ -145,8 +145,7 @@ public class PlaceOrder extends AbstractFragment {
 
     protected TextView lbl_afstatus;
     protected TextView tv_afstatus;
-    protected TextView lbl_afstatussell;
-    protected TextView tv_afstatussell;
+
 
     protected String[] list_Sell_Symbol;
     private String[] listAllStock;
@@ -373,8 +372,7 @@ public class PlaceOrder extends AbstractFragment {
 
         lbl_afstatus = (TextView) view.findViewById(R.id.lbl_datlenh_trangthaitieukhoan);
         tv_afstatus = (TextView) view.findViewById(R.id.text_datlenh_trangthaitieukhoan);
-        lbl_afstatussell = (TextView) view.findViewById(R.id.lbl_datlenh_trangthaitieukhoansell);
-        tv_afstatussell = (TextView) view.findViewById(R.id.text_datlenh_trangthaitieukhoansell);
+
         edt_SplitQtty = ((Edittext_SoLuong) view
                 .findViewById(R.id.edttg_DatLenh_SplitQtty));
 
@@ -1057,18 +1055,21 @@ public class PlaceOrder extends AbstractFragment {
                 if (!DeviceProperties.isTablet) {
                     if (!AFStatus[0].equals("0")) {
                         tv_afstatus.setText(AFStatus[1]);
-                        tv_afstatussell.setText(AFStatus[1]);
+                        lbl_afstatus.setVisibility(TextView.VISIBLE);
+                        tv_afstatus.setVisibility(TextView.VISIBLE);
                     } else {
                         lbl_afstatus.setVisibility(TextView.GONE);
                         tv_afstatus.setVisibility(TextView.GONE);
-                        lbl_afstatussell.setVisibility(TextView.GONE);
-                        tv_afstatussell.setVisibility(TextView.GONE);
+
                         tv_afstatus.setText(StringConst.EMPTY);
-                        tv_afstatussell.setText(StringConst.EMPTY);
+
                     }
                 }
                 else{
-                    if (!AFStatus[0].equals("0")) tv_afstatus.setText(AFStatus[1]);
+                    if (!AFStatus[0].equals("0")){
+                        tv_afstatus.setText(AFStatus[1]);
+                        tv_afstatus.setVisibility(TextView.VISIBLE);
+                    }
                     else tv_afstatus.setText(StringConst.EMPTY);
                 }
                 try {
@@ -1137,8 +1138,7 @@ public class PlaceOrder extends AbstractFragment {
                 tv_NNBan.setVisibility(TextView.GONE);
                 lbl_afstatus.setVisibility(TextView.GONE);
                 tv_afstatus.setVisibility(TextView.GONE);
-                lbl_afstatussell.setVisibility(TextView.VISIBLE);
-                tv_afstatussell.setVisibility(TextView.VISIBLE);
+
             }
 
             sellChangeColorBackground();
@@ -1168,10 +1168,9 @@ public class PlaceOrder extends AbstractFragment {
                 tv_NNBan.setVisibility(TextView.VISIBLE);
                 lbl_NNBanSell.setVisibility(TextView.GONE);
                 tv_NNBanSell.setVisibility(TextView.GONE);
-                lbl_afstatus.setVisibility(TextView.VISIBLE);
-                tv_afstatus.setVisibility(TextView.VISIBLE);
-                lbl_afstatussell.setVisibility(TextView.GONE);
-                tv_afstatussell.setVisibility(TextView.GONE);
+//                lbl_afstatus.setVisibility(TextView.VISIBLE);
+//                tv_afstatus.setVisibility(TextView.VISIBLE);
+
             }
 
           buyChangeColorBackground();
@@ -1244,8 +1243,7 @@ public class PlaceOrder extends AbstractFragment {
             if (!DeviceProperties.isTablet) {
                 lbl_NNBanSell.setVisibility(TextView.VISIBLE);
                 tv_NNBanSell.setVisibility(TextView.VISIBLE);
-                lbl_afstatussell.setVisibility(TextView.VISIBLE);
-                tv_afstatussell.setVisibility(TextView.VISIBLE);
+
                 ((MainActivity_Mobile) getActivity()).setActionbarPlaceOrder(R.color.placeorder_sell_color);
             }
             btn_DatLenh.setBackgroundResource(R.drawable.background_sellbutton);
@@ -1273,8 +1271,8 @@ public class PlaceOrder extends AbstractFragment {
             if (!DeviceProperties.isTablet) {
                 lbl_NNBan.setVisibility(TextView.VISIBLE);
                 tv_NNBan.setVisibility(TextView.VISIBLE);
-                lbl_afstatus.setVisibility(TextView.VISIBLE);
-                tv_afstatus.setVisibility(TextView.VISIBLE);
+//                lbl_afstatus.setVisibility(TextView.VISIBLE);
+//                tv_afstatus.setVisibility(TextView.VISIBLE);
                 ((MainActivity_Mobile) getActivity()).setActionbarPlaceOrder(R.color.placeorder_buy_color);
             }
             PlaceOrder.btn_DatLenh.setBackgroundResource(R.drawable.backgroundbutton);
