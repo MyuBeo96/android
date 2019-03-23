@@ -41,6 +41,10 @@ public class StaticObjectManager {
     public static String sessionCookie = "";
     public static String accessTokenName = "";
 
+	public static String strOTP="";
+	public static boolean saveOTP=false;
+	public static String otpType="";
+
 	public static void ClearData() {
 		loginInfo = null;
 		acctnoItem = null;

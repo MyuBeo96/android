@@ -703,4 +703,7 @@
     <string name="TongGiaTriVon"> Total investment value</string>
     <string name="TongGiaTriTT">Total market value</string>
     <string name="DonViGia">Price Unit: 1,000 VND</string>
+    <string name="otptypenote">Quý khách đang giao dịch trên Mobile Trading. Xin quý khách chọn hình thức nhận mã xác thực.</string>
+    <string name="otptypesms">Nhận qua SMS</string>
+    <string name="otptypeapp">Nhận qua ứng dụng</string>
 </resources>

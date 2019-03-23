@@ -89,7 +89,9 @@ public class WelcomeScreen extends Activity implements INotifier {
                             e.printStackTrace();
                         }
                         hasconfig = true;
+                        //toannds comment
                         startLogin(AppConfig.getInstance().enableSSO);
+                        //startLogin(true);
                         break;
                 }
                 break;

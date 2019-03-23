@@ -748,6 +748,8 @@ public class Login extends FragmentActivity implements INotifier {
 					StaticObjectManager.listStock = readAT(listStock);
 					if (txDate.equals(StaticObjectManager.loginInfo.TxDateString)
 							&& StaticObjectManager.listStock.size() > 0) {
+
+
 						startMainActivity();
 						return;
 					}
@@ -886,12 +888,26 @@ public class Login extends FragmentActivity implements INotifier {
 	}
 
 	private void startMainActivity() {
-		if (DeviceProperties.isTablet) {
-			startActivity(new Intent(this, MainActivity_Tablet.class));
-		} else {
-			Intent intentMobile = new Intent(this, MainActivity_Mobile.class);
-			startActivity(intentMobile);
-		}
+	    if(StaticObjectManager.loginInfo.IsOTPDeposit == "true"){
+	        if(StaticObjectManager.otpType == StringConst.EMPTY)
+                startActivity(new Intent(this, OTPTypeActivity.class));
+	        else{
+                if (DeviceProperties.isTablet) {
+                    startActivity(new Intent(this, MainActivity_Tablet.class));
+                } else {
+                    Intent intentMobile = new Intent(this, MainActivity_Mobile.class);
+                    startActivity(intentMobile);
+                }
+            }
+        }
+        else {
+            if (DeviceProperties.isTablet) {
+                startActivity(new Intent(this, MainActivity_Tablet.class));
+            } else {
+                Intent intentMobile = new Intent(this, MainActivity_Mobile.class);
+                startActivity(intentMobile);
+            }
+        }
 		ClearData();
 	}
 

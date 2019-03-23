@@ -2,6 +2,7 @@ package com.fscuat.mobiletrading;
 
 import android.app.Fragment;
 import android.graphics.Bitmap;
+import android.net.http.SslError;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.CookieManager;
+import android.webkit.SslErrorHandler;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -43,7 +45,7 @@ public class LoginOverWeb extends Fragment {
                 Log.i("test cookies", "cookies: " + CookieManager.getInstance().getCookie(url));
                 url = url.toLowerCase();
                 String returnURL = MSTradeAppConfig.returnLoginUrl.toLowerCase();
-                if (url.equals(returnURL)) {
+                if (url.matches(returnURL)) {
                     String cookies = CookieManager.getInstance().getCookie(url);
                     Log.i("hhhhhhhhhhhhh", "cookies: " + cookies);
                     if (isAdded()) {
@@ -57,6 +59,10 @@ public class LoginOverWeb extends Fragment {
                 super.onPageFinished(view, url);
             }
 
+            @Override
+            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+                handler.proceed();
+            }
         });
         loadWebview(MSTradeAppConfig.MobileServerUrl + AppData.language);
         return root;

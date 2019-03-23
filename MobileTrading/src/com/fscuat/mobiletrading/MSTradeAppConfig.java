@@ -26,9 +26,9 @@ package com.fscuat.mobiletrading;
 //    public static String returnLoginUrl = "https://hftsso.fss.com.vn/MFlexTest/";
 //    public static String NTServerUrl = "https://hftsso.fss.com.vn/NTSServer";
 //    production
-        public static String MobileServerUrl = "https://owa.msi.com.vn/MFlexApps/Account/LoginOAuth?lang=";
-        public static String returnLoginUrl = "https://owa.msi.com.vn/MFlexApps/";
-        public static String NTServerUrl = "https://owa.msi.com.vn/NTSServer";
+        public static String MobileServerUrl = "https://uat.vcbs.com.vn/GOLIVE_MflexApps//Account/LoginOAuth?lang=";
+        public static String returnLoginUrl = "https://uat.vcbs.com.vn/GOLIVE_MflexApps/";
+        public static String NTServerUrl = "https://uat.vcbs.com.vn/NTSServerTCSC";
 
 
         public static final String controller_FindCustodyCd = "/MAccount/FindCustodyCd";

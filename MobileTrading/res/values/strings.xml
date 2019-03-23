@@ -802,4 +802,7 @@
     <string name="TongGiaTriVon">Tổng giá trị vốn</string>
     <string name="TongGiaTriTT">Tổng giá trị TT</string>
     <string name="DonViGia">Đơn vị giá: 1,000 VNĐ</string>
+    <string name="otptypenote">Quý khách đang giao dịch trên Mobile Trading. Xin quý khách chọn hình thức nhận mã xác thực.</string>
+    <string name="otptypesms">Nhận qua SMS</string>
+    <string name="otptypeapp">Nhận qua ứng dụng</string>
 </resources>

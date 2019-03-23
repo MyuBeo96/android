@@ -491,6 +491,7 @@ public class Login_SSO extends FragmentActivity implements INotifier {
         super.onResume();
         btn_Login.setLoading(false);
         refeshWebview();
+        webviewContainer.setVisibility(View.VISIBLE);
     }
 
     private void CallAT() {
@@ -561,6 +562,7 @@ public class Login_SSO extends FragmentActivity implements INotifier {
 
                     default:
                         StaticObjectManager.loginInfo = (LoginItem) rObj.obj;
+                        Log.d("testsso",StaticObjectManager.loginInfo.TxDateString);
                         if (StaticObjectManager.loginInfo.IsBroker) {
                             StaticObjectManager.defaultbrokeracctno = new AcctnoItem(
                                     MSTradeAppConfig.USERNAME_DEFAULT);

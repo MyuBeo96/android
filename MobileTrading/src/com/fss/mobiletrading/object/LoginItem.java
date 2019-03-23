@@ -18,11 +18,18 @@ public class LoginItem {
 	public String Clazz;
 	public String Agent;
 	public String Mobile;
+	public String IsOTPOrder;
+	public String IsOTPCondOrder;
+	public String IsOTPCash;
+	public String IsOTPIssue;
+	public String IsOTPDeposit;
+	public String DisableOTPTime;
 
 	public LoginItem(String currentAcctno, String custodycd, String custName,
 			String custEmail, String username, String txDateString,
 			String language, String isBroker, String pr_Clazz, String pr_agent,
-			String pr_mobile, List<AcctnoItem> contractList) {
+			String pr_mobile, List<AcctnoItem> contractList, String isotporder,
+					 String isotpcondorder,String isotpcash,String isotpissue,String isotpdeposit, String disableotptime) {
 		super();
 		CurrentAcctno = currentAcctno;
 		Custodycd = custodycd;
@@ -36,6 +43,12 @@ public class LoginItem {
 		Clazz = pr_Clazz;
 		Agent = pr_agent;
 		Mobile = pr_mobile;
+		IsOTPOrder = isotporder;
+		IsOTPCondOrder= isotpcondorder;
+		IsOTPCash= isotpcash;
+		IsOTPIssue= isotpissue;
+		IsOTPDeposit= isotpdeposit;
+		DisableOTPTime= disableotptime;
 	}
 
 }
