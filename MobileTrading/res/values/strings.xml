@@ -439,9 +439,7 @@
     <string name="login_text_time">Timeout</string>
     <string name="login_text_minus">phút</string>
     <string name="ghi_nho">Lưu thông tin</string>
-    <string name="remmber_otp">Lưu mã xác thực</string>
     <string name="remmber_tradingpass">Lưu mật khẩu giao dịch</string>
-    <string name="genOTP">Lấy mã xác thực</string>
     <string name="showpassword">Hiển thị mật khẩu</string>
     <string name="activity_main_btn_ThiTruong">T.Trường</string>
     <string name="activity_main_btn_Menu">Menu</string>
@@ -786,6 +784,7 @@
     <string name="controller_GetCashTransferList">/MCash/GetCashTransferList</string>
     <string name="controller_ListCriteria">/MWatchList/ListCriteria</string>
     <string name="controller_CheckSession">/MAccount/checkSession</string>
+    <string name="controller_GenOTPSMS">/MAccount/GenOTPSMS</string>
 
     <!--Login SSO-->
     <string name="DangNhapThatBai">Đăng nhập thất bại</string>
@@ -805,4 +804,8 @@
     <string name="otptypenote">Quý khách đang giao dịch trên Mobile Trading. Xin quý khách chọn hình thức nhận mã xác thực.</string>
     <string name="otptypesms">Nhận qua SMS</string>
     <string name="otptypeapp">Nhận qua ứng dụng</string>
+    <string name="otpcode">Mã xác thực</string>
+    <string name="otpremember">Lưu mã xác thực</string>
+    <string name="genOTP">Lấy mã xác thực</string>
+    <string name="requireOTP">Mã xác thực trống</string>
 </resources>

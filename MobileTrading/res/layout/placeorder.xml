@@ -688,7 +688,7 @@
                 <com.fscuat.mobiletrading.design.CustomPassLayout
                     android:id="@+id/edt_amendorder_TradingCode"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/m_labelcontentverlayout_height"
+                    android:layout_height="wrap_content"
                     app:contentColor="@color/white_text"
                     app:contentHint="@string/MatKhauGiaoDich"
                     android:layout_below="@+id/lay_order_splitqtty"

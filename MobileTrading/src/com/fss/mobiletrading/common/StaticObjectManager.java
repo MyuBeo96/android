@@ -44,6 +44,7 @@ public class StaticObjectManager {
 	public static String strOTP="";
 	public static boolean saveOTP=false;
 	public static String otpType="";
+    public static long mLastGenOTPClickTime=01;
 
 	public static void ClearData() {
 		loginInfo = null;

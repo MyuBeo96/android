@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.fscuat.mobiletrading.design.CustomPassLayout;
@@ -32,6 +33,7 @@ public class OrderConfirm extends AbstractFragment {
 
     final String TRADECONFIRM = "SuccessService#TRADECONFIRM";
     final String TRADEGTCCONFIRM = "SuccessService#TRADEGTCCONFIRM";
+    final String GENOTPSMS = "SuccessService#GENOTPSMS";
 
     static final String DEFAULT_PRICETYPE = "LO";
 
@@ -44,12 +46,17 @@ public class OrderConfirm extends AbstractFragment {
     protected LabelContentLayout tv_checkorder_fromDate;
     protected LabelContentLayout tv_checkorder_toDate;
     protected CustomPassLayout edt_checkorder_TradingPw;
+    protected CustomPassLayout edt_checkorder_OTPCode;
     protected TextView tv_checkorder_Side;
     protected Button btn_detail_ChapNhan;
     protected Button btn_detail_Cancel;
     protected ImageButton checkboxTradingpass;
+    protected ImageButton checkboxOTPCode;
     OrderSetParams orderSetParams;
     long mLastConfirmClickTime = 0l;
+    long disableOTPTime= 01;
+    boolean isOTP= false;
+    boolean saveOTP= false;
 
     public static OrderConfirm newInstance(MainActivity mActivity) {
 
@@ -83,15 +90,24 @@ public class OrderConfirm extends AbstractFragment {
                 .findViewById(R.id.text_checkorder_toDate);
         edt_checkorder_TradingPw = (CustomPassLayout) view
                 .findViewById(R.id.edt_checkorder_TradingCode);
+        edt_checkorder_OTPCode = (CustomPassLayout) view
+                .findViewById(R.id.edt_checkorder_OTCode);
         btn_detail_ChapNhan = (Button) view
                 .findViewById(R.id.btn_checkorder_Accept);
         checkboxTradingpass = (ImageButton) edt_checkorder_TradingPw.getcheckbox();
+        checkboxOTPCode = (ImageButton) edt_checkorder_OTPCode.getcheckbox();
         innitListener();
 
         return view;
     }
 
     private  void innitListener(){
+        checkboxOTPCode.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkboxOTPCode.setSelected(!checkboxOTPCode.isSelected());
+            }
+        });
         checkboxTradingpass.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,7 +129,38 @@ public class OrderConfirm extends AbstractFragment {
                 }
             }
         });
+        edt_checkorder_OTPCode.getbtn().setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if ((SystemClock.elapsedRealtime() - StaticObjectManager.mLastGenOTPClickTime) < disableOTPTime) {
+                    return;
+                }
+                StaticObjectManager.mLastGenOTPClickTime=SystemClock.elapsedRealtime();
+                GenOTPSMS();
+            }
+        });
     }
+
+    protected  void GenOTPSMS(){
+        List<String> list_key = new ArrayList<String>();
+        List<String> list_value = new ArrayList<String>();
+        {
+            list_key.add("link");
+            list_value.add(getStringResource(R.string.controller_GenOTPSMS));
+        }
+        {
+            list_key.add("afacctno");
+            list_value.add(StaticObjectManager.acctnoItem.ACCTNO);
+        }
+        {
+            list_key.add("otptype");
+            list_value.add(StaticObjectManager.otpType);
+        }
+
+        StaticObjectManager.connectServer.callHttpPostService(GENOTPSMS,
+                this, list_key, list_value);
+    }
+
 
     @Override
     public void onStart() {
@@ -124,17 +171,43 @@ public class OrderConfirm extends AbstractFragment {
         }
     }
     private void customDisplay(){
-        if(StaticObjectManager.saveTradingPass){
-            edt_checkorder_TradingPw.setText(StaticObjectManager.tradingPass);
-            checkboxTradingpass.setSelected(StaticObjectManager.saveTradingPass);
+        if(isOTP){
             edt_checkorder_TradingPw.setVisibility(View.GONE);
+            edt_checkorder_OTPCode.setVisibility(View.VISIBLE);
+
+            if(StaticObjectManager.saveOTP) {
+                edt_checkorder_OTPCode.setText(StaticObjectManager.strOTP);
+                checkboxOTPCode.setSelected(StaticObjectManager.saveOTP);
+                edt_checkorder_OTPCode.setVisibility(View.GONE);
+                saveOTP= StaticObjectManager.saveOTP;
+            }
+            else
+                edt_checkorder_OTPCode.setText(StringConst.EMPTY);
+
+            if(!DeviceProperties.isTablet) {
+                RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) btn_detail_ChapNhan.getLayoutParams();
+                params.addRule(RelativeLayout.BELOW, R.id.edt_checkorder_OTCode);
+            }
         }
-        else
-            edt_checkorder_TradingPw.setText(StringConst.EMPTY);
+        else {
+            edt_checkorder_TradingPw.setVisibility(View.VISIBLE);
+            edt_checkorder_OTPCode.setVisibility(View.GONE);
+            if(!DeviceProperties.isTablet) {
+                RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) btn_detail_ChapNhan.getLayoutParams();
+                params.addRule(RelativeLayout.BELOW, R.id.edt_checkorder_TradingCode);
+            }
+            if (StaticObjectManager.saveTradingPass) {
+                edt_checkorder_TradingPw.setText(StaticObjectManager.tradingPass);
+                checkboxTradingpass.setSelected(StaticObjectManager.saveTradingPass);
+                edt_checkorder_TradingPw.setVisibility(View.GONE);
+            } else
+                edt_checkorder_TradingPw.setText(StringConst.EMPTY);
+        }
     }
     @Override
     public void onResume() {
         super.onResume();
+        isOTP= orderSetParams.isGTCOrder? StaticObjectManager.loginInfo.IsOTPCondOrder == "true": StaticObjectManager.loginInfo.IsOTPOrder == "true";
         showOrder();
         customDisplay();
     }
@@ -154,122 +227,160 @@ public class OrderConfirm extends AbstractFragment {
     }
 
     protected void CallTradeConfirm() {
-        if (edt_checkorder_TradingPw.getText().length() != 0) {
-            List<String> list_key = new ArrayList<String>();
-            List<String> list_value = new ArrayList<String>();
-            {
-                list_key.add("link");
-                list_value.add(getStringResource(R.string.controller_TradeConfirm));
+        if(isOTP) {
+            if (edt_checkorder_OTPCode.getText().length() == 0) {
+                showDialogMessage(
+                        getResources().getString(
+                                R.string.thong_bao),
+                        getResources().getString(
+                                R.string.requireOTP));
+                edt_checkorder_OTPCode.requestFocus();
+                return;
             }
-            {
-                list_key.add("AFACCTNO");
-                list_value.add(orderSetParams.afacctno);
-            }
-            {
-                list_key.add("CUSTODYCD");
-                list_value.add(orderSetParams.custodycd);
-            }
-            {
-                list_key.add("SIDE");
-                list_value.add(orderSetParams.sideOrder);
-            }
-            {
-                list_key.add("SYMBOL");
-                list_value.add(orderSetParams.symbolOrder);
-            }
-            {
-                list_key.add("PRICETYPE");
-                list_value.add(orderSetParams.priceType);
-            }
-            {
-                list_key.add("QTTY");
-                list_value.add(orderSetParams.quantityOrder);
-            }
-            {
-                list_key.add("PRICE");
-                list_value.add(orderSetParams.priceOrder);
-            }
-            {
-                list_key.add("SplitQtty");
-                list_value.add(orderSetParams.splitOrder);
-            }
-            {
-                list_key.add("TradingPassword");
-                list_value.add(edt_checkorder_TradingPw.getText().toString());
-            }
-            StaticObjectManager.connectServer.callHttpPostService(TRADECONFIRM,
-                    this, list_key, list_value);
-            mainActivity.loadingScreen(true);
-        } else {
-            showDialogMessage(
-                    getResources().getString(
-                            R.string.thong_bao),
-                    getResources().getString(
-                            R.string.NhapPin));
-            edt_checkorder_TradingPw.requestFocus();
+
         }
+        else {
+            if (edt_checkorder_TradingPw.getText().length() == 0) {
+                showDialogMessage(
+                        getResources().getString(
+                                R.string.thong_bao),
+                        getResources().getString(
+                                R.string.NhapPin));
+                edt_checkorder_TradingPw.requestFocus();
+                return;
+            }
+        }
+        List<String> list_key = new ArrayList<String>();
+        List<String> list_value = new ArrayList<String>();
+        {
+            list_key.add("link");
+            list_value.add(getStringResource(R.string.controller_TradeConfirm));
+        }
+        {
+            list_key.add("AFACCTNO");
+            list_value.add(orderSetParams.afacctno);
+        }
+        {
+            list_key.add("CUSTODYCD");
+            list_value.add(orderSetParams.custodycd);
+        }
+        {
+            list_key.add("SIDE");
+            list_value.add(orderSetParams.sideOrder);
+        }
+        {
+            list_key.add("SYMBOL");
+            list_value.add(orderSetParams.symbolOrder);
+        }
+        {
+            list_key.add("PRICETYPE");
+            list_value.add(orderSetParams.priceType);
+        }
+        {
+            list_key.add("QTTY");
+            list_value.add(orderSetParams.quantityOrder);
+        }
+        {
+            list_key.add("PRICE");
+            list_value.add(orderSetParams.priceOrder);
+        }
+        {
+            list_key.add("SplitQtty");
+            list_value.add(orderSetParams.splitOrder);
+        }
+        {
+            list_key.add("TradingPassword");
+            list_value.add(isOTP? edt_checkorder_OTPCode.getText().toString(): edt_checkorder_TradingPw.getText().toString());
+        }
+        {
+            list_key.add("saveotp");
+            list_value.add(saveOTP?"Y":"N");
+        }
+        StaticObjectManager.connectServer.callHttpPostService(TRADECONFIRM,
+                this, list_key, list_value);
+        mainActivity.loadingScreen(true);
+
     }
 
     protected void CallGTCTradeConfirm() {
-        if (edt_checkorder_TradingPw.getText().length() != 0) {
-            List<String> list_key = new ArrayList<String>();
-            List<String> list_value = new ArrayList<String>();
-            {
-                list_key.add("link");
-                list_value
-                        .add(getStringResource(R.string.controller_TradeGTCConfirm));
+        if(isOTP) {
+            if (edt_checkorder_OTPCode.getText().length() == 0) {
+                showDialogMessage(
+                        getResources().getString(
+                                R.string.thong_bao),
+                        getResources().getString(
+                                R.string.requireOTP));
+                edt_checkorder_OTPCode.requestFocus();
+                return;
             }
-            {
-                list_key.add("AFACCTNO");
-                list_value.add(orderSetParams.afacctno);
-            }
-            {
-                list_key.add("CUSTODYCD");
-                list_value.add(orderSetParams.custodycd);
-            }
-            {
-                list_key.add("SIDE");
-                list_value.add(orderSetParams.sideOrder);
-            }
-            {
-                list_key.add("SYMBOL");
-                list_value.add(orderSetParams.symbolOrder);
-            }
-            {
-                list_key.add("PRICETYPE");
-                list_value.add(DEFAULT_PRICETYPE);
-            }
-            {
-                list_key.add("QTTY");
-                list_value.add(orderSetParams.quantityOrder);
-            }
-            {
-                list_key.add("PRICE");
-                list_value.add(orderSetParams.priceOrder);
-            }
-            {
-                list_key.add("fromDate");
-                list_value.add(orderSetParams.fromDate);
-            }
-            {
-                list_key.add("toDate");
-                list_value.add(orderSetParams.toDate);
-            }
-            {
-                list_key.add("TradingPassword");
-                list_value.add(edt_checkorder_TradingPw.getText().toString());
-            }
-            StaticObjectManager.connectServer.callHttpPostService(TRADEGTCCONFIRM,
-                    this, list_key, list_value);
-            mainActivity.loadingScreen(true);
-        } else {
-            showDialogMessage(
-                    getResources().getString(
-                            R.string.thong_bao),
-                    getResources().getString(
-                            R.string.NhapPin));
-            edt_checkorder_TradingPw.requestFocus();
+
         }
+        else {
+            if (edt_checkorder_TradingPw.getText().length() == 0) {
+                showDialogMessage(
+                        getResources().getString(
+                                R.string.thong_bao),
+                        getResources().getString(
+                                R.string.NhapPin));
+                edt_checkorder_TradingPw.requestFocus();
+                return;
+            }
+        }
+        List<String> list_key = new ArrayList<String>();
+        List<String> list_value = new ArrayList<String>();
+        {
+            list_key.add("link");
+            list_value
+                    .add(getStringResource(R.string.controller_TradeGTCConfirm));
+        }
+        {
+            list_key.add("AFACCTNO");
+            list_value.add(orderSetParams.afacctno);
+        }
+        {
+            list_key.add("CUSTODYCD");
+            list_value.add(orderSetParams.custodycd);
+        }
+        {
+            list_key.add("SIDE");
+            list_value.add(orderSetParams.sideOrder);
+        }
+        {
+            list_key.add("SYMBOL");
+            list_value.add(orderSetParams.symbolOrder);
+        }
+        {
+            list_key.add("PRICETYPE");
+            list_value.add(DEFAULT_PRICETYPE);
+        }
+        {
+            list_key.add("QTTY");
+            list_value.add(orderSetParams.quantityOrder);
+        }
+        {
+            list_key.add("PRICE");
+            list_value.add(orderSetParams.priceOrder);
+        }
+        {
+            list_key.add("fromDate");
+            list_value.add(orderSetParams.fromDate);
+        }
+        {
+            list_key.add("toDate");
+            list_value.add(orderSetParams.toDate);
+        }
+        {
+            list_key.add("TradingPassword");
+            list_value.add(isOTP? edt_checkorder_OTPCode.getText().toString(): edt_checkorder_TradingPw.getText().toString());
+        }
+        {
+            list_key.add("saveotp");
+            list_value.add(saveOTP?"Y":"N");
+        }
+        StaticObjectManager.connectServer.callHttpPostService(TRADEGTCCONFIRM,
+                this, list_key, list_value);
+        mainActivity.loadingScreen(true);
+
     }
 
     private void showOrder() {
@@ -320,17 +431,29 @@ public class OrderConfirm extends AbstractFragment {
     @Override
     protected void process(String key, ResultObj rObj) {
         switch (key) {
+            case GENOTPSMS:
+                showDialogMessage(getStringResource(R.string.thong_bao), rObj.EM);
+                break;
             case TRADEGTCCONFIRM:
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                StaticObjectManager.saveTradingPass= checkboxTradingpass.isSelected();
-                if(StaticObjectManager.saveTradingPass)
-                    StaticObjectManager.tradingPass = edt_checkorder_TradingPw.getText().toString();
-                else
-                    StaticObjectManager.tradingPass = StringConst.EMPTY;
+                if(isOTP){
+                    StaticObjectManager.saveOTP= checkboxOTPCode.isSelected();
+                    if(StaticObjectManager.saveOTP)
+                        StaticObjectManager.strOTP = edt_checkorder_OTPCode.getText().toString();
+                    else
+                        StaticObjectManager.strOTP = StringConst.EMPTY;
+                }
+                else {
+                    StaticObjectManager.saveTradingPass = checkboxTradingpass.isSelected();
+                    if (StaticObjectManager.saveTradingPass)
+                        StaticObjectManager.tradingPass = edt_checkorder_TradingPw.getText().toString();
+                    else
+                        StaticObjectManager.tradingPass = StringConst.EMPTY;
+                }
                 showDialogMessage(
                         getStringResource(R.string.datlenh_title_DatLenhThanhCong),
                         getStringResource(R.string.datlenh_title_QuestionTradeConfirm),
@@ -357,11 +480,20 @@ public class OrderConfirm extends AbstractFragment {
 
                     e.printStackTrace();
                 }
-                StaticObjectManager.saveTradingPass= checkboxTradingpass.isSelected();
-                if(StaticObjectManager.saveTradingPass)
-                    StaticObjectManager.tradingPass = edt_checkorder_TradingPw.getText().toString();
-                else
-                    StaticObjectManager.tradingPass = StringConst.EMPTY;
+                if(isOTP){
+                    StaticObjectManager.saveOTP= checkboxOTPCode.isSelected();
+                    if(StaticObjectManager.saveOTP)
+                        StaticObjectManager.strOTP = edt_checkorder_OTPCode.getText().toString();
+                    else
+                        StaticObjectManager.strOTP = StringConst.EMPTY;
+                }
+                else {
+                    StaticObjectManager.saveTradingPass = checkboxTradingpass.isSelected();
+                    if (StaticObjectManager.saveTradingPass)
+                        StaticObjectManager.tradingPass = edt_checkorder_TradingPw.getText().toString();
+                    else
+                        StaticObjectManager.tradingPass = StringConst.EMPTY;
+                }
                 showDialogMessage(
                         getStringResource(R.string.datlenh_title_DatLenhThanhCong),
                         getStringResource(R.string.datlenh_title_QuestionTradeConfirm),

@@ -182,7 +182,7 @@
         <com.fscuat.mobiletrading.design.CustomPassLayout
             android:id="@+id/edt_checkorder_TradingCode"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/m_labelcontentverlayout_height"
+            android:layout_height="wrap_content"
             app:contentColor="@color/white_text"
             app:contentHint="@string/MatKhauGiaoDich"
             android:layout_below="@+id/text_checkorder_Gia"
@@ -190,6 +190,18 @@
             app:inputType="textPassword"
             app:labelText="@string/MatKhauGiaoDich"
             app:labelRememberText="@string/remmber_tradingpass"
+            app:orientation="horizontal" />
+        <com.fscuat.mobiletrading.design.CustomPassLayout
+            android:id="@+id/edt_checkorder_OTCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentColor="@color/white_text"
+            app:contentHint="@string/otpcode"
+            android:layout_below="@+id/text_checkorder_Gia"
+            app:editable="true"
+            android:visibility="gone"
+            app:labelRememberText="@string/otpremember"
+            app:showLabel="false"
             app:orientation="horizontal" />
 
         <com.fscuat.mobiletrading.design.LabelContentLayout

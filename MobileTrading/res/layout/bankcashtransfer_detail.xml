@@ -154,7 +154,7 @@
             <com.fscuat.mobiletrading.design.CustomPassLayout
                 android:id="@+id/edt_CTout_chitiet_tradingcode"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/m_labelcontentverlayout_height"
+                android:layout_height="wrap_content"
                 app:contentColor="@color/white_text"
                 app:contentHint="@string/MatKhauGiaoDich"
                 app:editable="true"

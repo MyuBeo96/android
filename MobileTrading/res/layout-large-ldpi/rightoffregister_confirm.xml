@@ -241,7 +241,7 @@
     <com.fscuat.mobiletrading.design.CustomPassLayout
         android:id="@+id/edt_DKQM_chitiet_tradingcode"
         android:layout_width="300dp"
-        android:layout_height="@dimen/m_labelcontentverlayout_height"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:background="@drawable/bg_black_conner3_262630"

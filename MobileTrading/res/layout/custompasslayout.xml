@@ -4,14 +4,10 @@
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
     android:orientation="vertical" >
-    <View
 
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="@color/transparent" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="45dp"
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 
@@ -75,6 +71,11 @@
                 android:background="@color/white_text" />
         </RelativeLayout>
     </LinearLayout>
+    <View
+        android:id="@+id/labelcontenthori_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/lc_separation_color" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/m_labelcontenthorilayout_height"
@@ -102,10 +103,6 @@
             />
     </RelativeLayout>
 
-    <View
-        android:id="@+id/labelcontenthori_line"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="@color/lc_separation_color" />
+
 
 </LinearLayout>
