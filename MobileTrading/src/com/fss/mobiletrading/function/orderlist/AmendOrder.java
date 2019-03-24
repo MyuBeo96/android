@@ -2,6 +2,7 @@ package com.fss.mobiletrading.function.orderlist;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -54,6 +55,7 @@ public class AmendOrder extends AbstractFragment {
 
 	static final String FINDSTOCK = "FindStockService#FINDSTOCK";
 	static final String AMENDORDER = "CheckOrderService#AMENDORDER";
+	final String GENOTPSMS = "SuccessService#GENOTPSMS";
 	String findstockKey;
 
 	protected Button btn_Ban;
@@ -66,6 +68,7 @@ public class AmendOrder extends AbstractFragment {
 	protected Edittext_LoaiLenh edttg_LoaiLenh;
 	protected Edittext_SoLuong edttg_SoLuong;
 	protected CustomPassLayout edt_TradingPw;
+	protected CustomPassLayout edt_OTPCode;
 	protected FindStock findStock;
 
 	protected TextView tv_GiaKhopCuoi;
@@ -102,10 +105,16 @@ public class AmendOrder extends AbstractFragment {
 
 	protected LinearLayout stockIndex;
 	protected ImageButton checkboxTradingpass;
+	protected ImageButton checkboxOTPCode;
 
 	AmendOrderModel orderSetParams;
 	boolean changedAfacctno = false;
 	StockIndexView stockIndexView;
+
+	long mLastConfirmClickTime = 0l;
+	long disableOTPTime= 01;
+	boolean isOTP= false;
+	boolean saveOTP= false;
 
 	/**
 	 * only tablet
@@ -145,7 +154,10 @@ public class AmendOrder extends AbstractFragment {
 				.findViewById(R.id.cus_edt_DatLenh_LoaiLenh);
 		edttg_Gia = (Edittext_Gia) view.findViewById(R.id.cus_edt_DatLenh_Gia);
 		edt_TradingPw = (CustomPassLayout) view.findViewById(R.id.edt_amendorder_TradingCode);
+		edt_OTPCode = (CustomPassLayout) view
+				.findViewById(R.id.edt_amendorder_OTCode);
 		checkboxTradingpass = edt_TradingPw.getcheckbox();
+		checkboxOTPCode = edt_OTPCode.getcheckbox();
 		kBoardPrice = (KBoardPrice) view
 				.findViewById(R.id.t_placeorder_kboardsymbol_price);
 		kBoardQuantity = (KBoardQuantity) view
@@ -254,6 +266,26 @@ public class AmendOrder extends AbstractFragment {
 
 	}
 
+	protected  void GenOTPSMS(){
+		List<String> list_key = new ArrayList<String>();
+		List<String> list_value = new ArrayList<String>();
+		{
+			list_key.add("link");
+			list_value.add(getStringResource(R.string.controller_GenOTPSMS));
+		}
+		{
+			list_key.add("afacctno");
+			list_value.add(StaticObjectManager.acctnoItem.ACCTNO);
+		}
+		{
+			list_key.add("otptype");
+			list_value.add(StaticObjectManager.otpType);
+		}
+
+		StaticObjectManager.connectServer.callHttpPostService(GENOTPSMS,
+				this, list_key, list_value);
+	}
+
 	TextWatcher edt_gia_textwatcher;
 
 	private void initialiseListener() {
@@ -263,6 +295,22 @@ public class AmendOrder extends AbstractFragment {
 				checkboxTradingpass.setSelected(!checkboxTradingpass.isSelected());
 			}
 		});
+		checkboxOTPCode.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				checkboxOTPCode.setSelected(!checkboxOTPCode.isSelected());
+			}
+		});
+        edt_OTPCode.getbtn().setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if ((SystemClock.elapsedRealtime() - StaticObjectManager.mLastGenOTPClickTime) < disableOTPTime) {
+                    return;
+                }
+                StaticObjectManager.mLastGenOTPClickTime=SystemClock.elapsedRealtime();
+                GenOTPSMS();
+            }
+        });
 		edttg_SoLuong.setOnFocusChangeListener(new OnFocusChangeListener() {
 
 			@Override
@@ -361,18 +409,35 @@ public class AmendOrder extends AbstractFragment {
 		}
 	}
 	private void customDisplay(){
-		if(StaticObjectManager.saveTradingPass){
-			edt_TradingPw.setText(StaticObjectManager.tradingPass);
-			checkboxTradingpass.setSelected(StaticObjectManager.saveTradingPass);
-			edt_TradingPw.setVisibility(View.GONE);
+		if(isOTP){
+			if(StaticObjectManager.saveOTP) {
+				edt_OTPCode.setText(StaticObjectManager.strOTP);
+				checkboxOTPCode.setSelected(StaticObjectManager.saveOTP);
+				edt_OTPCode.setVisibility(View.GONE);
+				saveOTP= StaticObjectManager.saveOTP;
+			}
+			else
+				edt_OTPCode.setText(StringConst.EMPTY);
 		}
-		else
-			edt_TradingPw.setText(StringConst.EMPTY);
+		else {
+			if (StaticObjectManager.saveTradingPass) {
+				edt_TradingPw.setText(StaticObjectManager.tradingPass);
+				checkboxTradingpass.setSelected(StaticObjectManager.saveTradingPass);
+				edt_TradingPw.setVisibility(View.GONE);
+			} else
+				edt_TradingPw.setText(StringConst.EMPTY);
+		}
 	}
 	@Override
 	public void onResume() {
 		super.onResume();
+		isOTP= orderSetParams.isGTCOrder? StaticObjectManager.loginInfo.IsOTPCondOrder == "true": StaticObjectManager.loginInfo.IsOTPOrder == "true";
 		customDisplay();
+        try {
+            disableOTPTime= Long.parseLong(StaticObjectManager.loginInfo.DisableOTPTime)*1000;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 		if (orderSetParams != null) {
 			if (DeviceProperties.isTablet) {
 				StockIndex.CallStockDetails(StringConst.EMPTY,
@@ -514,61 +579,81 @@ public class AmendOrder extends AbstractFragment {
 					getStringResource(R.string.ChuaNhapDL));
 			return;
 		}
-		if (edt_TradingPw.getText().length() == 0) {
-			if (edt_TradingPw.getVisibility() != View.VISIBLE) {
-				edt_TradingPw.setVisibility(View.VISIBLE);
-			}
-			showDialogMessage(getStringResource(R.string.thong_bao), getStringResource(R.string.NhapPin));
-			edt_TradingPw.requestFocus();
-			return;
-		}
-			List<String> list_key = new ArrayList<String>();
-			List<String> list_value = new ArrayList<String>();
-			{
-				list_key.add("link");
-				list_value.add(getStringResource(R.string.controller_AmendOrder));
-			}
-			{
-				list_key.add("OrderId");
-				list_value.add(item.orderID);
-			}
-			{
-				list_key.add("CustodyCd");
-				list_value.add(item.custodycd);
-			}
-			{
-				list_key.add("AfAcctno");
-				list_value.add(item.afacctno);
-			}
-			{
-				list_key.add("Symbol");
-				list_value.add(item.symbolOrder);
-			}
-			{
-				list_key.add("Side");
-				list_value.add(item.sideOrder);
-			}
-			{
-				list_key.add("Qtty");
-				list_value.add(edttg_SoLuong.getText().toString());
-			}
-			{
-				list_key.add("PriceType");
-				list_value.add(item.priceType);
-			}
-			{
-				list_key.add("Price");
-				list_value.add(edttg_Gia.getText().toString());
-			}
-			{
-				list_key.add("TradingPassword");
-				list_value.add(edt_TradingPw.getText().toString());
+		if(isOTP) {
+			if (edt_OTPCode.getText().length() == 0) {
+				if (edt_OTPCode.getVisibility() != View.VISIBLE) {
+					edt_OTPCode.setVisibility(View.VISIBLE);
+				}
+				showDialogMessage(
+						getResources().getString(
+								R.string.thong_bao),
+						getResources().getString(
+								R.string.requireOTP));
+				edt_OTPCode.requestFocus();
+				return;
 			}
 
-			StaticObjectManager.connectServer.callHttpPostService(AMENDORDER, this,
-					list_key, list_value);
-			btn_DatLenh.setEnabled(false);
 		}
+		else {
+			if (edt_TradingPw.getText().length() == 0) {
+				if (edt_TradingPw.getVisibility() != View.VISIBLE) {
+					edt_TradingPw.setVisibility(View.VISIBLE);
+				}
+				showDialogMessage(getStringResource(R.string.thong_bao), getStringResource(R.string.NhapPin));
+				edt_TradingPw.requestFocus();
+				return;
+			}
+		}
+		List<String> list_key = new ArrayList<String>();
+		List<String> list_value = new ArrayList<String>();
+		{
+			list_key.add("link");
+			list_value.add(getStringResource(R.string.controller_AmendOrder));
+		}
+		{
+			list_key.add("OrderId");
+			list_value.add(item.orderID);
+		}
+		{
+			list_key.add("CustodyCd");
+			list_value.add(item.custodycd);
+		}
+		{
+			list_key.add("AfAcctno");
+			list_value.add(item.afacctno);
+		}
+		{
+			list_key.add("Symbol");
+			list_value.add(item.symbolOrder);
+		}
+		{
+			list_key.add("Side");
+			list_value.add(item.sideOrder);
+		}
+		{
+			list_key.add("Qtty");
+			list_value.add(edttg_SoLuong.getText().toString());
+		}
+		{
+			list_key.add("PriceType");
+			list_value.add(item.priceType);
+		}
+		{
+			list_key.add("Price");
+			list_value.add(edttg_Gia.getText().toString());
+		}
+		{
+			list_key.add("TradingPassword");
+			list_value.add(isOTP ? edt_OTPCode.getText().toString() : edt_TradingPw.getText().toString());
+		}
+		{
+			list_key.add("saveotp");
+			list_value.add(saveOTP?"Y":"N");
+		}
+		StaticObjectManager.connectServer.callHttpPostService(AMENDORDER, this,
+				list_key, list_value);
+		btn_DatLenh.setEnabled(false);
+	}
 
 
 	protected void CallFindStock() {
@@ -713,12 +798,24 @@ public class AmendOrder extends AbstractFragment {
 				stockIndexView.displayView(stockDetailsItem);
 			}
 			break;
+		case GENOTPSMS:
+			showDialogMessage(getStringResource(R.string.thong_bao), rObj.EM);
+			break;
 		case AMENDORDER:
-			StaticObjectManager.saveTradingPass= checkboxTradingpass.isSelected();
-			if(StaticObjectManager.saveTradingPass)
-				StaticObjectManager.tradingPass = edt_TradingPw.getText().toString();
-			else
-				StaticObjectManager.tradingPass = StringConst.EMPTY;
+			if(isOTP){
+				StaticObjectManager.saveOTP= checkboxOTPCode.isSelected();
+				if(StaticObjectManager.saveOTP)
+					StaticObjectManager.strOTP = edt_OTPCode.getText().toString();
+				else
+					StaticObjectManager.strOTP = StringConst.EMPTY;
+			}
+			else {
+				StaticObjectManager.saveTradingPass = checkboxTradingpass.isSelected();
+				if (StaticObjectManager.saveTradingPass)
+					StaticObjectManager.tradingPass = edt_TradingPw.getText().toString();
+				else
+					StaticObjectManager.tradingPass = StringConst.EMPTY;
+			}
 			showDialogMessage(getStringResource(R.string.thong_bao),
 					getStringResource(R.string.Giaodichthanhcong),
 					new SimpleAction() {

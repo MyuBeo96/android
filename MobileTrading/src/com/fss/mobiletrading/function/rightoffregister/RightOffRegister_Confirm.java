@@ -2,6 +2,7 @@ package com.fss.mobiletrading.function.rightoffregister;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -33,6 +34,7 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 
 	static final String RIGHTOFFREGISTERSUBMIT = "SuccessService#1";
 	static final String RIGHTOFFREGISTERCONFIRM = "RightOffRegisterConfirmService";
+	final String GENOTPSMS = "SuccessService#GENOTPSMS";
 
 	LabelContentLayout tv_chitiet_Gia;
 	LabelContentLayout tv_chitiet_Afaactno;
@@ -47,7 +49,9 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 	Button btn_close;
 
 	CustomPassLayout edt_chitiet_MaPin;
+	CustomPassLayout edt_chitiet_OTPCode;
 	protected ImageButton checkboxTradingpass;
+	protected ImageButton checkboxOTPCode;
 	LabelContentLayout edt_chitiet_SLMua;
 	RightOffRegisterItem rightOffRegisterItem;
 	/**
@@ -55,6 +59,10 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 	 */
 	SelectorImageView isAcceptPolicy;
 	boolean changeAfacctno;
+
+	long disableOTPTime= 01;
+	boolean isOTP= StaticObjectManager.loginInfo.IsOTPIssue == "true";
+	boolean saveOTP= false;
 
 	public static RightOffRegister_Confirm newInstance(MainActivity mActivity) {
 
@@ -84,7 +92,10 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 				.findViewById(R.id.text_DKQM_chitiet_TongTien));
 		edt_chitiet_MaPin = ((CustomPassLayout) view
 				.findViewById(R.id.edt_DKQM_chitiet_tradingcode));
+		edt_chitiet_OTPCode = ((CustomPassLayout) view
+				.findViewById(R.id.edt_DKQM_chitiet_OTCode));
 		checkboxTradingpass = edt_chitiet_MaPin.getcheckbox();
+		checkboxOTPCode = edt_chitiet_OTPCode.getcheckbox();
 		btn_chitiet_ChapNhan = ((Button) view
 				.findViewById(R.id.btn_DKQM_chitiet_Accept));
 
@@ -120,12 +131,46 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 			getDialog().getWindow().setLayout(width, LayoutParams.WRAP_CONTENT);
 		}
 	}
+	protected  void GenOTPSMS(){
+		List<String> list_key = new ArrayList<String>();
+		List<String> list_value = new ArrayList<String>();
+		{
+			list_key.add("link");
+			list_value.add(getStringResource(R.string.controller_GenOTPSMS));
+		}
+		{
+			list_key.add("afacctno");
+			list_value.add(StaticObjectManager.acctnoItem.ACCTNO);
+		}
+		{
+			list_key.add("otptype");
+			list_value.add(StaticObjectManager.otpType);
+		}
 
+		StaticObjectManager.connectServer.callHttpPostService(GENOTPSMS,
+				this, list_key, list_value);
+	}
 	private void initListener() {
 		checkboxTradingpass.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				checkboxTradingpass.setSelected(!checkboxTradingpass.isSelected());
+			}
+		});
+		checkboxOTPCode.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				checkboxOTPCode.setSelected(!checkboxOTPCode.isSelected());
+			}
+		});
+		edt_chitiet_OTPCode.getbtn().setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				if ((SystemClock.elapsedRealtime() - StaticObjectManager.mLastGenOTPClickTime) < disableOTPTime) {
+					return;
+				}
+				StaticObjectManager.mLastGenOTPClickTime=SystemClock.elapsedRealtime();
+				GenOTPSMS();
 			}
 		});
 		if (DeviceProperties.isTablet) {
@@ -194,20 +239,38 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 		});
 	}
 	private void customDisplay(){
-		if(StaticObjectManager.saveTradingPass){
-			edt_chitiet_MaPin.setText(StaticObjectManager.tradingPass);
-			checkboxTradingpass.setSelected(StaticObjectManager.saveTradingPass);
-			edt_chitiet_MaPin.setVisibility(View.GONE);
+		if(isOTP){
+			if(StaticObjectManager.saveOTP) {
+				edt_chitiet_OTPCode.setText(StaticObjectManager.strOTP);
+				checkboxOTPCode.setSelected(StaticObjectManager.saveOTP);
+				edt_chitiet_OTPCode.setVisibility(View.GONE);
+				saveOTP= StaticObjectManager.saveOTP;
+			}
+			else {
+				edt_chitiet_OTPCode.setText(StringConst.EMPTY);
+				edt_chitiet_OTPCode.setVisibility(View.VISIBLE);
+			}
 		}
 		else {
-			edt_chitiet_MaPin.setText(StringConst.EMPTY);
-			edt_chitiet_MaPin.setVisibility(View.VISIBLE);
+			if (StaticObjectManager.saveTradingPass) {
+				edt_chitiet_MaPin.setText(StaticObjectManager.tradingPass);
+				checkboxTradingpass.setSelected(StaticObjectManager.saveTradingPass);
+				edt_chitiet_MaPin.setVisibility(View.GONE);
+			} else {
+				edt_chitiet_MaPin.setText(StringConst.EMPTY);
+				edt_chitiet_MaPin.setVisibility(View.VISIBLE);
+			}
 		}
 	}
 	@Override
 	public void onResume() {
 		super.onResume();
 		customDisplay();
+		try {
+			disableOTPTime= Long.parseLong(StaticObjectManager.loginInfo.DisableOTPTime)*1000;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		ShowDialogChiTiet();
 	}
 
@@ -317,7 +380,24 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 	}
 
 	private void CallRightOffRegisterSubmit() {
-
+		if(isOTP) {
+			if (edt_chitiet_OTPCode.getText().length() == 0) {
+				showDialogMessage(
+						getResources().getString(
+								R.string.thong_bao),
+						getResources().getString(
+								R.string.requireOTP));
+				edt_chitiet_OTPCode.requestFocus();
+				return;
+			}
+		}
+		else {
+			if (edt_chitiet_MaPin.getText().length() == 0) {
+				showDialogMessage(getStringResource(R.string.thong_bao), getStringResource(R.string.NhapPin));
+				edt_chitiet_MaPin.requestFocus();
+				return;
+			}
+		}
 		List<String> list_key = new ArrayList<String>();
 		List<String> list_value = new ArrayList<String>();
 		{
@@ -360,7 +440,11 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 		}
 		{
 			list_key.add("Pin");
-			list_value.add(edt_chitiet_MaPin.getText().toString());
+			list_value.add(isOTP ? edt_chitiet_OTPCode.getText().toString() : edt_chitiet_MaPin.getText().toString());
+		}
+		{
+			list_key.add("saveotp");
+			list_value.add(saveOTP?"Y":"N");
 		}
 
 		StaticObjectManager.connectServer.callHttpPostService(
@@ -406,6 +490,9 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 	@Override
 	protected void process(String key, ResultObj rObj) {
 		switch (key) {
+		case GENOTPSMS:
+			showDialogMessage(getStringResource(R.string.thong_bao), rObj.EM);
+			break;
 		case RIGHTOFFREGISTERCONFIRM:
 			if (rObj.obj != null) {
 				rightOffRegisterItem = (RightOffRegisterItem) rObj.obj;
@@ -413,11 +500,20 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 			}
 			break;
 		case RIGHTOFFREGISTERSUBMIT:
-			StaticObjectManager.saveTradingPass= checkboxTradingpass.isSelected();
-			if(StaticObjectManager.saveTradingPass)
-				StaticObjectManager.tradingPass = edt_chitiet_MaPin.getText().toString();
-			else
-				StaticObjectManager.tradingPass = StringConst.EMPTY;
+			if(isOTP){
+				StaticObjectManager.saveOTP= checkboxOTPCode.isSelected();
+				if(StaticObjectManager.saveOTP)
+					StaticObjectManager.strOTP = edt_chitiet_OTPCode.getText().toString();
+				else
+					StaticObjectManager.strOTP = StringConst.EMPTY;
+			}
+			else {
+				StaticObjectManager.saveTradingPass = checkboxTradingpass.isSelected();
+				if (StaticObjectManager.saveTradingPass)
+					StaticObjectManager.tradingPass = edt_chitiet_MaPin.getText().toString();
+				else
+					StaticObjectManager.tradingPass = StringConst.EMPTY;
+			}
 			RightOffRegister rightOffRegister = (RightOffRegister) mainActivity
 					.getFragmentByName(RightOffRegister.class.getName());
 			rightOffRegister.onResume();

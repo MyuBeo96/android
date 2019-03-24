@@ -255,6 +255,21 @@
         app:separationColor="@color/transparent"
         app:labelRememberText="@string/remmber_tradingpass"
         app:orientation="vertical" />
+    <com.fscuat.mobiletrading.design.CustomPassLayout
+        android:id="@+id/edt_DKQM_chitiet_OTCode"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_black_conner3_262630"
+        android:paddingLeft="5dp"
+        app:contentColor="@color/white_text"
+        app:contentHint="@string/otpcode"
+        app:editable="true"
+        android:visibility="gone"
+        app:labelRememberText="@string/otpremember"
+        app:showLabel="false"
+        app:orientation="horizontal" />
 
     <View
         android:layout_width="match_parent"

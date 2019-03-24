@@ -104,6 +104,17 @@
                 android:visibility="gone"
                 app:labelRememberText="@string/remmber_tradingpass"
                 app:orientation="horizontal" />
+            <com.fscuat.mobiletrading.design.CustomPassLayout
+                android:id="@+id/edt_DKQM_chitiet_OTCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentColor="@color/white_text"
+                app:contentHint="@string/otpcode"
+                app:editable="true"
+                android:visibility="gone"
+                app:labelRememberText="@string/otpremember"
+                app:showLabel="false"
+                app:orientation="horizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"

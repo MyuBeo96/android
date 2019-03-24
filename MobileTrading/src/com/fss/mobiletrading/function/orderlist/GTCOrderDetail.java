@@ -74,6 +74,7 @@ public class GTCOrderDetail extends OrderDetail {
 		tv_chitiet_toDate = ((LabelContentLayout) view
 				.findViewById(R.id.text_solenh_chitiet_toDate));
 		edt_TradingPw = (CustomPassLayout) view.findViewById(R.id.edt_orderdetail_TradingCode);
+		edt_OTPCode = (CustomPassLayout) view.findViewById(R.id.edt_orderdetail_OTCode);
 
 
 		view.findViewById(R.id.layout_solenh_chitiet_ChiTietKhop)
@@ -167,7 +168,31 @@ public class GTCOrderDetail extends OrderDetail {
 	}
 
 	protected void CallCancelOrder(SolenhItem item) {
-		if(edt_TradingPw.getText().length()!=0){
+		if(isOTP) {
+			if (edt_OTPCode.getText().length() == 0) {
+				if (edt_OTPCode.getVisibility() != View.VISIBLE) {
+					edt_OTPCode.setVisibility(View.VISIBLE);
+				}
+				showDialogMessage(
+						getResources().getString(
+								R.string.thong_bao),
+						getResources().getString(
+								R.string.requireOTP));
+				edt_OTPCode.requestFocus();
+				return;
+			}
+
+		}
+		else {
+			if (edt_TradingPw.getText().length() == 0) {
+				if (edt_TradingPw.getVisibility() != View.VISIBLE) {
+					edt_TradingPw.setVisibility(View.VISIBLE);
+				}
+				showDialogMessage(getStringResource(R.string.thong_bao), getStringResource(R.string.NhapPin));
+				edt_TradingPw.requestFocus();
+				return;
+			}
+		}
 		if (item != null) {
 			List<String> list_key = new ArrayList<String>();
 			List<String> list_value = new ArrayList<String>();
@@ -210,18 +235,17 @@ public class GTCOrderDetail extends OrderDetail {
 			}
 			{
 				list_key.add("TradingPassword");
-				list_value.add(edt_TradingPw.getText().toString());
+				list_value.add(isOTP ? edt_OTPCode.getText().toString() : edt_TradingPw.getText().toString());
 			}
-
+			{
+				list_key.add("saveotp");
+				list_value.add(saveOTP?"Y":"N");
+			}
 			StaticObjectManager.connectServer.callHttpPostService(CANCELORDER,
 					this, list_key, list_value);
 			btn_chitiet_HuyLenh.setEnabled(false);
 		}
-	}else {
-		showDialogMessage(getStringResource(R.string.thong_bao),getStringResource(R.string.NhapPin));
-			edt_TradingPw.setVisibility(View.VISIBLE);
-		edt_TradingPw.requestFocus();
-		}
+
 	}
 
 }

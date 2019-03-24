@@ -1,6 +1,7 @@
 package com.fss.mobiletrading.function.orderlist;
 
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +40,7 @@ public class OrderDetail extends AbstractFragment {
     final String ORDERDETAILS = "OrderDetailsService#ORDERDETAILS";
     final String CANCELORDER = "SuccessService#CANCELORDER";
     final String CHECKORDER = "CheckOrderService#CHECKORDER";
+    final String GENOTPSMS = "SuccessService#GENOTPSMS";
     String  priceNew ;
     Double price;
     LabelContentLayout tv_chitiet_CustodyCd;
@@ -51,15 +53,22 @@ public class OrderDetail extends AbstractFragment {
     LabelContentLayout tv_chitiet_Gia;
     LabelContentLayout tv_chitiet_SoLuong;
     CustomPassLayout edt_TradingPw;
+    CustomPassLayout edt_OTPCode;
     Button btn_chitiet_HuyLenh;
     Button btn_chitiet_SuaLenh;
     protected VerticalListview lv_SolenhCT;
     protected ImageButton checkboxTradingpass;
+    protected ImageButton checkboxOTPCode;
 
     List<OrderDetailsItem> listOrderDetails;
     SolenhCT_Adapter adapterSolenhCT;
 
     SolenhItem item;
+
+    long mLastConfirmClickTime = 0l;
+    long disableOTPTime= 01;
+    boolean isOTP= StaticObjectManager.loginInfo.IsOTPOrder == "true";
+    boolean saveOTP= false;
 
 
     public static OrderDetail newInstance(MainActivity mActivity) {
@@ -92,6 +101,7 @@ public class OrderDetail extends AbstractFragment {
         tv_chitiet_PriceType = (LabelContentLayout) view
                 .findViewById(R.id.text_solenh_chitiet_pricetype);
         edt_TradingPw = (CustomPassLayout) view.findViewById(R.id.edt_orderdetail_TradingCode);
+        edt_OTPCode =(CustomPassLayout) view.findViewById(R.id.edt_orderdetail_OTCode);
 
         lv_SolenhCT = ((VerticalListview) view
                 .findViewById(R.id.listview_solenhthuongCT));
@@ -130,8 +140,43 @@ public class OrderDetail extends AbstractFragment {
                 checkboxTradingpass.setSelected(!checkboxTradingpass.isSelected());
             }
         });
+        checkboxOTPCode = edt_OTPCode.getcheckbox();
+        checkboxOTPCode.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkboxOTPCode.setSelected(!checkboxOTPCode.isSelected());
+            }
+        });
+        edt_OTPCode.getbtn().setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if ((SystemClock.elapsedRealtime() - StaticObjectManager.mLastGenOTPClickTime) < disableOTPTime) {
+                    return;
+                }
+                StaticObjectManager.mLastGenOTPClickTime=SystemClock.elapsedRealtime();
+                GenOTPSMS();
+            }
+        });
     }
+    protected  void GenOTPSMS(){
+        List<String> list_key = new ArrayList<String>();
+        List<String> list_value = new ArrayList<String>();
+        {
+            list_key.add("link");
+            list_value.add(getStringResource(R.string.controller_GenOTPSMS));
+        }
+        {
+            list_key.add("afacctno");
+            list_value.add(StaticObjectManager.acctnoItem.ACCTNO);
+        }
+        {
+            list_key.add("otptype");
+            list_value.add(StaticObjectManager.otpType);
+        }
 
+        StaticObjectManager.connectServer.callHttpPostService(GENOTPSMS,
+                this, list_key, list_value);
+    }
     protected void initData() {
         if (listOrderDetails == null) {
             listOrderDetails = new ArrayList<OrderDetailsItem>();
@@ -146,23 +191,39 @@ public class OrderDetail extends AbstractFragment {
 
     }
     private void customDisplay(){
-        if(StaticObjectManager.saveTradingPass){
-            edt_TradingPw.setText(StaticObjectManager.tradingPass);
-            checkboxTradingpass.setSelected(StaticObjectManager.saveTradingPass);
-            edt_TradingPw.setVisibility(View.GONE);
+        if(isOTP){
+            if(StaticObjectManager.saveOTP) {
+                edt_OTPCode.setText(StaticObjectManager.strOTP);
+                checkboxOTPCode.setSelected(StaticObjectManager.saveOTP);
+                edt_OTPCode.setVisibility(View.GONE);
+                saveOTP= StaticObjectManager.saveOTP;
+            }
+            else
+                edt_OTPCode.setText(StringConst.EMPTY);
         }
         else {
-            edt_TradingPw.setText(StringConst.EMPTY);
-            //edt_TradingPw.setVisibility(View.VISIBLE);
+            if (StaticObjectManager.saveTradingPass) {
+                edt_TradingPw.setText(StaticObjectManager.tradingPass);
+                checkboxTradingpass.setSelected(StaticObjectManager.saveTradingPass);
+                edt_TradingPw.setVisibility(View.GONE);
+            } else {
+                edt_TradingPw.setText(StringConst.EMPTY);
+            }
         }
     }
     @Override
     public void onResume() {
         super.onResume();
+
         customDisplay();
         if (item != null) {
             displayOrderDetail(item);
             CallOrderDetails(item.OrderId, item.CustodyCd);
+        }
+        try {
+            disableOTPTime= Long.parseLong(StaticObjectManager.loginInfo.DisableOTPTime)*1000;
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -275,61 +336,84 @@ public class OrderDetail extends AbstractFragment {
     }
 
     protected void CallCancelOrder(SolenhItem item) {
-        if (edt_TradingPw.getText().length() != 0) {
-            if (item != null) {
-                List<String> list_key = new ArrayList<String>();
-                List<String> list_value = new ArrayList<String>();
-                {
-                    list_key.add("link");
-                    list_value
-                            .add(getStringResource(R.string.controller_CancelOrder));
+        if(isOTP) {
+            if (edt_OTPCode.getText().length() == 0) {
+                if (edt_OTPCode.getVisibility() != View.VISIBLE) {
+                    edt_OTPCode.setVisibility(View.VISIBLE);
                 }
-                {
-                    list_key.add("OrderId");
-                    list_value.add(item.OrderId);
-                }
-                {
-                    list_key.add("CustodyCd");
-                    list_value.add(item.CustodyCd);
-                }
-                {
-                    list_key.add("AfAcctno");
-                    list_value.add(item.AfAcctno);
-                }
-                {
-                    list_key.add("Symbol");
-                    list_value.add(item.Symbol);
-                }
-                {
-                    list_key.add("Side");
-                    list_value.add(item.Side);
-                }
-                {
-                    list_key.add("Qtty");
-                    list_value.add(item.Qtty);
-                }
-                {
-                    list_key.add("PriceType");
-                    list_value.add(item.PriceType);
-                }
-                {
-                    list_key.add("Price");
-                    list_value.add(item.Price);
-                }
-                {
-                    list_key.add("TradingPassword");
-                    list_value.add(edt_TradingPw.getText().toString());
-                }
-
-                StaticObjectManager.connectServer.callHttpPostService(CANCELORDER,
-                        this, list_key, list_value);
-                btn_chitiet_HuyLenh.setEnabled(false);
+                showDialogMessage(
+                        getResources().getString(
+                                R.string.thong_bao),
+                        getResources().getString(
+                                R.string.requireOTP));
+                edt_OTPCode.requestFocus();
+                return;
             }
-        } else {
-            showDialogMessage(getStringResource(R.string.thong_bao), getStringResource(R.string.NhapPin));
-            edt_TradingPw.setVisibility(View.VISIBLE);
-            edt_TradingPw.requestFocus();
+
         }
+        else {
+            if (edt_TradingPw.getText().length() == 0) {
+                if (edt_TradingPw.getVisibility() != View.VISIBLE) {
+                    edt_TradingPw.setVisibility(View.VISIBLE);
+                }
+                showDialogMessage(getStringResource(R.string.thong_bao), getStringResource(R.string.NhapPin));
+                edt_TradingPw.requestFocus();
+                return;
+            }
+        }
+        if (item != null) {
+            List<String> list_key = new ArrayList<String>();
+            List<String> list_value = new ArrayList<String>();
+            {
+                list_key.add("link");
+                list_value
+                        .add(getStringResource(R.string.controller_CancelOrder));
+            }
+            {
+                list_key.add("OrderId");
+                list_value.add(item.OrderId);
+            }
+            {
+                list_key.add("CustodyCd");
+                list_value.add(item.CustodyCd);
+            }
+            {
+                list_key.add("AfAcctno");
+                list_value.add(item.AfAcctno);
+            }
+            {
+                list_key.add("Symbol");
+                list_value.add(item.Symbol);
+            }
+            {
+                list_key.add("Side");
+                list_value.add(item.Side);
+            }
+            {
+                list_key.add("Qtty");
+                list_value.add(item.Qtty);
+            }
+            {
+                list_key.add("PriceType");
+                list_value.add(item.PriceType);
+            }
+            {
+                list_key.add("Price");
+                list_value.add(item.Price);
+            }
+            {
+                list_key.add("TradingPassword");
+                list_value.add(isOTP ? edt_OTPCode.getText().toString() : edt_TradingPw.getText().toString());
+            }
+            {
+                list_key.add("saveotp");
+                list_value.add(saveOTP?"Y":"N");
+            }
+            StaticObjectManager.connectServer.callHttpPostService(CANCELORDER,
+                    this, list_key, list_value);
+            btn_chitiet_HuyLenh.setEnabled(false);
+        }
+
     }
 
     protected void CallOrderDetails(String orderId, String pv_custodycd) {
@@ -375,11 +459,20 @@ public class OrderDetail extends AbstractFragment {
     protected void process(String key, ResultObj rObj) {
         switch (key) {
             case CANCELORDER:
-                StaticObjectManager.saveTradingPass= checkboxTradingpass.isSelected();
-                if(StaticObjectManager.saveTradingPass)
-                    StaticObjectManager.tradingPass = edt_TradingPw.getText().toString();
-                else
-                    StaticObjectManager.tradingPass = StringConst.EMPTY;
+                if(isOTP){
+                    StaticObjectManager.saveOTP= checkboxOTPCode.isSelected();
+                    if(StaticObjectManager.saveOTP)
+                        StaticObjectManager.strOTP = edt_OTPCode.getText().toString();
+                    else
+                        StaticObjectManager.strOTP = StringConst.EMPTY;
+                }
+                else {
+                    StaticObjectManager.saveTradingPass = checkboxTradingpass.isSelected();
+                    if (StaticObjectManager.saveTradingPass)
+                        StaticObjectManager.tradingPass = edt_TradingPw.getText().toString();
+                    else
+                        StaticObjectManager.tradingPass = StringConst.EMPTY;
+                }
                 showDialogMessage(getStringResource(R.string.thong_bao),
                         getStringResource(R.string.Giaodichthanhcong),
                         new SimpleAction() {
@@ -392,7 +485,9 @@ public class OrderDetail extends AbstractFragment {
                             }
                         });
                 break;
-
+            case GENOTPSMS:
+                showDialogMessage(getStringResource(R.string.thong_bao), rObj.EM);
+                break;
             case ORDERDETAILS:
                 if (rObj.obj != null) {
                     listOrderDetails.clear();

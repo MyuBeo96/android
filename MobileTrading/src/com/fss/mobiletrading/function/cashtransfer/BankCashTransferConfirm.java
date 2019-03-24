@@ -1,6 +1,7 @@
 package com.fss.mobiletrading.function.cashtransfer;
 
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -30,6 +31,7 @@ import java.util.List;
 public class BankCashTransferConfirm extends AbstractFragment {
 
 	static final String SUBMITCASHTRANSFER = "SuccessService#1";
+	final String GENOTPSMS = "SuccessService#GENOTPSMS";
 	ConBankAccDetail conBankAccDetail;
 
 	LabelContentLayout tv_chitiet_NganHang;
@@ -44,8 +46,13 @@ public class BankCashTransferConfirm extends AbstractFragment {
 	LabelContentLayout tv_chitiet_TinhTP;
 	LabelContentLayout tv_chitiet_TongTien;
 	CustomPassLayout edt_chitiet_MaPIN;
+	CustomPassLayout edt_chitiet_OTPCode;
 	Button btn_chitiet_ChapNhan;
 	protected ImageButton checkboxTradingpass;
+	protected ImageButton checkboxOTPCode;
+	long disableOTPTime= 01;
+	boolean isOTP= StaticObjectManager.loginInfo.IsOTPCash == "true";
+	boolean saveOTP= false;
 
 	public static BankCashTransferConfirm newInstance(MainActivity mActivity) {
 
@@ -89,6 +96,9 @@ public class BankCashTransferConfirm extends AbstractFragment {
 		edt_chitiet_MaPIN = ((CustomPassLayout) view
 				.findViewById(R.id.edt_CTout_chitiet_tradingcode));
 		checkboxTradingpass = edt_chitiet_MaPIN.getcheckbox();
+		edt_chitiet_OTPCode= ((CustomPassLayout) view
+				.findViewById(R.id.edt_CTout_chitiet_OTCode));
+		checkboxOTPCode = edt_chitiet_OTPCode.getcheckbox();
 		btn_chitiet_ChapNhan = ((Button) view
 				.findViewById(R.id.btn_CTout_chitiet_Accept));
 		if (DeviceProperties.isTablet) {
@@ -117,12 +127,46 @@ public class BankCashTransferConfirm extends AbstractFragment {
 	private void init() {
 
 	}
+	protected  void GenOTPSMS(){
+		List<String> list_key = new ArrayList<String>();
+		List<String> list_value = new ArrayList<String>();
+		{
+			list_key.add("link");
+			list_value.add(getStringResource(R.string.controller_GenOTPSMS));
+		}
+		{
+			list_key.add("afacctno");
+			list_value.add(StaticObjectManager.acctnoItem.ACCTNO);
+		}
+		{
+			list_key.add("otptype");
+			list_value.add(StaticObjectManager.otpType);
+		}
 
+		StaticObjectManager.connectServer.callHttpPostService(GENOTPSMS,
+				this, list_key, list_value);
+	}
 	private void initListener() {
 		checkboxTradingpass.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				checkboxTradingpass.setSelected(!checkboxTradingpass.isSelected());
+			}
+		});
+		checkboxOTPCode.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				checkboxOTPCode.setSelected(!checkboxOTPCode.isSelected());
+			}
+		});
+		edt_chitiet_OTPCode.getbtn().setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				if ((SystemClock.elapsedRealtime() - StaticObjectManager.mLastGenOTPClickTime) < disableOTPTime) {
+					return;
+				}
+				StaticObjectManager.mLastGenOTPClickTime=SystemClock.elapsedRealtime();
+				GenOTPSMS();
 			}
 		});
 		btn_chitiet_ChapNhan.setOnClickListener(new OnClickListener() {
@@ -160,20 +204,38 @@ public class BankCashTransferConfirm extends AbstractFragment {
 		}
 	}
 	private void customDisplay(){
-		if(StaticObjectManager.saveTradingPass){
-			edt_chitiet_MaPIN.setText(StaticObjectManager.tradingPass);
-			checkboxTradingpass.setSelected(StaticObjectManager.saveTradingPass);
-			edt_chitiet_MaPIN.setVisibility(View.GONE);
+		if(isOTP){
+			if(StaticObjectManager.saveOTP) {
+				edt_chitiet_OTPCode.setText(StaticObjectManager.strOTP);
+				checkboxOTPCode.setSelected(StaticObjectManager.saveOTP);
+				edt_chitiet_OTPCode.setVisibility(View.GONE);
+				saveOTP= StaticObjectManager.saveOTP;
+			}
+			else {
+				edt_chitiet_OTPCode.setText(StringConst.EMPTY);
+				edt_chitiet_OTPCode.setVisibility(View.VISIBLE);
+			}
 		}
 		else {
-			edt_chitiet_MaPIN.setText(StringConst.EMPTY);
-			edt_chitiet_MaPIN.setVisibility(View.VISIBLE);
+			if (StaticObjectManager.saveTradingPass) {
+				edt_chitiet_MaPIN.setText(StaticObjectManager.tradingPass);
+				checkboxTradingpass.setSelected(StaticObjectManager.saveTradingPass);
+				edt_chitiet_MaPIN.setVisibility(View.GONE);
+			} else {
+				edt_chitiet_MaPIN.setText(StringConst.EMPTY);
+				edt_chitiet_MaPIN.setVisibility(View.VISIBLE);
+			}
 		}
 	}
 	@Override
 	public void onResume() {
 		super.onResume();
 		customDisplay();
+		try {
+			disableOTPTime= Long.parseLong(StaticObjectManager.loginInfo.DisableOTPTime)*1000;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		showTransferDetail();
 	}
 
@@ -185,85 +247,104 @@ public class BankCashTransferConfirm extends AbstractFragment {
 
 	protected void CallSubmitCashTransfer() {
 
-		if (edt_chitiet_MaPIN.getText().length() > 0) {
-
-			List<String> list_key = new ArrayList<String>();
-			List<String> list_value = new ArrayList<String>();
-			{
-				list_key.add("link");
-				list_value
-						.add(getStringResource(R.string.controller_SubmitCashTransfer));
+		if(isOTP) {
+			if (edt_chitiet_OTPCode.getText().length() == 0) {
+				showDialogMessage(
+						getResources().getString(
+								R.string.thong_bao),
+						getResources().getString(
+								R.string.requireOTP));
+				edt_chitiet_OTPCode.requestFocus();
+				return;
 			}
-			{
-				list_key.add("ConBankAcc");
-				list_value.add(conBankAccDetail.ConBankAcc);
-			}
-			{
-				list_key.add("ConBankAccIndex");
-				list_value.add(conBankAccDetail.ConBankAccIndex);
-			}
-			{
-				list_key.add("BankID");
-				list_value.add(conBankAccDetail.BankID);
-			}
-			{
-				list_key.add("BeneficiaryName");
-				list_value.add(conBankAccDetail.BeneficiaryName);
-			}
-			{
-				list_key.add("BeneficiaryBank");
-				list_value.add(conBankAccDetail.BeneficiaryBank);
-			}
-			{
-				list_key.add("City");
-				list_value.add(conBankAccDetail.City);
-			}
-			{
-				list_key.add("Branch");
-				list_value.add(conBankAccDetail.Branch);
-			}
-			{
-				list_key.add("Afacctno");
-				list_value.add(conBankAccDetail.Afacctno);
-			}
-			{
-				list_key.add("BeneficiaryCustodyCd");
-				list_value.add(conBankAccDetail.BeneficiaryCustodyCd);
-			}
-			{
-				list_key.add("BeneficiaryAfacctno");
-				list_value.add(conBankAccDetail.BeneficiaryAfacctno);
-			}
-			{
-				list_key.add("CashAvailable");
-				list_value.add(conBankAccDetail.CashAvailable);
-			}
-			{
-				list_key.add("Amount");
-				list_value.add(conBankAccDetail.Amount);
-			}
-			{
-				list_key.add("Fee");
-				list_value.add(conBankAccDetail.Fee);
-			}
-			{
-				list_key.add("Desc");
-				list_value.add(conBankAccDetail.Desc);
-			}
-			{
-				list_key.add("TransferType");
-				list_value.add("1");
-			}
-			{
-				list_key.add("Pin");
-				list_value.add(edt_chitiet_MaPIN.getText().toString());
-			}
-			StaticObjectManager.connectServer.callHttpPostService(
-					SUBMITCASHTRANSFER, this, list_key, list_value);
-			mainActivity.loadingScreen(true);
-		} else {
-			showDialogMessage(R.string.thong_bao, R.string.NhapPin);
 		}
+		else {
+			if (edt_chitiet_MaPIN.getText().length() == 0) {
+				showDialogMessage(getStringResource(R.string.thong_bao), getStringResource(R.string.NhapPin));
+				edt_chitiet_MaPIN.requestFocus();
+				return;
+			}
+		}
+
+		List<String> list_key = new ArrayList<String>();
+		List<String> list_value = new ArrayList<String>();
+		{
+			list_key.add("link");
+			list_value
+					.add(getStringResource(R.string.controller_SubmitCashTransfer));
+		}
+		{
+			list_key.add("ConBankAcc");
+			list_value.add(conBankAccDetail.ConBankAcc);
+		}
+		{
+			list_key.add("ConBankAccIndex");
+			list_value.add(conBankAccDetail.ConBankAccIndex);
+		}
+		{
+			list_key.add("BankID");
+			list_value.add(conBankAccDetail.BankID);
+		}
+		{
+			list_key.add("BeneficiaryName");
+			list_value.add(conBankAccDetail.BeneficiaryName);
+		}
+		{
+			list_key.add("BeneficiaryBank");
+			list_value.add(conBankAccDetail.BeneficiaryBank);
+		}
+		{
+			list_key.add("City");
+			list_value.add(conBankAccDetail.City);
+		}
+		{
+			list_key.add("Branch");
+			list_value.add(conBankAccDetail.Branch);
+		}
+		{
+			list_key.add("Afacctno");
+			list_value.add(conBankAccDetail.Afacctno);
+		}
+		{
+			list_key.add("BeneficiaryCustodyCd");
+			list_value.add(conBankAccDetail.BeneficiaryCustodyCd);
+		}
+		{
+			list_key.add("BeneficiaryAfacctno");
+			list_value.add(conBankAccDetail.BeneficiaryAfacctno);
+		}
+		{
+			list_key.add("CashAvailable");
+			list_value.add(conBankAccDetail.CashAvailable);
+		}
+		{
+			list_key.add("Amount");
+			list_value.add(conBankAccDetail.Amount);
+		}
+		{
+			list_key.add("Fee");
+			list_value.add(conBankAccDetail.Fee);
+		}
+		{
+			list_key.add("Desc");
+			list_value.add(conBankAccDetail.Desc);
+		}
+		{
+			list_key.add("TransferType");
+			list_value.add("1");
+		}
+		{
+			list_key.add("Pin");
+			list_value.add(isOTP ? edt_chitiet_OTPCode.getText().toString() : edt_chitiet_MaPIN.getText().toString());
+		}
+		{
+			list_key.add("saveotp");
+			list_value.add(saveOTP?"Y":"N");
+		}
+		StaticObjectManager.connectServer.callHttpPostService(
+				SUBMITCASHTRANSFER, this, list_key, list_value);
+		mainActivity.loadingScreen(true);
+
 
 	}
 
@@ -299,17 +380,29 @@ public class BankCashTransferConfirm extends AbstractFragment {
 	@Override
 	protected void process(String key, ResultObj rObj) {
 		switch (key) {
+		case GENOTPSMS:
+			showDialogMessage(getStringResource(R.string.thong_bao), rObj.EM);
+			break;
 		case SUBMITCASHTRANSFER:
 			clearForm();
 			try {
 				Thread.sleep(2000);
 			} catch (Exception e) {
 			}
-			StaticObjectManager.saveTradingPass= checkboxTradingpass.isSelected();
-			if(StaticObjectManager.saveTradingPass)
-				StaticObjectManager.tradingPass = edt_chitiet_MaPIN.getText().toString();
-			else
-				StaticObjectManager.tradingPass = StringConst.EMPTY;
+			if(isOTP){
+				StaticObjectManager.saveOTP= checkboxOTPCode.isSelected();
+				if(StaticObjectManager.saveOTP)
+					StaticObjectManager.strOTP = edt_chitiet_OTPCode.getText().toString();
+				else
+					StaticObjectManager.strOTP = StringConst.EMPTY;
+			}
+			else {
+				StaticObjectManager.saveTradingPass = checkboxTradingpass.isSelected();
+				if (StaticObjectManager.saveTradingPass)
+					StaticObjectManager.tradingPass = edt_chitiet_MaPIN.getText().toString();
+				else
+					StaticObjectManager.tradingPass = StringConst.EMPTY;
+			}
 			showDialogMessage(getStringResource(R.string.thong_bao), rObj.EM,
 					new SimpleAction() {
 

@@ -474,7 +474,7 @@
     <string name="datlenh_label_HanMucMua">Hạn mức mua</string>
     <string name="datlenh_label_KLDuocMua">Max qty</string>
     <string name="datlenh_label_KLduocban">Max qty</string>
-    <string name="datlenh_label_Trangthaitieukhoan">Status</string>
+    <string name="datlenh_label_Trangthaitieukhoan">Sub-account status</string>
     <string name="datlenh_label_ChoVe">Receiving</string>
     <string name="TongTien">Total</string>
     <string name="LoaiLenh">Order type</string>

@@ -210,6 +210,11 @@ public class OrderConfirm extends AbstractFragment {
         isOTP= orderSetParams.isGTCOrder? StaticObjectManager.loginInfo.IsOTPCondOrder == "true": StaticObjectManager.loginInfo.IsOTPOrder == "true";
         showOrder();
         customDisplay();
+        try {
+            disableOTPTime= Long.parseLong(StaticObjectManager.loginInfo.DisableOTPTime)*1000;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
