@@ -808,4 +808,5 @@
     <string name="otpremember">Lưu mã xác thực</string>
     <string name="genOTP">Lấy mã xác thực</string>
     <string name="requireOTP">Mã xác thực trống</string>
+    <string name="requireSymbol">Mã CK không được để trống</string>
 </resources>

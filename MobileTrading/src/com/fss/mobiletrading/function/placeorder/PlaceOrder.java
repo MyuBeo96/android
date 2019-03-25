@@ -874,6 +874,15 @@ public class PlaceOrder extends AbstractFragment {
     }
 
     protected void CallCheckOrder() {
+        if(edt_MaCK.getText().toString() ==  StringConst.EMPTY){
+            showDialogMessage(
+                    getResources().getString(
+                            R.string.thong_bao),
+                    getResources().getString(
+                            R.string.requireSymbol));
+            edt_MaCK.requestFocus();
+            return;
+        }
         boolean callcheckorder = PlaceOrderService.CallCheckOrder(afacctno,
                 StaticObjectManager.acctnoItem.CUSTODYCD, flag_side, edt_MaCK
                         .getText().toString(), edttg_LoaiLenh.getText()
@@ -886,6 +895,15 @@ public class PlaceOrder extends AbstractFragment {
     }
 
     private void CallCheckGTCOrder() {
+        if(edt_MaCK.getText().toString().equals(StringConst.EMPTY)){
+            showDialogMessage(
+                    getResources().getString(
+                            R.string.thong_bao),
+                    getResources().getString(
+                            R.string.requireSymbol));
+            edt_MaCK.requestFocus();
+            return;
+        }
         boolean callcheckgtcorder = PlaceOrderService.CallCheckGTCOrder(
                 afacctno, StaticObjectManager.acctnoItem.CUSTODYCD, flag_side,
                 edt_MaCK.getText().toString(), GTCORDERPRICETYPE, edttg_SoLuong

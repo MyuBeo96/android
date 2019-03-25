@@ -708,4 +708,5 @@
     <string name="otpremember">Save auth. code</string>
     <string name="genOTP">Get auth. code</string>
     <string name="requireOTP">Empty authentication</string>
+    <string name="requireSymbol">Symbol is empty</string>
 </resources>
