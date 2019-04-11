@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_marginRight="10dp"
@@ -13,7 +13,7 @@
         android:orientation="horizontal"
         android:paddingLeft="@dimen/t_paddingLeft" >
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/qltk_dskh_accountno"
             android:layout_width="@dimen/t_listcustomers_frame_width"
             android:layout_height="@dimen/t_listcustomers_frame_content"
@@ -37,7 +37,7 @@
             android:text="@string/SoTieuKhoan"
             android:textSize="@dimen/t_listcustomers_labletextsize" />
 
-        <com.fscuat.mobiletrading.design.MySpinner
+        <com.tcscuat.mobiletrading.design.MySpinner
             android:id="@+id/spn_qltk_dskh_subaccount"
             android:layout_width="180dp"
             android:layout_height="@dimen/t_listcustomers_frame_content"
@@ -49,7 +49,7 @@
             app:separationColor="@color/transparent"
             app:textMySpinner="@string/SoTieuKhoan" />
 
-        <!-- <com.fscuat.mobiletrading.design.LabelContentLayout -->
+        <!-- <com.tcscuat.mobiletrading.design.LabelContentLayout -->
         <!-- android:id="@+id/qltk_dskh_subaccount" -->
         <!-- android:layout_width="@dimen/t_listcustomers_frame_width" -->
         <!-- android:layout_height="@dimen/t_listcustomers_frame_content" -->
@@ -96,7 +96,7 @@
         android:paddingLeft="@dimen/t_paddingLeft"
         android:visibility="visible" >
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/qltk_dskh_customername"
             android:layout_width="0dp"
             android:layout_height="@dimen/t_listcustomers_frame_content"
@@ -107,7 +107,7 @@
             app:labelsize_dimen="@dimen/t_listcustomers_labletextsize"
             app:orientation="vertical" />
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/qltk_dskh_assettotal"
             android:layout_width="0dp"
             android:layout_height="@dimen/t_listcustomers_frame_content"
@@ -119,7 +119,7 @@
             app:labelsize_dimen="@dimen/t_listcustomers_labletextsize"
             app:orientation="vertical" />
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/qltk_dskh_debttotal"
             android:layout_width="0dp"
             android:layout_height="@dimen/t_listcustomers_frame_content"
@@ -142,7 +142,7 @@
         android:paddingLeft="@dimen/t_paddingLeft"
         android:visibility="visible" >
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/qltk_dskh_nobaolanh"
             android:layout_width="0dp"
             android:layout_height="@dimen/t_listcustomers_frame_content"
@@ -153,7 +153,7 @@
             app:labelsize_dimen="@dimen/t_listcustomers_labletextsize"
             app:orientation="vertical" />
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/qltk_dskh_baolanhdacaptrongngay"
             android:layout_width="0dp"
             android:layout_height="@dimen/t_listcustomers_frame_content"
@@ -165,7 +165,7 @@
             app:labelsize_dimen="@dimen/t_listcustomers_labletextsize"
             app:orientation="vertical" />
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/qltk_dskh_buyvalueperday"
             android:layout_width="0dp"
             android:layout_height="@dimen/t_listcustomers_frame_content"
@@ -188,7 +188,7 @@
         android:paddingLeft="@dimen/t_paddingLeft"
         android:visibility="visible" >
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/qltk_dskh_totalmoney"
             android:layout_width="0dp"
             android:layout_height="@dimen/t_listcustomers_frame_content"
@@ -199,7 +199,7 @@
             app:labelsize_dimen="@dimen/t_listcustomers_labletextsize"
             app:orientation="vertical" />
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/qltk_dskh_rtt"
             android:layout_width="0dp"
             android:layout_height="@dimen/t_listcustomers_frame_content"
@@ -211,7 +211,7 @@
             app:labelsize_dimen="@dimen/t_listcustomers_labletextsize"
             app:orientation="vertical" />
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/qltk_dskh_rttbono"
             android:layout_width="0dp"
             android:layout_height="@dimen/t_listcustomers_frame_content"

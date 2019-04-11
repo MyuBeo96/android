@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.object.CashStatementItem;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
 
 public class CashStatementView extends LinearLayout {
 	TextView Giam;

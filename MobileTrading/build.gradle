@@ -20,11 +20,11 @@ android {
     aaptOptions.cruncherEnabled = false
     aaptOptions.useNewCruncher = false
     defaultConfig {
-        applicationId "com.fscuat.mobiletrading"
+        applicationId "com.tcscuat.mobiletrading"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 2
-        versionName "1.1.2"
+        versionCode 4
+        versionName "7.0"
         multiDexEnabled true
 
     }
@@ -42,16 +42,16 @@ android {
     }
     productFlavors {
         production{
-            buildConfigField "String", "address_server", '"http://apps.funan.com.vn/MFlexApps"'
+            buildConfigField "String", "address_server", '"http://online.tcsc.vn/MFlexApps"'
         }
         development{
-                buildConfigField "String", "address_server", '"http://14.161.11.106:1616/MFlexApp"'
+            buildConfigField "String", "address_server", '"http://online.tcsc.vn/MFlexApps"'
         }
         uat{
-            buildConfigField "String", "address_server", '"http://118.69.230.209//MFlexApps"'
+            buildConfigField "String", "address_server", '"http://10.128.31.53:1234/MFlexApps"'
         }
         systemTest{
-            buildConfigField "String", "address_server", '"http://14.161.11.106:2309/MFlexApps"'
+            buildConfigField "String", "address_server", '"http://online.tcsc.vn/MFlexApps"'
         }
     }
     compileOptions {

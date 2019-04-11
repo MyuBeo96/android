@@ -39,7 +39,7 @@ import com.devsmart.android.ui.HorizontalListView;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.keyboard.KBoardPrice;
 import com.fss.mobiletrading.keyboard.KBoardQuantity;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 
 public class Common {
 

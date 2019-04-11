@@ -17,16 +17,16 @@ import android.widget.AbsListView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.NewsAdapter;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.function.news.NewsDetail;
 import com.fss.mobiletrading.jsonservice.Error;
 import com.fss.mobiletrading.object.NewsItem;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.Login;
-import com.fscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.Login;
+import com.tcscuat.mobiletrading.MainActivity;
 
 public class AnalysisNews extends AbstractFragment {
 

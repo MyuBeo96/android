@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:id="@+id/check_order"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
         android:paddingLeft="@dimen/t_paddingLeft"
         android:paddingRight="@dimen/t_paddingRight" >
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_checkorder_SoLuuKy"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -41,7 +41,7 @@
             android:layout_height="0.2dp"
             android:background="@color/header_separation_color" />
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_checkorder_TieuKhoan"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -137,7 +137,7 @@
             android:layout_height="0.2dp"
             android:background="@color/header_separation_color" />
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_checkorder_SoLuong"
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -152,7 +152,7 @@
             android:layout_height="0.2dp"
             android:background="@color/header_separation_color" />
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_checkorder_Gia"
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -166,7 +166,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:background="@color/header_separation_color" />
-        <!--<com.fscuat.mobiletrading.design.LabelContentLayout-->
+        <!--<com.tcscuat.mobiletrading.design.LabelContentLayout-->
             <!--android:id="@+id/edt_checkorder_TradingCode"-->
             <!--android:layout_width="match_parent"-->
             <!--android:layout_height="30dp"-->
@@ -179,7 +179,7 @@
             <!--app:inputType="textPassword"-->
             <!--app:labelText="@string/MatKhauGiaoDich"-->
             <!--app:orientation="horizontal"/>-->
-        <com.fscuat.mobiletrading.design.CustomPassLayout
+        <com.tcscuat.mobiletrading.design.CustomPassLayout
             android:id="@+id/edt_checkorder_TradingCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -191,7 +191,7 @@
             app:labelText="@string/MatKhauGiaoDich"
             app:labelRememberText="@string/remmber_tradingpass"
             app:orientation="horizontal" />
-        <com.fscuat.mobiletrading.design.CustomPassLayout
+        <com.tcscuat.mobiletrading.design.CustomPassLayout
             android:id="@+id/edt_checkorder_OTCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -204,7 +204,7 @@
             app:showLabel="false"
             app:orientation="horizontal" />
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_checkorder_fromDate"
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -214,7 +214,7 @@
             app:orientation="horizontal"
             app:separationColor="@color/transparent" />
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/text_checkorder_toDate"
             android:layout_width="match_parent"
             android:layout_height="60dp"

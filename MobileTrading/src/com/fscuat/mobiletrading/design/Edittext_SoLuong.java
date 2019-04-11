@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import android.app.Service;
 import android.content.Context;
@@ -17,7 +17,7 @@ import android.widget.LinearLayout;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.object.StockItem;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 
 public class Edittext_SoLuong extends LinearLayout {
 

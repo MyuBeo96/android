@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.fscuat.mobiletrading"
+    package="com.tcscuat.mobiletrading"
     android:versionCode="17"
     android:versionName="1.1.2">
 
@@ -9,10 +9,10 @@
         android:targetSdkVersion="19" />
 
     <permission
-        android:name="com.fscuat.mobiletrading.permission.MAPS_RECEIVE"
+        android:name="com.tcscuat.mobiletrading.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.fscuat.mobiletrading.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.tcscuat.mobiletrading.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
@@ -38,7 +38,7 @@
     <!-- android:protectionLevel="signature" /> -->
 
     <permission
-        android:name="com.fscuat.mobiletrading.permission.C2D_MESSAGE"
+        android:name="com.tcscuat.mobiletrading.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.androidhive.pushnotifications.permission.C2D_MESSAGE" />
@@ -106,7 +106,7 @@
                 <!-- Receives the registration id. -->
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
-                <category android:name="com.fscuat.mobiletrading" />
+                <category android:name="com.tcscuat.mobiletrading" />
             </intent-filter>
         </receiver>
 

@@ -62,9 +62,9 @@
     <string name="RtttrunoBLchuadenhan">Abandon the term Guarantee</string>
     <string name="TenNganHang">Bank</string>
     <string name="SoTKTaiMSI">Custody No. at KBSV</string>
-    <string name="SoTKTaiFNS">Custody No. at FNS</string>
-    <string name="SoTaiKkhoanTaiFNS">Custody No. at FNS</string>
-    <string name="SoTieuKhoanTaiFNS">Account No at FNS</string>
+    <string name="SoTKTaiFNS">Custody No. at TCSC</string>
+    <string name="SoTaiKkhoanTaiFNS">Custody No. at TCSC</string>
+    <string name="SoTieuKhoanTaiFNS">Account No at TCSC</string>
     <string name="DaHuy">Cancelled</string>
     <string name="Gia1">Price 1</string>
     <string name="Gia2">Price 2</string>
@@ -105,6 +105,7 @@
     <string name="RoRPolicy">I agree to extract money from my account to FUNAN\'s account for registeing buying stock!</string>
     <string name="RoRPolicy_Error">You do not agree to the terms?</string>
     <string name="BanCoMuonXoaMa">Do you want to delete symbol</string>
+    <string name="CheckPolicy">you are not authorized to do this action</string>
     <string name="ThanhPho">City</string>
     <string name="Xong">Done</string>
     <string name="ChiNhanh">Branch</string>

@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import android.app.Service;
 import android.content.Context;
@@ -10,8 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.fss.mobiletrading.object.IndicesItem;
-import com.fscuat.mobiletrading.DeviceProperties;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.R;
 
 public class Indices_View extends LinearLayout {
 

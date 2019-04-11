@@ -6,11 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.PermissionTable_Adapter;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
 import com.google.android.gms.drive.internal.ad;
 
 public class PermissionTable extends AbstractFragment {

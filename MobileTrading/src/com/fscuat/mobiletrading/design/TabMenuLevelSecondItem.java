@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import android.app.Service;
 import android.content.Context;
@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.menu.MenuItemAction;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 
 public class TabMenuLevelSecondItem extends TabItem {
 	MenuItemAction action;

@@ -19,8 +19,8 @@ import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.function.placeorder.PlaceOrder;
 import com.fss.mobiletrading.object.SolenhItem;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
 
 public class GTCOrderListItemView extends LinearLayout {
 

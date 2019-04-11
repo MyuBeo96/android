@@ -16,9 +16,9 @@ import com.fss.mobiletrading.adapter.RightOffRegister_Adapter;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.R;
 
 public class RightOffRegister extends AbstractFragment {
 	static final String RIGHTOFFREGISTER = "RightOffRegisterService";

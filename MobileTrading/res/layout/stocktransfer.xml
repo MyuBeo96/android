@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:id="@+id/chuyenkhoan_chungkhoan"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -20,35 +20,35 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <com.fscuat.mobiletrading.design.MySpinner
+            <com.tcscuat.mobiletrading.design.MySpinner
                 android:id="@+id/spn_ChuyenKhoanCK_senderafacctno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:hasLabel="true"
                 app:textMySpinner="@string/TieuKhoanChuyen" />
 
-            <com.fscuat.mobiletrading.design.MySpinner
+            <com.tcscuat.mobiletrading.design.MySpinner
                 android:id="@+id/spn_ChuyenKhoanCK_TKNhan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:hasLabel="true"
                 app:textMySpinner="@string/chuyenkhoanck_label_TKNhan" />
 
-            <com.fscuat.mobiletrading.design.MySpinner
+            <com.tcscuat.mobiletrading.design.MySpinner
                 android:id="@+id/spn_ChuyenKhoanCK_MaCK"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:hasLabel="true"
                 app:textMySpinner="@string/MaChungKhoan" />
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_ChuyenKhoanCK_HienCo"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"
                 app:labelText="@string/SLCoTheChuyen"
                 app:orientation="vertical" />
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/edt_ChuyenKhoanCK_SoLuong"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/m_labelcontentverlayout_height"

@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.fss.mobiletrading.function.placeorder.PlaceOrder;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 
 public class PastPlaceOrderItemView extends LinearLayout {
     TextView tv_Gia;

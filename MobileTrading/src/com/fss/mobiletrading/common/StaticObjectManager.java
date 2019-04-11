@@ -9,7 +9,7 @@ import com.fss.mobiletrading.object.BRRptItem;
 import com.fss.mobiletrading.object.BankAccList;
 import com.fss.mobiletrading.object.LoginItem;
 import com.fss.mobiletrading.object.StockItem;
-import com.fscuat.mobiletrading.CallAnotherAppManager;
+import com.tcscuat.mobiletrading.CallAnotherAppManager;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -21,6 +21,7 @@ import java.util.Locale;
 public class StaticObjectManager {
 	public static ConnectServer connectServer;
 	public static LoginItem loginInfo;
+
 	//luu mk
 	public static boolean saveTradingPass= false;
 	public static String tradingPass="";
@@ -54,6 +55,7 @@ public class StaticObjectManager {
 		defaultbrokeracctno = null;
 		isLogin = false;
 		saveTradingPass= false;
+		saveOTP =false;
 	}
 
 	public StaticObjectManager() {

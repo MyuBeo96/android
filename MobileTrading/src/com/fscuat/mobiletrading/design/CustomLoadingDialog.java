@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 
 /**
  * Created by Admin on 06-06-2016.

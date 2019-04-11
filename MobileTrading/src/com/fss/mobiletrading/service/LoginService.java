@@ -8,8 +8,8 @@ import java.util.List;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.connector.ConnectServer;
 import com.fss.mobiletrading.interfaces.INotifier;
-import com.fscuat.mobiletrading.MSTradeAppConfig;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.MSTradeAppConfig;
+import com.tcscuat.mobiletrading.R;
 
 public class LoginService extends MTradingService {
 	public static void CallGetLinkGuide(INotifier notifier, String key) {

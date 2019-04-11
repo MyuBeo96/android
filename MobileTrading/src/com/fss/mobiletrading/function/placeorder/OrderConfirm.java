@@ -2,29 +2,35 @@ package com.fss.mobiletrading.function.placeorder;
 
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.provider.Settings;
 import android.test.suitebuilder.annotation.Smoke;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.fscuat.mobiletrading.design.CustomPassLayout;
+import com.google.android.gcm.GCMRegistrar;
+import com.tcscuat.mobiletrading.design.CustomPassLayout;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
+import com.fss.mobiletrading.function.notify.NotificationService;
 import com.fss.mobiletrading.function.orderlist.GTCOrderList;
 import com.fss.mobiletrading.function.orderlist.NormalOrderList;
+import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
-import com.fscuat.mobiletrading.design.LabelContentLayout;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.design.LabelContentLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +40,8 @@ public class OrderConfirm extends AbstractFragment {
     final String TRADECONFIRM = "SuccessService#TRADECONFIRM";
     final String TRADEGTCCONFIRM = "SuccessService#TRADEGTCCONFIRM";
     final String GENOTPSMS = "SuccessService#GENOTPSMS";
-
+    public static final String GETUNREAD = "GetUnReadService#GETUNREAD";
+    int unread = 0;
     static final String DEFAULT_PRICETYPE = "LO";
 
     protected LabelContentLayout tv_checkorder_Gia;
@@ -52,6 +59,8 @@ public class OrderConfirm extends AbstractFragment {
     protected Button btn_detail_Cancel;
     protected ImageButton checkboxTradingpass;
     protected ImageButton checkboxOTPCode;
+    protected EditText etOTPCode;
+
     OrderSetParams orderSetParams;
     long mLastConfirmClickTime = 0l;
     long disableOTPTime= 01;
@@ -96,10 +105,12 @@ public class OrderConfirm extends AbstractFragment {
                 .findViewById(R.id.btn_checkorder_Accept);
         checkboxTradingpass = (ImageButton) edt_checkorder_TradingPw.getcheckbox();
         checkboxOTPCode = (ImageButton) edt_checkorder_OTPCode.getcheckbox();
+        etOTPCode = (EditText)edt_checkorder_OTPCode.getEditContent();
         innitListener();
 
         return view;
     }
+
 
     private  void innitListener(){
         checkboxOTPCode.setOnClickListener(new OnClickListener() {
@@ -137,10 +148,17 @@ public class OrderConfirm extends AbstractFragment {
                 }
                 StaticObjectManager.mLastGenOTPClickTime=SystemClock.elapsedRealtime();
                 GenOTPSMS();
+
+
             }
         });
     }
-
+    public void CallUnRead(INotifier notifier) {
+        String android_id = Settings.Secure.getString(getContext().getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        NotificationService.CallUnRead(StaticObjectManager.deviceToken, android_id,
+                StaticObjectManager.loginInfo.UserName, notifier, GETUNREAD);
+    }
     protected  void GenOTPSMS(){
         List<String> list_key = new ArrayList<String>();
         List<String> list_value = new ArrayList<String>();
@@ -159,6 +177,7 @@ public class OrderConfirm extends AbstractFragment {
 
         StaticObjectManager.connectServer.callHttpPostService(GENOTPSMS,
                 this, list_key, list_value);
+        CallUnRead(this);
     }
 
 
@@ -170,6 +189,13 @@ public class OrderConfirm extends AbstractFragment {
             getDialog().getWindow().setLayout(width, LayoutParams.WRAP_CONTENT);
         }
     }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        StaticObjectManager.mLastGenOTPClickTime = 01;
+    }
+
     private void customDisplay(){
         if(isOTP){
             edt_checkorder_TradingPw.setVisibility(View.GONE);
@@ -215,6 +241,7 @@ public class OrderConfirm extends AbstractFragment {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     @Override
@@ -436,8 +463,17 @@ public class OrderConfirm extends AbstractFragment {
     @Override
     protected void process(String key, ResultObj rObj) {
         switch (key) {
+            case GETUNREAD:
+                unread = (int) rObj.obj;
+                mainActivity.showUnReadNotify(unread);
+                break;
             case GENOTPSMS:
-                showDialogMessage(getStringResource(R.string.thong_bao), rObj.EM);
+                String[] arrayString = rObj.EM.split(";");
+                showDialogMessage(getStringResource(R.string.thong_bao), arrayString[0]);
+                if (rObj.EC == 0 && StaticObjectManager.loginInfo.IsFillOTP.equals("Y"))
+                {
+                    etOTPCode.setText(arrayString[1]);
+                }
                 break;
             case TRADEGTCCONFIRM:
                 try {

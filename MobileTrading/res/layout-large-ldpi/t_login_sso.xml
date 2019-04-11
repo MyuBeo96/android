@@ -125,9 +125,9 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp"
                         android:scaleType="centerInside"
-                        android:src="@drawable/ic_fsc_logo" />
+                        android:src="@drawable/ic_tcsc_logo" />
 
-                    <com.fscuat.mobiletrading.design.MyButton
+                    <com.tcscuat.mobiletrading.design.MyButton
                         android:id="@+id/btn_login_Login"
                         android:layout_height="@dimen/t_login_button"
                         android:layout_below="@+id/img_login_logo"

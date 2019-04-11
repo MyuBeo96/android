@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.interfaces.INotifier;
-import com.fscuat.mobiletrading.MSTradeAppConfig;
+import com.tcscuat.mobiletrading.MSTradeAppConfig;
 
 public class BalanceService {
 	public static boolean CallGetMoneyInfo(String acctno, INotifier notifier,

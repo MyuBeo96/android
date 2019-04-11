@@ -15,21 +15,21 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.fscuat.mobiletrading.design.CustomPassLayout;
+import com.tcscuat.mobiletrading.design.CustomPassLayout;
 import com.fss.mobiletrading.consts.StringConst;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.SolenhCT_Adapter;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.function.placeorder.PlaceOrder;
 import com.fss.mobiletrading.object.OrderDetailsItem;
 import com.fss.mobiletrading.object.SolenhItem;
-import com.fscuat.mobiletrading.Login;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.MyActionBar.Action;
-import com.fscuat.mobiletrading.design.LabelContentLayout;
-import com.fscuat.mobiletrading.design.NumberEditText;
-import com.fscuat.mobiletrading.design.VerticalListview;
+import com.tcscuat.mobiletrading.Login;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.MyActionBar.Action;
+import com.tcscuat.mobiletrading.design.LabelContentLayout;
+import com.tcscuat.mobiletrading.design.NumberEditText;
+import com.tcscuat.mobiletrading.design.VerticalListview;
 
 public class GTCOrderDetail extends OrderDetail {
 
@@ -168,6 +168,7 @@ public class GTCOrderDetail extends OrderDetail {
 	}
 
 	protected void CallCancelOrder(SolenhItem item) {
+
 		if(isOTP) {
 			if (edt_OTPCode.getText().length() == 0) {
 				if (edt_OTPCode.getVisibility() != View.VISIBLE) {

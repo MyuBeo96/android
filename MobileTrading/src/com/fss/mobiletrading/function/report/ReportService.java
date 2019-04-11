@@ -5,9 +5,9 @@ import java.util.List;
 
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.interfaces.INotifier;
-import com.fscuat.mobiletrading.MSTradeAppConfig;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.design.LinearLayoutEdittext;
+import com.tcscuat.mobiletrading.MSTradeAppConfig;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.design.LinearLayoutEdittext;
 
 public class ReportService {
 	public static void CallGetDataSource(String code, String filter,

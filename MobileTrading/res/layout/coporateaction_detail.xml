@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_fragment"
@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/m_paddingLeft"
     android:paddingRight="@dimen/m_paddingRight" >
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_coporateaction_details_afacctno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,7 +17,7 @@
         app:labelweight="4"
         app:orientation="horizontal" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_coporateaction_details_eventtype"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
         app:labelweight="4"
         app:orientation="horizontal" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_coporateaction_details_symbol"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
         app:labelweight="4"
         app:orientation="horizontal" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_coporateaction_details_closingdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
         android:textColor="@color/white_text"
         android:textSize="20sp" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_coporateaction_details_trade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
         app:labelweight="4"
         app:orientation="horizontal" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_coporateaction_details_rate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
         app:labelweight="4"
         app:orientation="horizontal" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_coporateaction_details_receivingQtty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
         app:labelweight="4"
         app:orientation="horizontal" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_coporateaction_details_receivingCash"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
         app:labelweight="4"
         app:orientation="horizontal" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_coporateaction_details_actiondate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -98,7 +98,7 @@
         app:labelweight="4"
         app:orientation="horizontal" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_coporateaction_details_status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

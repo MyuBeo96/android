@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading;
+package com.tcscuat.mobiletrading;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,12 +13,12 @@ import android.widget.LinearLayout;
 
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.menu.MenuItemAction;
-import com.fscuat.mobiletrading.design.TabItem;
-import com.fscuat.mobiletrading.design.TabMenuLevelFirstItem;
-import com.fscuat.mobiletrading.design.TabMenuLevelSecondItem;
-import com.fscuat.mobiletrading.design.TabMenuLevelThirdItem;
-import com.fscuat.mobiletrading.design.TabMenuLevelThirdItem_2;
-import com.fscuat.mobiletrading.design.TabSelector;
+import com.tcscuat.mobiletrading.design.TabItem;
+import com.tcscuat.mobiletrading.design.TabMenuLevelFirstItem;
+import com.tcscuat.mobiletrading.design.TabMenuLevelSecondItem;
+import com.tcscuat.mobiletrading.design.TabMenuLevelThirdItem;
+import com.tcscuat.mobiletrading.design.TabMenuLevelThirdItem_2;
+import com.tcscuat.mobiletrading.design.TabSelector;
 
 /**
  * Class này đại diện cho 1 menu ngang 3 cấp dạng tab, mỗi một tab chứa 1 class

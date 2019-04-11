@@ -22,13 +22,13 @@ import com.fss.mobiletrading.object.MoneyInfoItem;
 import com.fss.mobiletrading.object.Order;
 import com.fss.mobiletrading.object.ResultObj;
 import com.fss.mobiletrading.object.StockBalanceItem;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
-import com.fscuat.mobiletrading.design.LabelContentLayout;
-import com.fscuat.mobiletrading.design.MyContextMenu;
-import com.fscuat.mobiletrading.design.MySpinner;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.design.LabelContentLayout;
+import com.tcscuat.mobiletrading.design.MyContextMenu;
+import com.tcscuat.mobiletrading.design.MySpinner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -254,7 +254,13 @@ public class AccountBalance extends AbstractFragment {
 				Common.formatAmount(moneyInfoItem.AVLWITHDRAW));
 		tv_TongNo.getContent().setText(
 				Common.formatAmount(moneyInfoItem.TOTALLOAN));
-		tv_RTT.getContent().setText(moneyInfoItem.MARGINRATE);
+		if(moneyInfoItem.MARGINRATE.equals("100000")||moneyInfoItem.MARGINRATE.equals("10000000")){
+			tv_RTT.getContent().setText("∞");
+		}
+		else {
+			tv_RTT.getContent().setText(Common.formatAmount(moneyInfoItem.MARGINRATE));
+		}
+
 		tv_TienNopBoSung.getContent().setText(
 				Common.formatAmount(moneyInfoItem.ADDVND));
 		tv_ChoVeT0.getContent().setText(
@@ -263,7 +269,7 @@ public class AccountBalance extends AbstractFragment {
 				Common.formatAmount(moneyInfoItem.CASH_RECEIVING_T1));
 		tv_ChoVeT2.getContent().setText(
 				Common.formatAmount(moneyInfoItem.CASH_RECEIVING_T2));
-		tv_GiaTriNAV.getContent().setText(moneyInfoItem.NAV);
+		tv_GiaTriNAV.getContent().setText(Common.formatAmount(moneyInfoItem.NAV));
         if (DeviceProperties.isTablet) {
 			tv_cotucchove.setText(Common.formatAmount(moneyInfoItem
 					.getCARECEIVING()));

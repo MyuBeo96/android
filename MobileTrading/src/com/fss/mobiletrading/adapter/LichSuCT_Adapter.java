@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.fss.mobiletrading.object.LichSuCT_Item;
 import com.fss.mobiletrading.view.LichSuCT_View;
 

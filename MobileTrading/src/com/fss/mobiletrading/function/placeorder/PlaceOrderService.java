@@ -5,8 +5,8 @@ import java.util.List;
 
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.interfaces.INotifier;
-import com.fscuat.mobiletrading.MSTradeAppConfig;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.MSTradeAppConfig;
+import com.tcscuat.mobiletrading.R;
 
 public class PlaceOrderService {
 	public static boolean CallCheckOrder(String afacctno, String custodycd,

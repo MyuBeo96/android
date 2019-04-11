@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading;
+package com.tcscuat.mobiletrading;
 
 import android.app.Dialog;
 import android.app.NotificationManager;
@@ -108,9 +108,9 @@ import com.fss.mobiletrading.function.watchlist.WatchList;
 import com.fss.mobiletrading.object.ResultObj;
 import com.fss.mobiletrading.service.ServiceManager;
 import com.google.android.gcm.GCMRegistrar;
-import com.fscuat.mobiletrading.MyActionBar.Action;
-import com.fscuat.mobiletrading.design.CustomLoadingDialog;
-import com.fscuat.mobiletrading.design.DialogLoading;
+import com.tcscuat.mobiletrading.MyActionBar.Action;
+import com.tcscuat.mobiletrading.design.CustomLoadingDialog;
+import com.tcscuat.mobiletrading.design.DialogLoading;
 
 import java.io.Serializable;
 import java.util.ArrayList;

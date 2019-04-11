@@ -3,22 +3,23 @@ package com.fss.mobiletrading.function.accountconfig;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
-
+import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MSTradeAppConfig;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
-import com.fscuat.mobiletrading.design.LabelContentLayout;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MSTradeAppConfig;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.design.LabelContentLayout;
 
 public class ChangeTradingPassword extends AbstractFragment {
 	static final String CHANGEPASSWORD = "SuccessService#1";
@@ -27,7 +28,7 @@ public class ChangeTradingPassword extends AbstractFragment {
 	LabelContentLayout edt_ConfirmPin;
 	LabelContentLayout edt_NewPin;
 	LabelContentLayout edt_OldPin;
-	View viewsp;
+	View viewsp, view;
 
 	public static ChangeTradingPassword newInstance(MainActivity mActivity) {
 
@@ -39,7 +40,7 @@ public class ChangeTradingPassword extends AbstractFragment {
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup viewGroup,
 			Bundle bundle) {
-		View view = inflater.inflate(R.layout.changetradingpassword, viewGroup,
+		view = inflater.inflate(R.layout.changetradingpassword, viewGroup,
 				false);
 		initView(view);
 		initListener();
@@ -49,6 +50,7 @@ public class ChangeTradingPassword extends AbstractFragment {
 	public void addActionToActionBar() {
 		super.addActionToActionBar();
 		setBackLogoActionMenu();
+
 	}
 
 	@Override
@@ -58,6 +60,7 @@ public class ChangeTradingPassword extends AbstractFragment {
 		if (getDialog() != null) {
 			getDialog().getWindow().setLayout(width, LayoutParams.WRAP_CONTENT);
 		}
+
 	}
 
 	private void initView(View view) {
@@ -80,6 +83,7 @@ public class ChangeTradingPassword extends AbstractFragment {
 			Common.setupUI(view.findViewById(R.id.changetradingpassword),
 					mainActivity);
 		}
+
 	}
 
 	private void initListener() {
@@ -130,6 +134,7 @@ public class ChangeTradingPassword extends AbstractFragment {
 							clearFieldPin();
 						}
 					});
+
 			break;
 		default:
 			break;
@@ -140,8 +145,31 @@ public class ChangeTradingPassword extends AbstractFragment {
 	public void onResume() {
 		super.onResume();
 		clearFieldPin();
-	}
+		if(StaticObjectManager.loginInfo.IsOTPDeposit == "true" || StaticObjectManager.loginInfo.IsDigital.equals("Y"))
+		{
+			showDialogMessage(getStringResource(R.string.thong_bao),
+					getStringResource(R.string.CheckPolicy));
+			disableView(view);
 
+		}
+	}
+	public static void disableView(View v) {
+
+		v.setOnTouchListener(new View.OnTouchListener() {
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				return true;
+			}
+		});
+
+		if (v instanceof ViewGroup) {
+			ViewGroup vg = (ViewGroup) v;
+			for (int i = 0; i < vg.getChildCount(); i++) {
+				View child = vg.getChildAt(i);
+				disableView(child);
+			}
+		}
+	}
 	protected void clearFieldPin() {
 		edt_OldPin.setText(StringConst.EMPTY);
 		edt_NewPin.setText(StringConst.EMPTY);

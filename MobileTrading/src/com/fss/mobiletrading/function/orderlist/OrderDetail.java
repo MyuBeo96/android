@@ -2,35 +2,39 @@ package com.fss.mobiletrading.function.orderlist;
 
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
-import com.fscuat.mobiletrading.design.CustomPassLayout;
+import com.tcscuat.mobiletrading.design.CustomPassLayout;
 import com.fss.mobiletrading.adapter.SolenhCT_Adapter;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.function.ChooseAfacctno;
+import com.fss.mobiletrading.function.notify.NotificationService;
 import com.fss.mobiletrading.function.placeorder.OrderSetParams;
 import com.fss.mobiletrading.function.placeorder.PlaceOrder;
+import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.object.AcctnoItem;
 import com.fss.mobiletrading.object.OrderDetailsItem;
 import com.fss.mobiletrading.object.ResultObj;
 import com.fss.mobiletrading.object.SolenhItem;
 import com.fss.mobiletrading.object.StockItem;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.MyActionBar.Action;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
-import com.fscuat.mobiletrading.design.LabelContentLayout;
-import com.fscuat.mobiletrading.design.VerticalListview;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.MyActionBar.Action;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.design.LabelContentLayout;
+import com.tcscuat.mobiletrading.design.VerticalListview;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +45,8 @@ public class OrderDetail extends AbstractFragment {
     final String CANCELORDER = "SuccessService#CANCELORDER";
     final String CHECKORDER = "CheckOrderService#CHECKORDER";
     final String GENOTPSMS = "SuccessService#GENOTPSMS";
+    public static final String GETUNREAD = "GetUnReadService#GETUNREAD";
+    int unread = 0;
     String  priceNew ;
     Double price;
     LabelContentLayout tv_chitiet_CustodyCd;
@@ -59,6 +65,7 @@ public class OrderDetail extends AbstractFragment {
     protected VerticalListview lv_SolenhCT;
     protected ImageButton checkboxTradingpass;
     protected ImageButton checkboxOTPCode;
+    protected EditText etOTPCode;
 
     List<OrderDetailsItem> listOrderDetails;
     SolenhCT_Adapter adapterSolenhCT;
@@ -110,6 +117,7 @@ public class OrderDetail extends AbstractFragment {
         btn_chitiet_SuaLenh = ((Button) view
                 .findViewById(R.id.btn_solenh_chitiet_SuaLenh));
 
+
         tv_chitiet_OrderSide.getContent().setAllCaps(true);
         initData();
         initListener();
@@ -141,6 +149,7 @@ public class OrderDetail extends AbstractFragment {
             }
         });
         checkboxOTPCode = edt_OTPCode.getcheckbox();
+        etOTPCode = (EditText)edt_OTPCode.getEditContent();
         checkboxOTPCode.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -176,6 +185,13 @@ public class OrderDetail extends AbstractFragment {
 
         StaticObjectManager.connectServer.callHttpPostService(GENOTPSMS,
                 this, list_key, list_value);
+        CallUnRead(this);
+    }
+    public void CallUnRead(INotifier notifier) {
+        String android_id = Settings.Secure.getString(getContext().getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        NotificationService.CallUnRead(StaticObjectManager.deviceToken, android_id,
+                StaticObjectManager.loginInfo.UserName, notifier, GETUNREAD);
     }
     protected void initData() {
         if (listOrderDetails == null) {
@@ -454,10 +470,18 @@ public class OrderDetail extends AbstractFragment {
         }
 
     }
-
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        StaticObjectManager.mLastGenOTPClickTime = 01;
+    }
     @Override
     protected void process(String key, ResultObj rObj) {
         switch (key) {
+            case GETUNREAD:
+                unread = (int) rObj.obj;
+                mainActivity.showUnReadNotify(unread);
+                break;
             case CANCELORDER:
                 if(isOTP){
                     StaticObjectManager.saveOTP= checkboxOTPCode.isSelected();
@@ -486,7 +510,12 @@ public class OrderDetail extends AbstractFragment {
                         });
                 break;
             case GENOTPSMS:
-                showDialogMessage(getStringResource(R.string.thong_bao), rObj.EM);
+                String[] arrayString = rObj.EM.split(";");
+                showDialogMessage(getStringResource(R.string.thong_bao), arrayString[0]);
+                if (rObj.EC == 0 && StaticObjectManager.loginInfo.IsFillOTP.equals("Y"))
+                {
+                    etOTPCode.setText(arrayString[1]);
+                }
                 break;
             case ORDERDETAILS:
                 if (rObj.obj != null) {

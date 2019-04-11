@@ -35,7 +35,7 @@ import android.util.Log;
 
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 
 public class IndexVolumeChartView extends CustomChartView {
 	static int verticallinecolor = Color.parseColor("#DDDDDD");

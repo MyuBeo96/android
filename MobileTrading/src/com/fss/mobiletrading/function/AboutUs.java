@@ -16,15 +16,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.object.ContactInfoItem;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MSTradeAppConfig;
-import com.fscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MSTradeAppConfig;
+import com.tcscuat.mobiletrading.MainActivity;
 
 public class AboutUs extends AbstractFragment {
 

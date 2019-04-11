@@ -13,7 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.TabsPagerAdapter;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.function.cashtransfer.BankCashTransfer;
@@ -21,8 +21,8 @@ import com.fss.mobiletrading.function.cashtransfer.InternalCashTransfer;
 import com.fss.mobiletrading.function.cashtransfer.SCCashTransfer;
 import com.fss.mobiletrading.object.BankAccList;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
 
 public class ChuyenTien_ViewPager extends AbstractFragment {
 

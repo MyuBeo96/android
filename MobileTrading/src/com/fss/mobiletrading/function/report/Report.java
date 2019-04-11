@@ -33,12 +33,12 @@ import com.fss.mobiletrading.object.BRRptItem;
 import com.fss.mobiletrading.object.ItemString2;
 import com.fss.mobiletrading.object.NewsItem;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.design.LinearLayoutEdittext;
-import com.fscuat.mobiletrading.design.MyContextMenu.OnItemSelectedListener;
-import com.fscuat.mobiletrading.design.MySpinner;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.design.LinearLayoutEdittext;
+import com.tcscuat.mobiletrading.design.MyContextMenu.OnItemSelectedListener;
+import com.tcscuat.mobiletrading.design.MySpinner;
 
 public class Report extends AbstractFragment {
 	static final String REPORTPARSE = "ReportParser2#REPORTPARSE";

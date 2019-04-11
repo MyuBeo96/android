@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:background="@color/bg_fragment"
@@ -8,32 +8,32 @@
     android:paddingLeft="@dimen/m_paddingLeft"
     android:paddingRight="@dimen/m_paddingRight" >
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_ChuyenKhoanCKInfo_TKChuyen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:labelText="@string/TieuKhoanNguon" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_ChuyenKhoanCKInfo_TKNhan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:labelText="@string/chuyenkhoanck_label_TKNhan" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_ChuyenKhoanCKInfo_MaCK"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:labelText="@string/MaChungKhoan" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_ChuyenKhoanCKInfo_HienCo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:labelText="@string/KhoiLuongHienCo"
         app:labelweight="5" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_ChuyenKhoanCKInfo_SoLuong"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

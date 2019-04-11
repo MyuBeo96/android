@@ -15,10 +15,10 @@ import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MSTradeAppConfig;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MSTradeAppConfig;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.R;
 
 public class NotifyDetails extends AbstractFragment {
     public final static String GETDETAILNOTIFY = "GetDetailNotifyService#NOTIFYDETAIL";
@@ -74,7 +74,7 @@ public class NotifyDetails extends AbstractFragment {
         }
     }
 
-    public void CallGetNotifyDetails(INotifier notifier, String Id) {
+    public void CallGetNotifyDetails(INotifier notifier, String Id, String Iddtl) {
 
         List<String> list_key = new ArrayList<String>();
         List<String> list_value = new ArrayList<String>();
@@ -83,17 +83,18 @@ public class NotifyDetails extends AbstractFragment {
             list_value.add(MSTradeAppConfig.controller_NotifyDetail);
         }
         {
-            list_key.add("token");
-            list_value.add(deviceToken);
+            list_key.add("mstautoid");
+            list_value.add(Id);
+        }
+        {
+            list_key.add("dtlautoid");
+            list_value.add(Iddtl);
         }
         {
             list_key.add("username");
             list_value.add(userName);
         }
-        {
-            list_key.add("Id");
-            list_value.add(Id);
-        }
+
         StaticObjectManager.connectServer.callHttpPostService(GETDETAILNOTIFY,
                 notifier, list_key, list_value);
     }
@@ -102,7 +103,7 @@ public class NotifyDetails extends AbstractFragment {
     public void onResume() {
         super.onResume();
         if (notifyItem != null) {
-            CallGetNotifyDetails(this, notifyItem.ID);
+            CallGetNotifyDetails(this, notifyItem.ID, notifyItem.IDdtl);
         }
         CallUnRead(this);
     }

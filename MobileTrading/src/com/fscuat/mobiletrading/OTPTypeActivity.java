@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading;
+package com.tcscuat.mobiletrading;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -21,10 +21,12 @@ public class OTPTypeActivity extends FragmentActivity implements INotifier {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         DeviceProperties.isTablet = Common.isTablet(getApplicationContext());
-        setContentView(R.layout.otptypeactivity);
+
         if (DeviceProperties.isTablet) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            setContentView(R.layout.otptypeactivity_t);
+           setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         } else {
+            setContentView(R.layout.otptypeactivity);
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
         initView();
@@ -39,23 +41,29 @@ public class OTPTypeActivity extends FragmentActivity implements INotifier {
             @Override
             public void onClick(View view) {
                 StaticObjectManager.otpType="APP";
-                startMainActivity();
+                startMainActivityOTP();
+
+
             }
         });
         btnOTPTypeSMS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 StaticObjectManager.otpType="SMS";
-                startMainActivity();
+                startMainActivityOTP();
+
             }
         });
     }
-    private  void startMainActivity(){
+    private  void startMainActivityOTP(){
         if (DeviceProperties.isTablet) {
+            finish();
             startActivity(new Intent(this, MainActivity_Tablet.class));
         } else {
             Intent intentMobile = new Intent(this, MainActivity_Mobile.class);
+            finish();
             startActivity(intentMobile);
+
         }
     }
     @Override

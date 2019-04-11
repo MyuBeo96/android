@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading;
+package com.tcscuat.mobiletrading;
 
     public class MSTradeAppConfig {
 

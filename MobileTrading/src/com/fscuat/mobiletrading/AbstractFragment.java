@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading;
+package com.tcscuat.mobiletrading;
 
 import android.app.Dialog;
 import android.graphics.Color;
@@ -19,7 +19,7 @@ import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.jsonservice.Error;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.MyActionBar.Action;
+import com.tcscuat.mobiletrading.MyActionBar.Action;
 
 import java.lang.reflect.Field;
 

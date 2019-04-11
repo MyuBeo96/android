@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
@@ -22,7 +22,7 @@
         android:background="@color/header_separation_color"
         android:visibility="gone" />
 
-    <com.fscuat.mobiletrading.design.BoundedLinearLayout
+    <com.tcscuat.mobiletrading.design.BoundedLinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -36,7 +36,7 @@
             android:background="#2A2931"
             android:scrollbars="none" >
         </ListView>
-    </com.fscuat.mobiletrading.design.BoundedLinearLayout>
+    </com.tcscuat.mobiletrading.design.BoundedLinearLayout>
 
     <TextView
         android:id="@+id/text_resultcancelallorder_positive"

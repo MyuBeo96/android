@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import android.content.Context;
 import android.text.InputType;
@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.fss.mobiletrading.common.StaticObjectManager;
-import com.fscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.MainActivity;
 
 public class SearchStockUI extends SearchTextUI {
 

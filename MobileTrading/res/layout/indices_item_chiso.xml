@@ -43,7 +43,7 @@
                 android:gravity="center" />
         </RelativeLayout>
 
-        <com.fscuat.mobiletrading.design.TextViewHightLight
+        <com.tcscuat.mobiletrading.design.TextViewHightLight
             android:id="@+id/text_indices_item_marketindex"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
             android:gravity="center"
             android:textColor="@color/white_text" />
 
-        <com.fscuat.mobiletrading.design.TextViewHightLight
+        <com.tcscuat.mobiletrading.design.TextViewHightLight
             android:id="@+id/text_indices_item_marketchange"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
             android:gravity="center"
             android:textColor="@color/white_text" />
 
-        <com.fscuat.mobiletrading.design.TextViewHightLight
+        <com.tcscuat.mobiletrading.design.TextViewHightLight
             android:id="@+id/text_indices_item_marketchangeP"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
             android:textColor="@color/white_text"
             android:visibility="gone" />
 
-        <com.fscuat.mobiletrading.design.TextViewHightLight
+        <com.tcscuat.mobiletrading.design.TextViewHightLight
             android:id="@+id/text_indices_item_volume"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
             android:gravity="right|center"
             android:textColor="@color/white_text" />
 
-        <com.fscuat.mobiletrading.design.TextViewHightLight
+        <com.tcscuat.mobiletrading.design.TextViewHightLight
             android:id="@+id/text_indices_item_value"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -87,25 +87,25 @@
             android:visibility="gone" />
     </LinearLayout>
 
-    <com.fscuat.mobiletrading.design.TextViewHightLight
+    <com.tcscuat.mobiletrading.design.TextViewHightLight
         android:id="@+id/text_indices_item_trade"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:visibility="gone" />
 
-    <com.fscuat.mobiletrading.design.TextViewHightLight
+    <com.tcscuat.mobiletrading.design.TextViewHightLight
         android:id="@+id/text_indices_item_upstocks"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:visibility="gone" />
 
-    <com.fscuat.mobiletrading.design.TextViewHightLight
+    <com.tcscuat.mobiletrading.design.TextViewHightLight
         android:id="@+id/text_indices_item_downstocks"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:visibility="gone" />
 
-    <com.fscuat.mobiletrading.design.TextViewHightLight
+    <com.tcscuat.mobiletrading.design.TextViewHightLight
         android:id="@+id/text_indices_item_refstocks"
         android:layout_width="0dp"
         android:layout_height="0dp"

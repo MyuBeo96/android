@@ -111,7 +111,7 @@
                 android:layout_alignParentLeft="true"
                 android:text="@string/KhoiLuong" />
 
-            <com.fscuat.mobiletrading.design.Edittext_SoLuong
+            <com.tcscuat.mobiletrading.design.Edittext_SoLuong
                 android:id="@+id/cus_edt_large_orderplace_SoLuong"
                 style="@style/EditText_Style"
                 android:layout_below="@+id/autoEdt_large_orderplace_Symbol"
@@ -125,7 +125,7 @@
                 android:layout_alignParentLeft="true"
                 android:text="@string/LoaiLenh" />
 
-            <com.fscuat.mobiletrading.design.Edittext_LoaiLenh
+            <com.tcscuat.mobiletrading.design.Edittext_LoaiLenh
                 android:id="@+id/cus_edt_large_orderplace_LoaiLenh"
                 style="@style/EditText_Style"
                 android:layout_below="@+id/cus_edt_large_orderplace_SoLuong"
@@ -139,7 +139,7 @@
                 android:layout_alignParentLeft="true"
                 android:text="@string/Gia1000" />
 
-            <com.fscuat.mobiletrading.design.Edittext_Gia
+            <com.tcscuat.mobiletrading.design.Edittext_Gia
                 android:id="@+id/cus_edt_large_orderplace_Gia"
                 style="@style/EditText_Style"
                 android:layout_below="@+id/cus_edt_large_orderplace_LoaiLenh"
@@ -153,7 +153,7 @@
                 android:layout_alignParentLeft="true"
                 android:text="@string/datlenh_label_SplitQtty" />
 
-            <com.fscuat.mobiletrading.design.Edittext_SoLuong
+            <com.tcscuat.mobiletrading.design.Edittext_SoLuong
                 android:id="@+id/edttg_large_orderplace_SplitQtty"
                 style="@style/EditText_Style"
                 android:layout_below="@+id/cus_edt_large_orderplace_Gia"

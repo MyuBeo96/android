@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:id="@+id/stockinfo_index"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -35,7 +35,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="5">
 
-                    <com.fscuat.mobiletrading.design.TextViewHightLight
+                    <com.tcscuat.mobiletrading.design.TextViewHightLight
                         android:id="@+id/text_BangGiaCT_GiaKhopCuoi"
                         style="@style/Label_Style"
                         android:layout_width="match_parent"
@@ -53,7 +53,7 @@
                         android:layout_alignTop="@+id/text_BangGiaCT_Change"
                         android:scaleType="centerInside" />
 
-                    <com.fscuat.mobiletrading.design.TextViewHightLight
+                    <com.tcscuat.mobiletrading.design.TextViewHightLight
                         android:id="@+id/text_BangGiaCT_Change"
                         style="@style/Label_Style"
                         android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
                         android:gravity="center"
                         android:textSize="14.0sp" />
 
-                    <com.fscuat.mobiletrading.design.TextViewHightLight
+                    <com.tcscuat.mobiletrading.design.TextViewHightLight
                         android:id="@+id/text_BangGiaCT_Percent"
                         style="@style/Label_Style"
                         android:layout_width="wrap_content"
@@ -97,7 +97,7 @@
                             android:text="@string/KhoiLuong_2"
                             android:textSize="13sp" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_khoiluong"
                             style="@style/Content_Style"
                             android:layout_width="0dp"
@@ -123,7 +123,7 @@
                             android:text="@string/TongKL_2"
                             android:textSize="13sp" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_tongkhoiluong"
                             style="@style/Content_Style"
                             android:layout_width="0dp"
@@ -148,7 +148,7 @@
                             android:text="@string/RoomNuocNgoai"
                             android:textSize="13sp" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_foreignRemain"
                             style="@style/Content_Style"
                             android:layout_width="match_parent"
@@ -193,7 +193,7 @@
                             android:text="@string/Tran"
                             android:textSize="13sp" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_Tran"
                             style="@style/Content_Style"
                             android:layout_width="0dp"
@@ -220,7 +220,7 @@
                             android:text="@string/ThamChieu"
                             android:textSize="13sp" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_ThamChieu"
                             style="@style/Content_Style"
                             android:layout_width="0dp"
@@ -247,7 +247,7 @@
                             android:text="@string/San"
                             android:textSize="13sp" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_San"
                             style="@style/Content_Style"
                             android:layout_width="0dp"
@@ -275,7 +275,7 @@
                             android:text="@string/NNMua"
                             android:textSize="13sp" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_NNMua"
                             style="@style/Content_Style"
                             android:layout_width="0dp"
@@ -303,7 +303,7 @@
                             android:text="@string/NNBan"
                             android:textSize="13sp" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_NNBan"
                             style="@style/Content_Style"
                             android:layout_width="0dp"
@@ -337,7 +337,7 @@
                             android:text="@string/CaoNhat"
                             android:textSize="13sp" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_CaoNhat"
                             style="@style/Content_Style"
                             android:layout_width="0dp"
@@ -363,7 +363,7 @@
                             android:text="@string/TrungBinh"
                             android:textSize="13sp" />
 
-                        <!--<com.fscuat.mobiletrading.design.TextViewHightLight-->
+                        <!--<com.tcscuat.mobiletrading.design.TextViewHightLight-->
                         <!--android:id="@+id/text_stockitem_index_average"-->
                         <!--style="@style/Content_Style"-->
                         <!--android:layout_width="0dp"-->
@@ -372,7 +372,7 @@
                         <!--android:gravity="center_vertical|right"-->
                         <!--android:paddingLeft="10dp"-->
                         <!--android:singleLine="true" />-->
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_Average"
                             style="@style/Content_Style"
                             android:layout_width="0dp"
@@ -398,7 +398,7 @@
                             android:text="@string/ThapNhat"
                             android:textSize="13sp" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_ThapNhat"
                             style="@style/Content_Style"
                             android:layout_width="0dp"
@@ -471,7 +471,7 @@
                             android:textColor="@color/white_text"
                             android:textSize="13sp" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_BidPrice1"
                             style="@style/Label_Style"
                             android:layout_width="wrap_content"
@@ -479,7 +479,7 @@
                             android:layout_marginLeft="5dp"
                             android:layout_toRightOf="@+id/btn_stockitem_index_bid1" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_Bid1"
                             style="@style/Label_Style"
                             android:layout_width="wrap_content"
@@ -504,7 +504,7 @@
                             android:textColor="@color/white_text"
                             android:textSize="13sp" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_BidPrice2"
                             style="@style/Label_Style"
                             android:layout_width="wrap_content"
@@ -512,7 +512,7 @@
                             android:layout_marginLeft="5dp"
                             android:layout_toRightOf="@+id/btn_stockitem_index_bid2" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_Bid2"
                             style="@style/Label_Style"
                             android:layout_width="wrap_content"
@@ -537,7 +537,7 @@
                             android:textColor="@color/white_text"
                             android:textSize="13sp" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_BidPrice3"
                             style="@style/Label_Style"
                             android:layout_width="wrap_content"
@@ -545,7 +545,7 @@
                             android:layout_marginLeft="5dp"
                             android:layout_toRightOf="@+id/btn_stockitem_index_bid3" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_Bid3"
                             style="@style/Label_Style"
                             android:layout_width="wrap_content"
@@ -567,14 +567,14 @@
                         android:background="@color/offer1_background_color"
                         android:paddingLeft="10dp">
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_OfferPrice1"
                             style="@style/Label_Style"
                             android:layout_width="wrap_content"
                             android:layout_centerVertical="true"
                             android:layout_marginTop="0dp" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_Offer1"
                             style="@style/Label_Style"
                             android:layout_width="wrap_content"
@@ -602,14 +602,14 @@
                         android:background="@color/offer2_background_color"
                         android:paddingLeft="10dp">
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_OfferPrice2"
                             style="@style/Label_Style"
                             android:layout_width="wrap_content"
                             android:layout_centerVertical="true"
                             android:layout_marginTop="0dp" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_Offer2"
                             style="@style/Label_Style"
                             android:layout_width="wrap_content"
@@ -637,14 +637,14 @@
                         android:background="@color/offer3_background_color"
                         android:paddingLeft="10dp">
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_OfferPrice3"
                             style="@style/Label_Style"
                             android:layout_width="wrap_content"
                             android:layout_centerVertical="true"
                             android:layout_marginTop="0dp" />
 
-                        <com.fscuat.mobiletrading.design.TextViewHightLight
+                        <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_Offer3"
                             style="@style/Label_Style"
                             android:layout_width="wrap_content"
@@ -691,7 +691,7 @@
                     android:layout_height="0dp"
                     android:visibility="gone" />
             </RelativeLayout>
-            <!--<com.fscuat.mobiletrading.design.TextViewHightLight-->
+            <!--<com.tcscuat.mobiletrading.design.TextViewHightLight-->
             <!--android:id="@+id/text_BangGiaCT_Average"-->
             <!--android:layout_width="0dp"-->
             <!--android:layout_height="0dp"-->

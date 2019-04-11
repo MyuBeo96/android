@@ -1,7 +1,7 @@
 package com.fss.mobiletrading.function.placeorder;
 
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.R;
 
 public class GTCPlaceOrder extends PlaceOrder {
 

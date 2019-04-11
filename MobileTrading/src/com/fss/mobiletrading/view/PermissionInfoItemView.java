@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.fss.mobiletrading.function.authorizationinfo.PermissionInfoItem;
 import com.fss.mobiletrading.object.AcctnoItem;
 

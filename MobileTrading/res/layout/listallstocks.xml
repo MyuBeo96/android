@@ -7,7 +7,7 @@
     android:focusableInTouchMode="true"
     android:orientation="vertical" >
 
-    <com.fscuat.mobiletrading.design.SearchStockUI
+    <com.tcscuat.mobiletrading.design.SearchStockUI
         android:id="@+id/searchtext_listallstock_symbol"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:id="@+id/internalcashtransfer_detail"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -22,7 +22,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/lc_CTin_chitiet_TieuKhoan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
                 app:labelweight="5"
                 app:orientation="horizontal" />
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_CTin_chitiet_NguoiNhan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
                 app:orientation="horizontal"
                 app:singleLine="true" />
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_CTin_chitiet_SoTKNhan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
                 app:orientation="horizontal"
                 app:singleLine="true" />
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_CTin_chitiet_SoLuuKy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
                 android:layout_height="0.5dp"
                 android:background="@color/header_separation_color" />
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_CTin_chitiet_SoDu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
                 app:orientation="horizontal"
                 app:singleLine="true" />
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_CTin_chitiet_SoTienChuyen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
                 app:orientation="horizontal"
                 app:singleLine="true" />
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_CTin_chitiet_PhiChuyenTien"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
                 app:orientation="horizontal"
                 app:singleLine="true" />
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_CTin_chitiet_TongTien"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
                 app:orientation="horizontal"
                 app:singleLine="true" />
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_CTin_chitiet_NoiDung"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -124,7 +124,7 @@
                 app:orientation="horizontal"
                 app:singleLine="true" />
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/edt_CTin_chitiet_tradingcode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

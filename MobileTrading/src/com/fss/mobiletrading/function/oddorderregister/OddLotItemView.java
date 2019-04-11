@@ -1,6 +1,6 @@
 package com.fss.mobiletrading.function.oddorderregister;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.fss.mobiletrading.common.Common;
 
 import android.app.Service;

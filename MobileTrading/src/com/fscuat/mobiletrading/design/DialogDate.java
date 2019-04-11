@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import java.text.ParseException;
 import java.util.Calendar;
@@ -17,7 +17,7 @@ import android.widget.EditText;
 
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
-import com.fscuat.mobiletrading.design.InputDate.OnChangeTextDateListener;
+import com.tcscuat.mobiletrading.design.InputDate.OnChangeTextDateListener;
 
 public class DialogDate {
 	EditText edt;

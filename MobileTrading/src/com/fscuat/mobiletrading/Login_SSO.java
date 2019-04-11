@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading;
+package com.tcscuat.mobiletrading;
 
 import android.app.Dialog;
 import android.app.FragmentManager;
@@ -50,9 +50,9 @@ import com.fss.mobiletrading.object.LoginItem;
 import com.fss.mobiletrading.object.ResultObj;
 import com.fss.mobiletrading.object.StockItem;
 import com.fss.mobiletrading.service.LoginService;
-import com.fscuat.mobiletrading.design.CustomLoadingDialog;
-import com.fscuat.mobiletrading.design.MyButton;
-import com.fscuat.mobiletrading.design.MyContextMenu;
+import com.tcscuat.mobiletrading.design.CustomLoadingDialog;
+import com.tcscuat.mobiletrading.design.MyButton;
+import com.tcscuat.mobiletrading.design.MyContextMenu;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -479,7 +479,7 @@ public class Login_SSO extends FragmentActivity implements INotifier {
                 .setText(getResources().getString(R.string.LuaChonNgonNgu));
         tv_scinfo.setText(getResources().getString(R.string.stockcompany_info));
         if (AppData.language.equals(AppData.LOCALE_EN)) {
-            logo.setImageResource(R.drawable.ic_fsc_logo);
+            logo.setImageResource(R.drawable.ic_tcsc_logo);
         }
     }
     private void refeshWebview(){

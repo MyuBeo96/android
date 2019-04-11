@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/bg_fragment"
@@ -57,7 +57,7 @@
                             android:textColor="#ffffffff"
                             android:textSize="13.0sp" />
 
-                        <com.fscuat.mobiletrading.design.RangeSeekBarLayout
+                        <com.tcscuat.mobiletrading.design.RangeSeekBarLayout
                             android:id="@+id/seekbar_boloccoban_EPS"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
                             android:textColor="#ffffffff"
                             android:textSize="13.0sp" />
 
-                        <com.fscuat.mobiletrading.design.RangeSeekBarLayout
+                        <com.tcscuat.mobiletrading.design.RangeSeekBarLayout
                             android:id="@+id/seekbar_boloccoban_PE"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
@@ -137,7 +137,7 @@
                             android:textColor="#ffffffff"
                             android:textSize="13.0sp" />
 
-                        <com.fscuat.mobiletrading.design.RangeSeekBarLayout
+                        <com.tcscuat.mobiletrading.design.RangeSeekBarLayout
                             android:id="@+id/seekbar_boloccoban_ROE"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
@@ -177,7 +177,7 @@
                             android:textColor="#ffffffff"
                             android:textSize="13.0sp" />
 
-                        <com.fscuat.mobiletrading.design.RangeSeekBarLayout
+                        <com.tcscuat.mobiletrading.design.RangeSeekBarLayout
                             android:id="@+id/seekbar_boloccoban_ROA"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
@@ -217,7 +217,7 @@
                             android:textColor="#ffffffff"
                             android:textSize="13.0sp" />
 
-                        <com.fscuat.mobiletrading.design.RangeSeekBarLayout
+                        <com.tcscuat.mobiletrading.design.RangeSeekBarLayout
                             android:id="@+id/seekbar_boloccoban_PB"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
@@ -257,7 +257,7 @@
                             android:textColor="#ffffffff"
                             android:textSize="13.0sp" />
 
-                        <com.fscuat.mobiletrading.design.RangeSeekBarLayout
+                        <com.tcscuat.mobiletrading.design.RangeSeekBarLayout
                             android:id="@+id/seekbar_boloccoban_Beta"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
@@ -288,7 +288,7 @@
                             android:textColor="#ffffffff"
                             android:textSize="13.0sp" />
 
-                        <com.fscuat.mobiletrading.design.RangeSeekBarLayout
+                        <com.tcscuat.mobiletrading.design.RangeSeekBarLayout
                             android:id="@+id/seekbar_boloccoban_GiaHT"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"

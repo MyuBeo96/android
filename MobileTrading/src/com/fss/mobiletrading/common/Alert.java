@@ -7,7 +7,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 
 /**
  * Created by giangcoibg on 2/20/2017.

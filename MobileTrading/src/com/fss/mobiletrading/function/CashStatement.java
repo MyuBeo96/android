@@ -20,16 +20,16 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.CashStatementAdapter;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.object.ResultObj;
 import com.fss.mobiletrading.object.CashStatementItem;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.design.InputDate;
-import com.fscuat.mobiletrading.design.InputDate.OnChangeTextDateListener;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.design.InputDate;
+import com.tcscuat.mobiletrading.design.InputDate.OnChangeTextDateListener;
 
 public class CashStatement extends AbstractFragment {
 	final String CASHSTATEMENT = "CashStatementService#CASHSTATEMENT";

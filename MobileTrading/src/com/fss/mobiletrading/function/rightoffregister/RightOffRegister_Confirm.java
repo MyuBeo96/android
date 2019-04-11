@@ -3,6 +3,7 @@ package com.fss.mobiletrading.function.rightoffregister;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.provider.Settings;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -11,21 +12,24 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout.LayoutParams;
 
-import com.fscuat.mobiletrading.design.CustomPassLayout;
+import com.tcscuat.mobiletrading.design.CustomPassLayout;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
+import com.fss.mobiletrading.function.notify.NotificationService;
+import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
-import com.fscuat.mobiletrading.design.LabelContentLayout;
-import com.fscuat.mobiletrading.design.SelectorImageView;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.design.LabelContentLayout;
+import com.tcscuat.mobiletrading.design.SelectorImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +39,8 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 	static final String RIGHTOFFREGISTERSUBMIT = "SuccessService#1";
 	static final String RIGHTOFFREGISTERCONFIRM = "RightOffRegisterConfirmService";
 	final String GENOTPSMS = "SuccessService#GENOTPSMS";
+    public static final String GETUNREAD = "GetUnReadService#GETUNREAD";
+    int unread = 0;
 
 	LabelContentLayout tv_chitiet_Gia;
 	LabelContentLayout tv_chitiet_Afaactno;
@@ -52,6 +58,7 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 	CustomPassLayout edt_chitiet_OTPCode;
 	protected ImageButton checkboxTradingpass;
 	protected ImageButton checkboxOTPCode;
+	protected EditText etOTPCode;
 	LabelContentLayout edt_chitiet_SLMua;
 	RightOffRegisterItem rightOffRegisterItem;
 	/**
@@ -96,6 +103,7 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 				.findViewById(R.id.edt_DKQM_chitiet_OTCode));
 		checkboxTradingpass = edt_chitiet_MaPin.getcheckbox();
 		checkboxOTPCode = edt_chitiet_OTPCode.getcheckbox();
+		etOTPCode = (EditText)edt_chitiet_OTPCode.getEditContent();
 		btn_chitiet_ChapNhan = ((Button) view
 				.findViewById(R.id.btn_DKQM_chitiet_Accept));
 
@@ -149,7 +157,14 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 
 		StaticObjectManager.connectServer.callHttpPostService(GENOTPSMS,
 				this, list_key, list_value);
+        CallUnRead(this);
 	}
+    public void CallUnRead(INotifier notifier) {
+        String android_id = Settings.Secure.getString(getContext().getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        NotificationService.CallUnRead(StaticObjectManager.deviceToken, android_id,
+                StaticObjectManager.loginInfo.UserName, notifier, GETUNREAD);
+    }
 	private void initListener() {
 		checkboxTradingpass.setOnClickListener(new OnClickListener() {
 			@Override
@@ -216,6 +231,13 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 
 			@Override
 			public void onClick(View v) {
+				if( StaticObjectManager.loginInfo.IsDigital.equals("Y"))
+				{
+					showDialogMessage(getStringResource(R.string.thong_bao),
+							getStringResource(R.string.CheckPolicy));
+					return;
+
+				}
 				if (edt_chitiet_MaPin.getVisibility() != View.VISIBLE) {
 					String validate = validateRightOffRegisterConfirm();
 					if (validate.equals(StringConst.TRUE)) {
@@ -486,12 +508,26 @@ public class RightOffRegister_Confirm extends AbstractFragment {
 		super.notifyChangeAcctNo();
 		changeAfacctno = true;
 	}
+	@Override
+	public void onDetach() {
+		super.onDetach();
+		StaticObjectManager.mLastGenOTPClickTime = 01;
+	}
 
 	@Override
 	protected void process(String key, ResultObj rObj) {
 		switch (key) {
+        case GETUNREAD:
+            unread = (int) rObj.obj;
+            mainActivity.showUnReadNotify(unread);
+            break;
 		case GENOTPSMS:
-			showDialogMessage(getStringResource(R.string.thong_bao), rObj.EM);
+			String[] arrayString = rObj.EM.split(";");
+			showDialogMessage(getStringResource(R.string.thong_bao), arrayString[0]);
+			if (rObj.EC == 0 && StaticObjectManager.loginInfo.IsFillOTP.equals("Y"))
+			{
+				etOTPCode.setText(arrayString[1]);
+			}
 			break;
 		case RIGHTOFFREGISTERCONFIRM:
 			if (rObj.obj != null) {

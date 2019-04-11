@@ -13,7 +13,7 @@ import android.content.res.XmlResourceParser;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.menu.MenuItemAction;
 import com.fss.mobiletrading.menu.MenuItemActionWithImage;
-import com.fscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.MainActivity;
 
 public class XmlParser {
 

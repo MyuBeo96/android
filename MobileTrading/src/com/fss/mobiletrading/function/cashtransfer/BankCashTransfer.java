@@ -18,14 +18,14 @@ import com.fss.mobiletrading.object.BankAccItem;
 import com.fss.mobiletrading.object.BankAccList;
 import com.fss.mobiletrading.object.ConBankAccDetail;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
-import com.fscuat.mobiletrading.design.LabelContentLayout;
-import com.fscuat.mobiletrading.design.MyContextMenu.OnItemSelectedListener;
-import com.fscuat.mobiletrading.design.MySpinner;
-import com.fscuat.mobiletrading.design.NumberEditText;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.design.LabelContentLayout;
+import com.tcscuat.mobiletrading.design.MyContextMenu.OnItemSelectedListener;
+import com.tcscuat.mobiletrading.design.MySpinner;
+import com.tcscuat.mobiletrading.design.NumberEditText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -234,6 +234,13 @@ public class BankCashTransfer extends AbstractFragment {
 
 			@Override
 			public void onClick(View v) {
+				if( StaticObjectManager.loginInfo.IsDigital.equals("Y"))
+				{
+					showDialogMessage(getStringResource(R.string.thong_bao),
+							getStringResource(R.string.CheckPolicy));
+					return;
+
+				}
 				if (edt_SoTienChuyen.length() == 0) {
 					showDialogMessage(R.string.thong_bao, R.string.ChuaNhapDL);
 					return;

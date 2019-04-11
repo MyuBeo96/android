@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +19,8 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.R;
 
 public class Edittext_LoaiLenh extends LinearLayout {
 

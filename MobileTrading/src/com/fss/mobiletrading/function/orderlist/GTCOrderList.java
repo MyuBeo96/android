@@ -5,6 +5,7 @@ import android.graphics.Point;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.provider.Settings;
 import android.support.v7.app.ActionBar;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -19,21 +20,23 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.fscuat.mobiletrading.design.CustomPassLayout;
+import com.tcscuat.mobiletrading.design.CustomPassLayout;
 import com.fss.mobiletrading.adapter.SolenhGTC_Adapter;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
+import com.fss.mobiletrading.function.notify.NotificationService;
+import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.object.ResultObj;
 import com.fss.mobiletrading.object.SolenhItem;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MSTradeAppConfig;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
-import com.fscuat.mobiletrading.design.SearchTextUI;
-import com.fscuat.mobiletrading.design.TabSelector;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MSTradeAppConfig;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.design.SearchTextUI;
+import com.tcscuat.mobiletrading.design.TabSelector;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +51,8 @@ public class GTCOrderList extends AbstractFragment {
     final String MGTCORDERREALTIME = "MorderService#MGTCORDERREALTIME";
     final String ORDERGTCDETAILS = "OrderDetailsService#ORDERGTCDETAILS";
     static final String GENOTPSMS = "SuccessService#GENOTPSMS";
+    public static final String GETUNREAD = "GetUnReadService#GETUNREAD";
+    int unread = 0;
 
     ListView lv_Solenh;
     TabSelector tabSelector;
@@ -73,6 +78,7 @@ public class GTCOrderList extends AbstractFragment {
     protected TextView tv_Huy;
     protected ImageButton checkboxTradingpass;
     protected ImageButton checkboxOTPCode;
+    protected EditText etOTPCode;
     Dialog dialog;
 
     boolean isOTP= StaticObjectManager.loginInfo.IsOTPCondOrder == "true";
@@ -120,6 +126,13 @@ public class GTCOrderList extends AbstractFragment {
 
         StaticObjectManager.connectServer.callHttpPostService(GENOTPSMS,
                 this, list_key, list_value);
+        CallUnRead(this);
+    }
+    public void CallUnRead(INotifier notifier) {
+        String android_id = Settings.Secure.getString(getContext().getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        NotificationService.CallUnRead(StaticObjectManager.deviceToken, android_id,
+                StaticObjectManager.loginInfo.UserName, notifier, GETUNREAD);
     }
     private void customDisplay(){
         if(isOTP){
@@ -153,6 +166,7 @@ public class GTCOrderList extends AbstractFragment {
         checkboxTradingpass= edt_dialog_TradingPw.getcheckbox();
         edt_dialog_OTPCode = (CustomPassLayout) dialog.findViewById(R.id.edt_dialog_otpcode);
         checkboxOTPCode = edt_dialog_OTPCode.getcheckbox();
+        etOTPCode = (EditText)edt_dialog_OTPCode.getEditContent();
         checkboxTradingpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -187,6 +201,7 @@ public class GTCOrderList extends AbstractFragment {
         tv_Huy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                StaticObjectManager.mLastGenOTPClickTime = 01;
                 dialog.dismiss();
             }
         });
@@ -217,6 +232,13 @@ public class GTCOrderList extends AbstractFragment {
 
                 @Override
                 public void performAction(Object obj) {
+                    if( StaticObjectManager.loginInfo.IsDigital.equals("Y"))
+                    {
+                        showDialogMessage(getStringResource(R.string.thong_bao),
+                                getStringResource(R.string.CheckPolicy));
+                        return;
+
+                    }
                     if (obj != null && obj instanceof SolenhItem) {
                         mainActivity.sendArgumentToFragment(
                                 GTCOrderDetail.class.getName(), obj);
@@ -230,6 +252,13 @@ public class GTCOrderList extends AbstractFragment {
 
                 @Override
                 public void performAction(Object obj) {
+                    if( StaticObjectManager.loginInfo.IsDigital.equals("Y"))
+                    {
+                        showDialogMessage(getStringResource(R.string.thong_bao),
+                                getStringResource(R.string.CheckPolicy));
+                        return;
+
+                    }
                     if (obj instanceof SolenhItem
                             && ((SolenhItem) obj).isCancellable
                             .equals(StringConst.TRUE)) {
@@ -458,7 +487,11 @@ public class GTCOrderList extends AbstractFragment {
             timer.cancel();
         }
     }
-
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        StaticObjectManager.mLastGenOTPClickTime = 01;
+    }
     public void notifyChangeAcctNo() {
         super.notifyChangeAcctNo();
     }
@@ -466,6 +499,10 @@ public class GTCOrderList extends AbstractFragment {
     @Override
     protected void process(String key, ResultObj rObj) {
         switch (key) {
+            case GETUNREAD:
+                unread = (int) rObj.obj;
+                mainActivity.showUnReadNotify(unread);
+                break;
             case MGTCORDERREALTIME:
                 if (rObj.obj != null) {
                     listSolenhItem.clear();
@@ -474,7 +511,12 @@ public class GTCOrderList extends AbstractFragment {
                 }
                 break;
             case GENOTPSMS:
-                showDialogMessage(getStringResource(R.string.thong_bao), rObj.EM);
+                String[] arrayString = rObj.EM.split(";");
+                showDialogMessage(getStringResource(R.string.thong_bao), arrayString[0]);
+                if (rObj.EC == 0 && StaticObjectManager.loginInfo.IsFillOTP.equals("Y"))
+                {
+                    etOTPCode.setText(arrayString[1]);
+                }
                 break;
             case CANCELORDERGTC:
                 if(isOTP){

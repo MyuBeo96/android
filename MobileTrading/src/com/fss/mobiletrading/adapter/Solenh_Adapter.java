@@ -10,8 +10,8 @@ import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.object.SolenhItem;
 import com.fss.mobiletrading.view.NorOrderListItemView;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
 import java.util.ArrayList;
 import java.util.List;
 

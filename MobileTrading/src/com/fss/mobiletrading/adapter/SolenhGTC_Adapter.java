@@ -8,8 +8,8 @@ import android.widget.ArrayAdapter;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.object.SolenhItem;
 import com.fss.mobiletrading.view.GTCOrderListItemView;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
 
 import java.util.ArrayList;
 import java.util.List;

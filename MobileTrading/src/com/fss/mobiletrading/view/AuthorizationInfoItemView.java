@@ -1,6 +1,6 @@
 package com.fss.mobiletrading.view;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.fss.mobiletrading.object.AuthorizationInfoItem;
 
 import android.app.Service;

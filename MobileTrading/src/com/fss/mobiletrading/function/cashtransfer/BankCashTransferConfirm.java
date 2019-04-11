@@ -2,28 +2,32 @@ package com.fss.mobiletrading.function.cashtransfer;
 
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
-import com.fscuat.mobiletrading.design.CustomPassLayout;
+import com.tcscuat.mobiletrading.design.CustomPassLayout;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
+import com.fss.mobiletrading.function.notify.NotificationService;
+import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.object.ConBankAccDetail;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MSTradeAppConfig;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.MyActionBar.Action;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
-import com.fscuat.mobiletrading.design.LabelContentLayout;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MSTradeAppConfig;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.MyActionBar.Action;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.design.LabelContentLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +36,8 @@ public class BankCashTransferConfirm extends AbstractFragment {
 
 	static final String SUBMITCASHTRANSFER = "SuccessService#1";
 	final String GENOTPSMS = "SuccessService#GENOTPSMS";
+	public static final String GETUNREAD = "GetUnReadService#GETUNREAD";
+	int unread = 0;
 	ConBankAccDetail conBankAccDetail;
 
 	LabelContentLayout tv_chitiet_NganHang;
@@ -50,6 +56,7 @@ public class BankCashTransferConfirm extends AbstractFragment {
 	Button btn_chitiet_ChapNhan;
 	protected ImageButton checkboxTradingpass;
 	protected ImageButton checkboxOTPCode;
+	protected EditText etOTPCode;
 	long disableOTPTime= 01;
 	boolean isOTP= StaticObjectManager.loginInfo.IsOTPCash == "true";
 	boolean saveOTP= false;
@@ -99,6 +106,7 @@ public class BankCashTransferConfirm extends AbstractFragment {
 		edt_chitiet_OTPCode= ((CustomPassLayout) view
 				.findViewById(R.id.edt_CTout_chitiet_OTCode));
 		checkboxOTPCode = edt_chitiet_OTPCode.getcheckbox();
+		etOTPCode = (EditText)edt_chitiet_OTPCode.getEditContent();
 		btn_chitiet_ChapNhan = ((Button) view
 				.findViewById(R.id.btn_CTout_chitiet_Accept));
 		if (DeviceProperties.isTablet) {
@@ -145,6 +153,13 @@ public class BankCashTransferConfirm extends AbstractFragment {
 
 		StaticObjectManager.connectServer.callHttpPostService(GENOTPSMS,
 				this, list_key, list_value);
+		CallUnRead(this);
+	}
+	public void CallUnRead(INotifier notifier) {
+		String android_id = Settings.Secure.getString(getContext().getContentResolver(),
+				Settings.Secure.ANDROID_ID);
+		NotificationService.CallUnRead(StaticObjectManager.deviceToken, android_id,
+				StaticObjectManager.loginInfo.UserName, notifier, GETUNREAD);
 	}
 	private void initListener() {
 		checkboxTradingpass.setOnClickListener(new OnClickListener() {
@@ -173,7 +188,13 @@ public class BankCashTransferConfirm extends AbstractFragment {
 
 			@Override
 			public void onClick(View v) {
+				if( StaticObjectManager.loginInfo.IsDigital.equals("Y"))
+				{
+					showDialogMessage(getStringResource(R.string.thong_bao),
+							getStringResource(R.string.CheckPolicy));
+					return;
 
+				}
 				CallSubmitCashTransfer();
 			}
 		});
@@ -376,12 +397,26 @@ public class BankCashTransferConfirm extends AbstractFragment {
 		tv_chitiet_NoiDung.setText(conBankAccDetail.Desc);
 		//edt_chitiet_MaPIN.setText(StringConst.EMPTY);
 	}
+	@Override
+	public void onDetach() {
+		super.onDetach();
+		StaticObjectManager.mLastGenOTPClickTime = 01;
+	}
 
 	@Override
 	protected void process(String key, ResultObj rObj) {
 		switch (key) {
+		case GETUNREAD:
+			unread = (int) rObj.obj;
+			mainActivity.showUnReadNotify(unread);
+			break;
 		case GENOTPSMS:
-			showDialogMessage(getStringResource(R.string.thong_bao), rObj.EM);
+			String[] arrayString = rObj.EM.split(";");
+			showDialogMessage(getStringResource(R.string.thong_bao), arrayString[0]);
+			if (rObj.EC == 0 && StaticObjectManager.loginInfo.IsFillOTP.equals("Y"))
+			{
+				etOTPCode.setText(arrayString[1]);
+			}
 			break;
 		case SUBMITCASHTRANSFER:
 			clearForm();

@@ -7,8 +7,8 @@ import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.function.AppData;
 import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.service.MTradingService;
-import com.fscuat.mobiletrading.Login;
-import com.fscuat.mobiletrading.MSTradeAppConfig;
+import com.tcscuat.mobiletrading.Login;
+import com.tcscuat.mobiletrading.MSTradeAppConfig;
 
 public class NewsService extends MTradingService {
 	public void CallGetAllNews(INotifier notifier, String key) {

@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import java.util.List;
 
@@ -15,8 +15,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.fss.mobiletrading.consts.StringConst;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.design.MyContextMenu.OnItemSelectedListener;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.design.MyContextMenu.OnItemSelectedListener;
 
 public class MySpinner extends RelativeLayout {
 

@@ -1,10 +1,10 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.EditText;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 
 public class MyEditText extends EditText {
 

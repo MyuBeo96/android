@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading;
+package com.tcscuat.mobiletrading;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -35,7 +35,7 @@ import com.fss.mobiletrading.keyboard.KBoardSymbol;
 import com.fss.mobiletrading.menu.SlideMenu;
 import com.fss.mobiletrading.object.AcctnoItem;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.MyActionBar.Action;
+import com.tcscuat.mobiletrading.MyActionBar.Action;
 
 import java.util.List;
 import java.util.Locale;

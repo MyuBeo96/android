@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading;
+package com.tcscuat.mobiletrading;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -15,7 +15,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
+import android.widget.LinearLayout;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.FontsOverride;
 import com.fss.mobiletrading.common.SimpleAction;
@@ -31,7 +31,7 @@ import com.fss.mobiletrading.object.AcctnoItem;
 import com.fss.mobiletrading.object.LoginItem;
 import com.fss.mobiletrading.object.ResultObj;
 import com.google.android.gms.plus.model.people.Person;
-import com.fscuat.mobiletrading.design.LabelContentLayout;
+import com.tcscuat.mobiletrading.design.LabelContentLayout;
 
 import org.apache.http.cookie.Cookie;
 
@@ -49,7 +49,7 @@ public class ResetPassActivity extends FragmentActivity implements INotifier {
     LabelContentLayout edt_ConfirmPass;
     LabelContentLayout edt_NewPass;
     LabelContentLayout edt_OldPass;
-
+    LinearLayout changeTradingpassword;
     static final String CHANGEPIN = "SuccessService#2";
     Button btn_ChangePin;
     Button btn_Pin_Cancel;
@@ -138,6 +138,12 @@ public class ResetPassActivity extends FragmentActivity implements INotifier {
         btn_ChangePassAndPin = (Button) findViewById(R.id.btn_ChangePassAndPin);
         btn_checkbox = (ImageButton) findViewById(R.id.btn_showpassword);
         btn_back = (ImageButton) findViewById(R.id.btn_Back);
+        changeTradingpassword = (LinearLayout) findViewById(R.id.changpinlayout);
+        if(StaticObjectManager.loginInfo.IsOTPDeposit == "true" || StaticObjectManager.loginInfo.IsDigital.equals("Y")) {
+            changeTradingpassword.setVisibility(View.GONE);
+        } else {
+            changeTradingpassword.setVisibility(View.VISIBLE);
+        }
     }
     private void createDialogMessage() {
         dialog_ShowError = new Dialog(this);
@@ -222,34 +228,64 @@ public class ResetPassActivity extends FragmentActivity implements INotifier {
         btn_ChangePassAndPin.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View v) {
-                String confirmPass = String.valueOf(edt_ConfirmPass.getEditContent());
-                String newPass= String.valueOf(edt_NewPass.getEditContent());
-                String confirmPin = String.valueOf(edt_ConfirmPin.getEditContent());
-                String newPin= String.valueOf(edt_NewPin.getEditContent());
-                if (edt_ConfirmPass.getEditContent().length() == 0
-                        || edt_NewPass.getEditContent().length() == 0
-                        || edt_OldPass.getEditContent().length() == 0
-                        || edt_ConfirmPin.getEditContent().length() == 0
-                        || edt_NewPin.getEditContent().length() == 0
-                        || edt_OldPin.getEditContent().length() == 0) {
-                    showDialogMessage(getString(R.string.thong_bao),getString(R.string.ChuaNhapDL),null);
+            public void onClick(View v)
+            {
+
+
+                if(StaticObjectManager.loginInfo.IsOTPDeposit == "true" || StaticObjectManager.loginInfo.IsDigital.equals("Y")) {
+                    String confirmPass = String.valueOf(edt_ConfirmPass.getEditContent());
+                    String newPass= String.valueOf(edt_NewPass.getEditContent());
+                    String confirmPin = String.valueOf(edt_ConfirmPin.getEditContent());
+                    String newPin= String.valueOf(edt_NewPin.getEditContent());
+                    if (edt_ConfirmPass.getEditContent().length() == 0
+                            || edt_NewPass.getEditContent().length() == 0
+                            || edt_OldPass.getEditContent().length() == 0) {
+                        showDialogMessage(getString(R.string.thong_bao),getString(R.string.ChuaNhapDL),null);
+                    }
+                    else if(edt_NewPass.getText().toString().trim().length()<6
+                            ||edt_ConfirmPass.getText().toString().trim().length()<6){
+                        showDialogMessage(getString(R.string.thong_bao),getString(R.string.ChuaNhapDungDL),null);}
+                    else  {
+                        AccountConfig.CallChangePasswordAndPin(
+                                ResetPassActivity.this,
+                                MSTradeAppConfig.controller_ChangeTradingPasswordAndPin,
+                                edt_OldPass.getText().toString(), edt_NewPass
+                                        .getText().toString(), edt_ConfirmPass
+                                        .getText().toString(),edt_OldPin.getText().toString(), edt_NewPin
+                                        .getText().toString(), edt_ConfirmPin
+                                        .getText().toString(), CHANGEPIN);
+                    }
+                }else{
+                    String confirmPass = String.valueOf(edt_ConfirmPass.getEditContent());
+                    String newPass= String.valueOf(edt_NewPass.getEditContent());
+                    String confirmPin = String.valueOf(edt_ConfirmPin.getEditContent());
+                    String newPin= String.valueOf(edt_NewPin.getEditContent());
+                    if (edt_ConfirmPass.getEditContent().length() == 0
+                            || edt_NewPass.getEditContent().length() == 0
+                            || edt_OldPass.getEditContent().length() == 0
+                            || edt_ConfirmPin.getEditContent().length() == 0
+                            || edt_NewPin.getEditContent().length() == 0
+                            || edt_OldPin.getEditContent().length() == 0) {
+                        showDialogMessage(getString(R.string.thong_bao),getString(R.string.ChuaNhapDL),null);
+                    }
+                    else if(edt_NewPass.getText().toString().trim().length()<6
+                            ||edt_ConfirmPass.getText().toString().trim().length()<6
+                            ||edt_NewPin.getText().toString().trim().length()<6
+                            ||edt_ConfirmPin.getText().toString().trim().length()<6){
+                        showDialogMessage(getString(R.string.thong_bao),getString(R.string.ChuaNhapDungDL),null);}
+                    else  {
+                        AccountConfig.CallChangePasswordAndPin(
+                                ResetPassActivity.this,
+                                MSTradeAppConfig.controller_ChangeTradingPasswordAndPin,
+                                edt_OldPass.getText().toString(), edt_NewPass
+                                        .getText().toString(), edt_ConfirmPass
+                                        .getText().toString(),edt_OldPin.getText().toString(), edt_NewPin
+                                        .getText().toString(), edt_ConfirmPin
+                                        .getText().toString(), CHANGEPIN);
+                    }
                 }
-                else if(edt_NewPass.getText().toString().trim().length()<6
-                        ||edt_ConfirmPass.getText().toString().trim().length()<6
-                        ||edt_NewPin.getText().toString().trim().length()<6
-                        ||edt_ConfirmPin.getText().toString().trim().length()<6){
-                    showDialogMessage(getString(R.string.thong_bao),getString(R.string.ChuaNhapDungDL),null);}
-                else  {
-                    AccountConfig.CallChangePasswordAndPin(
-                            ResetPassActivity.this,
-                            MSTradeAppConfig.controller_ChangeTradingPasswordAndPin,
-                            edt_OldPass.getText().toString(), edt_NewPass
-                                    .getText().toString(), edt_ConfirmPass
-                                    .getText().toString(),edt_OldPin.getText().toString(), edt_NewPin
-                                    .getText().toString(), edt_ConfirmPin
-                                    .getText().toString(), CHANGEPIN);
-                }
+
+
             }
         });
     }

@@ -18,12 +18,12 @@ import com.fss.mobiletrading.object.IndicesItem;
 import com.fss.mobiletrading.object.MarketIndexItem;
 import com.fss.mobiletrading.object.ResultObj;
 import com.fss.mobiletrading.view.MarketIndexGraphView;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MSTradeAppConfig;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.design.DialogLoading;
-import com.fscuat.mobiletrading.design.TextViewHightLight;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MSTradeAppConfig;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.design.DialogLoading;
+import com.tcscuat.mobiletrading.design.TextViewHightLight;
 import com.mtrading.mobile.graph.IndexVolumeChartPoint;
 
 import java.text.NumberFormat;

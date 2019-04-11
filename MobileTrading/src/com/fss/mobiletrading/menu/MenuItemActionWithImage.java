@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fss.mobiletrading.interfaces.IStringAction;
-import com.fscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.MainActivity;
 
 public class MenuItemActionWithImage {
 

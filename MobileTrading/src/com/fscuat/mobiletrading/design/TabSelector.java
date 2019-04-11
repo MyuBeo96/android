@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.LinearLayout;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 
 public class TabSelector extends LinearLayout {
 

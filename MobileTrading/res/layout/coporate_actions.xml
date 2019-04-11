@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
@@ -17,14 +17,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
 
-            <com.fscuat.mobiletrading.design.InputDate
+            <com.tcscuat.mobiletrading.design.InputDate
                 android:id="@+id/edt_coporate_actions_fromdate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 app:separationColorInputDate="@color/transparent" />
 
-            <com.fscuat.mobiletrading.design.InputDate
+            <com.tcscuat.mobiletrading.design.InputDate
                 android:id="@+id/edt_coporate_actions_todate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

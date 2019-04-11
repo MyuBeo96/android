@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import java.text.ParseException;
 import java.util.Calendar;
@@ -20,11 +20,11 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 
-import com.fscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.MainActivity;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.function.AppData;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 
 import static java.util.Locale.CHINESE;
 

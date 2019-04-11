@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:id="@+id/bankcashtransfer_register"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -71,7 +71,7 @@
                 android:background="@color/lc_separation_color" />
         </RelativeLayout>
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/edt_banktransferregis_accountbank"
             android:layout_width="@dimen/t_cashtransfer_frame_width"
             android:layout_height="@dimen/t_cashtransfer_frame_content"
@@ -85,7 +85,7 @@
             app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
             app:orientation="vertical" />
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/edt_banktransferregis_beneficiaryname"
             android:layout_width="@dimen/t_cashtransfer_frame_width"
             android:layout_height="@dimen/t_cashtransfer_frame_content"
@@ -105,7 +105,7 @@
         android:gravity="bottom"
         android:orientation="horizontal" >
 
-        <com.fscuat.mobiletrading.design.MySpinner
+        <com.tcscuat.mobiletrading.design.MySpinner
             android:id="@+id/spn_banktransferregis_beneficiarybank"
             android:layout_width="@dimen/t_cashtransfer_frame_width"
             android:layout_height="@dimen/t_cashtransfer_frame_content"
@@ -114,7 +114,7 @@
             app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
             app:textMySpinner="@string/TenNganHang" />
 
-        <com.fscuat.mobiletrading.design.MySpinner
+        <com.tcscuat.mobiletrading.design.MySpinner
             android:id="@+id/spn_banktransferregis_branch"
             android:layout_width="@dimen/t_cashtransfer_frame_width"
             android:layout_height="@dimen/t_cashtransfer_frame_content"
@@ -124,7 +124,7 @@
             app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
             app:textMySpinner="@string/ChiNhanh" />
 
-        <com.fscuat.mobiletrading.design.LabelContentLayout
+        <com.tcscuat.mobiletrading.design.LabelContentLayout
             android:id="@+id/edt_banktransferregis_city"
             android:layout_width="@dimen/t_cashtransfer_frame_width"
             android:layout_height="@dimen/t_cashtransfer_frame_content"

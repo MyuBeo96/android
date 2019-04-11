@@ -1,7 +1,7 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import com.fss.mobiletrading.common.Rule;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class NotifyItem {
 	public String ID;
+	public String IDdtl;
 	public String Date;
 	public String Short;
 	public String Content;
@@ -21,6 +22,7 @@ public class NotifyItem {
 
 	public NotifyItem(HashMap<String, String> hm) {
 		ID = hm.get("ID");
+		IDdtl = hm.get("IDdtl");
 		Date = hm.get("Date");
 		Short = hm.get("Short");
 		Content = hm.get("Content");
@@ -31,9 +33,14 @@ public class NotifyItem {
 	public String getID() {
 		return ID;
 	}
-
 	public void setID(String iD) {
 		ID = iD;
+	}
+	public String getIDdtl() {
+		return IDdtl;
+	}
+	public void setIDdtl(String iDdtl) {
+		IDdtl = iDdtl;
 	}
 
 	public String getDate() {

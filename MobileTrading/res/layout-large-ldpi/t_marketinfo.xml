@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
 
-                <com.fscuat.mobiletrading.design.Indices_View
+                <com.tcscuat.mobiletrading.design.Indices_View
                     android:id="@+id/indices_marketinfo_HOSE"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
 
-                <com.fscuat.mobiletrading.design.Indices_View
+                <com.tcscuat.mobiletrading.design.Indices_View
                     android:id="@+id/indices_marketinfo_HNX"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
 
-                <com.fscuat.mobiletrading.design.Indices_View
+                <com.tcscuat.mobiletrading.design.Indices_View
                     android:id="@+id/indices_marketinfo_UPCOM"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -132,7 +132,7 @@
             android:gravity="center"
             android:text="@string/TinTuc" />
 
-        <com.fscuat.mobiletrading.design.SearchTextUI
+        <com.tcscuat.mobiletrading.design.SearchTextUI
             android:id="@+id/searchtext_listview"
             android:layout_width="300dp"
             android:layout_height="wrap_content"

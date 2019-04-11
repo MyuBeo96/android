@@ -35,18 +35,18 @@ import com.fss.mobiletrading.object.FindStock;
 import com.fss.mobiletrading.object.ResultObj;
 import com.fss.mobiletrading.object.StockBalanceItem;
 import com.fss.mobiletrading.object.StockItem;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.MainActivity_Mobile;
-import com.fscuat.mobiletrading.MainActivity_Tablet;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
-import com.fscuat.mobiletrading.design.DialogDate;
-import com.fscuat.mobiletrading.design.Edittext_Gia;
-import com.fscuat.mobiletrading.design.Edittext_LoaiLenh;
-import com.fscuat.mobiletrading.design.Edittext_SoLuong;
-import com.fscuat.mobiletrading.design.MyContextMenu;
-import com.fscuat.mobiletrading.design.MyContextMenu.OnItemSelectedListener;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.MainActivity_Mobile;
+import com.tcscuat.mobiletrading.MainActivity_Tablet;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.design.DialogDate;
+import com.tcscuat.mobiletrading.design.Edittext_Gia;
+import com.tcscuat.mobiletrading.design.Edittext_LoaiLenh;
+import com.tcscuat.mobiletrading.design.Edittext_SoLuong;
+import com.tcscuat.mobiletrading.design.MyContextMenu;
+import com.tcscuat.mobiletrading.design.MyContextMenu.OnItemSelectedListener;
 
 import org.w3c.dom.Text;
 
@@ -806,6 +806,13 @@ public class PlaceOrder extends AbstractFragment {
 
             @Override
             public void onClick(View v) {
+                if( StaticObjectManager.loginInfo.IsDigital.equals("Y"))
+                {
+                    showDialogMessage(getStringResource(R.string.thong_bao),
+                            getStringResource(R.string.CheckPolicy));
+                    return;
+
+                }
                 if (placeOrderType == NORMALORDER_TYPE) {
                     CallCheckOrder();
                 } else {
@@ -874,7 +881,7 @@ public class PlaceOrder extends AbstractFragment {
     }
 
     protected void CallCheckOrder() {
-        if(edt_MaCK.getText().toString() ==  StringConst.EMPTY){
+        if(edt_MaCK.getText().toString().length() <= 0){
             showDialogMessage(
                     getResources().getString(
                             R.string.thong_bao),

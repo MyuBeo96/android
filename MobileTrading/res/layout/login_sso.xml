@@ -354,7 +354,7 @@
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
-                    <com.fscuat.mobiletrading.design.MyButton
+                    <com.tcscuat.mobiletrading.design.MyButton
                         android:id="@+id/btn_login_Login"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
@@ -362,7 +362,7 @@
                         android:background="@drawable/background_button_login"
                         app:textMyButton="@string/login_btn_Login" />
 
-                    <com.fscuat.mobiletrading.design.MyButton
+                    <com.tcscuat.mobiletrading.design.MyButton
                         android:id="@+id/btn_login_LoginDemo"
                         android:layout_width="0dp"
                         android:layout_height="40dp"

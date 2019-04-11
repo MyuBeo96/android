@@ -196,7 +196,7 @@
                 ptr:ptrHeaderTextAppearance="@style/TextAppearance"
                 android:layout_weight="9"/>
             <!--Phone-->
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_porfolio_TongGTriVon"
                 style="@style/Label_Style1"
                 android:layout_width="match_parent"
@@ -211,7 +211,7 @@
                 android:layout_marginTop="2dp"
                 android:visibility="gone"/>
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_porfolio_TongGTriTT"
                 style="@style/Label_Style1"
                 android:layout_width="match_parent"
@@ -224,7 +224,7 @@
                 app:separationColor="@color/transparent"
                 android:visibility="gone"/>
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_porfolio_LaiLo"
                 style="@style/Label_Style1"
                 android:layout_width="match_parent"
@@ -237,7 +237,7 @@
                 app:separationColor="@color/transparent"
                 android:visibility="gone"/>
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_porfolio_PercentLaiLo"
                 style="@style/Label_Style1"
                 android:layout_width="match_parent"

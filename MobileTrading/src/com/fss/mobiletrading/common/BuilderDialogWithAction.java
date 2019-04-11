@@ -8,7 +8,7 @@ import android.view.Gravity;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.fscuat.mobiletrading.MyActionBar.Action;
+import com.tcscuat.mobiletrading.MyActionBar.Action;
 
 public class BuilderDialogWithAction extends AlertDialog.Builder {
 

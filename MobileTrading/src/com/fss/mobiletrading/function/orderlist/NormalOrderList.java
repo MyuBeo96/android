@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
+import android.provider.Settings;
 import android.support.v7.app.ActionBar;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -25,8 +26,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.fscuat.mobiletrading.MainActivity_Mobile;
-import com.fscuat.mobiletrading.design.CustomPassLayout;
+import com.tcscuat.mobiletrading.MainActivity_Mobile;
+import com.tcscuat.mobiletrading.design.CustomPassLayout;
 import com.fss.mobiletrading.adapter.Solenh_Adapter;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
@@ -34,23 +35,25 @@ import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.function.AppConfig;
 import com.fss.mobiletrading.function.ChooseAfacctno;
+import com.fss.mobiletrading.function.notify.NotificationService;
 import com.fss.mobiletrading.function.placeorder.OrderSetParams;
 import com.fss.mobiletrading.function.placeorder.PlaceOrder;
+import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.object.AcctnoItem;
 import com.fss.mobiletrading.object.Order;
 import com.fss.mobiletrading.object.ResultObj;
 import com.fss.mobiletrading.object.SolenhItem;
 import com.fss.mobiletrading.object.StockItem;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.DeviceProperties;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.MyActionBar.Action;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.design.SearchStockUI;
-import com.fscuat.mobiletrading.design.SearchTextUI;
-import com.fscuat.mobiletrading.design.SearchTextUI.OnHideListener;
-import com.fscuat.mobiletrading.design.SelectorImageView;
-import com.fscuat.mobiletrading.design.TabSelector;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.MyActionBar.Action;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.design.SearchStockUI;
+import com.tcscuat.mobiletrading.design.SearchTextUI;
+import com.tcscuat.mobiletrading.design.SearchTextUI.OnHideListener;
+import com.tcscuat.mobiletrading.design.SelectorImageView;
+import com.tcscuat.mobiletrading.design.TabSelector;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,8 +68,9 @@ public class NormalOrderList extends AbstractFragment {
     static final String MORDER = "MorderService#MORDER";
     static final String MORDERREALTIME = "MorderService#MORDERREALTIME";
     static final String ORDERDETAILS = "OrderDetailsService#ORDERDETAILS";
-    static final String GENOTPSMS = "SuccessService#GENOTPSMS";
-
+    final String GENOTPSMS = "SuccessService#GENOTPSMS";
+    public static final String GETUNREAD = "GetUnReadService#GETUNREAD";
+    int unread = 0;
     TabSelector tabSelector;
     ListView lv_Solenh;
     SearchStockUI search_Symbol;
@@ -117,6 +121,7 @@ public class NormalOrderList extends AbstractFragment {
     Dialog dialog;
     protected ImageButton checkboxTradingpass;
     protected ImageButton checkboxOTPCode;
+    protected EditText etOTPCode;
 
     boolean isOTP= StaticObjectManager.loginInfo.IsOTPOrder == "true";
     boolean saveOTP =false;
@@ -223,6 +228,13 @@ public class NormalOrderList extends AbstractFragment {
 
         StaticObjectManager.connectServer.callHttpPostService(GENOTPSMS,
                 this, list_key, list_value);
+        CallUnRead(this);
+    }
+    public void CallUnRead(INotifier notifier) {
+        String android_id = Settings.Secure.getString(getContext().getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        NotificationService.CallUnRead(StaticObjectManager.deviceToken, android_id,
+                StaticObjectManager.loginInfo.UserName, notifier, GETUNREAD);
     }
     //input trading password cancelorder
     private void inputTradingPw(boolean isShow) {
@@ -232,6 +244,7 @@ public class NormalOrderList extends AbstractFragment {
         edt_dialog_TradingPw = (CustomPassLayout) dialog.findViewById(R.id.edt_dialog_tradingcode);
         edt_dialog_OTPCode = (CustomPassLayout) dialog.findViewById(R.id.edt_dialog_otpcode);
         checkboxTradingpass= edt_dialog_TradingPw.getcheckbox();
+        etOTPCode = (EditText)edt_dialog_OTPCode.getEditContent();
         checkboxOTPCode = edt_dialog_OTPCode.getcheckbox();
         tv_XacNhan = (TextView) dialog.findViewById(R.id.text_dialog_possitive);
         tv_Huy = (TextView) dialog.findViewById(R.id.text_dialog_negative);
@@ -268,6 +281,7 @@ public class NormalOrderList extends AbstractFragment {
         tv_Huy.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+                StaticObjectManager.mLastGenOTPClickTime = 01;
                 dialog.dismiss();
             }
         });
@@ -280,6 +294,7 @@ public class NormalOrderList extends AbstractFragment {
         dialog.setContentView(R.layout.input_tradingpw_dialog);
         edt_dialog_TradingPw = (CustomPassLayout) dialog.findViewById(R.id.edt_dialog_tradingcode);
         checkboxTradingpass= edt_dialog_TradingPw.getcheckbox();
+        etOTPCode = (EditText)edt_dialog_OTPCode.getEditContent();
         tv_XacNhan = (TextView) dialog.findViewById(R.id.text_dialog_possitive);
         tv_Huy = (TextView) dialog.findViewById(R.id.text_dialog_negative);
         final String orderIds = adapterSolenh
@@ -320,6 +335,7 @@ public class NormalOrderList extends AbstractFragment {
         tv_Huy.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+                StaticObjectManager.mLastGenOTPClickTime = 01;
                 dialog.dismiss();
             }
         });
@@ -367,6 +383,7 @@ public class NormalOrderList extends AbstractFragment {
         tv_Huy.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+                StaticObjectManager.mLastGenOTPClickTime = 01;
                 dialog.dismiss();
             }
         });
@@ -398,6 +415,13 @@ public class NormalOrderList extends AbstractFragment {
 
                     @Override
                     public void performAction(Object obj) {
+                        if( StaticObjectManager.loginInfo.IsDigital.equals("Y"))
+                        {
+                            showDialogMessage(getStringResource(R.string.thong_bao),
+                                    getStringResource(R.string.CheckPolicy));
+                            return;
+
+                        }
                         if (obj instanceof SolenhItem) {
                             if (((SolenhItem) obj).isModifiable
                                     .equals(StringConst.TRUE)) {
@@ -415,6 +439,13 @@ public class NormalOrderList extends AbstractFragment {
 
                 @Override
                 public void performAction(Object obj) {
+                    if( StaticObjectManager.loginInfo.IsDigital.equals("Y"))
+                    {
+                        showDialogMessage(getStringResource(R.string.thong_bao),
+                                getStringResource(R.string.CheckPolicy));
+                        return;
+
+                    }
                     if (obj != null && obj instanceof SolenhItem) {
                         mainActivity.sendArgumentToFragment(
                                 OrderDetail.class.getName(), obj);
@@ -428,6 +459,13 @@ public class NormalOrderList extends AbstractFragment {
 
                 @Override
                 public void performAction(Object obj) {
+                    if( StaticObjectManager.loginInfo.IsDigital.equals("Y"))
+                    {
+                        showDialogMessage(getStringResource(R.string.thong_bao),
+                                getStringResource(R.string.CheckPolicy));
+                        return;
+
+                    }
                     if (obj != null && obj instanceof SolenhItem) {
                         SolenhItem item = ((SolenhItem) obj);
                         mainActivity.setOrderToPlaceOrder(new OrderSetParams(
@@ -441,6 +479,13 @@ public class NormalOrderList extends AbstractFragment {
 
                 @Override
                 public void performAction(Object obj) {
+                    if( StaticObjectManager.loginInfo.IsDigital.equals("Y"))
+                    {
+                        showDialogMessage(getStringResource(R.string.thong_bao),
+                                getStringResource(R.string.CheckPolicy));
+                        return;
+
+                    }
                     if (obj != null && obj instanceof SolenhItem) {
                         SolenhItem item = ((SolenhItem) obj);
                         mainActivity.setOrderToPlaceOrder(new OrderSetParams(
@@ -453,6 +498,13 @@ public class NormalOrderList extends AbstractFragment {
 
                 @Override
                 public void performAction(Object obj) {
+                    if( StaticObjectManager.loginInfo.IsDigital.equals("Y"))
+                    {
+                        showDialogMessage(getStringResource(R.string.thong_bao),
+                                getStringResource(R.string.CheckPolicy));
+                        return;
+
+                    }
                     if (obj instanceof SolenhItem
                             && ((SolenhItem) obj).isCancellable.equals("true")) {
                         cancelItem = (SolenhItem) obj;
@@ -496,6 +548,13 @@ public class NormalOrderList extends AbstractFragment {
 
                 @Override
                 public void onClick(View v) {
+                    if( StaticObjectManager.loginInfo.IsDigital.equals("Y"))
+                    {
+                        showDialogMessage(getStringResource(R.string.thong_bao),
+                                getStringResource(R.string.CheckPolicy));
+                        return;
+
+                    }
                     selectCancelAll.setActivated(!selectCancelAll.isActivated());
                     adapterSolenh.selectedCancelAllItem(selectCancelAll
                             .isActivated());
@@ -506,6 +565,13 @@ public class NormalOrderList extends AbstractFragment {
 
                 @Override
                 public void onClick(View v) {
+                    if( StaticObjectManager.loginInfo.IsDigital.equals("Y"))
+                    {
+                        showDialogMessage(getStringResource(R.string.thong_bao),
+                                getStringResource(R.string.CheckPolicy));
+                        return;
+
+                    }
                     final String orderIds = adapterSolenh
                             .getSelectedCancelItem();
                     if (orderIds.length() == 0) {
@@ -937,6 +1003,12 @@ public class NormalOrderList extends AbstractFragment {
         }
     }
 
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        StaticObjectManager.mLastGenOTPClickTime = 01;
+    }
+
     public void notifyChangeAcctNo() {
         super.notifyChangeAcctNo();
     }
@@ -944,6 +1016,10 @@ public class NormalOrderList extends AbstractFragment {
     @Override
     protected void process(String key, ResultObj rObj) {
         switch (key) {
+            case GETUNREAD:
+                unread = (int) rObj.obj;
+                mainActivity.showUnReadNotify(unread);
+                break;
             case MORDER:
                 if (rObj.obj != null) {
                     listSolenhItem.clear();
@@ -952,7 +1028,12 @@ public class NormalOrderList extends AbstractFragment {
                 }
                 break;
             case GENOTPSMS:
-                showDialogMessage(getStringResource(R.string.thong_bao), rObj.EM);
+                String[] arrayString = rObj.EM.split(";");
+                showDialogMessage(getStringResource(R.string.thong_bao), arrayString[0]);
+                if (rObj.EC == 0 && StaticObjectManager.loginInfo.IsFillOTP.equals("Y"))
+                {
+                    etOTPCode.setText(arrayString[1]);
+                }
                 break;
             case MORDERREALTIME:
                 if (rObj.obj != null) {

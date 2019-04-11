@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.common.StaticObjectManager;
@@ -23,10 +23,10 @@ import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.object.AccountInfo;
 import com.fss.mobiletrading.object.AcctnoItem;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.Login;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.design.LabelContentLayout;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.Login;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.design.LabelContentLayout;
 
 public class AccountConfig extends AbstractFragment {
 	static final String ACCOUNTINFORMATION = "AccountInformationService";

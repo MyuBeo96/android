@@ -3,7 +3,7 @@ package com.fss.mobiletrading.function.market;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.service.MTradingService;
-import com.fscuat.mobiletrading.MSTradeAppConfig;
+import com.tcscuat.mobiletrading.MSTradeAppConfig;
 
 public class MarketInfoService extends MTradingService {
 

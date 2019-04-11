@@ -3,6 +3,7 @@ package com.fss.mobiletrading.function.orderlist;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.provider.Settings;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -21,41 +22,47 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.fscuat.mobiletrading.MainActivity_Mobile;
-import com.fscuat.mobiletrading.design.CustomPassLayout;
+import com.tcscuat.mobiletrading.MainActivity_Mobile;
+import com.tcscuat.mobiletrading.design.CustomPassLayout;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.consts.StringConst;
+import com.fss.mobiletrading.function.notify.NotificationService;
 import com.fss.mobiletrading.function.placeorder.PlaceOrder;
 import com.fss.mobiletrading.function.watchlist.StockIndex;
 import com.fss.mobiletrading.function.watchlist.StockIndexView;
+import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.keyboard.KBoardPrice;
 import com.fss.mobiletrading.keyboard.KBoardQuantity;
 import com.fss.mobiletrading.object.FindStock;
 import com.fss.mobiletrading.object.ResultObj;
 import com.fss.mobiletrading.object.StockDetailsItem;
 import com.fss.mobiletrading.object.StockItem;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MSTradeAppConfig;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
-import com.fscuat.mobiletrading.design.Edittext_Gia;
-import com.fscuat.mobiletrading.design.Edittext_LoaiLenh;
-import com.fscuat.mobiletrading.design.Edittext_SoLuong;
-import com.fscuat.mobiletrading.design.LabelContentLayout;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MSTradeAppConfig;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.design.Edittext_Gia;
+import com.tcscuat.mobiletrading.design.Edittext_LoaiLenh;
+import com.tcscuat.mobiletrading.design.Edittext_SoLuong;
+import com.tcscuat.mobiletrading.design.LabelContentLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.fss.mobiletrading.object.StockItem.HOSE;
 
+
+
 public class AmendOrder extends AbstractFragment {
 
 	static final String FINDSTOCK = "FindStockService#FINDSTOCK";
 	static final String AMENDORDER = "CheckOrderService#AMENDORDER";
 	final String GENOTPSMS = "SuccessService#GENOTPSMS";
+	public static final String GETUNREAD = "GetUnReadService#GETUNREAD";
+	int unread = 0;
 	String findstockKey;
 
 	protected Button btn_Ban;
@@ -106,6 +113,7 @@ public class AmendOrder extends AbstractFragment {
 	protected LinearLayout stockIndex;
 	protected ImageButton checkboxTradingpass;
 	protected ImageButton checkboxOTPCode;
+	protected EditText etOTPCode;
 
 	AmendOrderModel orderSetParams;
 	boolean changedAfacctno = false;
@@ -158,6 +166,7 @@ public class AmendOrder extends AbstractFragment {
 				.findViewById(R.id.edt_amendorder_OTCode);
 		checkboxTradingpass = edt_TradingPw.getcheckbox();
 		checkboxOTPCode = edt_OTPCode.getcheckbox();
+		etOTPCode = (EditText)edt_OTPCode.getEditContent();
 		kBoardPrice = (KBoardPrice) view
 				.findViewById(R.id.t_placeorder_kboardsymbol_price);
 		kBoardQuantity = (KBoardQuantity) view
@@ -207,6 +216,7 @@ public class AmendOrder extends AbstractFragment {
 
 		lbl_NNBanSell = (TextView) view.findViewById(R.id.lbl_datlenh_nnbansell);
 		tv_NNBanSell = (TextView) view.findViewById(R.id.text_DatLenh_NNBanSell);
+
 
 		edt_SplitQtty = ((Edittext_SoLuong) view
 				.findViewById(R.id.edttg_DatLenh_SplitQtty));
@@ -265,7 +275,12 @@ public class AmendOrder extends AbstractFragment {
 		}
 
 	}
-
+	public void CallUnRead(INotifier notifier) {
+		String android_id = Settings.Secure.getString(getContext().getContentResolver(),
+				Settings.Secure.ANDROID_ID);
+		NotificationService.CallUnRead(StaticObjectManager.deviceToken, android_id,
+				StaticObjectManager.loginInfo.UserName, notifier, GETUNREAD);
+	}
 	protected  void GenOTPSMS(){
 		List<String> list_key = new ArrayList<String>();
 		List<String> list_value = new ArrayList<String>();
@@ -284,6 +299,7 @@ public class AmendOrder extends AbstractFragment {
 
 		StaticObjectManager.connectServer.callHttpPostService(GENOTPSMS,
 				this, list_key, list_value);
+		CallUnRead(this);
 	}
 
 	TextWatcher edt_gia_textwatcher;
@@ -778,11 +794,19 @@ public class AmendOrder extends AbstractFragment {
 		super.notifyChangeAcctNo();
 		changedAfacctno = true;
 	}
-
+	@Override
+	public void onDetach() {
+		super.onDetach();
+		StaticObjectManager.mLastGenOTPClickTime = 01;
+	}
 	@Override
 	protected void process(String key, ResultObj rObj) {
 		String[] keys = key.split(StringConst.SEMI);
 		switch (keys[0]) {
+		case GETUNREAD:
+			unread = (int) rObj.obj;
+			mainActivity.showUnReadNotify(unread);
+			break;
 		case FINDSTOCK:
 			if (rObj.obj != null && key.equals(findstockKey)) {
 				findStock = ((FindStock) rObj.obj);
@@ -799,7 +823,12 @@ public class AmendOrder extends AbstractFragment {
 			}
 			break;
 		case GENOTPSMS:
-			showDialogMessage(getStringResource(R.string.thong_bao), rObj.EM);
+			String[] arrayString = rObj.EM.split(";");
+			showDialogMessage(getStringResource(R.string.thong_bao), arrayString[0]);
+			if (rObj.EC == 0 && StaticObjectManager.loginInfo.IsFillOTP.equals("Y"))
+			{
+				etOTPCode.setText(arrayString[1]);
+			}
 			break;
 		case AMENDORDER:
 			if(isOTP){

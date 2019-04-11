@@ -24,12 +24,16 @@ public class LoginItem {
 	public String IsOTPIssue;
 	public String IsOTPDeposit;
 	public String DisableOTPTime;
+	public String IsFirstLogin;
+	public String IsDigital;
+	public String IsFillOTP;
 
 	public LoginItem(String currentAcctno, String custodycd, String custName,
 			String custEmail, String username, String txDateString,
 			String language, String isBroker, String pr_Clazz, String pr_agent,
 			String pr_mobile, List<AcctnoItem> contractList, String isotporder,
-					 String isotpcondorder,String isotpcash,String isotpissue,String isotpdeposit, String disableotptime) {
+					 String isotpcondorder,String isotpcash,String isotpissue,String isotpdeposit, String disableotptime,
+					 String isfirstlogin, String isDigital, String isFillOTP) {
 		super();
 		CurrentAcctno = currentAcctno;
 		Custodycd = custodycd;
@@ -49,6 +53,9 @@ public class LoginItem {
 		IsOTPIssue= isotpissue;
 		IsOTPDeposit= isotpdeposit;
 		DisableOTPTime= disableotptime;
+		IsFirstLogin= isfirstlogin;
+		IsDigital = isDigital;
+		IsFillOTP = isFillOTP;
 	}
 
 }

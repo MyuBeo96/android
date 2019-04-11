@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:id="@+id/chuyentienrangoai"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -84,7 +84,7 @@
                         android:background="@color/lc_separation_color" />
                 </RelativeLayout>
 
-                <com.fscuat.mobiletrading.design.LabelContentLayout
+                <com.tcscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_bankcashtransfer_SenderCustodyCd"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -96,7 +96,7 @@
                     app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                     app:orientation="vertical" />
 
-                <com.fscuat.mobiletrading.design.MySpinner
+                <com.tcscuat.mobiletrading.design.MySpinner
                     android:id="@+id/spn_CTout_Afacctno"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -114,7 +114,7 @@
                 android:gravity="bottom"
                 android:orientation="horizontal" >
 
-                <com.fscuat.mobiletrading.design.MySpinner
+                <com.tcscuat.mobiletrading.design.MySpinner
                     android:id="@+id/spn_CTout_accountbank"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -124,7 +124,7 @@
                     app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                     app:textMySpinner="@string/SoTaiKhoanNganHang" />
 
-                <com.fscuat.mobiletrading.design.LabelContentLayout
+                <com.tcscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_CTout_bank"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -136,7 +136,7 @@
                     app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                     app:orientation="vertical" />
 
-                <com.fscuat.mobiletrading.design.LabelContentLayout
+                <com.tcscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_CTout_branch"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -155,7 +155,7 @@
                 android:gravity="bottom"
                 android:orientation="horizontal" >
 
-                <com.fscuat.mobiletrading.design.LabelContentLayout
+                <com.tcscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_CTout_city"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -166,7 +166,7 @@
                     app:labelsize_dimen="@dimen/t_cashtransfer_labletextsize"
                     app:orientation="vertical" />
 
-                <com.fscuat.mobiletrading.design.LabelContentLayout
+                <com.tcscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_CTout_beneficiaryName"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -193,7 +193,7 @@
                         android:text="@string/SoTienDeNghiChuyen"
                         android:textSize="@dimen/t_cashtransfer_labletextsize" />
 
-                    <com.fscuat.mobiletrading.design.NumberEditText
+                    <com.tcscuat.mobiletrading.design.NumberEditText
                         android:id="@+id/edt_CTout_amount"
                         style="@style/EditText_Style"
                         android:layout_width="match_parent"
@@ -219,7 +219,7 @@
                 android:gravity="bottom"
                 android:orientation="horizontal" >
 
-                <com.fscuat.mobiletrading.design.LabelContentLayout
+                <com.tcscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/edt_CTout_desc"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
@@ -244,7 +244,7 @@
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal" >
 
-                <com.fscuat.mobiletrading.design.LabelContentLayout
+                <com.tcscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_bankcashtransfer_tienmat"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -256,7 +256,7 @@
                     app:orientation="vertical"
                     app:separationColor="@color/transparent" />
 
-                <com.fscuat.mobiletrading.design.LabelContentLayout
+                <com.tcscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_bankcashtransfer_advancecash"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -269,7 +269,7 @@
                     app:orientation="vertical"
                     app:separationColor="@color/transparent" />
 
-                <com.fscuat.mobiletrading.design.LabelContentLayout
+                <com.tcscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_bankcashtransfer_sotiendichvu"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -287,7 +287,7 @@
                 android:layout_height="54dp"
                 android:orientation="horizontal" >
 
-                <com.fscuat.mobiletrading.design.LabelContentLayout
+                <com.tcscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_bankcashtransfer_phiungdutinh"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -299,7 +299,7 @@
                     app:orientation="vertical"
                     app:separationColor="@color/transparent" />
 
-                <com.fscuat.mobiletrading.design.LabelContentLayout
+                <com.tcscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_CTout_sotientoidaduocchuyen"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -312,7 +312,7 @@
                     app:orientation="vertical"
                     app:separationColor="@color/transparent" />
 
-                <com.fscuat.mobiletrading.design.LabelContentLayout
+                <com.tcscuat.mobiletrading.design.LabelContentLayout
                     android:id="@+id/text_bankcashtransfer_amounttotal"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -375,7 +375,7 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <com.fscuat.mobiletrading.design.LabelContentLayout
+            <com.tcscuat.mobiletrading.design.LabelContentLayout
                 android:id="@+id/text_CTout_cashavailable"
                 android:layout_width="0dp"
                 android:layout_height="0dp"

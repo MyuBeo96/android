@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/bg_fragment"
@@ -33,7 +33,7 @@
             android:inputType="textCapCharacters|textNoSuggestions"
             android:textCursorDrawable="@drawable/shape_textcursoredittext"
             />
-        <com.fscuat.mobiletrading.design.InputDate
+        <com.tcscuat.mobiletrading.design.InputDate
             android:id="@+id/fromdate"
             android:layout_width="230dp"
             android:layout_height="@dimen/t_singleLine_height"
@@ -41,7 +41,7 @@
             app:orientationInputDate="horizontal"
             app:separationColorInputDate="@color/transparent" />
 
-        <com.fscuat.mobiletrading.design.InputDate
+        <com.tcscuat.mobiletrading.design.InputDate
             android:id="@+id/todate"
             android:layout_width="230dp"
             android:layout_height="@dimen/t_singleLine_height"

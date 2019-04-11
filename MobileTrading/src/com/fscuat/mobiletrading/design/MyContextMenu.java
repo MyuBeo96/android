@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ import android.widget.TextView;
 
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.consts.StringConst;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.google.android.gms.drive.internal.ad;
 import com.google.android.gms.drive.internal.i;
 import com.google.android.gms.internal.co;

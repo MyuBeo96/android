@@ -1,8 +1,8 @@
 package com.fss.mobiletrading.connector;
 
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
 
 public class CheckSessionFragment extends AbstractFragment {
 

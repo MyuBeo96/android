@@ -49,9 +49,9 @@
     <string name="TienCoTheUng">Tiền có thể ứng</string>
     <string name="TaiKhoanThuHuong">Tài khoản thụ hưởng</string>
     <string name="TenNganHang">Tên ngân hàng</string>
-    <string name="SoTKTaiFNS">Số TK tại FNS</string>
-    <string name="SoTaiKkhoanTaiFNS">Số tài khoản tại FNS</string>
-    <string name="SoTieuKhoanTaiFNS">Số tiểu khoản tại FNS</string>
+    <string name="SoTKTaiFNS">Số TK tại TCSC</string>
+    <string name="SoTaiKkhoanTaiFNS">Số tài khoản tại TCSC</string>
+    <string name="SoTieuKhoanTaiFNS">Số tiểu khoản tại TCSC</string>
     <string name="DaHuy">Đã hủy</string>
     <string name="Gia1">Giá 1</string>
     <string name="Gia2">Giá 2</string>
@@ -93,7 +93,8 @@
     <string name="RoRPolicy">Tôi đồng ý trích tiền từ tài khoản của tôi chuyển sang tài khoản của công ty chứng khoán Funan để đăng ký quyền mua CK.</string>
     <string name="RoRPolicy_Error">Bạn chưa đồng ý điều khoản</string>
     <string name="BanCoMuonXoaMa">Bạn có muốn xóa mã</string>
-    <string name="ThanhPho">Thành phố</string>
+    <string name="CheckPolicy">Bạn không có quyền thực hiện thao tác này</string>
+    <string name="ThanhPho">Thành phố</string>y
     <string name="Xong">Xong</string>
     <string name="ChiNhanh">Chi nhánh</string>
     <string name="NganHangNguoiThuHuong">Ngân hàng người thụ hưởng</string>
@@ -389,7 +390,7 @@
     <string name="ChangeAccount">Chọn tiểu khoản</string>
     <string name="Report">Báo cáo</string>
     <string name="About">Liên hệ TCSC</string>
-    <string name="MSINotification">Thông điệp FNS</string>
+    <string name="MSINotification">Thông điệp TCSC</string>
     <string name="CashTransferList">Danh sách người thụ hưởng</string>
     <string name="ConditionalTrade">Đặt lệnh điều kiện</string>
     <string name="GTCOrder">Sổ lệnh điều kiện</string>

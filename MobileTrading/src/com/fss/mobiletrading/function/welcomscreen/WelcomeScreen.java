@@ -17,10 +17,10 @@ import com.fss.mobiletrading.connector.ConnectServer;
 import com.fss.mobiletrading.function.AppConfig;
 import com.fss.mobiletrading.interfaces.INotifier;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.Login;
-import com.fscuat.mobiletrading.Login_SSO;
-import com.fscuat.mobiletrading.MSTradeAppConfig;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.Login;
+import com.tcscuat.mobiletrading.Login_SSO;
+import com.tcscuat.mobiletrading.MSTradeAppConfig;
+import com.tcscuat.mobiletrading.R;
 
 import org.json.JSONException;
 

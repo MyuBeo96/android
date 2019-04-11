@@ -176,7 +176,7 @@
                     android:gravity="center"
                     android:text="@string/TinTuc" />
 
-                <com.fscuat.mobiletrading.design.SearchTextUI
+                <com.tcscuat.mobiletrading.design.SearchTextUI
                     android:id="@+id/searchtext_listview"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"

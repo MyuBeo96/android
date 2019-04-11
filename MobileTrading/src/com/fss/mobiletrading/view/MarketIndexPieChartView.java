@@ -14,10 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.AbstractFragment;
 
 @SuppressLint({ "ValidFragment" })
 public class MarketIndexPieChartView extends AbstractFragment {

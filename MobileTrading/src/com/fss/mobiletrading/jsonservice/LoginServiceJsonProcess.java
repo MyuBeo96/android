@@ -28,7 +28,9 @@ public class LoginServiceJsonProcess extends AbstractProcessJsonObjectService {
 				DT.getString("Agent"), DT.getString("Mobile"), list_AcctnoItems,
 				DT.getString("IsOTPOrder"),DT.getString("IsOTPCondOrder"),
 				DT.getString("IsOTPCash"),DT.getString("IsOTPIssue"),
-				DT.getString("IsOTPDeposit"),DT.getString("DisableOTPTime"));
+				DT.getString("IsOTPDeposit"),DT.getString("DisableOTPTime"),
+				DT.getString("IsFirstLogin"), DT.getString("IsDigital"),
+				DT.getString("IsFillOTP"));
 
 		return new ResultObj(EC, EM, loginItem);
 	}

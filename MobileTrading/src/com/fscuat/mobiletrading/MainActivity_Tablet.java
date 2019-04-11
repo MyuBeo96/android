@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading;
+package com.tcscuat.mobiletrading;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -51,7 +51,7 @@ import com.fss.mobiletrading.menu.MenuItemAction;
 import com.fss.mobiletrading.object.AcctnoItem;
 import com.fss.mobiletrading.object.ContactInfoItem;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.MyActionBar.Action;
+import com.tcscuat.mobiletrading.MyActionBar.Action;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -217,7 +217,7 @@ contain_watchlist_price = (LinearLayout) findViewById(R.id.container_tablet_acti
         createDialogKeyboard();
         setSubAccountInfo(StaticObjectManager.acctnoItem);
         if (AppData.language.equals(AppData.LOCALE_EN)) {
-            logo.setImageResource(R.drawable.ic_fsc);
+            logo.setImageResource(R.drawable.ic_tcsc);
         }
     }
 
@@ -372,7 +372,7 @@ contain_watchlist_price = (LinearLayout) findViewById(R.id.container_tablet_acti
     protected void onResume() {
         super.onResume();
         if (AppData.language.equals(AppData.LOCALE_EN)) {
-            logo.setImageResource(R.drawable.ic_fsc);
+            logo.setImageResource(R.drawable.ic_tcsc);
         }
         Configuration newConfig = new Configuration();
         newConfig.locale = new Locale(AppData.language);

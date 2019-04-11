@@ -12,8 +12,8 @@ import com.fss.mobiletrading.jsonservice.ATService;
 import com.fss.mobiletrading.jsonservice.AbstractProcessJsonArrayService;
 import com.fss.mobiletrading.jsonservice.AbstractProcessJsonObjectService;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.BuildConfig;
-import com.fscuat.mobiletrading.MSTradeAppConfig;
+import com.tcscuat.mobiletrading.BuildConfig;
+import com.tcscuat.mobiletrading.MSTradeAppConfig;
 
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;

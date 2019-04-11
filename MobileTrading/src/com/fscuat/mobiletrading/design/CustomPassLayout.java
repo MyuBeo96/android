@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import android.app.Service;
 import android.content.Context;
@@ -24,7 +24,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.fss.mobiletrading.common.Rule;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 
 import org.w3c.dom.Text;
 

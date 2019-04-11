@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:id="@+id/datlenh"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -571,7 +571,7 @@
                     android:gravity="center_vertical"
                     android:text="@string/SoLuong_2" />
 
-                <com.fscuat.mobiletrading.design.Edittext_SoLuong
+                <com.tcscuat.mobiletrading.design.Edittext_SoLuong
                     android:id="@+id/cus_edt_DatLenh_SoLuong"
                     android:layout_width="200dp"
                     android:layout_height="45dp"
@@ -602,7 +602,7 @@
                         android:gravity="center_vertical"
                         android:text="@string/LoaiLenh" />
 
-                    <com.fscuat.mobiletrading.design.Edittext_LoaiLenh
+                    <com.tcscuat.mobiletrading.design.Edittext_LoaiLenh
                         android:id="@+id/cus_edt_DatLenh_LoaiLenh"
                         android:layout_width="200dp"
                         android:layout_height="45dp"
@@ -627,7 +627,7 @@
                     android:gravity="center_vertical"
                     android:text="@string/Gia1000" />
 
-                <com.fscuat.mobiletrading.design.Edittext_Gia
+                <com.tcscuat.mobiletrading.design.Edittext_Gia
                     android:id="@+id/cus_edt_DatLenh_Gia"
                     android:layout_width="200dp"
                     android:layout_height="45dp"
@@ -658,7 +658,7 @@
                         android:gravity="center_vertical"
                         android:text="@string/datlenh_label_SplitQtty" />
 
-                    <com.fscuat.mobiletrading.design.Edittext_SoLuong
+                    <com.tcscuat.mobiletrading.design.Edittext_SoLuong
                         android:id="@+id/edttg_DatLenh_SplitQtty"
                         android:layout_width="200dp"
                         android:layout_height="45dp"
@@ -673,7 +673,7 @@
                         android:background="@color/header_separation_color"
                         android:paddingLeft="10dp" />
                 </RelativeLayout>
-                <!--<com.fscuat.mobiletrading.design.LabelContentLayout-->
+                <!--<com.tcscuat.mobiletrading.design.LabelContentLayout-->
                     <!--android:id="@+id/edt_amendorder_TradingCode"-->
                     <!--android:layout_width="match_parent"-->
                     <!--android:layout_height="@dimen/m_labelcontentverlayout_height"-->
@@ -685,7 +685,7 @@
                     <!--app:labelText="@string/MatKhauGiaoDich"-->
                     <!--app:orientation="horizontal"-->
                     <!--android:visibility="gone"/>-->
-                <com.fscuat.mobiletrading.design.CustomPassLayout
+                <com.tcscuat.mobiletrading.design.CustomPassLayout
                     android:id="@+id/edt_amendorder_TradingCode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -698,7 +698,7 @@
                     android:visibility="gone"
                     app:labelRememberText="@string/remmber_tradingpass"
                     app:orientation="horizontal" />
-                <com.fscuat.mobiletrading.design.CustomPassLayout
+                <com.tcscuat.mobiletrading.design.CustomPassLayout
                     android:id="@+id/edt_amendorder_OTCode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

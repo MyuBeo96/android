@@ -22,12 +22,12 @@ import com.fss.mobiletrading.function.news.NewsBySymbolDetail;
 import com.fss.mobiletrading.function.news.NewsDetail;
 import com.fss.mobiletrading.function.placeorder.OrderSetParams;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.MyActionBar.Action;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
-import com.fscuat.mobiletrading.design.SearchTextUI;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.MyActionBar.Action;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.design.SearchTextUI;
 import com.mtrading.mobile.graph.IndexVolumeChartPoint;
 import com.mtrading.mobile.graph.TradeLog;
 

@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.R;
 
 public class RightOffRegister_Info extends AbstractFragment {
 

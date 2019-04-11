@@ -1,4 +1,4 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.function.report.FieldInReport;
 import com.fss.mobiletrading.object.RptFieldItem;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 
 /**
  * @author Admin

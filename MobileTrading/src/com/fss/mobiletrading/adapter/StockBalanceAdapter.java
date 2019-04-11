@@ -8,8 +8,8 @@ import android.widget.ArrayAdapter;
 import com.fss.mobiletrading.common.SimpleAction;
 import com.fss.mobiletrading.object.StockBalanceItem;
 import com.fss.mobiletrading.view.StockBalanceItemView;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
 import java.util.HashMap;
 import java.util.List;
 

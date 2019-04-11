@@ -12,9 +12,9 @@ import android.widget.TextView;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.consts.StringConst;
 import com.fss.mobiletrading.object.StockDetailsItem;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
-import com.fscuat.mobiletrading.design.TextViewHightLight;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.design.TextViewHightLight;
 
 public class StockIndexView extends LinearLayout {
 	ImageView imgview_kyhieu;

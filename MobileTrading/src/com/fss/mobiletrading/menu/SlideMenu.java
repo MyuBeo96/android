@@ -23,9 +23,9 @@ import android.widget.TextView;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.common.XmlParser;
 import com.fss.mobiletrading.function.AppData;
-import com.fscuat.mobiletrading.Login;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.Login;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.R;
 
 public class SlideMenu extends LinearLayout {
 
@@ -60,7 +60,7 @@ public class SlideMenu extends LinearLayout {
 	private void initialise() {
 		if (AppData.language.equals(AppData.LOCALE_EN)) {
 //			logo.setImageResource(R.drawable.ic_slidemenu_logo_en);
-			logo.setImageResource(R.drawable.ic_fsc);
+			logo.setImageResource(R.drawable.ic_tcsc);
 		}
 		initialiseData();
 		initialiseListener();

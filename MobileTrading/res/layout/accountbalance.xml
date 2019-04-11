@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:id="@+id/accountbalance"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
-        <com.fscuat.mobiletrading.design.MySpinner
+        <com.tcscuat.mobiletrading.design.MySpinner
             android:id="@+id/spn_accountbalance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal" >
 
-                    <com.fscuat.mobiletrading.design.LabelContentLayout
+                    <com.tcscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/text_tienmat"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -56,7 +56,7 @@
                         android:layout_marginTop="5dp"
                         android:background="@color/lc_separation_color" />
 
-                    <com.fscuat.mobiletrading.design.LabelContentLayout
+                    <com.tcscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/text_ungtoida"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -78,7 +78,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal" >
 
-                    <com.fscuat.mobiletrading.design.LabelContentLayout
+                    <com.tcscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/text_ruttoida"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -96,7 +96,7 @@
                         android:layout_marginTop="5dp"
                         android:background="@color/lc_separation_color" />
 
-                    <com.fscuat.mobiletrading.design.LabelContentLayout
+                    <com.tcscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/text_tongno"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -118,7 +118,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal" >
 
-                    <com.fscuat.mobiletrading.design.LabelContentLayout
+                    <com.tcscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/text_RTT"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -136,7 +136,7 @@
                         android:layout_marginTop="5dp"
                         android:background="@color/lc_separation_color" />
 
-                    <com.fscuat.mobiletrading.design.LabelContentLayout
+                    <com.tcscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/text_tiennopbosung"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -155,7 +155,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal" >
-                    <com.fscuat.mobiletrading.design.LabelContentLayout
+                    <com.tcscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/text_GiaTriNAV"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -175,7 +175,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal" >
 
-                    <com.fscuat.mobiletrading.design.LabelContentLayout
+                    <com.tcscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/text_choveT0"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -193,7 +193,7 @@
                         android:layout_marginTop="5dp"
                         android:background="@color/lc_separation_color" />
 
-                    <com.fscuat.mobiletrading.design.LabelContentLayout
+                    <com.tcscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/text_choveT1"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/m_labelcontentverlayout_height"
@@ -212,7 +212,7 @@
                         android:layout_marginTop="5dp"
                         android:background="@color/lc_separation_color" />
 
-                    <com.fscuat.mobiletrading.design.LabelContentLayout
+                    <com.tcscuat.mobiletrading.design.LabelContentLayout
                         android:id="@+id/text_choveT2"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/m_labelcontentverlayout_height"

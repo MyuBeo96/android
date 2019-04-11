@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/bg_fragment"
@@ -10,13 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <com.fscuat.mobiletrading.design.TabSelector
+        <com.tcscuat.mobiletrading.design.TabSelector
             android:id="@+id/tab_solenhthuong"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
 
-            <com.fscuat.mobiletrading.design.TabItem
+            <com.tcscuat.mobiletrading.design.TabItem
                 android:id="@+id/tab_solenhthuong_all"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
                 android:gravity="center"
                 app:textTabItem="@string/solenh_label_All" />
 
-            <com.fscuat.mobiletrading.design.TabItem
+            <com.tcscuat.mobiletrading.design.TabItem
                 android:id="@+id/tab_SoLenhThuong_receiving"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
                 android:gravity="center"
                 app:textTabItem="@string/Cho" />
 
-            <com.fscuat.mobiletrading.design.TabItem
+            <com.tcscuat.mobiletrading.design.TabItem
                 android:id="@+id/tab_solenhthuong_matched"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
                 android:gravity="center"
                 app:textTabItem="@string/Khop" />
 
-            <com.fscuat.mobiletrading.design.TabItem
+            <com.tcscuat.mobiletrading.design.TabItem
                 android:id="@+id/tab_solenhthuong_cancel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -48,16 +48,16 @@
                 android:gravity="center"
                 app:textTabItem="@string/Cancel" />
 
-            <com.fscuat.mobiletrading.design.TabItem
+            <com.tcscuat.mobiletrading.design.TabItem
                 android:id="@+id/tab_solenhthuong_allmatched"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:gravity="center"
                 app:textTabItem="@string/solenh_label_Khophet" />
-        </com.fscuat.mobiletrading.design.TabSelector>
+        </com.tcscuat.mobiletrading.design.TabSelector>
 
-        <com.fscuat.mobiletrading.design.SearchStockUI
+        <com.tcscuat.mobiletrading.design.SearchStockUI
             android:id="@+id/searchtext_solenhthuong_symbol"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

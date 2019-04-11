@@ -16,7 +16,7 @@ import com.fss.mobiletrading.common.MyJsonArray;
 import com.fss.mobiletrading.common.MyJsonObject;
 import com.fss.mobiletrading.object.StockDetailsItem;
 import com.fss.mobiletrading.view.MarketIndexGraphView;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.mtrading.mobile.graph.IndexVolumeChartPoint;
 import com.mtrading.mobile.graph.IndexVolumeChartView;
 import com.mtrading.mobile.graph.TradeLog;

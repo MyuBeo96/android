@@ -18,7 +18,7 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.google.android.gcm.GCMRegistrar;
 
 public final class ServerUtilities {

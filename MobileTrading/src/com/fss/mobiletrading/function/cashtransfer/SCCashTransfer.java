@@ -8,14 +8,14 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.fscuat.mobiletrading.Login;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.Login;
+import com.tcscuat.mobiletrading.R;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.StaticObjectManager;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.design.LabelContentLayout;
-import com.fscuat.mobiletrading.design.MySpinner;
-import com.fscuat.mobiletrading.design.NumberEditText;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.design.LabelContentLayout;
+import com.tcscuat.mobiletrading.design.MySpinner;
+import com.tcscuat.mobiletrading.design.NumberEditText;
 
 public class SCCashTransfer extends BankCashTransfer {
 	static String key_trans = "cashtransMSBlNotice";

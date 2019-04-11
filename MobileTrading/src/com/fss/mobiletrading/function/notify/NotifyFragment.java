@@ -28,10 +28,10 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnLastItemVisibleListener;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
 
 import java.util.ArrayList;
 
@@ -164,7 +164,7 @@ public class NotifyFragment extends AbstractFragment {
                         item.hasRead = StringConst.TRUE;
                         if (DeviceProperties.isTablet) {
                             notifyDetails.CallGetNotifyDetails(
-                                    NotifyFragment.this, item.ID);
+                                    NotifyFragment.this, item.ID, item.IDdtl);
                             showNotifyDetail(true);
                         } else {
                             ShowNotifyDetails(item);
@@ -180,8 +180,7 @@ public class NotifyFragment extends AbstractFragment {
     }
 
     public void CallListNotify() {
-        NotificationService.CallListNotify(StaticObjectManager.deviceToken,
-                StaticObjectManager.loginInfo.UserName, lastSeq, this,
+        NotificationService.CallListNotify(StaticObjectManager.loginInfo.UserName, lastSeq, this,
                 NOTIFICATION);
     }
 
@@ -263,8 +262,8 @@ public class NotifyFragment extends AbstractFragment {
     @Override
     public void onResume() {
         super.onResume();
-        //CallListNotify();
-        //CallUnRead(this);
+        CallListNotify();
+        CallUnRead(this);
     }
 
     private void showNotifyDetail(boolean isShow) {

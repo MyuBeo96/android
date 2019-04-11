@@ -6,9 +6,9 @@ import android.view.ViewGroup;
 
 import com.fss.mobiletrading.object.LichSuLenh_Item;
 import com.fss.mobiletrading.view.OrderHistoryItemView;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
-import com.fscuat.mobiletrading.design.FilterArrayAdapter;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.design.FilterArrayAdapter;
 import java.util.HashMap;
 import java.util.List;
 

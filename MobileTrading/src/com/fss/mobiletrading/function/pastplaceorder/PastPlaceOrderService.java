@@ -2,7 +2,7 @@ package com.fss.mobiletrading.function.pastplaceorder;
 
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.interfaces.INotifier;
-import com.fscuat.mobiletrading.MSTradeAppConfig;
+import com.tcscuat.mobiletrading.MSTradeAppConfig;
 
 
 import java.util.ArrayList;

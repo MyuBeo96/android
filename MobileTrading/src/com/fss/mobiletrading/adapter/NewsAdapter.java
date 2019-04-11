@@ -10,8 +10,8 @@ import android.widget.ArrayAdapter;
 import java.util.HashMap;
 import java.util.List;
 
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.design.FilterArrayAdapter;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.design.FilterArrayAdapter;
 import com.fss.mobiletrading.function.watchlist.BangGia_View;
 import com.fss.mobiletrading.object.NewsItem;
 import com.fss.mobiletrading.view.NewsItemView;

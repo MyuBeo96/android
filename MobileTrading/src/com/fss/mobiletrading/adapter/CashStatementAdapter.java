@@ -7,8 +7,8 @@ import android.widget.ArrayAdapter;
 
 import com.fss.mobiletrading.object.CashStatementItem;
 import com.fss.mobiletrading.view.CashStatementView;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
 import java.util.List;
 
 public class CashStatementAdapter extends ArrayAdapter<CashStatementItem> {

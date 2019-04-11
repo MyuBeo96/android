@@ -15,8 +15,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.fss.mobiletrading.consts.StringConst;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
 
 import java.math.BigDecimal;
 

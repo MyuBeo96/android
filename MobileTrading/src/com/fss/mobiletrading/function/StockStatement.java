@@ -15,12 +15,12 @@ import com.fss.mobiletrading.adapter.StockStatementAdapter;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.object.ResultObj;
 import com.fss.mobiletrading.object.StockStatementItem;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.R;
-import com.fscuat.mobiletrading.DeviceProperties;
-import com.fscuat.mobiletrading.design.InputDate;
-import com.fscuat.mobiletrading.design.InputDate.OnChangeTextDateListener;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.DeviceProperties;
+import com.tcscuat.mobiletrading.design.InputDate;
+import com.tcscuat.mobiletrading.design.InputDate.OnChangeTextDateListener;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,8 +1,8 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
 import java.math.BigDecimal;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 
 import android.content.Context;
 import android.graphics.Bitmap;

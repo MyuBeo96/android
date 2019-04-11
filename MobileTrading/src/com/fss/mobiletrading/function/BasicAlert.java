@@ -20,17 +20,17 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemLongClickListener;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.fss.mobiletrading.adapter.DanhSachCanhBao_Adapter;
 import com.fss.mobiletrading.common.Common;
 import com.fss.mobiletrading.common.StaticObjectManager;
 import com.fss.mobiletrading.object.DanhSachCanhBaoItem;
 import com.fss.mobiletrading.object.ResultObj;
-import com.fscuat.mobiletrading.AbstractFragment;
-import com.fscuat.mobiletrading.MainActivity;
-import com.fscuat.mobiletrading.design.RangeSeekBar;
-import com.fscuat.mobiletrading.design.RangeSeekBarLayout;
-import com.fscuat.mobiletrading.design.RangeSeekBar.OnRangeSeekBarChangeListener;
+import com.tcscuat.mobiletrading.AbstractFragment;
+import com.tcscuat.mobiletrading.MainActivity;
+import com.tcscuat.mobiletrading.design.RangeSeekBar;
+import com.tcscuat.mobiletrading.design.RangeSeekBarLayout;
+import com.tcscuat.mobiletrading.design.RangeSeekBar.OnRangeSeekBarChangeListener;
 
 public class BasicAlert extends AbstractFragment {
 	final String ADDALERTBASICSUBMIT = "SuccessService#1";

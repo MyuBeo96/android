@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:id="@+id/login"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -281,6 +281,22 @@
                         android:paddingRight="10dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/checkbox_layout" />
+                    <TextView
+                        android:id="@+id/lbl_login_forgetpassword"
+                        style="@style/Label_Style"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@+id/lay_login_findbranch"
+                        android:layout_alignLeft="@+id/lay_login_findbranch"
+                        android:text="@string/QuenMatKhau"
+                        android:textColor="@color/white_text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignLeft="@+id/lbl_login_forgetpassword"
+                        android:layout_alignRight="@+id/lbl_login_forgetpassword"
+                        android:layout_below="@+id/lbl_login_forgetpassword"
+                        android:background="@color/white_text" />
 
                     <TextView
                         android:id="@+id/text_login_remember"
@@ -355,7 +371,7 @@
                     android:weightSum="10"
                     android:gravity="center">
 
-                    <com.fscuat.mobiletrading.design.MyButton
+                    <com.tcscuat.mobiletrading.design.MyButton
                         android:id="@+id/btn_login_Login"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
@@ -363,7 +379,7 @@
                         android:background="@drawable/background_button_login"
                         app:textMyButton="@string/login_btn_Login" />
 
-                    <com.fscuat.mobiletrading.design.MyButton
+                    <com.tcscuat.mobiletrading.design.MyButton
                         android:id="@+id/btn_login_LoginDemo"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
@@ -400,22 +416,7 @@
                         android:textColor="@color/white_text" />
                 </FrameLayout>
 
-                <TextView
-                    android:id="@+id/lbl_login_forgetpassword"
-                    style="@style/Label_Style"
-                    android:layout_width="wrap_content"
-                    android:layout_below="@+id/lay_login_findbranch"
-                    android:layout_alignLeft="@+id/lay_login_findbranch"
-                    android:text="@string/QuenMatKhau"
-                    android:textColor="@color/white_text" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_alignLeft="@+id/lbl_login_forgetpassword"
-                    android:layout_alignRight="@+id/lbl_login_forgetpassword"
-                    android:layout_below="@+id/lbl_login_forgetpassword"
-                    android:background="@color/white_text" />
 
                 <TextView
                     android:id="@+id/lbl_login_guide"
@@ -426,13 +427,13 @@
                     android:text="@string/HuongDan"
                     android:textColor="@color/white_text" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_alignLeft="@+id/lbl_login_guide"
-                    android:layout_alignRight="@+id/lbl_login_guide"
-                    android:layout_below="@+id/lbl_login_guide"
-                    android:background="@color/white_text" />
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_alignLeft="@+id/lbl_login_guide"-->
+                    <!--android:layout_alignRight="@+id/lbl_login_guide"-->
+                    <!--android:layout_below="@+id/lbl_login_guide"-->
+                    <!--android:background="@color/white_text" />-->
 
                 <TextView
                     android:id="@+id/lbl_login_stockcompanyinfo"

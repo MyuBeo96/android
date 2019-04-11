@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/com.fscuat.mobiletrading"
+    xmlns:app="http://schemas.android.com/apk/res/com.tcscuat.mobiletrading"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_fragment"
     android:orientation="vertical" >
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_cashtransferitemdetail_beneficiaryname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:labelText="@string/HoTen"
         app:orientation="horizontal" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_cashtransferitemdetail_bankaccount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:labelText="@string/TaiKhoan"
         app:orientation="horizontal" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_cashtransferitemdetail_bank"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,28 +28,28 @@
         app:orientation="horizontal"
         app:singleLine="true" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_cashtransferitemdetail_branch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:labelText="@string/PhongGiaoDich"
         app:orientation="horizontal" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_cashtransferitemdetail_city"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:labelText="@string/TinhThanhPho"
         app:orientation="horizontal" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_cashtransferitemdetail_custodycd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:labelText="@string/SoTaiKhoanNhan"
         app:orientation="horizontal" />
 
-    <com.fscuat.mobiletrading.design.LabelContentLayout
+    <com.tcscuat.mobiletrading.design.LabelContentLayout
         android:id="@+id/text_cashtransferitemdetail_afacctno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

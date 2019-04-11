@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.fss.mobiletrading.consts.StringConst;
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 
 public class Notify_View extends LinearLayout {
 	TextView tvTittleNotify, tvContentNotify, tvDateNotify;

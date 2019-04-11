@@ -1,6 +1,6 @@
-package com.fscuat.mobiletrading.design;
+package com.tcscuat.mobiletrading.design;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 
 import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;

@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
-import com.fscuat.mobiletrading.R;
+import com.tcscuat.mobiletrading.R;
 import com.fss.mobiletrading.function.watchlist.BangGia_View;
 import com.fss.mobiletrading.object.LichSuDKQM_Item;
 import com.fss.mobiletrading.view.LichSuDKQM_View;
