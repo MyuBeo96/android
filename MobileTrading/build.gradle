@@ -23,7 +23,7 @@ android {
         applicationId "com.tcscuat.mobiletrading"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 4
+        versionCode 6
         versionName "7.0"
         multiDexEnabled true
 
@@ -45,7 +45,8 @@ android {
             buildConfigField "String", "address_server", '"http://online.tcsc.vn/MFlexApps"'
         }
         development{
-            buildConfigField "String", "address_server", '"http://online.tcsc.vn/MFlexApps"'
+            buildConfigField "String", "address_server", '"http://14.161.11.106:1616/MFlexApp"'
+            //buildConfigField "String", "address_server", '"http://online.tcsc.vn/MFlexApps"'
         }
         uat{
             buildConfigField "String", "address_server", '"http://10.128.31.53:1234/MFlexApps"'

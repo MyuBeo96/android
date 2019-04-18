@@ -4,10 +4,13 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -45,7 +48,7 @@ public class StockItemInformation extends AbstractFragment {
 	LinearLayout container_stockIndex;
 	LinearLayout container_news;
 	String symbol;
-	ScrollView scrollview;
+	//ScrollView scrollview;
 	/**
 	 * only tablet
 	 */
@@ -83,8 +86,8 @@ public class StockItemInformation extends AbstractFragment {
 		View view = inflater.inflate(getLayoutId(), container, false);
 		container_stockIndex = (LinearLayout) view
 				.findViewById(R.id.container_stockindex);
-		scrollview = (ScrollView) view
-				.findViewById(R.id.scrollview_stockiteminformation);
+//		scrollview = (ScrollView) view
+//				.findViewById(R.id.scrollview_stockiteminformation);
 		btn_graph = (Button) view.findViewById(R.id.btn_stockinfo_graph);
 		btn_news = (Button) view.findViewById(R.id.btn_stockinfo_news);
 		container_graph = (LinearLayout) view
@@ -142,6 +145,20 @@ public class StockItemInformation extends AbstractFragment {
 				newsBySymbol.refresh();
 			}
 		});
+//		scrollview.setOnTouchListener(new View.OnTouchListener() {
+//			@Override
+//			public boolean onTouch(View v, MotionEvent event) {
+//				Log.d("1234","4567");
+//				return true;
+//			}
+//		});
+//		scrollview.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
+//			@Override
+//			public void onScrollChanged() {
+//				Log.d("TAG", "onScrollChanged: ");
+//				// DO SOMETHING WITH THE SCROLL COORDINATES
+//			}
+//		});
 		searchTextUI.getEditText().addTextChangedListener(new TextWatcher() {
 			int DELAYTIME = 500;
 			Timer timer = new Timer();
@@ -192,6 +209,7 @@ public class StockItemInformation extends AbstractFragment {
 		fm.beginTransaction()
 				.replace(container_stockIndex.getId(), stockIndex,
 						stockIndex.getTag()).commit();
+
 		fm.beginTransaction()
 				.replace(container_news.getId(), newsBySymbol,
 						newsBySymbol.getTag()).commit();
@@ -319,6 +337,7 @@ public class StockItemInformation extends AbstractFragment {
 		StockIndex stockIndex = (StockIndex) mainActivity.mapFragment
 				.get(StockIndex.class.getName());
 		if (stockIndex != null) {
+
 			stockIndex.receiverparameter(symbol);
 		}
 		NewsBySymbol newsBySymbol = (NewsBySymbol) mainActivity.mapFragment
@@ -344,6 +363,7 @@ public class StockItemInformation extends AbstractFragment {
 				container_graph.setVisibility(View.VISIBLE);
 				tradeLog.setVisibility(View.VISIBLE);
 				// drawChartView(getDataChart(stockDetailsItem.data));
+				Log.d("123ss","123");
 			}
 		} else {
 			if (!btn_news.isActivated()) {
@@ -352,6 +372,7 @@ public class StockItemInformation extends AbstractFragment {
 				lay_news.setVisibility(View.VISIBLE);
 				container_graph.setVisibility(View.GONE);
 				tradeLog.setVisibility(View.GONE);
+				Log.d("123ss","456");
 			}
 		}
 	}

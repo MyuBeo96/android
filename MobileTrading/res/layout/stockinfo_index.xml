@@ -12,7 +12,8 @@
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -469,7 +470,8 @@
                             android:background="@drawable/background_button_offer_stockinfo"
                             android:text="@string/Ban"
                             android:textColor="@color/white_text"
-                            android:textSize="13sp" />
+                            android:textSize="13sp"
+                            android:visibility="gone"/>
 
                         <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_BidPrice1"
@@ -502,7 +504,8 @@
                             android:background="@drawable/background_button_offer_stockinfo"
                             android:text="@string/Ban"
                             android:textColor="@color/white_text"
-                            android:textSize="13sp" />
+                            android:textSize="13sp"
+                            android:visibility="gone"/>
 
                         <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_BidPrice2"
@@ -535,7 +538,8 @@
                             android:background="@drawable/background_button_offer_stockinfo"
                             android:text="@string/Ban"
                             android:textColor="@color/white_text"
-                            android:textSize="13sp" />
+                            android:textSize="13sp"
+                            android:visibility="gone"/>
 
                         <com.tcscuat.mobiletrading.design.TextViewHightLight
                             android:id="@+id/text_BangGiaCT_BidPrice3"
@@ -585,14 +589,15 @@
 
                         <Button
                             android:id="@+id/btn_stockitem_index_offer1"
-                            android:layout_width="@dimen/button_bidoffer_width"
+                            android:layout_width="1dp"
                             android:layout_height="@dimen/button_bidoffer_height"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
                             android:background="@drawable/background_button_bid_stockinfo"
                             android:text="@string/Mua"
                             android:textColor="@color/white_text"
-                            android:textSize="13sp" />
+                            android:textSize="13sp"
+                            android:visibility="invisible"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -620,14 +625,15 @@
 
                         <Button
                             android:id="@+id/btn_stockitem_index_offer2"
-                            android:layout_width="@dimen/button_bidoffer_width"
+                            android:layout_width="1dp"
                             android:layout_height="@dimen/button_bidoffer_height"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
                             android:background="@drawable/background_button_bid_stockinfo"
                             android:text="@string/Mua"
                             android:textColor="@color/white_text"
-                            android:textSize="13sp" />
+                            android:textSize="13sp"
+                            android:visibility="invisible"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -655,14 +661,15 @@
 
                         <Button
                             android:id="@+id/btn_stockitem_index_offer3"
-                            android:layout_width="@dimen/button_bidoffer_width"
+                            android:layout_width="1dp"
                             android:layout_height="@dimen/button_bidoffer_height"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
                             android:background="@drawable/background_button_bid_stockinfo"
                             android:text="@string/Mua"
                             android:textColor="@color/white_text"
-                            android:textSize="13sp" />
+                            android:textSize="13sp"
+                            android:visibility="invisible"/>
                     </RelativeLayout>
                 </LinearLayout>
             </LinearLayout>

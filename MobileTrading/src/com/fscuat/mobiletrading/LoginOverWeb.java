@@ -2,7 +2,7 @@ package com.tcscuat.mobiletrading;
 
 import android.app.Fragment;
 import android.graphics.Bitmap;
-import android.net.http.SslError;
+
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.CookieManager;
-import android.webkit.SslErrorHandler;
+
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -59,10 +59,7 @@ public class LoginOverWeb extends Fragment {
                 super.onPageFinished(view, url);
             }
 
-            @Override
-            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
-                handler.proceed();
-            }
+
         });
         loadWebview(MSTradeAppConfig.MobileServerUrl + AppData.language);
         return root;

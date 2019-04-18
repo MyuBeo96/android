@@ -2,6 +2,7 @@ package com.fss.mobiletrading.function.watchlist;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -147,6 +148,8 @@ public class StockIndex extends AbstractFragment {
 							 ViewGroup paramViewGroup, Bundle paramBundle) {
 		View view = paramLayoutInflater.inflate(getLayout(), paramViewGroup,
 				false);
+
+
 		if (mainActivity == null) {
 			mainActivity = (MainActivity) getActivity();
 		}
@@ -530,12 +533,14 @@ public class StockIndex extends AbstractFragment {
 		tv_BidPrice1.setText(tv_BidPrice1.getText());
 		tv_BidPrice2.setText(tv_BidPrice2.getText());
 		tv_BidPrice3.setText(tv_BidPrice3.getText());
+
 		tv_Offer1.setText(tv_Offer1.getText());
 		tv_Offer2.setText(tv_Offer2.getText());
 		tv_Offer3.setText(tv_Offer3.getText());
 		tv_OfferPrice1.setText(tv_OfferPrice1.getText());
 		tv_OfferPrice2.setText(tv_OfferPrice2.getText());
 		tv_OfferPrice3.setText(tv_OfferPrice3.getText());
+
 		tv_BangGiaCT_NNMua.setText(tv_BangGiaCT_NNMua.getText());
 		tv_BangGiaCT_NNban.setText(tv_BangGiaCT_NNban.getText());
 
@@ -603,54 +608,116 @@ public class StockIndex extends AbstractFragment {
 					// stockDetailsItem.ceiling, stockDetailsItem.floor,
 					// stockDetailsItem.reference)));
 
-					tv_Bid1.setText(item.bidVol1);
-					tv_Bid2.setText(item.bidVol2);
-					tv_Bid3.setText(item.bidVol3);
-					tv_BidPrice1.setText(item.bidPrice1);
-					tv_BidPrice2.setText(item.bidPrice2);
-					tv_BidPrice3.setText(item.bidPrice3);
-					tv_Offer1.setText(item.offerVol1);
-					tv_Offer2.setText(item.offerVol2);
-					tv_Offer3.setText(item.offerVol3);
-					tv_OfferPrice1.setText(item.offerPrice1);
-					tv_OfferPrice2.setText(item.offerPrice2);
-					tv_OfferPrice3.setText(item.offerPrice3);
-					tv_Bid1.setTextColor(getResources().getColor(
+					tv_Bid1.setText(item.bidVol1.length() > 0 ?item.bidVol1 : "-");
+					tv_Bid2.setText(item.bidVol2.length() > 0 ?item.bidVol2 : "-");
+					tv_Bid3.setText(item.bidVol3.length() > 0 ?item.bidVol3 : "-");
+					if (item.bidVol1.length() > 0)
+						tv_Bid1.setTextColor(getResources().getColor(
 							Common.getColor(item.bidPrice1, item.ceiling,
 									item.floor, item.reference)));
-					tv_BidPrice1.setTextColor(getResources().getColor(
+					else
+						tv_Bid1.setTextColor(getResources().getColor(R.color.red_brown_text));
+
+					if (item.bidVol2.length() > 0)
+						tv_Bid2.setTextColor(getResources().getColor(
+							Common.getColor(item.bidPrice2, item.ceiling,
+									item.floor, item.reference)));
+					else
+						tv_Bid2.setTextColor(getResources().getColor(R.color.red_brown_text));
+
+					if (item.bidVol3.length() > 0)
+						tv_Bid3.setTextColor(getResources().getColor(
+							Common.getColor(item.bidPrice3, item.ceiling,
+									item.floor, item.reference)));
+					else
+						tv_Bid3.setTextColor(getResources().getColor(R.color.red_brown_text));
+					//tv_Bid2.setText(item.bidVol2);
+					//tv_Bid3.setText(item.bidVol3);
+
+
+					tv_BidPrice1.setText(item.bidPrice1.length() > 0 ?item.bidPrice1 : "-");
+					tv_BidPrice2.setText(item.bidPrice2.length() > 0 ?item.bidPrice2 : "-");
+					tv_BidPrice3.setText(item.bidPrice3.length() > 0 ?item.bidPrice3 : "-");
+					if (item.bidPrice1.length() > 0)
+						tv_BidPrice1.setTextColor(getResources().getColor(
 							Common.getColor(item.bidPrice1, item.ceiling,
 									item.floor, item.reference)));
-					tv_Bid2.setTextColor(getResources().getColor(
+					else
+						tv_BidPrice1.setTextColor(getResources().getColor(R.color.red_brown_text));
+
+					if (item.bidPrice2.length() > 0)
+						tv_BidPrice2.setTextColor(getResources().getColor(
 							Common.getColor(item.bidPrice2, item.ceiling,
 									item.floor, item.reference)));
-					tv_BidPrice2.setTextColor(getResources().getColor(
-							Common.getColor(item.bidPrice2, item.ceiling,
-									item.floor, item.reference)));
-					tv_Bid3.setTextColor(getResources().getColor(
+					else
+						tv_BidPrice2.setTextColor(getResources().getColor(R.color.red_brown_text));
+
+					if (item.bidPrice3.length() > 0)
+						tv_BidPrice3.setTextColor(getResources().getColor(
 							Common.getColor(item.bidPrice3, item.ceiling,
 									item.floor, item.reference)));
-					tv_BidPrice3.setTextColor(getResources().getColor(
-							Common.getColor(item.bidPrice3, item.ceiling,
-									item.floor, item.reference)));
-					tv_Offer1.setTextColor(getResources().getColor(
+					else
+						tv_BidPrice3.setTextColor(getResources().getColor(R.color.red_brown_text));
+
+//					tv_BidPrice1.setText(item.bidPrice1);
+//					tv_BidPrice2.setText(item.bidPrice2);
+//					tv_BidPrice3.setText(item.bidPrice3);
+
+					tv_Offer1.setText(item.offerVol1.length() > 0 ?item.offerVol1 : "-");
+					tv_Offer2.setText(item.offerVol2.length() > 0 ?item.offerVol2 : "-");
+					tv_Offer3.setText(item.offerVol3.length() > 0 ?item.offerVol3 : "-");
+					if (item.offerVol1.length() > 0)
+						tv_Offer1.setTextColor(getResources().getColor(
 							Common.getColor(item.offerPrice1, item.ceiling,
 									item.floor, item.reference)));
-					tv_OfferPrice1.setTextColor(getResources().getColor(
+					else
+						tv_Offer1.setTextColor(getResources().getColor(R.color.red_brown_text));
+
+					if (item.offerVol2.length() > 0)
+						tv_Offer2.setTextColor(getResources().getColor(
+							Common.getColor(item.offerPrice2, item.ceiling,
+									item.floor, item.reference)));
+					else
+						tv_Offer2.setTextColor(getResources().getColor(R.color.red_brown_text));
+
+					if (item.offerVol3.length() > 0)
+						tv_Offer3.setTextColor(getResources().getColor(
+							Common.getColor(item.offerPrice3, item.ceiling,
+									item.floor, item.reference)));
+					else
+						tv_Offer3.setTextColor(getResources().getColor(R.color.red_brown_text));
+
+//					tv_Offer1.setText(item.offerVol1);
+//					tv_Offer2.setText(item.offerVol2);
+//					tv_Offer3.setText(item.offerVol3);
+
+					tv_OfferPrice1.setText(item.offerPrice1.length() > 0 ?item.offerPrice1 : "-");
+					tv_OfferPrice2.setText(item.offerPrice2.length() > 0 ?item.offerPrice2 : "-");
+					tv_OfferPrice3.setText(item.offerPrice3.length() > 0 ?item.offerPrice3 : "-");
+					if (item.offerPrice1.length() > 0)
+						tv_OfferPrice1.setTextColor(getResources().getColor(
 							Common.getColor(item.offerPrice1, item.ceiling,
 									item.floor, item.reference)));
-					tv_Offer2.setTextColor(getResources().getColor(
+					else
+						tv_OfferPrice1.setTextColor(getResources().getColor(R.color.red_brown_text));
+
+					if (item.offerPrice2.length() > 0)
+						tv_OfferPrice2.setTextColor(getResources().getColor(
 							Common.getColor(item.offerPrice2, item.ceiling,
 									item.floor, item.reference)));
-					tv_OfferPrice2.setTextColor(getResources().getColor(
-							Common.getColor(item.offerPrice2, item.ceiling,
-									item.floor, item.reference)));
-					tv_Offer3.setTextColor(getResources().getColor(
+					else
+						tv_OfferPrice2.setTextColor(getResources().getColor(R.color.red_brown_text));
+
+					if (item.offerPrice3.length() > 0)
+						tv_OfferPrice3.setTextColor(getResources().getColor(
 							Common.getColor(item.offerPrice3, item.ceiling,
 									item.floor, item.reference)));
-					tv_OfferPrice3.setTextColor(getResources().getColor(
-							Common.getColor(item.offerPrice3, item.ceiling,
-									item.floor, item.reference)));
+					else
+						tv_OfferPrice3.setTextColor(getResources().getColor(R.color.red_brown_text));
+
+//					tv_OfferPrice1.setText(item.offerPrice1);
+//					tv_OfferPrice2.setText(item.offerPrice2);
+//					tv_OfferPrice3.setText(item.offerPrice3);
 
 					i = Common.getColor(item.closePrice, item.ceiling,
 							item.floor, item.reference);
